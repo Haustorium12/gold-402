@@ -548,6 +548,7 @@ Projects building with or extending x402.
 - [SENTINEL](https://mru-oracle.com) - AML/CFT compliance intelligence API and Mauritius economic data oracle. 77K+ sanctions entities (OFAC, UN, EU, PEP, Interpol, World Bank debarment, crypto watchlists, sanctioned vessels), 159-country jurisdiction risk scoring (FATF, Basel AML Index, CPI), Mauritius FSC registry checks, compound intelligence (due-diligence, transaction screening, network scan), plus 12 live economic feeds (forex, fuel, SEMDEX stock market, weather, macro, monetary policy, 812+ government datasets). MCP server at `/mcp`. $0.001–$0.015 USDC on Base. ([Discovery](https://mru-oracle.com/.well-known/x402-discovery)) | ([GitHub](https://github.com/INJprotocol/mauritius-oracle-))
 - [SkillMint](https://skillmint.sagasu.art) - Pay-per-call AI skills marketplace with 51 skills across 7 categories (dev tools, creative design, research, writing, docs). $0.01–$0.50 USDC on Base. No API keys, no subscriptions. ([GitHub](https://github.com/s87343472/skillmint))
 - [KnowMint](https://knowmint.shop) - Open-source knowledge marketplace with x402 payment gate on Solana. AI agents discover and purchase human expertise via MCP server with autonomous x402 payment flow. ([GitHub](https://github.com/Sou0327/knowmint))
+- [AgenticTotem Web Extractor](https://agentictotem.com/docs/web-extractor) - Send URLs + a JSON Schema. Get clean, structured data back. Powered by AI, paid per use — no keys, no accounts. ([MCP](https://agentictotem.com/mcp))
 
 ### Charity & Social Impact
 
