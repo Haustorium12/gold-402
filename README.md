@@ -56,7 +56,8 @@ The x402 protocol enables instant Blockchain payments over HTTP using the 402 "P
 Core resources from the x402 protocol maintainers.
 
 - [x402 Protocol Specification](https://github.com/coinbase/x402) - Official open-source protocol implementation by Coinbase.
-- [x402 Foundation (Linux Foundation)](https://www.linuxfoundation.org/press/linux-foundation-is-launching-the-x402-foundation-and-welcoming-the-contribution-of-the-x402-protocol) - **April 2, 2026**: Coinbase contributed x402 to the Linux Foundation, establishing a neutral nonprofit to govern the protocol. Founding members include Google, Microsoft, AWS, Stripe, Cloudflare, Visa, Mastercard, American Express, Shopify, Circle, Polygon Labs, Solana Foundation, and more.
+- [x402 Foundation (Linux Foundation)](https://www.linuxfoundation.org/press/linux-foundation-is-launching-the-x402-foundation-and-welcoming-the-contribution-of-the-x402-protocol) - **April 2, 2026**: Coinbase contributed x402 to the Linux Foundation at the MCP Dev Summit North America in New York, establishing a neutral nonprofit to govern the protocol. Founding members include Adyen, AWS, American Express, Ampersend.ai, Circle, Cloudflare, Coinbase, Fiserv Merchant Solutions, Google, KakaoPay, Mastercard, Microsoft, Polygon Labs, PPRO, Shopify, Sierra, Solana Foundation, Stripe, thirdweb, and Visa.
+- [x402 V2 Specification](https://www.x402.org/writing/x402-v2-launch) - Major protocol upgrade: standardized headers (`PAYMENT-SIGNATURE` / `PAYMENT-RESPONSE` replacing `X-PAYMENT`), CAIP-2 network identifiers, modular SDK architecture, Extensions framework, wallet-based identity, dynamic payment recipients, and expanded multi-chain + fiat support.
 - [x402 Foundation](https://x402.org) - Protocol foundation website with overview and documentation.
 - [x402 Whitepaper](https://x402.org/x402-whitepaper.pdf) - Technical deep dive into protocol architecture.
 - [Coinbase Developer Platform Docs](https://docs.cdp.coinbase.com/x402) - Complete implementation guide and API reference.
@@ -73,6 +74,9 @@ Essential documentation for understanding and implementing x402.
 - [Payment Payload Format](https://github.com/coinbase/x402#payment-payload) - Client payment submission format.
 - [Verification & Settlement](https://github.com/coinbase/x402#verification-and-settlement) - Payment validation process.
 - [EIP-3009 TransferWithAuthorization](https://eips.ethereum.org/EIPS/eip-3009) - Gasless transfer standard used by x402.
+- [Stripe x402 Payments Docs](https://docs.stripe.com/payments/machine/x402) - Stripe's machine payments documentation for x402 integration, including quickstart and settlement flow.
+- [Solana x402 Developer Guide](https://solana.com/developers/guides/getstarted/intro-to-x402) - Official Solana guide for getting started with x402 payments.
+- [x402 V2 Migration Guide](https://docs.cdp.coinbase.com/x402/migration-guide) - Official Coinbase migration guide from x402 v1 to v2.
 - [HTTP 402 Status Code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402) - The long-dormant HTTP status.
 
 ## 🚀 Quickstart Guides
@@ -125,7 +129,11 @@ Official and community implementations of the x402 protocol.
   - Multi-chain support
 - x402-axum - Axum web framework integration.
 - x402-reqwest - Reqwest HTTP client wrapper.
+- [x402-kit](https://github.com/bitrouter/x402-kit) ⭐ **Community** - Fully modular, framework-agnostic Rust SDK for building complex x402 payment integrations. Composable buyer (signer) and seller (server) primitives with public internals for maximum extensibility. ([crates.io](https://crates.io/crates/x402-paywall))
 
+### Go
+
+- [x402-go](https://github.com/mark3labs/x402-go) ⭐ **Community** - Go implementation of the x402 payment protocol by Mark III Labs.
 
 ## 🏭 Production Implementations
 
@@ -152,14 +160,15 @@ Real companies using x402 in production with proven scale and transaction volume
 | Chain         | Status      | Facilitators               | Settlement      | Production Examples       |
 | ------------- | ----------- | -------------------------- | --------------- | ------------------------- |
 | Base          | Production  | Coinbase CDP, Cloudflare   | Instant (2s)    | AIsa, Bitget, thirdweb    |
+| Polygon       | Production  | Coinbase CDP               | Instant (<1s)   | Agentic payments, APIs    |
 | Base Sepolia  | Testnet     | Coinbase CDP               | Instant (2s)    | Development, Testing      |
-| Ethereum      | Production  | Cloudflare                 | Deferred        | Enterprise DApps          |
+| Ethereum      | Production  | Cloudflare, Primev         | Deferred        | Enterprise DApps          |
 | Solana        | Production  | Community                  | Instant (<1s)   | High-frequency trading    |
 | BNB Chain     | Production  | Pieverse                   | Instant (2s)    | Gaming, NFTs              |
 
 ### Enterprise Adoption
 
-Major tech companies leveraging x402 in production include **Coinbase** (Native CDP integration, primary facilitator), **Cloudflare** (Edge payment processing infrastructure), **Google** (Agent-to-Agent A2A payment protocol development), **Visa** (Enterprise payment rail exploration), and **thirdweb** (AI agent transaction framework Nebula).
+Major tech companies leveraging x402 in production include **Coinbase** (Native CDP integration, primary facilitator), **Cloudflare** (Edge payment processing infrastructure), **Google** (Agent-to-Agent A2A payment protocol development), **Stripe** (Machine Payments with x402 support on Base), **Visa** (Enterprise payment rail exploration + Nevermined Intelligent Commerce integration), **KakaoPay** (First Asian payment processor in x402 Foundation), **Polygon** (Agentic payments infrastructure, leading Base in daily x402 transactions), **QuickNode** (Pay-per-request RPC access to 130+ chains), **Vercel** (x402-mcp for AI SDK paidTool primitives), and **thirdweb** (AI agent transaction framework Nebula).
 
 ## 🛠️ SDKs & Client Libraries
 
@@ -174,6 +183,12 @@ Client libraries for making x402 payments.
 - [PayBot SDK](https://github.com/RBKunnela/paybot-sdk) - TypeScript SDK for integrating x402 payments into AI agents and bots. Supports automatic 402 detection, wallet management, and USDC payments on Base. ([npm](https://www.npmjs.com/package/paybot-sdk))
 - [ClawPay MCP](https://www.npmjs.com/package/clawpay-mcp) - Non-custodial x402 payment layer for AI agents. Agents sign locally with their own keys — no custodial infrastructure needed. Supports automatic 402 detection and USDC payments on Base. ([npm](https://www.npmjs.com/package/clawpay-mcp))
 - [Azeth SDK](https://github.com/azeth-protocol/sdk) - TypeScript SDK with x402 client (`fetch402`), ERC-4337 smart accounts, on-chain reputation feedback after every x402 call, and ERC-8004 service discovery. USDC on Base. ([npm](https://www.npmjs.com/package/@azeth/sdk))
+
+**MCP Payment SDKs**
+- [x402-mcp](https://www.npmjs.com/package/x402-mcp) - Vercel's library for adding x402 paywalls to MCP servers via the AI SDK. Introduces the `paidTool` primitive — declare a price on any MCP tool, require payment before execution. Fees under $0.01, sub-$0.001 minimums. ([Blog](https://vercel.com/blog/introducing-x402-mcp-open-protocol-payments-for-mcp-tools)) ([Starter Template](https://vercel.com/templates/next.js/x402-ai-starter))
+
+**Privacy**
+- [PRXVT Privacy SDK](https://github.com/prxvt/sdk) - Privacy layer for x402 payments. Each payment uses a fresh burner wallet (unlinkable to previous payments), Groth16 zero-knowledge proofs, AES-256-GCM encrypted notes, and cross-chain deposits (Base to Polygon). ([Website](https://www.prxvt.com/))
 
 **Wallet Integration**
 - [Agent Wallet SDK](https://www.npmjs.com/package/agentwallet-sdk) - Non-custodial smart contract wallets for AI agents with on-chain spend limits and operator model. Base L2. ([npm](https://www.npmjs.com/package/agentwallet-sdk))
@@ -205,6 +220,9 @@ Server-side integrations for accepting x402 payments.
 - Browser wallet example - React + Hono full-stack.
 - [Azeth Provider](https://github.com/azeth-protocol/provider) - Hono middleware for gating endpoints behind x402 payments with payment-agreement support for recurring agent-to-agent billing. ([npm](https://www.npmjs.com/package/@azeth/provider))
 
+**API Gateways**
+- [Zuplo x402](https://zuplo.com/blog/mcp-api-payments-with-x402) - API gateway with x402 paywalls. Add pay-per-request monetization to any API or MCP server. Sub-cent transaction fees on Base and Solana. ([Docs](https://zuplo.com/docs/articles/monetization))
+
 ### Python
 
 **FastAPI**
@@ -231,6 +249,8 @@ Payment verification and settlement services.
 - [Primev FastRPC](https://facilitator.primev.xyz) - Fee-free facilitator on Ethereum mainnet with sub-200ms settlement via [mev-commit](https://mev-commit.xyz) preconfirmations. ERC-8004 registered (Agent #23175).
 - [Bankr x402 Cloud](https://chainwire.org/2026/04/02/bankr-launches-x402-cloud-on-4-02-day-as-x402-protocol-joins-the-linux-foundation/) - **Launched April 2, 2026.** Hosted platform for deploying USDC-monetized, pay-per-request APIs. Includes hosting, payment processing, and agent discovery indexing. Freemium (5% revenue cut). Built on Base.
 - [Stellar x402](https://stellar.org/blog/foundation-news/x402-on-stellar) - Official Stellar Foundation x402 integration with full developer docs. Middleware for Stellar payment addresses and micropayment-enabled apps with browser wallet support. ([Docs](https://developers.stellar.org/docs/build/agentic-payments/x402))
+- [Stripe x402](https://docs.stripe.com/payments/machine/x402) - Stripe supports x402 as part of its Machine Payments infrastructure. Handles deposit addresses, automatic PaymentIntent capture on on-chain settlement, dashboard monitoring, and webhooks. USDC on Base. ([Quickstart](https://docs.stripe.com/payments/machine/x402/quickstart))
+- [Polygon x402 Facilitator](https://www.coinbase.com/developer-platform/discover/launches/x402facilitator-polygon) - Coinbase CDP facilitator on Polygon with gas sponsorship, automated KYT compliance screening, and 1,000 free transactions/month. USDC on Polygon. ([Polygon Docs](https://docs.polygon.technology/pos/payments/x402/quickstart-sellers/))
 - [XRPL / 54.ai Facilitator](https://www.bitget.com/news/detail/12560605308861) - x402 facilitator for XRP Ledger by Virtuals Protocol / 54.ai. AI agents transact autonomously on XRPL with identity and compliance verification.
 
 ### Self-Hosted Facilitators
@@ -257,6 +277,8 @@ Full working examples and templates.
 - [Cloudflare EmDash](https://blog.cloudflare.com/emdash-wordpress/) - Cloudflare's open-source CMS (spiritual successor to WordPress) with native x402 support built in. Site owners charge per-article with zero engineering required. Includes a built-in MCP server.
 - [AWS Secure Agentic Payments Sample](https://github.com/aws-samples/sample-secure-agentic-payments-on-aws-x402) - Official AWS reference implementation demonstrating AI agents paying for premium API access via x402 with governance controls (budget caps, allowlists, rate limits, secure key management). ([AWS Blog](https://aws.amazon.com/blogs/industries/x402-and-agentic-commerce-redefining-autonomous-payments-in-financial-services/))
 - [VibeKanban x402 MCP on Cloudflare](https://conzit.com/post/deploying-an-x402-mcp-server-to-cloudflare-workers-with-vibekanban) - Tutorial: deploy x402-gated MCP servers to Cloudflare Workers using `x402FetchClient` and `x402server`.
+- [Browserbase x402](https://www.browserbase.com/blog/browserbase-and-coinbase-x402) - Pay-per-session browser access for AI agents. Agents spin up real Chrome browsers, navigate live websites, interact with UIs, submit forms, and extract data — paid per minute with USDC on Base. No API keys or accounts required. ([Docs](https://docs.browserbase.com/integrations/x402/introduction)) ([Coinbase Announcement](https://www.coinbase.com/en-ar/developer-platform/discover/launches/browserbase-x402-usdc))
+- [QuickNode x402](https://blog.quicknode.com/x402-micropayments-quicknode-rpc-endpoints/) - Pay-per-request access to 130+ blockchain networks via x402. Drawdown credit model with SIWx wallet-based authentication. No account or API key needed. USDC on Base, Polygon, and Solana. ([Guide](https://www.quicknode.com/guides/x402/access-quicknode-endpoints-with-x402-payments)) ([GitHub](https://github.com/quiknode-labs/qn-x402-examples))
 - [MCP Security Snapshot Server](https://github.com/Seiya-wasabi/mcp-server-security-snapshot) - MCP server for pay-per-call HTTP security header scanning. $0.05 USDC on Base mainnet. Went live March 28, 2026.
 - [Stack AI x402](https://github.com/Stack-AI-MCP/stackai-x402) - Platform for monetizing MCP servers. Tool calls execute inline with payment prompts when premium tools are invoked. Per-tool pricing, agent composer, Stacks wallet integration.
 
@@ -379,12 +401,14 @@ x402-native GPU inference APIs that let agents pay autonomously for compute.
 - [x402search-mcp](https://pypi.org/project/x402search-mcp/) - MCP server to search 13,000+ x402-enabled APIs from within Python AI agents. Powered by x402search.xyz. `pip install x402search-mcp`.
 - [Recall Kitchen](https://recallkitchen.com/docs/#mcp) - MCP server for searching food/product/vehicle recalls. Accepts x402 payments, no account required, $0.025 USDC on Base per request. [Examples](https://github.com/Recall-Kitchen/rk-mcp/tree/master/examples/go)
 - [Human Pages](https://humanpages.ai) - The open directory AI agents use to hire humans for real-world tasks. Supports x402 pay-per-use for profile views ($0.05) and job offers ($0.25) in USDC on Base. Also available as an [MCP server](https://github.com/human-pages-ai/humanpages) with 31 tools.
+- [mcp-go-x402](https://github.com/mark3labs/mcp-go-x402) - x402 payment protocol transport for MCP-Go clients and servers. Drop-in replacement compatible with mcp-go transport interface. Automatic 402 response handling, multi-chain support (EVM + Solana), mock signers for testing. ([Go Package](https://pkg.go.dev/github.com/mark3labs/mcp-go-x402))
 
 ### Agent Frameworks
 
 - [NEAR AI](https://near.ai) - Cross-chain agent settlements.
 - [Phidata Agents](https://github.com/phidatahq/phidata) - Multi-modal agents with x402.
 - [Vault-0](https://github.com/0-Vault/Vault-0) - Encrypted secret vault, agent monitor, and x402 wallet for OpenClaw. Handles 402 detection, EIP-3009 signing, and policy-gated auto-settlement.
+- [Nevermined](https://nevermined.ai/blog/building-agentic-payments-with-nevermined-x402-a2a-and-ap2) - **April 9, 2026**: Integrated Visa Intelligent Commerce + x402 for autonomous AI agent commerce. Agents get delegated credit card spending authority with budget limits, per-purchase caps, merchant restrictions, and time-based validity windows. Works with merchants' existing payment service providers. ([Announcement](https://pinionnewswire.com/press-release/nevermineds-visa-intelligent-commerce-x402-integration-unlocks-agentic-commerce/))
 
 ### Agent-to-Agent (A2A)
 
@@ -409,6 +433,7 @@ Development tools and utilities for x402.
 - [key0](https://github.com/key0ai/key0) - Commercial gateway for AI agents and APIs. Lets agents discover, pay for, and access APIs autonomously via x402. Exposes `/discover`, `/x402/access`, `/.well-known/agent.json`, `/.well-known/mcp.json`, and `/llms.txt`.
 - [World AgentKit](https://www.coindesk.com/tech/2026/03/17/sam-altman-s-world-teams-up-with-coinbase-to-prove-there-is-a-real-person-behind-every-ai-transaction) - Developer toolkit (March 2026) integrating World's WorldID biometric identity with x402. Lets AI agents prove they act on behalf of a verified unique human when making x402 transactions. 18M+ verified humans.
 - [Red Team Blue Team Agent Fabric](https://github.com/msaleme/red-team-blue-team-agent-fabric) - Security testing harness for autonomous AI agents with dedicated x402 endpoint testing (`agent-security test x402 --url`). MCP, A2A, x402/L402 support. 342-test suite.
+- [Cloudflare Agents SDK v0.4.0](https://developers.cloudflare.com/changelog/post/2026-02-09-agents-sdk-v040/) - x402 v2 migration support: `ClientEvmSigner` type, auto-selection from payment requirements, dual-header support (v2 `PAYMENT-SIGNATURE` + v1 `X-PAYMENT`), lazy facilitator initialization.
 
 ### Monitoring & Analytics
 
@@ -500,6 +525,10 @@ Written content about x402.
 - [x402 Joins the Linux Foundation](https://www.prnewswire.com/news-releases/linux-foundation-is-launching-the-x402-foundation-and-welcoming-the-contribution-of-the-x402-protocol-302732803.html) - PR Newswire, April 2, 2026. Protocol becomes a neutral open standard with 20+ institutional founding members.
 - [CoinDesk: Demand Still Unproven](https://www.coindesk.com/markets/2026/03/11/coinbase-backed-ai-payments-protocol-wants-to-fix-micropayment-but-demand-is-just-not-there-yet) - Honest assessment of x402 still in trial phase with limited real on-chain demand (March 11, 2026).
 - [Bankless: x402's Big Week](https://www.bankless.com/x402-big-week) - Recap of the April 2, 2026 Linux Foundation launch and Bankr x402 Cloud.
+- [PYMNTS: Digital Money Has a New Payment Standard](https://www.pymnts.com/digital-payments/2026/digital-money-has-a-new-payment-standard-and-its-not-built-for-humans/) - Analysis of x402 as a machine-first payment standard not built for humans.
+- [Nevermined + Visa Intelligent Commerce](https://pinionnewswire.com/press-release/nevermineds-visa-intelligent-commerce-x402-integration-unlocks-agentic-commerce/) - April 9, 2026. AI agents get delegated credit card spending authority via Visa + x402.
+- [Polygon Leads Base in x402 Transactions](https://etherworld.co/polygon-leads-base-in-x402-transactions/) - Polygon overtakes Base in daily x402 transaction count.
+- [KakaoPay Joins x402 Foundation](https://cryptonews.net/news/blockchain/32658871/) - First South Korean payment processor in the x402 Foundation.
 
 ### Technical Deep Dives
 
@@ -510,6 +539,11 @@ Written content about x402.
 - [Lushbinary: x402 & EmDash Content Monetization](https://lushbinary.com/blog/x402-emdash-content-monetization-ai-agent-era-2026/) - Analysis of x402 + Cloudflare EmDash as the content monetization stack for the AI era.
 - [James Bachini: Why x402 Is An Important Opportunity For Developers](https://www.linkedin.com/pulse/why-x402-important-opportunity-developers-james-bachini-fsjpe) - LinkedIn.
 - [Agentic Payments Are Finally Useful](https://shorupan.hashnode.dev/agentic-payments-are-finally-useful-what-x402-means-for-founders-in-2026) - What x402 means for founders in 2026.
+- [DWF Labs: Inside x402](https://www.dwf-labs.com/research/inside-x402-how-a-forgotten-http-code-becomes-the-future-of-autonomous-payments) - Research report covering protocol mechanics, ecosystem adoption, real-world use cases, and innovations.
+- [WorkOS: x402 vs Stripe MPP](https://workos.com/blog/x402-vs-stripe-mpp-how-to-choose-payment-infrastructure-for-ai-agents-and-mcp-tools-in-2026) - Comprehensive comparison of x402 and Stripe's Machine Payments Protocol for AI agents and MCP tools.
+- [Calmops: x402 Protocol Complete Guide 2026](https://calmops.com/web3/x402-protocol-programmable-payments-ai-agents-2026/) - Programmable payments for AI agents guide.
+- [Vercel: Introducing x402-mcp](https://vercel.com/blog/introducing-x402-mcp-open-protocol-payments-for-mcp-tools) - Open protocol payments for MCP tools using AI SDK and paidTool primitives.
+- [Polygon: Agentic Payments Infrastructure](https://polygon.technology/payments/agentic-payments) - Polygon's dedicated x402 agentic payments page with developer docs. ([Developer Guide](https://agentic-docs.polygon.technology/general/x402/intro/))
 
 ## 👥 Community
 
@@ -548,6 +582,7 @@ Projects building with or extending x402.
 - Cloudflare x402 - Edge payment processing.
 - [Finance District Prism](https://developers.fd.xyz/prism/concepts/x402) - Payment gateway for agentic commerce with x402 support. SDKs for TypeScript, Python, and Java. Two-layer architecture: Prism (orchestration — API, SDKs, middleware) and Spectrum (on-chain stablecoin settlement across Base, Ethereum, Arbitrum, and BSC). ([Docs](https://developers.fd.xyz))
 - [thirdweb Nebula](https://thirdweb.com/nebula) - AI agent transaction framework.
+- [Polygon Agentic Payments](https://polygon.technology/payments/agentic-payments) - Polygon's dedicated x402 infrastructure: near-instant finality, sub-$0.001 transaction fees, no reorgs. Coinbase CDP facilitator with gas sponsorship and KYT compliance. Supports USDC, USDT, and non-USD stablecoins. ([Docs](https://agentic-docs.polygon.technology/general/x402/intro/))
 - [RustChain](https://github.com/Scottcjn/Rustchain) - Decentralized proof-of-stake blockchain with x402 payment integration for AI agent micropayments. Features attestation-based consensus, hardware-bound validators, and RTC token economy with native x402 support for autonomous agent transactions. ([Docs](https://github.com/Scottcjn/rustchain-bounties))
 
 ### Tools & Services
@@ -571,6 +606,7 @@ Projects building with or extending x402.
 - BuffetPay - Smart x402 payments with guardrails.
 - [Cal.com](https://cal.com) - Automated scheduling with payments.
 - [AgentStore](https://agentstore.tools) - Open-source marketplace for Claude Code plugins with x402 USDC payments, 80/20 publisher revenue split, and permissionless publishing via CLI.
+- [AlphaClaw](https://github.com/diassique/alphaclaw) - Autonomous AI agent network that hunts alpha on Polymarket and DeFi. 6 specialized microservices sell data streams via x402 micropayments, one coordinator buys from all agents, synthesizes alpha, and resells premium signals. ACP (Alpha Consensus Protocol) with stake-weighted voting. Built for the SURGE x OpenClaw Hackathon 2026.
 - [AIAgentStore.ai](https://aiagentstore.ai/developer) - Insights for founders with x402 payments.
 - [Einstein AI](https://emc2ai.io) - AI blockchain intelligence with 23 x402 endpoints. Whale tracking, smart money, launchpad monitoring, security audits.
 - [Rug Munch Intelligence](https://cryptorugmunch.app) - AI-powered crypto risk intelligence with 19 x402 endpoints. Rug pull detection, honeypot scoring, deployer tracking, holder deep-dive, KOL shill detection, social OSINT, and LLM forensic analysis (Claude Sonnet/Opus). $0.02–$2.00 USDC on Base. MCP server (19 tools), A2A agent card, AgentKit plugin. [Example Agent](https://github.com/CryptoRugMunch/x402-trading-agent) | [AgentKit](https://github.com/CryptoRugMunch/rug-agent-kit)
@@ -630,7 +666,7 @@ Live metrics and on-chain analytics for the x402 ecosystem.
 
 ### Market Overview
 
-**Ecosystem Market Cap**: $815 million combined market capitalization of x402 ecosystem tokens. **Weekly Transactions**: 500K+ payment settlements across all chains. **Cumulative Transactions**: 50M+ total transactions processed (Coinbase Agentic Wallets, April 2026). **Transaction Growth**: 10,000%+ year-over-year increase in payment volume. **Settlement Time**: 2-second average across production deployments. **Governance**: x402 joined the Linux Foundation on April 2, 2026 with 20+ founding members including Google, Microsoft, AWS, Visa, and Mastercard.
+**Ecosystem Market Cap**: $815 million combined market capitalization of x402 ecosystem tokens. **Weekly Transactions**: 500K+ payment settlements across all chains. **Cumulative Transactions**: 50M+ total transactions processed (Coinbase Agentic Wallets, April 2026). **Annualized Volume**: ~$600M in annualized payment volume across supported chains. **Transaction Growth**: 10,000%+ year-over-year increase in payment volume. **Settlement Time**: 2-second average across production deployments. **Governance**: x402 joined the Linux Foundation on April 2, 2026 with 22+ founding members including Google, Microsoft, AWS, Stripe, Visa, Mastercard, KakaoPay, and Adyen. **Multi-chain leader**: Solana has commanded up to 88% of x402 transaction count; Polygon has overtaken Base for consecutive days; Base leads in cumulative value transferred (~$21.5M).
 
 ### Analytics Dashboards
 
@@ -641,7 +677,7 @@ Live metrics and on-chain analytics for the x402 ecosystem.
 
 ### Growth Metrics
 
-Evolution from developer curiosity to production scale: **Q1 2024** (Initial protocol launch), **Q2 2024** (Major tech company integrations including Coinbase and Cloudflare), **Q3 2024** (AIsa crosses 5M transactions milestone), **Q4 2024** (10,000%+ growth with $815M ecosystem valuation), **2025** (Google A2A protocol and Visa enterprise exploration), **March 2026** (Stellar and XRPL join, Python SDK ecosystem expands, 50M+ cumulative transactions), **April 2, 2026 ("4/02 Day")** (Coinbase contributes x402 to Linux Foundation; Bankr x402 Cloud, Coinbase Agentic Wallets, and Cloudflare EmDash all launch).
+Evolution from developer curiosity to production scale: **Q1 2024** (Initial protocol launch), **Q2 2024** (Major tech company integrations including Coinbase and Cloudflare), **Q3 2024** (AIsa crosses 5M transactions milestone), **Q4 2024** (10,000%+ growth with $815M ecosystem valuation), **2025** (Google A2A protocol and Visa enterprise exploration; x402 V2 launches with standardized headers, CAIP-2 network IDs, and modular SDK), **March 2026** (Stellar and XRPL join, Python SDK ecosystem expands, 50M+ cumulative transactions, Stripe launches x402 Machine Payments, Cloudflare Agents SDK v0.4.0 adds x402 v2 migration), **April 2, 2026 ("4/02 Day")** (Coinbase contributes x402 to Linux Foundation at MCP Dev Summit; Bankr x402 Cloud, Coinbase Agentic Wallets, and Cloudflare EmDash all launch), **April 2026** (Polygon facilitator launch, Nevermined + Visa Intelligent Commerce integration, KakaoPay joins Foundation, ~$600M annualized volume, Polygon overtakes Base in daily x402 transaction count).
 
 ### Network Statistics
 
@@ -649,11 +685,12 @@ Evolution from developer curiosity to production scale: **Q1 2024** (Initial pro
 | ------------------- | ---------- | ------------------------------ |
 | Total Transactions  | 50M+       | Coinbase Agentic Wallets       |
 | Weekly Volume       | 500K+      | Ecosystem-wide                 |
+| Annualized Volume   | ~$600M     | Cross-chain aggregate          |
 | Market Cap          | $815M      | Benzinga, CoinGecko            |
 | Settlement Speed    | 2 seconds  | Production avg                 |
-| Supported Chains    | 7+         | Base, ETH, SOL, BNB, XRPL, XLM|
-| Active Facilitators | 12+        | Hosted + Self-hosted           |
-| Foundation Members  | 20+        | Linux Foundation (April 2026)  |
+| Supported Chains    | 8+         | Base, Polygon, ETH, SOL, BNB, XRPL, XLM |
+| Active Facilitators | 14+        | Hosted + Self-hosted           |
+| Foundation Members  | 22+        | Linux Foundation (April 2026)  |
 
 ## 🚀 Migration Guides
 
