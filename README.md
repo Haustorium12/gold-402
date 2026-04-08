@@ -2,7 +2,9 @@
 
 > ⚡ **The Ultimate x402 Resource Hub** - Everything you need to build internet-native payments using HTTP 402. Perfect for AI agents, APIs, and micropayments. Build paywalls, monetize services, and enable autonomous agent payments with crypto/USDC. Zero fees, 2-second settlement.
 
-[![GitHub stars](https://img.shields.io/github/stars/xpaysh/awesome-x402?style=social)](https://github.com/xpaysh/awesome-x402)
+[![GitHub stars](https://img.shields.io/github/stars/Haustorium12/awesome-x402?style=social)](https://github.com/Haustorium12/awesome-x402)
+[![Last Commit](https://img.shields.io/github/last-commit/Haustorium12/awesome-x402)](https://github.com/Haustorium12/awesome-x402/commits/main)
+[![x402 Projects](https://img.shields.io/badge/x402_projects-300%2B-gold)](https://www.x402.org/ecosystem)
 
 ## Contents
 
