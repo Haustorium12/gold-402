@@ -1,6 +1,6 @@
 # Awesome X402 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-> ⚡ **The Ultimate x402 Resource Hub** - Everythng you need to build internet-native payments using HTTP 402. Perfect for AI agents, APIs, and micropayments. Build paywalls, monetize services, and enable autonomous agent payments with crypto/USDC. Zero fees, 2-second settlement.
+> ⚡ **The Ultimate x402 Resource Hub** - Everything you need to build internet-native payments using HTTP 402. Perfect for AI agents, APIs, and micropayments. Build paywalls, monetize services, and enable autonomous agent payments with crypto/USDC. Zero fees, 2-second settlement.
 
 [![GitHub stars](https://img.shields.io/github/stars/Haustorium12/awesome-x402?style=social)](https://github.com/Haustorium12/awesome-x402)
 [![Last Commit](https://img.shields.io/github/last-commit/Haustorium12/awesome-x402)](https://github.com/Haustorium12/awesome-x402/commits/main)
@@ -26,6 +26,7 @@
 - [🎥 Videos & Talks](#-videos--talks)
 - [📝 Articles & Blog Posts](#-articles--blog-posts)
 - [👥 Community](#-community)
+- [💼 Jobs & Career Resources](#-jobs--career-resources)
 - [🌟 Ecosystem Projects](#-ecosystem-projects)
 - [📊 Ecosystem Market Data](#-ecosystem-market-data)
 - [🚀 Migration Guides](#-migration-guides)
@@ -58,7 +59,7 @@ The x402 protocol enables instant Blockchain payments over HTTP using the 402 "P
 Core resources from the x402 protocol maintainers.
 
 - [x402 Protocol Specification](https://github.com/coinbase/x402) - Official open-source protocol implementation by Coinbase.
-- [x402 Foundation (Linux Foundation)](https://www.linuxfoundation.org/press/linux-foundation-is-launching-the-x402-foundation-and-welcoming-the-contribution-of-the-x402-protocol) - **April 2, 2026**: Coinbase contributed x402 to the Linux Foundation at the MCP Dev Summit North America in New York, establishing a neutral nonprofit to govern the protocol. Founding members include Adyen, AWS, American Express, Ampersend.ai, Circle, Cloudflare, Coinbase, Fiserv Merchant Solutions, Google, KakaoPay, Mastercard, Microsoft, Polygon Labs, PPRO, Shopify, Sierra, Solana Foundation, Stripe, thirdweb, and Visa.
+- [x402 Foundation (Linux Foundation)](https://www.linuxfoundation.org/press/linux-foundation-is-launching-the-x402-foundation-and-welcoming-the-contribution-of-the-x402-protocol) - **April 2, 2026**: Coinbase contributed x402 to the Linux Foundation at the MCP Dev Summit North America in New York, establishing a neutral nonprofit to govern the protocol. 22+ founding members including Adyen, AWS, American Express, Ampersend.ai, Circle, Cloudflare, Coinbase, Fiserv Merchant Solutions, Google, KakaoPay, Mastercard, Microsoft, Polygon Labs, PPRO, Shopify, Sierra, Solana Foundation, Stripe, thirdweb, and Visa.
 - [x402 V2 Specification](https://www.x402.org/writing/x402-v2-launch) - Major protocol upgrade: standardized headers (`PAYMENT-SIGNATURE` / `PAYMENT-RESPONSE` replacing `X-PAYMENT`), CAIP-2 network identifiers, modular SDK architecture, Extensions framework, wallet-based identity, dynamic payment recipients, and expanded multi-chain + fiat support.
 - [x402 Foundation](https://x402.org) - Protocol foundation website with overview and documentation.
 - [x402 Whitepaper](https://x402.org/x402-whitepaper.pdf) - Technical deep dive into protocol architecture.
@@ -150,6 +151,12 @@ Real companies using x402 in production with proven scale and transaction volume
 - [Bitget](https://www.bitget.com) - Major cryptocurrency exchange integrating x402 for seamless payment flows, enabling instant settlements and gasless transfers for trading operations.
 - [Coinbase Developer Platform](https://coinbase.com/developer-platform) - Official CDP implementation processing hundreds of thousands of transactions weekly with enterprise-grade reliability and 2-second settlement times.
 - [Cloudflare Workers](https://workers.cloudflare.com) - Edge computing platform with x402 integration serving global distributed payment verification at scale across 300+ data centers.
+
+### AI Services
+
+- [24K Labs](https://24klabs.ai) - 6 AI code analysis services (explain, debug, review, security audit, automation scripts, MCP blueprints) paid per request via x402. $0.50-$50.00 per request. Live at [api.24klabs.ai](https://api.24klabs.ai). No API keys or subscriptions required. USDC on Base.
+  - [24K Labs MCP Server](https://github.com/Haustorium12/24klabs-mcp) - MCP server for AI code analysis tools. Connect Claude Desktop or any MCP client to 24K Labs services.
+  - [24K Labs GitHub Action](https://github.com/Haustorium12/24klabs-action) - Automated AI code review on every PR. Drop into any CI/CD pipeline.
 
 ### Production Success Metrics
 
@@ -420,6 +427,7 @@ x402-native GPU inference APIs that let agents pay autonomously for compute.
 - [Harvey Tools](https://tools.rugslayer.com) - x402-paid MCP server for web scraping, screenshots, structured data extraction, code review, content generation, and sentiment analysis. 8 tools, $0.005–0.05 USDC on Solana. ([GitHub](https://github.com/meltingpixelsai/harvey-tools)) | ([npm](https://www.npmjs.com/package/@meltingpixels/harvey-tools))
 - [Harvey Verify](https://verify.rugslayer.com) - x402-paid MCP server for post-transaction outcome verification using LLM-as-judge. Tracks aggregated service quality scores. 5 tools, $0.002–0.01 USDC on Solana. ([GitHub](https://github.com/meltingpixelsai/harvey-verify)) | ([npm](https://www.npmjs.com/package/@meltingpixels/harvey-verify))
 - [Harvey Budget](https://budget.rugslayer.com) - x402-paid MCP server for agent spending management with budget tracking, ROI analysis, and spend approval. 6 tools, $0.001–0.005 USDC on Solana. ([GitHub](https://github.com/meltingpixelsai/harvey-budget)) | ([npm](https://www.npmjs.com/package/@meltingpixels/harvey-budget))
+- [24K Labs MCP Server](https://github.com/Haustorium12/24klabs-mcp) - MCP server for AI code analysis tools. 6 tools: explain, debug, review, security audit, automation scripts, and MCP blueprints. $0.50-$50.00 USDC per request on Base. Connect to Claude Desktop or any MCP client.
 - [PayBot MCP](https://github.com/RBKunnela/paybot-mcp) - MCP server enabling Claude and AI agents to make autonomous x402 payments. Supports wallet management, transaction history, and configurable spending limits. ([npm](https://www.npmjs.com/package/paybot-mcp))
 - [AskClaude MCP](https://www.npmjs.com/package/askclaude-mcp) - MCP server for pay-per-query Claude AI. 9 x402 endpoints: Haiku/Sonnet/Opus chat, streaming, summarization, code review, translation, sentiment, and crypto analysis. $0.01–$0.10 USDC on Base. `npx askclaude-mcp`. ([GitHub](https://github.com/pvega23/askclaude-mcp) | [Live](https://askclaude.shop))
 - [Cerebrus Pulse MCP](https://github.com/0xsl1m/cerebrus-pulse-mcp) - Real-time crypto intelligence MCP server with technical analysis (RSI, EMAs, Bollinger Bands), sentiment, and funding rates for 30+ Hyperliquid perpetuals. x402 USDC micropayments on Base.
@@ -481,6 +489,11 @@ Development tools and utilities for x402.
 - [World AgentKit](https://www.coindesk.com/tech/2026/03/17/sam-altman-s-world-teams-up-with-coinbase-to-prove-there-is-a-real-person-behind-every-ai-transaction) - Developer toolkit (March 2026) integrating World's WorldID biometric identity with x402. Lets AI agents prove they act on behalf of a verified unique human when making x402 transactions. 18M+ verified humans.
 - [Red Team Blue Team Agent Fabric](https://github.com/msaleme/red-team-blue-team-agent-fabric) - Security testing harness for autonomous AI agents with dedicated x402 endpoint testing (`agent-security test x402 --url`). MCP, A2A, x402/L402 support. 342-test suite.
 - [Cloudflare Agents SDK v0.4.0](https://developers.cloudflare.com/changelog/post/2026-02-09-agents-sdk-v040/) - x402 v2 migration support: `ClientEvmSigner` type, auto-selection from payment requirements, dual-header support (v2 `PAYMENT-SIGNATURE` + v1 `X-PAYMENT`), lazy facilitator initialization.
+
+### GitHub Actions & CI/CD
+
+- [24K Labs GitHub Action](https://github.com/Haustorium12/24klabs-action) - Automated AI code review on every PR. Runs explain, debug, review, and security audit via x402 micropayments. Drop into any GitHub Actions workflow.
+- [Obol GitHub Actions CI/CD](https://api.obol.sh) - Obol generates GitHub Actions CI/CD pipelines via x402. $5 USDC per call on Base.
 
 ### Monitoring & Analytics
 
@@ -556,6 +569,12 @@ Written content about x402.
 - Cloudflare x402 Foundation - Partnership announcement.
 - x402 Technical Whitepaper - Complete specification.
 
+### Builder Blog Posts
+
+- [How to Pay for AI Services with USDC in One HTTP Call](https://24klabs.ai/blog/how-to-pay-for-ai-services-with-usdc) - 24K Labs Blog. Walkthrough of x402 payment flow for AI code analysis.
+- [x402 Explained: The HTTP Status Code That Took 35 Years to Ship](https://24klabs.ai/blog/x402-explained) - 24K Labs Blog. History and technical breakdown of HTTP 402.
+- [Code Review API: Pay Per PR, Not Per Seat](https://24klabs.ai/blog/code-review-api-pay-per-pr) - 24K Labs Blog. Why per-request pricing beats SaaS subscriptions for code review.
+
 ### Technical Deep Dives
 
 - How x402 Works - Technical explanation.
@@ -622,6 +641,14 @@ Connect with the x402 community.
 
 - x402 Weekly - Weekly protocol updates.
 - [Agent Economy Digest](https://agenteconomy.substack.com) - AI agent payments news.
+
+## 💼 Jobs & Career Resources
+
+Find opportunities in the x402 ecosystem.
+
+- [24K Labs Jobs](https://24klabs.ai/community/jobs) - x402 ecosystem job board (coming soon). Developer, DevRel, and infrastructure roles across the x402 ecosystem.
+- [Human Pages](https://humanpages.ai) - Open directory for AI agents to hire humans for real-world tasks. x402 pay-per-use on Base.
+- [CryptoJobsList](https://cryptojobslist.com) - Crypto and Web3 job board with growing x402/agent economy listings.
 
 ## 🌟 Ecosystem Projects
 
@@ -741,7 +768,7 @@ Live metrics and on-chain analytics for the x402 ecosystem.
 
 ### Market Overview
 
-**Ecosystem Market Cap**: $815 million combined market capitalization of x402 ecosystem tokens. **Weekly Transactions**: 500K+ payment settlements across all chains. **Cumulative Transactions**: 50M+ total transactions processed (Coinbase Agentic Wallets, April 2026). **Annualized Volume**: ~$600M in annualized payment volume across supported chains. **Transaction Growth**: 10,000%+ year-over-year increase in payment volume. **Settlement Time**: 2-second average across production deployments. **Governance**: x402 joined the Linux Foundation on April 2, 2026 with 22+ founding members including Google, Microsoft, AWS, Stripe, Visa, Mastercard, KakaoPay, and Adyen. **Multi-chain leader**: Solana has commanded up to 88% of x402 transaction count; Polygon has overtaken Base for consecutive days; Base leads in cumulative value transferred (~$21.5M).
+**Narrative Valuation**: $7B+ market narrative around x402 and agentic payments. **Real On-Chain Volume**: ~$28K/day in verified on-chain x402 transactions (CoinDesk, March 2026). **Ecosystem Market Cap**: $815 million combined market capitalization of x402 ecosystem tokens. **Projects**: 300+ projects building on x402, 251+ Bazaar-indexed services. **Weekly Transactions**: 500K+ payment settlements across all chains. **Cumulative Transactions**: 50M+ total transactions processed (Coinbase Agentic Wallets, April 2026). **Annualized Volume**: ~$600M in annualized payment volume across supported chains. **Transaction Growth**: 10,000%+ year-over-year increase in payment volume. **Settlement Time**: 2-second average across production deployments. **Governance**: x402 joined the Linux Foundation on April 2, 2026 with 22+ founding members including Google, Microsoft, AWS, Stripe, Visa, Mastercard, KakaoPay, and Adyen. **Multi-chain leader**: Solana has commanded up to 88% of x402 transaction count; Polygon has overtaken Base for consecutive days; Base leads in cumulative value transferred (~$21.5M).
 
 ### Analytics Dashboards
 
@@ -760,8 +787,12 @@ Evolution from developer curiosity to production scale: **Q1 2024** (Initial pro
 | ------------------- | ---------- | ------------------------------ |
 | Total Transactions  | 50M+       | Coinbase Agentic Wallets       |
 | Weekly Volume       | 500K+      | Ecosystem-wide                 |
+| Real On-Chain Volume| ~$28K/day  | CoinDesk (March 2026)          |
 | Annualized Volume   | ~$600M     | Cross-chain aggregate          |
+| Narrative Valuation | $7B+       | Market narrative               |
 | Market Cap          | $815M      | Benzinga, CoinGecko            |
+| Total Projects      | 300+       | x402.org/ecosystem             |
+| Bazaar-Indexed      | 251+       | x402 Bazaar                    |
 | Settlement Speed    | 2 seconds  | Production avg                 |
 | Supported Chains    | 8+         | Base, Polygon, ETH, SOL, BNB, XRPL, XLM |
 | Active Facilitators | 14+        | Hosted + Self-hosted           |
