@@ -239,6 +239,7 @@ Payment verification and settlement services.
   - Multi-chain configuration
   - REST API endpoints (/verify, /settle)
 - [Running Your Own Facilitator](https://github.com/x402-rs/x402-rs#facilitator) - Setup guide.
+- [@facilitator/eip7702](https://github.com/melonask/facilitator) - Support for all EVM blockchains (BNB, Polygon, etc.), all tokens (USDT, DAI, WBTC, etc.), and all native coins (POL, AVAX, etc.).
 
 ## 💡 Example Applications
 
