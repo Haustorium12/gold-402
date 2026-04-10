@@ -520,6 +520,7 @@ Tools and resources for testing x402 implementations
 
 ## 📚 Tutorials & Learning Resources
 
+- [LearnAI — Base Interactive Course](https://www.uselearnai.com/chat?topic=Base+L2) — AI-powered personal tutor for learning Base from scratch through conversation
 Guides and tutorials for learning x402.
 
 ### Beginner Tutorials
