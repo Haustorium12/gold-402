@@ -23,6 +23,7 @@
 - [🔨 Tools & Utilities](#-tools--utilities)
 - [🧪 Testing & Development](#-testing--development)
 - [📚 Tutorials & Learning Resources](#-tutorials--learning-resources)
+- [🎓 AI-Powered Learning Tools](#-ai-powered-learning-tools)
 - [🎥 Videos & Talks](#-videos--talks)
 - [📝 Articles & Blog Posts](#-articles--blog-posts)
 - [👥 Community](#-community)
@@ -520,7 +521,6 @@ Tools and resources for testing x402 implementations
 
 ## 📚 Tutorials & Learning Resources
 
-- [LearnAI — Base Interactive Course](https://www.uselearnai.com/chat?topic=Base+L2) — AI-powered personal tutor for learning Base from scratch through conversation
 Guides and tutorials for learning x402.
 
 ### Beginner Tutorials
@@ -537,6 +537,21 @@ Guides and tutorials for learning x402.
 ### Advanced Tutorials
 
 - Building a Custom Facilitator - Self-host verification.
+
+## 🎓 AI-Powered Learning Tools
+
+Interactive AI tutors and conversational learning platforms for x402, Base, and the adjacent ecosystem. Distinct from static tutorials — these adapt to the learner's questions in real time.
+
+**Criteria for inclusion:**
+
+- Covers x402 or Base in its curriculum
+- Production-ready, not a demo or MVP
+- Transparent about what is human-authored vs AI-delivered
+- Free or clearly priced, no dark patterns
+
+<!-- New entries welcome via PR. See CONTRIBUTING guidelines. -->
+
+- **[LearnAI x402 Course](https://www.uselearnai.com/course/x402-protocol)** — Interactive AI-guided course covering the x402 payment flow, EIP-3009 gasless transfers, facilitator setup (Coinbase CDP, Cloudflare), middleware integration (Express, Next.js, FastAPI), and AI agent-to-agent payments. Free, no account required.
 
 ## 🎥 Videos & Talks
 
