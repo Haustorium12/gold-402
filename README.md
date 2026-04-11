@@ -551,6 +551,8 @@ Interactive AI tutors and conversational learning platforms for x402, Base, and 
 
 <!-- New entries welcome via PR. See CONTRIBUTING guidelines. -->
 
+- **[LearnAI x402 Course](https://www.uselearnai.com/course/x402-protocol)** — Interactive AI-guided course covering the x402 payment flow, EIP-3009 gasless transfers, facilitator setup (Coinbase CDP, Cloudflare), middleware integration (Express, Next.js, FastAPI), and AI agent-to-agent payments. Free, no account required.
+
 ## 🎥 Videos & Talks
 
 Video content about x402.
