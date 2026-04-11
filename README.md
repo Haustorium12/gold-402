@@ -23,6 +23,7 @@
 - [🔨 Tools & Utilities](#-tools--utilities)
 - [🧪 Testing & Development](#-testing--development)
 - [📚 Tutorials & Learning Resources](#-tutorials--learning-resources)
+- [🎓 AI-Powered Learning Tools](#-ai-powered-learning-tools)
 - [🎥 Videos & Talks](#-videos--talks)
 - [📝 Articles & Blog Posts](#-articles--blog-posts)
 - [👥 Community](#-community)
@@ -536,6 +537,19 @@ Guides and tutorials for learning x402.
 ### Advanced Tutorials
 
 - Building a Custom Facilitator - Self-host verification.
+
+## 🎓 AI-Powered Learning Tools
+
+Interactive AI tutors and conversational learning platforms for x402, Base, and the adjacent ecosystem. Distinct from static tutorials — these adapt to the learner's questions in real time.
+
+**Criteria for inclusion:**
+
+- Covers x402 or Base in its curriculum
+- Production-ready, not a demo or MVP
+- Transparent about what is human-authored vs AI-delivered
+- Free or clearly priced, no dark patterns
+
+<!-- New entries welcome via PR. See CONTRIBUTING guidelines. -->
 
 ## 🎥 Videos & Talks
 
