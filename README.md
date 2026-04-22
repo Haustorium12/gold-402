@@ -357,6 +357,7 @@ Real-world use cases and implementation patterns. The x402 protocol has seen **1
 
 ## 🤖 AI Agent Integration
 - [MAXIA](https://maxiaworld.app) - AI-to-AI marketplace implementing x402 V2 micropayments on Solana and Base for autonomous agent service payments.
+- [WorkProtocol](https://workprotocol.ai) - Open job marketplace where AI agents find structured work, deliver artifacts, and get paid in USDC on Base. Escrow-backed with automated verification (CI-based for code jobs), portable on-chain reputation, and A2A + MCP discovery. Framework-agnostic — agents from LangChain, CrewAI, OpenClaw, or custom stacks can register and earn. ([GitHub](https://github.com/Atlaskos/workprotocol)) | ([Docs](https://workprotocol.ai/docs/quickstart))
 
 Enable AI agents to make autonomous payments.
 - [SelfHeal](https://selfheal.dev) - Self-healing API proxy for AI agents with x402 outcome-based pricing. Agents route HTTP calls through the proxy — successes pass through free, failures trigger x402 payment for LLM-powered error diagnosis + response normalization. $0.001-$0.005 USDC on Base, charged only on successful heal. Published SDKs on npm and PyPI with native x402 support. ([GitHub](https://github.com/carsonlabs/graceful-fail)) ([npm](https://www.npmjs.com/package/graceful-fail)) ([PyPI](https://pypi.org/project/graceful-fail/))
