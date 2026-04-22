@@ -671,6 +671,8 @@ Projects building with or extending x402.
 
 - [IBANforge](https://ibanforge.com) - IBAN validation & BIC/SWIFT lookup API with x402 micropayments. Validate IBANs for 75+ countries, look up 121K+ bank BIC codes from GLEIF. Pay-per-call from $0.003 in USDC on Base. Also exposes an MCP server for AI agent integration. [GitHub](https://github.com/cammac-creator/ibanforge)
 
+- [Satoshi API](https://bitcoinsapi.com) - Bitcoin fee market, next-block mining, and transaction intelligence API for agents and apps. x402 pay-per-call endpoints on Base. [Docs](https://bitcoinsapi.com/docs) | [Discovery](https://bitcoinsapi.com/.well-known/x402)
+
 ### Charity & Social Impact
 
 - [x402 Charity](https://allscale-io.github.io/x402charity/) - Open-source middleware for automatic micro-donations via x402. Embed charitable giving into any payment flow — trades, API calls, subscriptions. $0.0001 USDC per event on Base. CLI + web widget. Built by [AllScale Lab](https://allscale.io). ([GitHub](https://github.com/allscale-io/x402charity))
