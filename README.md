@@ -291,7 +291,7 @@ Full working examples and templates.
 - [Trading Intelligence API](https://api.signalfuse.co) — Directional crypto trading signals fusing social sentiment, macro regime, and market structure. $0.001–$0.050 USDC per call on Base. 25 free credits per wallet. [Landing](https://signalfuse.co)
 
 ### Client Examples
-
+- [CentRake](https://centrake.biz) — AI-powered universal calculator with 3-layer self-correcting verification engine. 5-tier dynamic pricing: $0.01 basic solve, $0.05 verified solve (calculus/finance), $0.10 research solve (proofs/theorems), $0.15 AI action plans, $0.02 AI search. 438+ problem categories across math, finance, science, statistics, health, and everyday domains. Free for humans, paid for AI agents. USDC on Base. [Discovery](https://centrake.biz/api/.well-known/x402) | [Pricing](https://centrake.biz/api/x402/tiers) | [Info](https://centrake.biz/api/x402/info)
 - [Axios Client](https://github.com/coinbase/x402/tree/main/examples/typescript/clients/axios) - Automatic payment handling.
 - [Fetch Client](https://github.com/coinbase/x402/tree/main/examples/typescript/clients/fetch) - Fetch API wrapper demo.
 - Python Requests - Python client example.
