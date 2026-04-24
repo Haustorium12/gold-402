@@ -141,6 +141,14 @@ Official and community implementations of the x402 protocol.
 
 - [x402-go](https://github.com/mark3labs/x402-go) ⭐ **Community** - Go implementation of the x402 payment protocol by Mark III Labs.
 
+### GenLayer
+
+- [genlayer-x402](https://github.com/habiiyt31/genlayer-x402) ⭐ **Community** - x402 for GenLayer Intelligent Contracts. 4 production-ready on-chain contracts gating real-time web data and AI services behind trustless payments -- no server, no API key, no middleman.
+
+### Stellar
+
+- [Spillway](https://github.com/openledger-labs/Spillway) ⭐ **Community** - Subscription payment channels on Stellar using x402. Stream payments, not transactions -- 1,000 API requests = only 2 on-chain transactions. Ideal for high-frequency agent micropayment flows.
+
 ## 🏭 Production Implementations
 
 Real companies using x402 in production with proven scale and transaction volumes.
@@ -274,6 +282,7 @@ Payment verification and settlement services.
 - [Stripe x402](https://docs.stripe.com/payments/machine/x402) - Stripe supports x402 as part of its Machine Payments infrastructure. Handles deposit addresses, automatic PaymentIntent capture on on-chain settlement, dashboard monitoring, and webhooks. USDC on Base. ([Quickstart](https://docs.stripe.com/payments/machine/x402/quickstart))
 - [Polygon x402 Facilitator](https://www.coinbase.com/developer-platform/discover/launches/x402facilitator-polygon) - Coinbase CDP facilitator on Polygon with gas sponsorship, automated KYT compliance screening, and 1,000 free transactions/month. USDC on Polygon. ([Polygon Docs](https://docs.polygon.technology/pos/payments/x402/quickstart-sellers/))
 - [XRPL / 54.ai Facilitator](https://www.bitget.com/news/detail/12560605308861) - x402 facilitator for XRP Ledger by Virtuals Protocol / 54.ai. AI agents transact autonomously on XRPL with identity and compliance verification.
+- [x402 Sponsor Relay](https://github.com/aibtcdev/x402-sponsor-relay) - x402 sponsor relay for AI on Bitcoin (aibtcdev). Agents access x402-gated endpoints without managing their own wallets -- relay sponsors the payment on their behalf. ([aibtc.dev](https://aibtc.dev))
 
 ### Self-Hosted Facilitators
 
@@ -303,6 +312,7 @@ Full working examples and templates.
 - [QuickNode x402](https://blog.quicknode.com/x402-micropayments-quicknode-rpc-endpoints/) - Pay-per-request access to 130+ blockchain networks via x402. Drawdown credit model with SIWx wallet-based authentication. No account or API key needed. USDC on Base, Polygon, and Solana. ([Guide](https://www.quicknode.com/guides/x402/access-quicknode-endpoints-with-x402-payments)) ([GitHub](https://github.com/quiknode-labs/qn-x402-examples))
 - [MCP Security Snapshot Server](https://github.com/Seiya-wasabi/mcp-server-security-snapshot) - MCP server for pay-per-call HTTP security header scanning. $0.05 USDC on Base mainnet. Went live March 28, 2026.
 - [Stack AI x402](https://github.com/Stack-AI-MCP/stackai-x402) - Platform for monetizing MCP servers. Tool calls execute inline with payment prompts when premium tools are invoked. Per-tool pricing, agent composer, Stacks wallet integration.
+- [x402-creative-tim](https://github.com/creativetimofficial/x402-creative-tim) - Payment-gated content and API endpoints by Creative Tim. Fork-ready templates for gating premium UI components and APIs behind x402 payments on Base.
 
 ### API Examples
 - [Daizyx402 Security Research API](http://daizyx402.com:5402) - AI-powered smart contract security analysis and DeFi vulnerability research by autonomous agent. $0.05 USDC per query, $0.50 USDC deep analysis on Base mainnet. No signup required.
@@ -475,6 +485,8 @@ x402-native GPU inference APIs that let agents pay autonomously for compute.
 ### Multi-Agent Orchestration
 
 - [SwarmX (swarms-x402)](https://github.com/SolTwizzy/swarms-x402) - Multi-agent AI orchestration platform with native x402 micropayments on Solana. 49 endpoints, 39 MCP tools, dual LLM (Gemini + OpenAI), knowledge/RAG with pgvector. ElizaOS v2 plugin. $0.001–$5/call USDC. ([npm](https://www.npmjs.com/package/swarms-x402)) ([Live](https://swarmx.io))
+- [Agent.market](https://agent.market) - **Launched April 20, 2026.** x402 Foundation's official app store for agents. Unified marketplace aggregating AI-powered services and tools operating through x402 micropayments. Find, evaluate pricing, and consume x402-enabled services in one place. Backed by Coinbase.
+- [payagent](https://github.com/stevemilton/payagent) - Drop-in `fetch` wrapper that auto-handles HTTP 402 responses. Detects x402 requirements, signs USDC micropayments, and retries the request -- zero agent code changes required.
 
 
 ## 🔨 Tools & Utilities
@@ -873,6 +885,7 @@ Security resources and best practices for x402 implementations.
 
 - [Rate Limiting Tools](https://docs.cdp.coinbase.com/x402/security/rate-limiting) - Prevent abuse and ensure service availability.
 - [PaySentry](https://github.com/mkmkkkkk/paysentry) - Control plane for AI agent payments. Spending limits, circuit breakers, anomaly detection, and audit trails for x402 integrations. npm: `@paysentry/x402`.
+- [x402 Notary](https://github.com/x402notary/notary) - Enterprise-grade audit and compliance platform for x402. Full visibility into agent spending, policy enforcement, and cryptographic audit trails for organizations running x402 at scale.
 - [ShieldAPI](https://shield.vainplex.dev) - x402-native security intelligence API for AI agents. 9 endpoints: password/email breach check, domain/IP reputation, URL safety, prompt injection detection, and skill security scanning. Micropayments ($0.001–$0.02 USDC) on Base. Battle-tested against live AI agent SSRF attacks. [MCP Server](https://www.npmjs.com/package/shieldapi-mcp) | [x402scan](https://www.x402scan.com/server/55c99a38-34b3-4b2c-8987-f58ebd88a7df)
 
 ### Spending Controls & Policy Enforcement
