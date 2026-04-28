@@ -1,4 +1,4 @@
-# Facilitators
+﻿# Facilitators
 
 Payment verification and settlement services for x402. A facilitator verifies payment signatures and settles USDC on-chain so your server doesn't have to run blockchain infrastructure.
 
@@ -13,7 +13,7 @@ Payment verification and settlement services for x402. A facilitator verifies pa
 - [Cloudflare x402](https://blog.cloudflare.com/x402/) [![24K Verified](https://img.shields.io/badge/24K_Verified-2026--04-D4AF37?style=plastic)](../CONTRIBUTING.md) — Edge computing facilitator on Base and Ethereum. Deferred settlement. Global distribution via 300+ data centers.
 - [Polygon x402 Facilitator](https://www.coinbase.com/developer-platform/discover/launches/x402facilitator-polygon) [![24K Verified](https://img.shields.io/badge/24K_Verified-2026--04-D4AF37?style=plastic)](../CONTRIBUTING.md) — Coinbase CDP on Polygon with gas sponsorship, automated KYT compliance screening, 1,000 free transactions/month. USDC on Polygon. ([Polygon Docs](https://docs.polygon.technology/pos/payments/x402/quickstart-sellers/))
 - [Stellar x402](https://stellar.org/blog/foundation-news/x402-on-stellar) [![24K Verified](https://img.shields.io/badge/24K_Verified-2026--04-D4AF37?style=plastic)](../CONTRIBUTING.md) — Official Stellar Foundation integration. Middleware for Stellar payment addresses, browser wallet support. ([Docs](https://developers.stellar.org/docs/build/agentic-payments/x402))
-- [AsterPay](https://asterpay.io) [![MiCA](https://img.shields.io/badge/MiCA-compliant-blue?style=flat-square)](https://asterpay.io) [![ERC-8004](https://img.shields.io/badge/ERC--8004-registered-orange?style=flat-square)](https://asterpay.io) — European x402 facilitator with EUR off-ramp via SEPA Instant. First European-focused x402 infrastructure. ElizaOS plugin available.
+- [AsterPay](https://asterpay.io) [![MiCA](https://img.shields.io/badge/MiCA-compliant-blue?style=flat-square)](https://asterpay.io) [![ERC-8004](https://img.shields.io/badge/ERC--8004-registered-E36209?style=plastic)](https://asterpay.io) — European x402 facilitator with EUR off-ramp via SEPA Instant. First European-focused x402 infrastructure. ElizaOS plugin available.
 - [Primev FastRPC](https://facilitator.primev.xyz) [![ERC-8004](https://img.shields.io/badge/ERC--8004-Agent_%2323175-orange?style=flat-square)](https://facilitator.primev.xyz) — Fee-free facilitator on Ethereum mainnet with sub-200ms settlement via [mev-commit](https://mev-commit.xyz) preconfirmations.
 - [Bankr x402 Cloud](https://chainwire.org/2026/04/02/bankr-launches-x402-cloud-on-4-02-day-as-x402-protocol-joins-the-linux-foundation/) — Hosted platform for deploying USDC-monetized pay-per-request APIs. Includes hosting, payment processing, and agent discovery indexing. Freemium (5% revenue cut). Built on Base. Launched April 2, 2026.
 - [BNB Chain Pieverse](https://twitter.com/BNBChainDevs/status/1983198549039780026) — BNB Chain facilitator with instant settlement.
@@ -26,8 +26,8 @@ Payment verification and settlement services for x402. A facilitator verifies pa
 
 ## Self-Hosted Facilitators
 
-- [x402-rs Facilitator](https://github.com/x402-rs/x402-rs#facilitator) [![Open Source](https://img.shields.io/badge/Open_Source-green?style=flat-square)](https://github.com/x402-rs/x402-rs) — Production-grade Rust self-hosted facilitator. Docker deployment, multi-chain config, REST API (`/verify`, `/settle`).
-- [@facilitator/eip7702](https://github.com/melonask/facilitator) [![Open Source](https://img.shields.io/badge/Open_Source-green?style=flat-square)](https://github.com/melonask/facilitator) — Supports all EVM blockchains (BNB, Polygon, etc.), all tokens (USDT, DAI, WBTC, etc.), and native coins (POL, AVAX, etc.).
+- [x402-rs Facilitator](https://github.com/x402-rs/x402-rs#facilitator) [![Open Source](https://img.shields.io/badge/Open_Source-2EA44F?style=plastic)](https://github.com/x402-rs/x402-rs) — Production-grade Rust self-hosted facilitator. Docker deployment, multi-chain config, REST API (`/verify`, `/settle`).
+- [@facilitator/eip7702](https://github.com/melonask/facilitator) [![Open Source](https://img.shields.io/badge/Open_Source-2EA44F?style=plastic)](https://github.com/melonask/facilitator) — Supports all EVM blockchains (BNB, Polygon, etc.), all tokens (USDT, DAI, WBTC, etc.), and native coins (POL, AVAX, etc.).
 
 ---
 

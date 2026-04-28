@@ -1,4 +1,4 @@
-# Contributing to gold-402
+﻿# Contributing to gold-402
 
 gold-402 is curated, not exhaustive. Every entry earns its place.
 
@@ -95,11 +95,11 @@ These tags carry no quality judgment — they communicate protocol or compliance
 
 | Tag | Color | Meaning |
 |-----|-------|---------|
-| [![Open Source](https://img.shields.io/badge/Open_Source-green?style=flat-square)](url) | Green | Source code is publicly available. |
-| [![Multi-Chain](https://img.shields.io/badge/Multi--Chain-2+-blue?style=flat-square)](url) | Blue | Supports 2 or more chains. |
-| [![ERC-8004](https://img.shields.io/badge/ERC--8004-registered-orange?style=flat-square)](url) | Orange | Registered or integrated with the ERC-8004 on-chain agent registry. |
-| [![MiCA](https://img.shields.io/badge/MiCA-aware-blue?style=flat-square)](url) | Blue | EU Markets in Crypto Assets regulation aware or compliant. |
-| [![A2A Ready](https://img.shields.io/badge/A2A-ready-purple?style=flat-square)](url) | Purple | Compatible with Google's Agent-to-Agent protocol. |
+| [![Open Source](https://img.shields.io/badge/Open_Source-2EA44F?style=plastic)](url) | Green | Source code is publicly available. |
+| [![Multi-Chain](https://img.shields.io/badge/Multi--Chain-2+-0366D6?style=plastic)](url) | Blue | Supports 2 or more chains. |
+| [![ERC-8004](https://img.shields.io/badge/ERC--8004-registered-E36209?style=plastic)](url) | Orange | Registered or integrated with the ERC-8004 on-chain agent registry. |
+| [![MiCA](https://img.shields.io/badge/MiCA-aware-0550AE?style=plastic)](url) | Blue | EU Markets in Crypto Assets regulation aware or compliant. |
+| [![A2A Ready](https://img.shields.io/badge/A2A-ready-8250DF?style=plastic)](url) | Purple | Compatible with Google's Agent-to-Agent protocol. |
 
 Informational tags are applied by the maintainers on review. To request a tag for your entry, note it in your pull request with a link to documentation supporting the claim.
 
