@@ -6,6 +6,22 @@ Selection criteria are documented in [CONTRIBUTING.md](CONTRIBUTING.md#24k-featu
 
 ---
 
+## May 2026 — The x402 Foundation
+
+> [**x402 Foundation**](https://www.x402.org) under the [Linux Foundation](https://www.linuxfoundation.org/x402foundation)
+
+[![24K Featured](https://img.shields.io/badge/24K_Featured-2026--05-C0C0C0?style=plastic)](CONTRIBUTING.md#24k-featured-tier)
+
+On April 2, 2026, Coinbase contributed the x402 protocol to the Linux Foundation and launched the x402 Foundation with 22 founding members: Adyen, AWS, American Express, Circle, Cloudflare, Coinbase, Fiserv, Google, KakaoPay, Mastercard, Microsoft, Polygon Labs, Shopify, Solana Foundation, Stripe, Thirdweb, Visa, and others.
+
+The protocol moved from `coinbase/x402` to `x402-foundation/x402`. A Technical Charter was published. Vendor-neutral governance went live.
+
+This is the governance story April's "What's New" bullet didn't have room for. The x402 Foundation is the moment the protocol stopped being a company's product and became an open standard — the event that, historically, precedes ecosystem-wide adoption by years.
+
+[**→ Read the full write-up**](articles/2026-05-x402-foundation.md)
+
+---
+
 ## April 2026 — Stripe x402 Machine Payments
 
 > [**Stripe x402 Machine Payments**](https://docs.stripe.com/payments/machine/x402) by [Stripe](https://stripe.com)

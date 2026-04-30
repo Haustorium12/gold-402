@@ -18,27 +18,27 @@ This is the editorial layer: curated picks with context and badges, backed by an
 
 ## Featured This Month
 
-> ★ **April 2026** — [**Stripe x402 Machine Payments**](https://docs.stripe.com/payments/machine/x402) by [Stripe](https://stripe.com)
+> ★ **May 2026** — [**The x402 Foundation**](https://www.x402.org) under the [Linux Foundation](https://www.linuxfoundation.org/x402foundation)
 
-[![24K Featured](https://img.shields.io/badge/24K_Featured-2026--04-C0C0C0?style=plastic)](FEATURED.md) [![24K Verified](https://img.shields.io/badge/24K_Verified-2026--04-D4AF37?style=plastic)](CONTRIBUTING.md#24k-verified-tier)
+[![24K Featured](https://img.shields.io/badge/24K_Featured-2026--05-C0C0C0?style=plastic)](FEATURED.md)
 
-Stripe's Machine Payments launched in March 2026 on Base with USDC. No checkout UX, no redirects — an AI agent hits a 402, pays the signed EIP-3009 transfer, retries, and gets the resource. Stripe brings dispute resolution, fraud detection, and compliance tooling to the x402 primitive. Enterprise-grade infrastructure around a crypto-native payment rail.
+On April 2, Coinbase contributed x402 to the Linux Foundation and launched the x402 Foundation with 22 founding members — Adyen, AWS, American Express, Circle, Cloudflare, Google, KakaoPay, Mastercard, Microsoft, Polygon Labs, Shopify, Solana Foundation, Stripe, Thirdweb, Visa, and others. Vendor-neutral governance. Public Technical Charter. The protocol moved from a company product to an open standard.
 
-[Read the full write-up →](FEATURED.md) · [Past features →](FEATURED.md)
+This is the governance story behind April's news. The formation of a neutral foundation is what unlocks enterprise adoption — it happened with Kubernetes, OpenAPI, and Kafka. It is happening now with x402.
+
+[Read the full write-up →](articles/2026-05-x402-foundation.md) · [Past features →](FEATURED.md)
 
 ---
 
 ## What's New
 
-> **April 2026** — The month x402 became an open standard.
+> **May 2026** — Post-Foundation: the ecosystem builds on a vendor-neutral standard.
 
-- [**Linux Foundation + 22 founding members**](https://www.prnewswire.com/news-releases/linux-foundation-is-launching-the-x402-foundation-and-welcoming-the-contribution-of-the-x402-protocol-302732803.html) — Coinbase contributed x402 to the Linux Foundation on April 2 ("4/02 Day") at the MCP Dev Summit in New York. Adyen, AWS, Cloudflare, Google, Mastercard, Microsoft, Shopify, Stripe, Visa among founding members.
-- [**Coinbase Agentic Wallets**](https://docs.cdp.coinbase.com/agentic-wallets) — Native CDP wallets purpose-built for AI agents. Launched same day as Linux Foundation contribution.
-- [**Cloudflare EmDash**](https://developers.cloudflare.com/emdash) — CMS with native x402 content monetization. Launched 4/02.
-- [**Polygon overtakes Base**](https://etherworld.co/polygon-leads-base-in-x402-transactions/) — Polygon leads Base in daily x402 transaction count. Polygon Agentic Payments infrastructure now live.
-- [**Nevermined + Visa Intelligent Commerce**](https://pinionnewswire.com/press-release/nevermineds-visa-intelligent-commerce-x402-integration-unlocks-agentic-commerce/) — AI agents can now spend delegated credit card authority via Visa + x402.
-- [**KakaoPay joins Foundation**](https://cryptonews.net/news/blockchain/32658871/) — First South Korean payment processor in the x402 Foundation.
-- [**Agent.market app store**](https://agent.market) — Official app store for AI agents launched April 20.
+- [**x402 Foundation Technical Charter published**](https://github.com/x402-foundation/x402/blob/main/foundation/x402+Technical+Charter+March+31,+2026.pdf) — Formal governance structure: Technical Steering Committee, conformance certification, Apache 2.0 IP policy. No single company holds more than one-third of TSC seats.
+- [**Multi-facilitator conformance program launches**](https://www.linuxfoundation.org/x402foundation) — The Foundation's conformance framework means facilitators can now compete on a level spec. Cloudflare, Polygon, Stellar, and AsterPay (EU/MiCA-compliant) are conformant alongside Coinbase CDP.
+- [**Coinbase usage-based pricing for agentic compute**](https://coinspectator.com/cryptonews/2026/04/10/coinbase-moves-x402-protocol-to-usage-based-model-for-agentic-ai-tasks/) — New pricing model lets AI agents pay for compute resources based on actual usage rather than fixed rates. Aligns cost with value at the per-task level.
+- [**x402 V2 retrospective: 100M+ real-world transactions**](https://www.cobo.com/post/what-is-x402) — x402 V2 launched December 2025 with multi-chain support and scalable SDK architecture. Now documented with production data from 100M+ transactions.
+- [**Visa Intelligent Commerce + x402 live**](https://pinionnewswire.com/press-release/nevermineds-visa-intelligent-commerce-x402-integration-unlocks-agentic-commerce/) — AI agents can now spend delegated credit card authority via Visa TAP + x402. First traditional credit rail integrated at the protocol level.
 
 ---
 
