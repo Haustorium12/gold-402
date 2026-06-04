@@ -210,6 +210,7 @@ x402-payable APIs — pay per request, no subscriptions.
 | [Agent Forensics](https://www.npmjs.com/package/agent-forensics) | Claude Code cost observability. Analyzes JSONL session logs: per-model cost breakdown, cache efficiency, waste patterns. Free CLI. |
 | [x402station](https://x402station.com) [![24K Verified](https://img.shields.io/badge/24K_Verified-2026--05-D4AF37?style=plastic)](CONTRIBUTING.md#24k-verified-tier) | Real-time monitoring and discovery for 20,000+ x402 endpoints. Continuous health probes every 10 minutes. MCP server for agent access included. |
 | [AWS CloudFront x402 sample](https://github.com/aws-samples/sample-x402-content-monetization-with-cloudfront-and-waf) [![Open Source](https://img.shields.io/badge/Open_Source-2EA44F?style=plastic)](https://github.com/aws-samples/sample-x402-content-monetization-with-cloudfront-and-waf) | AWS-published reference implementation for monetizing content behind CloudFront and WAF with x402 and USDC payments. |
+| [LemonCake](https://lemoncake.xyz) [![Open Source](https://img.shields.io/badge/Open_Source-2EA44F?style=plastic)](https://github.com/evidai/agent-payment-mcp) | x402 gateway + agent funding rail. 402 challenge returns `accepts[]` with `buyUrl` (human) and `mintUrl` (machine). Off-session top-ups via Buyer Key (hard-capped per-mint/daily/monthly). Stripe Connect Direct Charge — custody-free. MCP server on npm. |
 
 [Full tools directory →](directory/tools.md)
 
