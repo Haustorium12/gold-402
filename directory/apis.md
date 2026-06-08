@@ -33,6 +33,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [AnyBrowse](https://anybrowse.dev) — Autonomous web browsing agent. Converts URLs to LLM-ready Markdown via real Chrome browsers. USDC on Base.
 - [Fly Labs Agentic Market](https://flylabs.fun/agents) — YouTube data APIs for AI agents. Transcribe ($0.03) and engagement analytics ($0.02) with structured JSON payloads. USDC on Base.
 - [GigSoul AI Research Agent](https://gig-x402-api.jayson-be1.workers.dev) — 23-endpoint AI research API: SEC filings, earnings calls, competitor analysis, market research, document intelligence. $0.01 USDC per call on Base.
+- [x402 Entity-ID Resolver](https://entityresolver.xyz) — Resolves a company or crypto name or ticker into ranked entities with verified canonical IDs across registries: SEC CIK + ticker, GLEIF LEI, Wikidata QID, CoinGecko slug. $0.005 USDC per call on Base. ([OpenAPI](https://entityresolver.xyz/openapi.json))
 
 ---
 
