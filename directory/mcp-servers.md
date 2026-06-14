@@ -23,6 +23,7 @@ x402-enabled MCP servers. AI agents (Claude, Cursor, any MCP client) can call th
 - [AskClaude MCP](https://www.npmjs.com/package/askclaude-mcp) — Pay-per-query Claude AI. 9 x402 endpoints: Haiku/Sonnet/Opus chat, streaming, summarization, code review, translation, sentiment, crypto analysis. $0.01-$0.10 USDC on Base. `npx askclaude-mcp`. ([GitHub](https://github.com/pvega23/askclaude-mcp))
 - [JubJub MCP](https://api.jubjubapp.com/v2/mcp) — 65-tool MCP server for media publishing, cross-platform analytics, automated on-chain royalty splits.
 - [Human Pages MCP](https://github.com/human-pages-ai/humanpages) — 31-tool MCP for the open directory AI agents use to hire humans for real-world tasks. x402 pay-per-use on Base.
+- [GPT55 x402 Agent Tools](https://gpt55.558686.xyz) — Remote x402 MCP/API gateway for OpenAI-compatible chat requests plus deterministic URL, HTTP status, JSON validation, and text utilities. Base USDC payments start at $0.0001 per compact request. ([MCP metadata](https://gpt55.558686.xyz/.well-known/agent.json))
 
 ---
 
