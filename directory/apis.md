@@ -102,6 +102,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 
 ## Business Intelligence
 
+- [Agent Revenue Radar](https://zaler23.github.io/agent-revenue-radar/) — Agent revenue-route research feeds and playbooks for legal, no-real-personal-info earning paths. $0.05-$10.00 USDC on Base. [Premium endpoint](https://x402-scoutgate.onrender.com/api/8b4d80fa).
 - [Strale](https://strale.dev) [![24K Verified](https://img.shields.io/badge/24K_Verified-2026--04-D4AF37?style=plastic)](../CONTRIBUTING.md) — Trust layer for AI agents with 250+ independently tested business data and compliance capabilities: IBAN validation, VAT checks, sanctions screening, company lookups, SSL checks, and more. Quality-scored (SQS). $0.02-$1.00 USDC. [MCP](https://api.strale.io/mcp)
 - [Intel API](https://intel.hugen.tokyo) — AI-synthesized token due diligence. Aggregates 4 GoPlus security checks + CoinGecko market data into risk-scored verdicts. One call replaces 5+ separate APIs. $0.50 USDC on Base.
 - [PayAPI Market](https://payapi.market) [![Open Source](https://img.shields.io/badge/Open_Source-2EA44F?style=plastic)](https://github.com/chetparker/x402-marketplace) — First marketplace for x402-powered APIs. 65 endpoints: UK property data, email verification, company enrichment, postcode lookup, currency/crypto rates, screenshots, DNS intelligence, web scraping, IP geolocation, QR codes. $0.001-$0.01 USDC on Base.
