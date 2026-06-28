@@ -97,6 +97,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [Daizyx402 Security Research API](http://daizyx402.com:5402) — AI-powered smart contract security analysis. $0.05 USDC per query, $0.50 USDC deep analysis on Base. No signup.
 - [AEO Scanner (Convrgent)](https://scan.convrgent.ai) [![Multi-Chain](https://img.shields.io/badge/Multi--Chain-2+-0366D6?style=plastic)](https://scan.convrgent.ai/.well-known/x402) — AI search visibility audit for any website. Triple scoring: AEO, GEO, Agent Readiness. 55+ checks across 12 categories. Free scan via SIWX, full audit $1, fix code $5 USDC on Base & Solana.
 - [CYBERA Compliance API](https://compliance-api-ruddy.vercel.app) [![Open Source](https://img.shields.io/badge/Open_Source-2EA44F?style=plastic)](https://github.com/tedddb-ai/compliance-api) — Crypto compliance suite. VASP address identification (20,468 addresses, 29 chains), risk scoring, sanctions/mixer screening. $0.01 USDC on Base.
+- [Agent Ready](https://agent-ready.dev) — Website agent-readability scanner. Scores any URL against the Vercel Agent Readability Spec and llmstxt.org with per-check remediation. Pay-per-scan: $0.02 (25 pages) / $0.25 (250 pages) USDC on Base via x402.
 
 ---
 
