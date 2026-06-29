@@ -75,6 +75,8 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 
 ---
 
+- [TerraDeed Scrape API](https://api.terradeed.co.uk) [![24K Verified](https://img.shields.io/badge/24K_Verified-2026--06-D4AF37?style=plastic)](../CONTRIBUTING.md) [![Open Source](https://img.shields.io/badge/Open_Source-2EA44F?style=plastic)](https://github.com/terradeed/terradeed-scraper) — Pay-per-use web scraping ($0.01 USDC) and structured JSON extraction ($0.05 USDC) on Base mainnet. LLM-ready markdown output, JS rendering via Playwright, schema-driven extraction via Claude. Dual auth: x402 USDC or API keys.
+
 ## Web & Geospatial
 
 - [Firecrawl x402](https://api.firecrawl.dev/v1/x402/search) [![24K Verified](https://img.shields.io/badge/24K_Verified-2026--05-D4AF37?style=plastic)](../CONTRIBUTING.md) — Web scraping and search API with x402-gated endpoints and automatic on-chain USDC settlement. Featured in Coinbase CDP case studies as a reference x402 integration.
