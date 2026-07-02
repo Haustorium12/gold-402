@@ -43,6 +43,7 @@ x402-enabled MCP servers. AI agents (Claude, Cursor, any MCP client) can call th
 
 - [ShieldAPI MCP](https://www.npmjs.com/package/shieldapi-mcp) [![Open Source](https://img.shields.io/badge/Open_Source-2EA44F?style=plastic)](https://github.com/alberthild/shieldapi-mcp) — 9-tool security MCP: password breach, email breach, domain/IP reputation, URL safety, full security scan, prompt injection detection, skill security scanning. x402 USDC on Base or free demo mode. `npx shieldapi-mcp`.
 - [MCP Security Snapshot Server](https://github.com/Seiya-wasabi/mcp-server-security-snapshot) [![Open Source](https://img.shields.io/badge/Open_Source-2EA44F?style=plastic)](https://github.com/Seiya-wasabi/mcp-server-security-snapshot) — Pay-per-call HTTP security header scanning. $0.05 USDC on Base.
+- [lso-mcp](https://mcp.lonestaroracle.xyz) [![Open Source](https://img.shields.io/badge/Open_Source-2EA44F?style=plastic)](https://github.com/Homie4570/lso-mcp) — 46 LoneStarOracle data tools: token and wallet risk, contract audits, whale tracking, DeFi and stablecoin risk, market and macro data, weather. x402-metered USDC on Base. ([GitHub](https://github.com/Homie4570/lso-mcp))
 
 ---
 
