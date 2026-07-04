@@ -1,4 +1,4 @@
-﻿# APIs & Pay-Per-Call Services
+# APIs & Pay-Per-Call Services
 
 x402-enabled APIs and production services. No API keys. No accounts. Pay USDC per call via x402 and get the data. Wallet is authentication.
 
@@ -39,6 +39,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 
 ## Crypto & DeFi Data
 
+- [AIServices](https://api.aiservices.to) — Paid data APIs for AI agents: crypto prices, technical indicators, DeFi yields, IP geolocation, and URL metadata. $0.00-$0.02 USDC on Base. ([x402](https://api.aiservices.to/.well-known/x402))
 - [AgentData API](https://agentdata-api.com) [![ERC-8004](https://img.shields.io/badge/ERC--8004-registered-E36209?style=plastic)](https://agentdata-api.com/discovery) — Real-time crypto market data. 16 pay-per-request endpoints: prices, funding rates, volatility, liquidation levels, DeFi yields, cross-exchange arbitrage, technical indicators (RSI/MACD/BB/ATR), support/resistance, sentiment, stablecoin health, historical OHLCV. Self-hosted facilitator.
 - [Polybot Arb Intelligence](https://github.com/packrvnner/polybot-arb-api) [![Open Source](https://img.shields.io/badge/Open_Source-2EA44F?style=plastic)](https://github.com/packrvnner/polybot-arb-api) — Real-time cross-platform prediction market arb data (Polymarket + Kalshi + Myriad). x402 USDC on Base.
 - [Tick Aggregator API](https://tick.hugen.tokyo) [![Multi-Chain](https://img.shields.io/badge/Multi--Chain-2+-0366D6?style=plastic)](https://tick.hugen.tokyo) — Multi-source aggregated FX Best Bid/Ask from 3 institutional liquidity providers. 62-88% tighter spreads than single source. 15 pairs including EURUSD, USDJPY, XAUUSD. $0.005 USDC per call on Base and Solana.
