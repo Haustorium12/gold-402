@@ -198,6 +198,7 @@ x402-payable APIs — pay per request, no subscriptions.
 | [ShieldAPI](https://shield.vainplex.dev) [![24K Verified](https://img.shields.io/badge/24K_Verified-2026--04-D4AF37?style=plastic)](CONTRIBUTING.md#24k-verified-tier) [![Open Source](https://img.shields.io/badge/Open_Source-2EA44F?style=plastic)](https://github.com/alberthild/shieldapi-mcp) | $0.002–$0.05 | Security intelligence: breach check, domain reputation, URL safety, prompt injection detection. |
 | [Valoria](https://x402.valoria.net) | — | Market intelligence: 90K+ indexed services, $148M+ tracked on-chain volume, revenue rankings. |
 | [Firecrawl x402](https://api.firecrawl.dev/v1/x402/search) [![24K Verified](https://img.shields.io/badge/24K_Verified-2026--05-D4AF37?style=plastic)](CONTRIBUTING.md#24k-verified-tier) | Per-request | Web scraping and search API with x402-gated endpoints and automatic on-chain USDC settlement. Coinbase CDP case study service. |
+| [JMT x402 Agent Tools](https://jmt-x402-proxy.jmthomasofficial.workers.dev) | $0.001-$0.15 | 25 endpoints: web search, AI analysis, crypto/stock data, SEC filings, company intel, news, sentiment, macro dashboard. USDC on Base. Local LLM-powered. |
 
 [Full API directory →](directory/apis.md)
 
