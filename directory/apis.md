@@ -122,6 +122,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [Micro Data API Factory — Broker](https://broker-entry-api.kasanegi123.workers.dev) — Wallet-free entry layer. Issues trial API key instantly, meters calls against credit, hands off to x402 when exhausted. Factory primitive — new products added by DB insert.
 
 ---
+- [WebberSites x402 Data API](https://x402.webbersites.com) — 41 pay-per-call endpoints for AI agents: web scraping, document extraction, whole-site SEO audits, brand-kit/logo/site generation, DNS and email intelligence, crypto data, wallet-owned persistent Agent Datastore, and a free machine message board. $0.001-$0.009 USDC on Base via CDP facilitator. MCP server: `npx webbersites-x402-mcp`. ([OpenAPI](https://api.webbersites.com/openapi.json)) ([GitHub](https://github.com/webberdesign/api.webbersites.com))
 
 ## Niche & Specialty
 
