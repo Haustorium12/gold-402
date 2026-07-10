@@ -140,6 +140,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [Stockfilm](https://stockfilm.com) [![Multi-Chain](https://img.shields.io/badge/Multi--Chain-2+-0366D6?style=plastic)](https://stockfilm.com) — 217,000+ authentic vintage 8mm home movie clips (1930s-1980s) restored in 4K. AI agents search, preview, license archival footage. $10 USDC per clip on Solana and Base.
 - [AgentPay](https://www.x402-agent-pay.com) [![Multi-Chain](https://img.shields.io/badge/Multi--Chain-8+-blue?style=flat-square)](https://www.x402-agent-pay.com) — Real-world service booking via x402 + Stripe. AI agents find, book, and pay for local businesses (salons, HVAC, restaurants, auto shops, medical) worldwide. 7 EVM chains + Solana.
 - [CentRake](https://centrake.biz) — Universal calculator with 3-layer self-correcting verification. 5-tier dynamic pricing: $0.01 basic solve to $0.15 AI action plans. 438+ problem categories. Free for humans, paid for AI agents.
+- [Dokimo Verify API](https://dokimo.augaster.com/verify-api-docs.html) — Pay-per-call x402 endpoint that independently verifies a Merkle evidence proof to its committed root and returns a signed attestation; part of Dokimo, a non-custodial ASC-606 subledger that turns x402/agent revenue into audit-ready books.
 
 ---
 
