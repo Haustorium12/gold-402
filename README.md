@@ -171,6 +171,7 @@ x402-native Model Context Protocol servers — AI agents pay per tool call, no A
 | MCP Server | Category | Description |
 |-----------|----------|-------------|
 | [agentsvc.io MCP](https://agentsvc.io/mcp) [![24K Verified](https://img.shields.io/badge/24K_Verified-2026--04-D4AF37?style=plastic)](CONTRIBUTING.md#24k-verified-tier) [![A2A Ready](https://img.shields.io/badge/A2A-ready-8250DF?style=plastic)](https://agentsvc.io) | General | 100+ curated MCP tools, x402-gated. The hub for AI agent tooling. |
+| [AgentServices MCP](https://agentservices.to/mcp) [![Open Source](https://img.shields.io/badge/Open_Source-2EA44F?style=plastic)](https://github.com/vbkotecha/aiservices-api) [![On MCP Registry](https://img.shields.io/badge/MCP_Registry-v5.3.0-blue?style=plastic)](https://to.agentservices/agentservices) | Data/Finance | 37 MCP tools covering market data, on-chain analytics, news, AI inference, and image generation. x402-gated, USDC on Base. |
 | [x402-mcp](https://vercel.com/blog/introducing-x402-mcp-open-protocol-payments-for-mcp-tools) [![24K Verified](https://img.shields.io/badge/24K_Verified-2026--04-D4AF37?style=plastic)](CONTRIBUTING.md#24k-verified-tier) | SDK | Vercel AI SDK `paidTool` primitive — for building MCP tools that monetize via x402. |
 | [IteraTools MCP](https://iteratools.ai/mcp) [![24K Verified](https://img.shields.io/badge/24K_Verified-2026--04-D4AF37?style=plastic)](CONTRIBUTING.md#24k-verified-tier) | Automation | Task automation via x402. Sequential and parallel workflow execution. |
 | [EntRoute MCP](https://entroute.ai/mcp) [![24K Verified](https://img.shields.io/badge/24K_Verified-2026--04-D4AF37?style=plastic)](CONTRIBUTING.md#24k-verified-tier) | Data/Intelligence | Data intelligence and routing. Multi-chain analytics. |
@@ -198,6 +199,7 @@ x402-payable APIs — pay per request, no subscriptions.
 | [ShieldAPI](https://shield.vainplex.dev) [![24K Verified](https://img.shields.io/badge/24K_Verified-2026--04-D4AF37?style=plastic)](CONTRIBUTING.md#24k-verified-tier) [![Open Source](https://img.shields.io/badge/Open_Source-2EA44F?style=plastic)](https://github.com/alberthild/shieldapi-mcp) | $0.002–$0.05 | Security intelligence: breach check, domain reputation, URL safety, prompt injection detection. |
 | [Valoria](https://x402.valoria.net) | — | Market intelligence: 90K+ indexed services, $148M+ tracked on-chain volume, revenue rankings. |
 | [Firecrawl x402](https://api.firecrawl.dev/v1/x402/search) [![24K Verified](https://img.shields.io/badge/24K_Verified-2026--05-D4AF37?style=plastic)](CONTRIBUTING.md#24k-verified-tier) | Per-request | Web scraping and search API with x402-gated endpoints and automatic on-chain USDC settlement. Coinbase CDP case study service. |
+| [AgentServices](https://agentservices.to) [![Open Source](https://img.shields.io/badge/Open_Source-2EA44F?style=plastic)](https://github.com/vbkotecha/aiservices-api) | $0.001–$0.05 | 54 services, 41 x402-paid endpoints: market data, on-chain analytics, crypto prices, news, AI inference, image generation. USDC on Base. |
 
 [Full API directory →](directory/apis.md)
 
