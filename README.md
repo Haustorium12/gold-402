@@ -205,6 +205,7 @@ x402-payable APIs — pay per request, no subscriptions.
 | [Vindex](https://api.vindexapi.dev) | $0.01 | Vehicle-data API: VIN decode with factory warranty terms, recalls, known-issues/reliability, and US & Canada purchase-cost estimates. NHTSA and Transport Canada sources. USDC on Base. |
 | [Isocast](https://api.isocast.dev) | From $0.01 | Per-signal Polymarket weather-market data across 37 cities. Fires when a city's daily-high temperature crosses into a new Polymarket bucket, returning the market URL and live bucket odds. USDC on Base. |
 | [Moltalyzer](https://api.moltalyzer.xyz) | $0.01–$0.05 | Polymarket and AI-agent-community intelligence: order-book microstructure movers, whale hold-to-resolution calibration, and multi-source digests. USDC on Base. |
+| [_done](https://underscoredone.com) | $0.01–$0.05 | Suite of x402 micropayment-gated utility APIs for AI agents (Web lookups, site analysis, data and more). Pay-per-call, no API keys or subscriptions — agents discover and pay per request via x402. Base + Solana mainnet payment support. |
 
 [Full API directory →](directory/apis.md)
 
