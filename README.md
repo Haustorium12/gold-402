@@ -181,6 +181,7 @@ x402-native Model Context Protocol servers — AI agents pay per tool call, no A
 | [vindex-mcp](https://www.npmjs.com/package/vindex-mcp) | Data/Intelligence | Vehicle data over x402: VIN decode with warranty terms, recalls, reliability, and US/Canada purchase-cost estimates. USDC on Base. |
 | [isocast-mcp](https://www.npmjs.com/package/isocast-mcp) | Data/Intelligence | Per-signal Polymarket weather-market data across 37 cities, with market URLs and live bucket odds. USDC on Base. |
 | [moltalyzer-mcp](https://www.npmjs.com/package/moltalyzer-mcp) | Data/Intelligence | Polymarket and AI-agent-community intelligence: order-book movers, whale calibration, and multi-source digests. USDC on Base. |
+| [fry-x402-mcp](https://github.com/Fry-Foundation/fry-x402-mcp) [![Open Source](https://img.shields.io/badge/Open_Source-2EA44F?style=plastic)](https://github.com/Fry-Foundation/fry-x402-mcp) | DeFi | Catalog-generated MCP tools for fry.farm's 15 x402 endpoints: DeFi/DePIN data feeds plus unsigned-group builders signed by the agent's own wallet. USDC on Algorand. |
 
 [Full MCP server directory →](directory/mcp-servers.md)
 
@@ -206,6 +207,7 @@ x402-payable APIs — pay per request, no subscriptions.
 | [Isocast](https://api.isocast.dev) | From $0.01 | Per-signal Polymarket weather-market data across 37 cities. Fires when a city's daily-high temperature crosses into a new Polymarket bucket, returning the market URL and live bucket odds. USDC on Base. |
 | [Moltalyzer](https://api.moltalyzer.xyz) | $0.01–$0.05 | Polymarket and AI-agent-community intelligence: order-book microstructure movers, whale hold-to-resolution calibration, and multi-source digests. USDC on Base. |
 | [_done](https://underscoredone.com) | $0.01–$0.05 | Suite of x402 micropayment-gated utility APIs for AI agents (Web lookups, site analysis, data and more). Pay-per-call, no API keys or subscriptions — agents discover and pay per request via x402. Base + Solana mainnet payment support. |
+| [fry.farm x402 Agentic Actions](https://fry.farm/x402/) | $0.001–$0.01 | DeFi/DePIN data and non-custodial transaction builders on Algorand mainnet: staking, LP farming, NFT mint, P2P offers. Builders return unsigned atomic groups signed by the agent's own wallet. USDC on Algorand. |
 
 [Full API directory →](directory/apis.md)
 
