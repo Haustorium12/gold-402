@@ -58,7 +58,7 @@ Infrastructure, agent frameworks, A2A protocols, multi-agent orchestration, and 
 
 - [Google A2A x402 Extension](https://github.com/google-agentic-commerce/a2a-x402) [![Open Source](https://img.shields.io/badge/Open_Source-2EA44F?style=plastic)](https://github.com/google-agentic-commerce/a2a-x402) [![A2A Ready](https://img.shields.io/badge/A2A-ready-8250DF?style=plastic)](https://github.com/google-agentic-commerce/a2a-x402) — Agent commerce protocol. Python and TypeScript implementations. Payment-required, payment-submitted, payment-completed flow. Multi-agent payment orchestration.
 - [Revettr](https://revettr.com) [![A2A Ready](https://img.shields.io/badge/A2A-ready-8250DF?style=plastic)](https://revettr.com) — Counterparty risk scoring API for x402 agentic commerce. Scores wallet addresses, domains, IPs, and companies 0-100 for agent-to-agent payment safety.
-- OpSpawn A2A x402 Gateway [![Multi-Chain](https://img.shields.io/badge/Multi--Chain-3+-0366D6?style=plastic)]() — Multi-chain A2A gateway with x402 payments. Google A2A protocol, Base/SKALE/Arbitrum support.
+- [OpSpawn A2A x402 Gateway](https://a2a.opspawn.com) [![Multi-Chain](https://img.shields.io/badge/Multi--Chain-3+-0366D6?style=plastic)](https://a2a.opspawn.com) — Multi-chain A2A gateway with x402 payments. Google A2A protocol, Base/SKALE/Arbitrum support.
 
 ---
 

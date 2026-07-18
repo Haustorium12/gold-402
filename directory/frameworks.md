@@ -35,8 +35,8 @@ Server-side integrations for accepting x402 payments. Drop into your existing st
 ## Rust
 
 ### Axum
-- x402-axum — Axum web framework integration (part of [x402-rs](https://github.com/x402-rs/x402-rs)).
-- x402-reqwest — Reqwest HTTP client wrapper (part of x402-rs).
+- [x402-axum](https://crates.io/crates/x402-axum) — Axum web framework integration (part of [x402-rs](https://github.com/x402-rs/x402-rs)).
+- [x402-reqwest](https://crates.io/crates/x402-reqwest) — Reqwest HTTP client wrapper (part of x402-rs).
 
 ---
 

@@ -5,6 +5,7 @@ on:
     types: [opened, synchronize]
     paths:
       - 'directory/**'
+      - 'README.md'
 
 permissions:
   contents: write
