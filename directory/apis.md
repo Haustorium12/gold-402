@@ -96,6 +96,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [Bloomfilter](https://bloomfilter.xyz) — x402-powered domain registration API for AI agents. Register ICANN domains and manage DNS, paying with USDC on Base.
 - [Find Domain](https://finddomain.io) — Domain research API. Generates candidates from keywords with stemming, IDN normalization, geo/registrar filtering, then checks availability via DNS or registry lookup. $0.002-$0.01 USDC on Base.
 - [Mailcheck API](https://mailcheck.hugen.tokyo) [![Open Source](https://img.shields.io/badge/Open_Source-2EA44F?style=plastic)](https://github.com/bartonguestier1725-collab/x402-mailcheck-api) — Email validation: syntax, MX records, disposable domain detection, free provider check, role-based address detection, typo suggestion. $0.01 USDC on Base.
+- [Venture NL Open-Data](https://api.pogo-tb.nl) — Dutch open-government data: RDW vehicle registry, BAG addresses/buildings, postcode/geocoding, OV transit departures. CC0/CC-BY-4.0 sources. $0.001-$0.01 USDC on Base.
 
 ---
 
