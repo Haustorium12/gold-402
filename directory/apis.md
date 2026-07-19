@@ -38,6 +38,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [PulseNetwork](https://pulsenetwork.theaslangroupllc.com) — 66 vertical intelligence APIs / 826 pay-per-call endpoints: OFAC sanctions screening, EU VAT validation (VIES), SEC XBRL fundamentals, token safety scans, tax data for 195 countries, climate, health, sports. $0.01–$2 USDC on Base; OpenAPI + llms.txt on every origin; MPP (Tempo) via [gateway](https://mpp.theaslangroupllc.com).
 - [JMT x402 Agent Tools](https://jmt-x402-proxy.jmthomasofficial.workers.dev) — 25 endpoints: web search, AI analysis, crypto/stock data, SEC filings, company intel, news, sentiment, macro dashboard. Local LLM-powered. $0.001-$0.15 USDC on Base.
 - [Vindex](https://api.vindexapi.dev) — Vehicle-data API: VIN decode with factory warranty terms, recalls, known-issues/reliability, and US & Canada purchase-cost estimates. NHTSA and Transport Canada sources. $0.01 USDC on Base.
+- [Grey Ridge Signals — x402 Data & Security APIs](https://x402-data-api.sigrunner.workers.dev) — 17 agent-native pay-per-call endpoints: blockchain queries (balance, gas, code, receipts, token balances), crypto funding rates & prices, DeFi yields, domain enrichment, tech-risk scoring, prediction market data, MCP scanning. $0.001–$0.05 USDC on Base. ([OpenAPI](https://x402-data-api.sigrunner.workers.dev/openapi.json))
 
 ---
 
