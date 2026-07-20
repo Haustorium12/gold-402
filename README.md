@@ -208,6 +208,7 @@ x402-payable APIs — pay per request, no subscriptions.
 | [Moltalyzer](https://api.moltalyzer.xyz) | $0.01–$0.05 | Polymarket and AI-agent-community intelligence: order-book microstructure movers, whale hold-to-resolution calibration, and multi-source digests. USDC on Base. |
 | [_done](https://underscoredone.com) | $0.01–$0.05 | Suite of x402 micropayment-gated utility APIs for AI agents (Web lookups, site analysis, data and more). Pay-per-call, no API keys or subscriptions — agents discover and pay per request via x402. Base + Solana mainnet payment support. |
 | [fry.farm x402 Agentic Actions](https://fry.farm/x402/) | $0.001–$0.01 | DeFi/DePIN data and non-custodial transaction builders on Algorand mainnet: staking, LP farming, NFT mint, P2P offers. Builders return unsigned atomic groups signed by the agent's own wallet. USDC on Algorand. |
+| [VirtualSMS](https://virtualsms.io/api/v1/x402/sms-verify) | From $0.05 | SMS verification and OTP receiving for AI agents: real carrier numbers across 145+ countries and 2500+ services, no account or API key. Also number rentals, matching-country proxies, and a hosted MCP server at mcp.virtualsms.io. USDC on Base, BNB Chain, and Solana. |
 
 [Full API directory →](directory/apis.md)
 
