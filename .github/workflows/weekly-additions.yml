@@ -1,0 +1,41 @@
+# Keeps the "New This Week" block in README.md current: two rolling lists
+# (this ISO week + last), recomputed from merge history. Self-rolling -- the
+# Monday roll is just the week math moving, no archive, no extra posts.
+name: Weekly Additions
+on:
+  push:
+    branches: [main]
+    paths: ['directory/**', 'README.md']
+  schedule:
+    - cron: '30 9 * * *'      # daily backstop: handles the Monday roll + missed merges
+  workflow_dispatch:
+concurrency:
+  group: weekly-additions
+  cancel-in-progress: false
+permissions:
+  contents: write
+  pull-requests: read
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Refresh New This Week block
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/weekly_additions.py
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- README.md; then
+            echo "no change"
+          else
+            git config user.name "weekly-additions"
+            git config user.email "actions@github.com"
+            git add README.md
+            git commit -m "weekly additions: refresh New This Week block"
+            git push
+          fi
