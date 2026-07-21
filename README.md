@@ -30,6 +30,16 @@ That number is the whole argument for a verified catalog. The Bazaar reflects ev
 
 ---
 
+## This Week in x402
+
+_Week of July 20–26, 2026_
+
+- **The x402 Foundation is live.** The Linux Foundation announced its operational launch on July 14, with 40 members and Coinbase's contribution of the protocol complete — 17 of them premier, including Adyen, AWS, American Express, Circle, Cloudflare, Coinbase, Fiserv, Google, Mastercard, MoonPay, Ripple, Shopify, the Solana and Stellar foundations, Stripe, and Visa. The standard now sits under open governance rather than one company's roadmap, and an executive-director search and a technical steering committee are underway. [[Linux Foundation](https://www.linuxfoundation.org/press/linux-foundation-announces-operational-launch-of-x402-foundation-to-standardize-internet-native-payments-for-ai-agents-and-applications)]
+- **Ripple and MoonPay buy in.** Ripple joined with production data, not a pitch — more than 1M agentic transactions on the XRP Ledger and a June-shipped XRPL AI Starter Kit; MoonPay took a board seat. [[Genfinity](https://genfinity.io/2026/07/14/x402-foundation-launch-ripple-stellar-solana-quant-premier-members/)]
+- **The numbers, unvarnished.** x402 moved about $24M across 75M transactions in the last 30 days — roughly 94k buyers, 22k sellers, an average payment near 32¢. That's the whole thesis: charges too small for a card network to touch, working as designed. It's also a fraction of what any premier member clears in a day. Both true. [[CoinDesk](https://www.coindesk.com/tech/2026/07/15/visa-mastercard-and-ripple-join-the-standard-letting-ai-agents-pay-in-stablecoins)]
+
+---
+
 <!-- NEW-THIS-WEEK:START -->
 ## New This Week
 
@@ -55,29 +65,11 @@ That number is the whole argument for a verified catalog. The Bazaar reflects ev
 
 ---
 
-## What's New
-
-> **July 2026** — 22,545 x402 endpoints probed. 74% are dead. Here's what's actually live.
-
-- [**24K Labs Verification Report**](articles/2026-07-verification-findings.md) — We probed every x402 service in the CDP Bazaar. 5,792 verified live (25.7%). 16,686 failed (74%). The verified catalog is what makes the Bazaar usable. [→ Full report](articles/2026-07-verification-findings.md)
-
----
-
-> **June 2026** — Enterprise infrastructure arrives: Fireblocks, Arbitrum, and 169M+ transactions.
-
-- [**Fireblocks Agentic Payments Suite**](https://www.fireblocks.com/products/agentic-payments) — Full-lifecycle agentic payment infrastructure from the $14T digital asset custody platform. MPC agentic wallets with delegation rules, merchant Gateway for stablecoin acceptance, and a security extension to the x402 spec (request integrity + spend governance). Joined the x402 Foundation May 20, 2026. [★ June Featured Pick →](articles/2026-06-fireblocks-agentic-payments.md)
-- [**x402 live on Arbitrum**](https://blog.arbitrum.foundation/x402-payments-on-arbitrum/) — Arbitrum confirmed x402 deployment on May 15. x402 now runs natively on Base, Ethereum, Arbitrum, Polygon, and Solana. EVM coverage is effectively complete.
-- [**169M+ transactions, 590k+ buyers, 100k+ sellers**](https://www.coinbase.com/blog/introducing-amazon-bedrock-agentcore-payments-powered-by-x402-and-coinbase) — Updated ecosystem stats from Coinbase's AWS Bedrock launch post. Grew from 50M to 169M transactions in roughly six weeks post-Foundation launch.
-- [**AWS Bedrock AgentCore Payments — now production**](https://www.coinbase.com/blog/introducing-amazon-bedrock-agentcore-payments-powered-by-x402-and-coinbase) — AWS-managed x402 wallet and payment infrastructure natively integrated into Amazon Bedrock agent workflows. Moved from preview to production.
-- [**LayerZero joins x402 Foundation**](https://x402.org/ecosystem) — Cross-chain infrastructure added to the Foundation roster. Enables x402 payments to bridge across chains without manual routing at the application layer.
-- [**Quant Network joins x402 Foundation**](https://x402.org/ecosystem) — Interoperability and programmable-money infrastructure joins Foundation governance. Expands the enterprise interoperability story for regulated deployments.
-
----
-
 ## Contents
 
 - [Featured This Month](#featured-this-month)
-- [What's New](#whats-new)
+- [This Week in x402](#this-week-in-x402)
+- [New This Week](#new-this-week)
 - [Quick Start](#quick-start)
 - [How x402 Works](#how-x402-works)
 - [Facilitators](#facilitators)
