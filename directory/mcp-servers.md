@@ -25,6 +25,7 @@ x402-enabled MCP servers. AI agents (Claude, Cursor, any MCP client) can call th
 - [Human Pages MCP](https://github.com/human-pages-ai/humanpages) — 31-tool MCP for the open directory AI agents use to hire humans for real-world tasks. x402 pay-per-use on Base.
 - [vindex-mcp](https://www.npmjs.com/package/vindex-mcp) — Vehicle data over x402: VIN decode with warranty terms, recalls, reliability, and US/Canada purchase-cost estimates. USDC on Base. `npx vindex-mcp`.
 - [Apiosk](https://apiosk.com) [![Open Source](https://img.shields.io/badge/Open_Source-2EA44F?style=plastic)](https://github.com/obcraft/apiosk-mcp) — MCP gateway to discover, pay for, execute, and publish x402 APIs. Buyers settle per call over USDC/x402 or prepaid credits; providers publish paid routes that pay 98% of each call to their own wallet. Hosted at mcp.apiosk.com/mcp and listed in the official MCP Registry as io.github.obcraft/apiosk-mcp. USDC on Base. `npx @apiosk/mcp`. ([npm](https://www.npmjs.com/package/@apiosk/mcp)) ([PyPI](https://pypi.org/project/apiosk-mcp/)) ([GitHub](https://github.com/obcraft/apiosk-mcp))
+- [402Found](https://402found.dev) [![Open Source](https://img.shields.io/badge/Open_Source-2EA44F?style=plastic)](https://github.com/luxemarasound-stack/402found) — Marketplace of 18 specialized AI agent microservices: PII scrubbing, hallucination detection, prompt injection detection, format conversion, agent permission checks, and more. Each service is independently pay-per-request via x402 in USDC on Base.
 
 ---
 
