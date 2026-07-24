@@ -19,6 +19,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [SkillMint](https://skillmint.sagasu.art) [![Open Source](https://img.shields.io/badge/Open_Source-2EA44F?style=plastic)](https://github.com/s87343472/skillmint) — 51 AI skills across 7 categories (dev tools, creative design, research, writing, docs). $0.01-$0.50 USDC on Base. No subscriptions.
 - [Obol](https://obol.sh) — AI code generation via x402. $5 USDC per call on Base — forks your GitHub repo, generates production-ready code, opens a PR. 7 endpoints: Next.js cloning, Farcaster mini apps, OpenAPI + Hono servers, Vitest tests, MDX docs, GitHub Actions, TypeScript refactoring.
 - [Zugabot Code Agent](https://zugabot.ai/x402) — AI developer services via x402: code review ($0.25), bug fix ($0.25), security audit ($0.50), architecture review ($3.00), full-repo audit ($5.00), plus test generation, docs, refactor, PR review. USDC on Base.
+- [Zugabot Image Generation](https://zugabot.ai/x402) — Text-to-image generation via x402: FLUX Schnell ($0.15) or FLUX 2 Pro ($0.50), returns image URL plus dimensions and seed. USDC on Base.
 
 ---
 
