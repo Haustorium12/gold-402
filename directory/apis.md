@@ -86,6 +86,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [CrossFin](https://crossfin.dev) — 15 paid Korean market data APIs (Kimchi Premium, KOSPI, Bithumb, Upbit, Coinone, FX, headlines, trading signals). First Korean financial data on x402. MCP server included.
 - [Cross-Asset Intelligence API](https://x402.bankr.bot/0x98ee945dfa6bb8e9ed9f9b6ae56eb82bcc82f0aa/) — AI-powered cross-market financial analysis (crypto × traditional finance). 10 x402 endpoints on Base. BTC-equity correlation, risk scores, macro reports, daily briefings. Powered by Claude Haiku.
 - [Tollbooth](https://x402toll.com) [![A2A Ready](https://img.shields.io/badge/A2A-ready-8250DF?style=plastic)](https://x402toll.com/.well-known/agent-card.json) — 56 financial, tax, and legal calculators for AI agents (income tax, self-employment/estimated tax, capital gains, LLC/entity comparison, mortgage/loan, retirement/RMD/Social Security, crypto/DeFi, sales tax). Each response includes its 2026 IRS/SSA source, a formula trace, and a reproducible SHA-256 hash, plus a free golden-vector self-check endpoint. $0.02-$1.00 USDC on Base. MCP: `npx tollbooth-x402`. ([OpenAPI](https://x402toll.com/v1/openapi.json))
+- [Macro Pulse](https://macro-pulse-x402.onrender.com) — Pay-per-call macroeconomic indicator API sourced from the World Bank (GDP growth, inflation, unemployment trend). Single-country lookup $0.02, 8-country flat-priced batch endpoint $0.05, 6-hour response caching. USDC on Base.
 
 ---
 
