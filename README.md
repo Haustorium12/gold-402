@@ -363,7 +363,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the curation standard, badge system, 
 **Quick rules:**
 - Entry must use the x402 protocol (HTTP 402 + X-Payment), not just USDC or general crypto payments.
 - Live URL or public GitHub repo. Link must work.
-- Last activity within 12 months, or carries a `24K Verified` tag.
+- Last activity within 12 months (for libraries and resources without a live endpoint).
 - One entry per pull request. Format: `[Name](url) — Description starting uppercase, ending with period.`
 - Descriptions are factual. No marketing language.
 
