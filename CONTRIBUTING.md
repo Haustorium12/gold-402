@@ -1,144 +1,97 @@
 # Contributing to gold-402
 
-**Built something on x402? Submit it here.** gold-402 is the editorial authority for the x402 ecosystem — getting listed means builders and AI agents will find you.
+**Built something on x402? Submit it.** gold-402 is a curated directory of x402 resources — facilitators, SDKs, frameworks, APIs, MCP servers, tools, and the services agents actually pay to use. Getting listed means builders and AI agents can find you.
 
-- **New entry?** Open a PR titled `Add [Name]` — takes 5 minutes, instructions below.
-- **Question or discussion?** Use [GitHub Discussions](https://github.com/Haustorium12/gold-402/discussions).
-- **Found a dead link or stale entry?** Open an issue — we fix them fast.
+- **New entry?** Open a PR titled `Add [Name]` — takes five minutes, format below.
+- **Question or discussion?** Open a [GitHub Discussion](https://github.com/Haustorium12/gold-402/discussions).
+- **Dead link or stale entry?** Open an [issue](https://github.com/Haustorium12/gold-402/issues) — we fix them fast.
 
-Star the repo to stay current with the ecosystem. The What's New section updates monthly.
+The directory is updated continuously. Each week the newest additions are collected in the README's **New This Week** section, and the week's ecosystem developments in **This Week in x402**.
 
 ---
 
 gold-402 is curated, not exhaustive. Every entry earns its place.
 
-## What We List
+## What Gets Listed
 
-Five categories are in scope:
+In scope — anything that genuinely uses the x402 protocol:
 
-1. **Facilitators** — hosted or self-hosted x402 payment facilitators processing real USDC (or supported stablecoin) transactions.
-2. **SDKs & Frameworks** — code libraries and middleware for implementing x402 as a server or client.
-3. **APIs & MCP Servers** — x402-payable endpoints and Model Context Protocol servers that accept payment via the x402 protocol.
-4. **Tools & Infrastructure** — monitoring, analytics, spending controls, CLI utilities, and CI/CD integrations for x402 builders.
-5. **Learning & Community** — documentation, tutorials, news, events, and channels directly useful to x402 builders.
+- **Facilitators** — hosted or self-hosted x402 payment facilitators settling real USDC (or a supported stablecoin). → `directory/facilitators.md`
+- **SDKs & Libraries** — client and server libraries for implementing x402, in any language. → `directory/sdks.md`
+- **Frameworks & Middleware** — server middleware and framework integrations (Express, Hono, Next.js, FastAPI, Axum, Cloudflare Workers, and more). → `directory/frameworks.md`
+- **APIs & Services** — x402-payable API endpoints agents call and pay for per request. → `directory/apis.md`
+- **MCP Servers** — Model Context Protocol servers that gate access behind x402. → `directory/mcp-servers.md`
+- **Tools & Utilities** — proxies, monitoring, analytics, spending controls, CLIs, and CI/CD integrations. → `directory/tools.md`
+- **Security & Compliance** — audits, trust scoring, sanctions/AML screening, and spend controls. → `directory/security.md`
+- **Ecosystem & Wallets** — agent wallets, marketplaces, and x402-integrated infrastructure. → `directory/ecosystem.md`
+- **Learning** — quickstarts, tutorials, and reference material directly useful to x402 builders. → `directory/learning.md`
+- **Community** — channels, newsletters, jobs, and events for x402 builders. → `directory/community.md`
+- **Market Data** — on-chain analytics and dashboards for the x402 economy. → `directory/market-data.md`
 
-**Out of scope:** general crypto wallets, general USDC infrastructure, and AI agent platforms that do not have a specific x402 integration.
+Out of scope: general crypto wallets, general USDC infrastructure, and AI-agent platforms with no specific x402 integration.
 
----
+## Acceptance
+
+For a **service** — an API, MCP server, facilitator, or anything with a live endpoint — all of the following:
+
+- **It's live.** The URL resolves and the endpoint returns a valid HTTP 402 challenge with correct payment headers, or serves a valid x402 manifest.
+- **It's actually x402.** It implements the protocol (HTTP 402 + `X-Payment`), not just "we accept USDC" or general crypto payments.
+- **It settles on a supported chain.** Base is the norm; other chains are fine as long as the x402 flow is real.
+- **It's not a duplicate service** (see the one-entry-per-service rule below).
+- **The description is one factual line.** No marketing language.
+
+For a **library, framework, or learning/community resource** with no payable endpoint of its own: it must be publicly accessible (live URL or public repo), demonstrably x402-specific, active within roughly the last twelve months, and described in one factual line.
+
+We probe every submitted endpoint before merging. Anything that fails gets a friendly note explaining what to fix — never a silent rejection. Fix it and resubmit.
+
+## What "verified" means
+
+gold-402 is one tier: **listed = verified.** There are no bronze/silver/gold levels. If an entry is on the list, the maintainers confirmed its endpoint was live and answered an x402 request correctly at the time of review, and re-check it periodically. That is the whole claim — a liveness-and-protocol check. It is **not** an audit of the provider, a guarantee of uptime, or a confirmation of any particular on-chain settlement. Curation is the bar; the list is the certificate.
+
+## One entry per service (multiple services welcome)
+
+The unit of a listing is the **service**, not the provider.
+
+- **Different services from the same provider are each welcome** — one entry each, in the section each belongs to. A provider running, say, a code-review API and an image-generation API gets two entries, because a builder searching for one won't find it buried inside the other.
+- **The same service listed twice is a duplicate** — that's the thing we don't take. One endpoint cross-posted into several categories to look bigger is what to avoid; each service has one home, its primary category.
+- **Prefer one entry per pull request.** It keeps diffs clean and lets us verify and merge each independently. But a PR with several genuinely distinct, valid entries is fine — we may split it across commits on merge.
 
 ## Entry Format
 
 ```
-[Name](url) [![badge](badge-url)](link) — One sentence description starting uppercase, ending with period.
+[Name](url) — One factual sentence, starting uppercase, ending with a period.
 ```
 
-- Em dash separator (` — `) between name/badges and description.
+- Em-dash separator (` — `) between the name and the description.
 - Description is factual. No "powerful", "amazing", "best", or "revolutionary".
-- URL: direct link to service, GitHub repo, or docs page.
+- URL links directly to the service, its repository, or its docs.
+- **No badges.** Submissions carry no badges; the one editorial mark gold-402 uses (Featured, below) is applied by the maintainers, never attached by a submitter.
 - No trailing whitespace.
 
-**Facilitator entries exception:** Facilitator entries in `directory/facilitators.md` may use up to three sentences, where each sentence is factual and non-marketing. Facilitators have multiple meaningful dimensions — networks supported, settlement mechanism, production status, and key differentiators — that a single sentence often cannot carry. Adjectives without supporting data and claims without a cited source remain out of scope regardless of sentence count.
-
----
-
-## Acceptance Criteria
-
-ALL must be true:
-
-- Publicly accessible — live URL or public GitHub repo.
-- x402-specific — actually uses the x402 protocol (HTTP 402 + X-Payment header), not just USDC or general crypto payments.
-- Active — last commit or service activity within 12 months, OR carries a `24K Verified` tag (see below).
-- Not a duplicate of an existing entry without meaningful differentiation.
-- Description is one line, factual, no marketing language.
-- Link is live and resolves correctly.
-
----
-
-## Rejection Criteria
-
-ANY fails the submission:
-
-- Not actually x402 — mentions USDC or on-chain payments but does not implement the x402 protocol.
-- Dead, private, or "coming soon" with no production deployment.
-- Archived, deprecated, or last activity older than 12 months without qualifying for `24K Verified`.
-- Duplicates an existing entry with no meaningful difference.
-- Description uses marketing language.
-- Broken or redirected link.
-
----
-
-## 24K Verified Tier
-
-[![24K Verified](https://img.shields.io/badge/24K_Verified-2026--04-D4AF37?style=plastic)](CONTRIBUTING.md#24k-verified-tier)
-
-A `24K Verified · YYYY-MM` tag means: as of the date shown, the maintainers confirmed this entry is **live in production, processing real transactions**. To carry the tag, an entry must satisfy ALL of the following at the time of verification:
-
-1. Has a live production endpoint serving real x402 requests (not just demo or testnet).
-2. Has processed real USDC (or supported stablecoin) transactions on at least one mainnet chain.
-3. Not deprecated, archived, or in "coming soon" / alpha-only state.
-4. Responsive to requests — returns correct 402 headers and accepts valid payment headers.
-
-The tag is re-verified quarterly. If any criterion fails on re-check, the tag is removed or the entry is retired.
-
-Verified entries appear in their natural categories alongside unverified entries — the tag is about transparency, not segregation.
-
----
-
-## 24K Featured Tier
-
-[![24K Featured](https://img.shields.io/badge/24K_Featured-2026--04-C0C0C0?style=plastic)](FEATURED.md)
-
-A `24K Featured · YYYY-MM` tag means the entry was selected as the monthly editorial pick and spotlighted in the README's Featured This Month section. Featured picks are archived in [FEATURED.md](FEATURED.md).
-
-Selection criteria, in roughly this order:
-
-1. **Quality of execution** — the implementation is clean, the docs are real, and the service does what it claims.
-2. **Active deployment** — real traffic, real transactions, evidence of actual use in the ecosystem.
-3. **Distinct value** — solves a real problem or fills a gap not well-served before.
-4. **Underexposure** — preference for excellent work that has not yet hit mainstream coverage.
-
-When a Featured pick also appears in a curated category table, its row gets a silver `24K Featured · YYYY-MM` badge to mark the editorial history. The badges form a three-metal hierarchy: gold for `24K Verified`, silver for `24K Featured`, bronze for informational tags.
-
----
-
-## Informational Tags
-
-These tags carry no quality judgment — they communicate protocol or compliance facts that are useful to builders selecting services.
-
-| Tag | Color | Meaning |
-|-----|-------|---------|
-| [![Open Source](https://img.shields.io/badge/Open_Source-2EA44F?style=plastic)](url) | Green | Source code is publicly available. |
-| [![Multi-Chain](https://img.shields.io/badge/Multi--Chain-2+-0366D6?style=plastic)](url) | Blue | Supports 2 or more chains. |
-| [![ERC-8004](https://img.shields.io/badge/ERC--8004-registered-E36209?style=plastic)](url) | Orange | Registered or integrated with the ERC-8004 on-chain agent registry. |
-| [![MiCA](https://img.shields.io/badge/MiCA-aware-0550AE?style=plastic)](url) | Blue | EU Markets in Crypto Assets regulation aware or compliant. |
-| [![A2A Ready](https://img.shields.io/badge/A2A-ready-8250DF?style=plastic)](url) | Purple | Compatible with Google's Agent-to-Agent protocol. |
-
-Informational tags are applied by the maintainers on review. To request a tag for your entry, note it in your pull request with a link to documentation supporting the claim.
-
----
+**Facilitators exception:** entries in `directory/facilitators.md` may run up to three factual sentences — facilitators have multiple meaningful dimensions (chains, settlement mechanism, production status) that a single line can't carry. Adjectives without data and claims without a source are still out of scope.
 
 ## How to Submit
 
 1. Open a Pull Request titled `Add [Name]`.
 2. Add the entry to the bottom of the correct section in the relevant `directory/` file.
-3. Use the format: `[Name](url) — Description starting uppercase, ending with period.`
-4. Verify the link is live before submitting.
-5. One entry per PR.
+3. Use the format above, and verify the link is live before submitting.
+4. One entry per PR where practical.
 
-To suggest an entry without writing the PR yourself, open an [issue](https://github.com/Haustorium12/gold-402/issues) with the name, URL, and a one-sentence description.
+To suggest an entry without writing the PR yourself, open an [issue](https://github.com/Haustorium12/gold-402/issues) with the name, URL, and a one-sentence description — we'll take it from there.
+
+## Featured
+
+Now and then the maintainers spotlight one entry as **Featured** in the README, archived in [FEATURED.md](FEATURED.md). Featured is an editorial pick — a judgment that something is well-built, actively used, and worth a second look, with a preference for excellent work that hasn't already had wide coverage. It is the one editorial mark gold-402 carries, and it is always awarded by the maintainers, never requested onto your own entry.
+
+## Maintenance
+
+- **Weekly** — refresh **This Week in x402** (ecosystem developments) and **New This Week** (the week's additions).
+- **Monthly** — rotate the Featured pick and archive the previous one to `FEATURED.md`.
+- **Ongoing** — probe listed endpoints for liveness, remove or fix dead links, and scan the ecosystem for new entries worth adding.
 
 ---
 
-## Maintenance Cadence
-
-**Monthly:**
-- Rotate the Featured pick in `README.md`, archive the previous pick to `FEATURED.md`.
-- Update the What's New section with the month's notable additions and ecosystem events.
-
-**Quarterly:**
-- Re-verify all `24K Verified` tagged entries against the four criteria.
-- Check all links in `README.md` and `directory/` files — remove or update dead links.
-- Scan [x402.org/ecosystem](https://x402.org/ecosystem) and x402 Foundation announcements for new entries worth adding.
-- Promote standout entries from `directory/` to the curated README sections if they have matured.
-
-Sources for the quarterly audit: [x402.org/ecosystem](https://x402.org/ecosystem), [agenteconomy.to](https://agenteconomy.to), [Dune Analytics x402](https://dune.com/x402), [x402scan](https://x402scan.com).
+<p align="center">
+  <b>Curated by <a href="https://24klabs.ai">24K Labs</a></b><br>
+  <sub>If this saved you time, star the repo.</sub>
+</p>
