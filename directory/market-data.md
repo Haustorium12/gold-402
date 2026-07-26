@@ -28,9 +28,9 @@ On-chain analytics, live metrics, and growth timeline for the x402 ecosystem.
 
 ## Analytics Dashboards
 
-- [agenteconomy.to](https://agenteconomy.to) [![24K Verified](https://img.shields.io/badge/24K_Verified-2026--04-D4AF37?style=plastic)](../CONTRIBUTING.md) — Real-time dashboard tracking the agentic economy across x402, ERC-8004, ERC-8183, and MPP protocols on 8 chains. Aggregated event counter, chain distribution, facilitator share, time-series charts. Refreshes every 6 hours.
-- [Dune Analytics x402](https://dune.com/x402) [![24K Verified](https://img.shields.io/badge/24K_Verified-2026--04-D4AF37?style=plastic)](../CONTRIBUTING.md) — Comprehensive on-chain metrics: transaction volumes, chain analytics, facilitator comparison, revenue/fee metrics.
-- [x402scan Explorer](https://x402scan.com) [![24K Verified](https://img.shields.io/badge/24K_Verified-2026--04-D4AF37?style=plastic)](../CONTRIBUTING.md) — Blockchain explorer for x402 payments. Transaction search, payment requirement inspection, settlement status.
+- [agenteconomy.to](https://agenteconomy.to) — Real-time dashboard tracking the agentic economy across x402, ERC-8004, ERC-8183, and MPP protocols on 8 chains. Aggregated event counter, chain distribution, facilitator share, time-series charts. Refreshes every 6 hours.
+- [Dune Analytics x402](https://dune.com/x402) — Comprehensive on-chain metrics: transaction volumes, chain analytics, facilitator comparison, revenue/fee metrics.
+- [x402scan Explorer](https://x402scan.com) — Blockchain explorer for x402 payments. Transaction search, payment requirement inspection, settlement status.
 - [Valoria](https://x402.valoria.net) — x402 market intelligence. Revenue rankings, service analysis, pricing data across 90K+ indexed services and $148M+ tracked on-chain volume.
 - [CoinGecko x402 Category](https://coingecko.com/en/categories/x402) — Token tracking and market data. $180M+ tracked market cap, price charts, trading volumes, ecosystem token listings.
 
