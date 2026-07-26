@@ -60,7 +60,7 @@ representative at an online or offline event.
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
 reported to the community leaders responsible for enforcement at
-[INSERT CONTACT METHOD].
+sean@24klabs.ai.
 All complaints will be reviewed and investigated promptly and fairly.
 
 All community leaders are obligated to respect the privacy and security of the
@@ -126,44 +126,3 @@ enforcement ladder](https://github.com/mozilla/diversity).
 For answers to common questions about this code of conduct, see the FAQ at
 https://www.contributor-covenant.org/faq. Translations are available at
 https://www.contributor-covenant.org/translations.
-
-## awesome-x402 Specific Guidelines
-
-### Community Values
-
-As builders in the x402 ecosystem, we especially value:
-
-- **Collaboration over Competition** - We're building the future of agent payments together
-- **Knowledge Sharing** - Help others learn and grow with x402
-- **Quality over Quantity** - Focus on valuable contributions that help developers
-- **Inclusivity** - Welcome developers from all backgrounds and experience levels
-- **Innovation** - Encourage creative uses of x402 protocol
-
-### Expected Behavior
-
-- **Share knowledge generously** - Help newcomers understand x402
-- **Provide constructive feedback** on pull requests and issues
-- **Test contributions** before submitting to ensure quality
-- **Be patient** with developers learning x402 for the first time
-- **Celebrate successes** and acknowledge good contributions from others
-
-### Reporting Issues
-
-For issues specific to this repository:
-- **Technical issues**: Open a GitHub issue with the `bug` label
-- **Content disputes**: Open a GitHub issue with the `discussion` label  
-- **Code of conduct violations**: Contact repository maintainers directly
-
-### Recognition
-
-We believe in recognizing positive contributions:
-- Outstanding contributors may be highlighted in release notes
-- Regular helpful contributors may be invited as collaborators
-- Community builders are celebrated in our documentation
-
----
-
-<p align="center">
-  <b>Together we're building an awesome x402 community! 🚀</b><br>
-  <sub>Let's help each other succeed in the agent economy</sub>
-</p>
