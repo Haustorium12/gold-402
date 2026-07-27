@@ -41,7 +41,11 @@ _Week of July 20–26, 2026_
 <!-- NEW-THIS-WEEK:START -->
 ## New This Week
 
-**This week** (Jul 20—26)
+**This week** (Jul 27—Aug 2)
+
+_No new listings yet._
+
+**Last week** (Jul 20—26)
 
 - **[Fabler Labs x402 Storefront](https://fablerlabs.com/x402/)** — Security and utility APIs for AI agents on Base, USDC per call, no signup: secret scan ($0.005), agent-config audit ($0.05), diff security gate ($0.10), pre-deploy evidence gate ($0.08), URL security evidence ($0.08), plus data and rendering endpoints and digital-product downloads; free machine-readable catalog at GET https://x402.fablerlabs.com/. Built and operated end-to-end by an autonomous AI agent.
 - **[x402-seller](https://x402-seller-m8nx.onrender.com)** — Token rug/honeypot scoring combining GoPlus static analysis with live Honeypot.is sell simulation, liquidity-drain detection from a self-collected reserve time-series, and market data. EVM + Solana. $0.001-$0.05 USDC on Base. ([Track record](https://x402-seller-m8nx.onrender.com/track-record))
@@ -54,19 +58,6 @@ _Week of July 20–26, 2026_
 - **[Zugabot Code Agent](https://zugabot.ai/x402)** — AI developer services: code review, bug fix, test generation, docs, refactor, security audit, architecture review, full-repo audit. USDC on Base.
 - **[Macro Pulse](https://macro-pulse-x402.onrender.com)** — Pay-per-call macroeconomic indicator API sourced from the World Bank (GDP growth, inflation, unemployment trend). Single-country lookup $0.02, 8-country flat-priced batch endpoint $0.05, 6-hour response caching. USDC on Base.
 - **[Stelar Digital](https://api.stelardigital.com)** — Live crypto grid-trading telemetry (real P&L, not simulated), grid-parameter recommendations, market-regime classification, and sentiment scoring. 8 endpoints, $0.005-$2.50 USDC on Base. ([x402](https://api.stelardigital.com/.well-known/x402))
-
-**Last week** (Jul 13—19)
-
-- **[AgentServices](https://agentservices.to)** — Paid data APIs for AI agents: crypto prices, technical indicators, DeFi yields, IP geolocation, and URL metadata. $0.00-$0.02 USDC on Base. ([x402](https://agentservices.to/.well-known/x402))
-- **[Dokimo Verify API](https://dokimo.augaster.com/verify-api-docs.html)** — Pay-per-call x402 endpoint that independently verifies a Merkle evidence proof to its committed root and returns a signed attestation; part of Dokimo, a non-custodial ASC-606 subledger that turns x402/agent revenue into audit-ready books.
-- **[Tollbooth](https://x402toll.com)** — 56 financial, tax, and legal calculators for AI agents (income tax, self-employment/estimated tax, capital gains, LLC/entity comparison, mortgage/loan, retirement/RMD/Social Security, crypto/DeFi, sales tax). Each response includes its 2026 IRS/SSA source, a formula trace, and a reproducible SHA-256 hash, plus a free golden-vector self-check endpoint. $0.02-$1.00 USDC on Base. MCP: `npx tollbooth-x402`. ([OpenAPI](https://x402toll.com/v1/openapi.json))
-- **[PulseNetwork](https://pulsenetwork.theaslangroupllc.com)** — 66 vertical intelligence APIs / 826 pay-per-call endpoints: OFAC sanctions screening, EU VAT validation (VIES), SEC XBRL fundamentals, token safety scans, tax data for 195 countries, climate, health, sports. $0.01–$2 USDC on Base; OpenAPI + llms.txt on every origin; MPP (Tempo) via [gateway](https://mpp.theaslangroupllc.com).
-- **[_done](https://underscoredone.com)** — agents discover and pay per request via x402. Base + Solana mainnet payment support.
-- **[Venture NL Open-Data](https://api.pogo-tb.nl)** — Dutch open-government data: RDW vehicle registry, BAG addresses/buildings, postcode/geocoding, OV transit departures. CC0/CC-BY-4.0 sources. $0.001-$0.01 USDC on Base.
-- **[Bincrease Operations APIs](https://bincrease.vercel.app/developers)** — Live no-spend USDC work shortlisting with risk and payout-evidence filters ($0.05 USDC), deterministic CSV deduplication ($0.10 USDC), commercial waste-bill analysis ($0.25 USDC), and bounded OpenAPI contract extraction ($0.50 USDC) over x402 v2, settled in native USDC on Base with OpenAPI and `llms.txt` discovery.
-- **[Grey Ridge Signals — x402 Data & Security APIs](https://x402-data-api.sigrunner.workers.dev)** — 17 agent-native pay-per-call endpoints: blockchain queries (balance, gas, code, receipts, token balances), crypto funding rates & prices, DeFi yields, domain enrichment, tech-risk scoring, prediction market data, MCP scanning. $0.001–$0.05 USDC on Base. ([OpenAPI](https://x402-data-api.sigrunner.workers.dev/openapi.json))
-- **[fry-x402-mcp](https://github.com/Fry-Foundation/fry-x402-mcp)** — Catalog-generated MCP tools for fry.farm's 15 x402 endpoints: DeFi/DePIN data feeds plus unsigned-group builders signed by the agent's own wallet. USDC on Algorand.
-- **[fry.farm x402 Agentic Actions](https://fry.farm/x402/)** — DeFi/DePIN data and non-custodial transaction builders on Algorand mainnet: staking, LP farming, NFT mint, P2P offers. Builders return unsigned atomic groups signed by the agent's own wallet. USDC on Algorand.
 <!-- NEW-THIS-WEEK:END -->
 
 ---
