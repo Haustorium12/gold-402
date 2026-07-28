@@ -57,7 +57,7 @@ Development tools, CLI utilities, monitoring, analytics, and CI/CD integrations 
 - [Base Sepolia Testnet](https://docs.base.org/docs/network-information) — Primary testnet for x402 development.
 - [Base Sepolia USDC Faucet](https://faucet.circle.com/) — Get test USDC for development.
 - [Base Sepolia Bridge](https://bridge.base.org/) — Bridge test ETH to Base Sepolia.
-- [x402 FixSpec](https://github.com/am5188/x402-fixspec) — Deterministic endpoint conformance and remediation tool that inspects unpaid challenges, validates Base USDC requirements, probes discovery documents, and returns OpenAPI, Bazaar, and agent-instruction templates. [Live x402 offer](https://payanagent.com/x402/kh7cpz6bqrv558bwvg09g84wq58bckmf).
+- [x402 FixSpec](https://github.com/am5188/x402-fixspec) — Deterministic endpoint conformance and remediation tool that inspects unpaid challenges, validates Base USDC requirements, probes discovery documents, and returns OpenAPI, Bazaar, and agent-instruction templates. [Live x402 offer](https://fixspec.am518.uk/buy/fixspec).
 
 ---
 
