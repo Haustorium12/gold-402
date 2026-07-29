@@ -20,6 +20,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [Obol](https://obol.sh) — AI code generation via x402. $5 USDC per call on Base — forks your GitHub repo, generates production-ready code, opens a PR. 7 endpoints: Next.js cloning, Farcaster mini apps, OpenAPI + Hono servers, Vitest tests, MDX docs, GitHub Actions, TypeScript refactoring.
 - [DeskCrew](https://deskcrew.io/agents) — Agent-native helpdesk. 16 tools: agents pay per call to draft customer-support replies grounded in a knowledge base and to work real tickets, while discovery tools (search_kb, list_issues, list_changelog) are free and need no signup. $0.02-$0.08 USDC on Base, Polygon, Avalanche, Sei, and Solana. A human approves before anything reaches a customer. ([Manifest](https://deskcrew.io/.well-known/x402))
 - [Zugabot Code Agent](https://zugabot.ai/x402) — AI developer services via x402: code review ($0.25), bug fix ($0.25), security audit ($0.50), architecture review ($3.00), full-repo audit ($5.00), plus test generation, docs, refactor, PR review. USDC on Base.
+- [Zugabot Image Generation](https://zugabot.ai/x402) — Text-to-image generation via x402: FLUX Schnell ($0.15) or FLUX 2 Pro ($0.50), returns image URL plus dimensions and seed. USDC on Base.
 
 ---
 

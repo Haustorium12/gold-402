@@ -58,6 +58,7 @@ _Week of July 20–26, 2026_
 - **[402Found](https://402found.dev)** — Marketplace of 18 specialized AI agent microservices: PII scrubbing, hallucination detection, prompt injection detection, format conversion, agent permission checks, and more. Each service is independently pay-per-request via x402 in USDC on Base.
 - **[token-risk](https://token-risk.com)** — Deterministic structural risk reports for ERC-20 tokens and wallet addresses on Base via x402 USDC per request.
 - **[Zugabot Code Agent](https://zugabot.ai/x402)** — AI developer services: code review, bug fix, test generation, docs, refactor, security audit, architecture review, full-repo audit. USDC on Base.
+- **[Zugabot Image Generation](https://zugabot.ai/x402)** — Text-to-image generation via x402: FLUX Schnell ($0.15) or FLUX 2 Pro ($0.50). USDC on Base.
 - **[Macro Pulse](https://macro-pulse-x402.onrender.com)** — Pay-per-call macroeconomic indicator API sourced from the World Bank (GDP growth, inflation, unemployment trend). Single-country lookup $0.02, 8-country flat-priced batch endpoint $0.05, 6-hour response caching. USDC on Base.
 - **[Stelar Digital](https://api.stelardigital.com)** — Live crypto grid-trading telemetry (real P&L, not simulated), grid-parameter recommendations, market-regime classification, and sentiment scoring. 8 endpoints, $0.005-$2.50 USDC on Base. ([x402](https://api.stelardigital.com/.well-known/x402))
 <!-- NEW-THIS-WEEK:END -->
@@ -224,6 +225,7 @@ x402-payable APIs — pay per request, no subscriptions.
 | [Moltalyzer](https://api.moltalyzer.xyz) | $0.01–$0.05 | Polymarket and AI-agent-community intelligence: order-book microstructure movers, whale hold-to-resolution calibration, and multi-source digests. USDC on Base. |
 | [_done](https://underscoredone.com) | $0.01–$0.05 | Suite of x402 micropayment-gated utility APIs for AI agents (Web lookups, site analysis, data and more). Pay-per-call, no API keys or subscriptions — agents discover and pay per request via x402. Base + Solana mainnet payment support. |
 | [Zugabot Code Agent](https://zugabot.ai/x402) | $0.10–$5.00 | AI developer services: code review, bug fix, test generation, docs, refactor, security audit, architecture review, full-repo audit. USDC on Base. |
+| [Zugabot Image Generation](https://zugabot.ai/x402) | $0.15–$0.50 | Text-to-image generation via x402: FLUX Schnell ($0.15) or FLUX 2 Pro ($0.50). USDC on Base. |
 | [fry.farm x402 Agentic Actions](https://fry.farm/x402/) | $0.001–$0.01 | DeFi/DePIN data and non-custodial transaction builders on Algorand mainnet: staking, LP farming, NFT mint, P2P offers. Builders return unsigned atomic groups signed by the agent's own wallet. USDC on Algorand. |
 | [VirtualSMS](https://virtualsms.io/api/v1/x402/sms-verify) | From $0.05 | SMS verification and OTP receiving for AI agents: real carrier numbers across 145+ countries and 2500+ services, no account or API key. Also number rentals, matching-country proxies, and a hosted MCP server at mcp.virtualsms.io. USDC on Base, BNB Chain, and Solana. |
 
