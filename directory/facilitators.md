@@ -26,6 +26,7 @@ Payment verification and settlement services for x402. A facilitator verifies pa
 - [x402 Sponsor Relay](https://github.com/aibtcdev/x402-sponsor-relay) — x402 sponsor relay for AI on Bitcoin (aibtcdev). Agents access gated endpoints without managing their own wallets — relay sponsors on their behalf. ([aibtc.dev](https://aibtc.dev))
 - [Satoshi Facilitator](https://bitcoinsapi.com/docs) — Independent facilitator for Bitcoin-focused pay-per-call services. Base, Base Sepolia, Solana Mainnet, Solana Devnet. [Supported networks](https://facilitator.bitcoinsapi.com/supported)
 - [NEAR x402 Facilitator](https://x402.mikedotexe.com/) — Open-source, API-key-gated facilitator for exact Circle USDC payments on NEAR and Base. It sponsors relayer gas and persists settlements for recovery. [Source](https://github.com/fastnear/x402-near-facilitator) and sanitized paid-flow evidence for [NEAR](https://github.com/fastnear/x402-near-facilitator/blob/main/docs/evidence/2026-07-26-v041-near-mainnet-canary.md) and [Base](https://github.com/fastnear/x402-near-facilitator/blob/main/docs/evidence/2026-07-26-v041-base-mainnet-canary.md).
+- [ArisPay](https://facilitator.arispay.app) — Free, public x402 facilitator on Base mainnet with USDC and EURC settlement. Open /verify and /settle, no API key or signup. Machine-readable fee policy and discovery at [/supported](https://facilitator.arispay.app/supported) and [/facilitator](https://facilitator.arispay.app/facilitator).
 
 ---
 
