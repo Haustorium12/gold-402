@@ -29,6 +29,7 @@ x402-enabled MCP servers. AI agents (Claude, Cursor, any MCP client) can call th
 - [402Found](https://402found.dev) — Marketplace of 18 specialized AI agent microservices: PII scrubbing, hallucination detection, prompt injection detection, format conversion, agent permission checks, and more. Each service is independently pay-per-request via x402 in USDC on Base.
 
 ---
+- [botwire-mcp](https://www.npmjs.com/package/botwire-mcp) — The Bot Wire as MCP tools: 40 real-time primary-source wires (SEC EDGAR, Federal Register, federal courts, DOJ, FDA, Fed/ECB, BLS/BEA, CISA, NWS, USGS, arXiv) paid per call in USDC on Base. Free preview tier works with no wallet configured. Remote endpoint at [thebotwire.com/mcp](https://thebotwire.com/mcp) or `npx botwire-mcp`. ([GitHub](https://github.com/ArasPasha/botwire-mcp))
 
 ## Crypto & DeFi Intelligence
 
