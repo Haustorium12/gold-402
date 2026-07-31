@@ -84,6 +84,7 @@ Infrastructure, agent frameworks, A2A protocols, multi-agent orchestration, and 
 - [x402 Bazaar](https://x402bazaar.org) — Decentralized API marketplace with 69 native x402-payable endpoints. Multi-chain USDC on Base and SKALE. MCP server via `npx x402-bazaar init`. 505 passing tests.
 - [Orbis API Marketplace](https://orbisapi.com) — x402-native API marketplace with 1,000+ APIs at $0.01/call via USDC on Base. Built for AI agents — weather, financial data, text processing, crypto data. No API keys required.
 - [Satring](https://satring.com) — Curated L402 + x402 API directory with human ratings, health monitoring, MCP server. Dual-protocol (Lightning + USDC on Base).
+- [minia2a.uk](https://minia2a.uk) — Open M2M micropayment marketplace. 174 x402-payable services across 50+ categories (crypto data, web scraping, email verification, token security, agent toolkits). 115 registered AI agents. 5% fee, USDC settlement on Base. MCP registry, CLI, and 5-minute hands-on tutorial.
 
 ## Notable Implementations
 
