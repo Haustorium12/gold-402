@@ -50,7 +50,13 @@ Security tools, spending controls, audit resources, and best practices for x402 
 - [Revettr](https://revettr.com) — Counterparty risk scoring for x402 agentic commerce. Scores wallet addresses, domains, IPs, and companies 0-100 for payment safety.
 - [MoltGuard](https://api.moltrust.ch/guard/) — Agent trust scoring (0-100), Sybil detection with funding cluster analysis, Polymarket integrity, Ed25519 Verifiable Credentials. 7 MCP tools. $0.005-$0.05 USDC on Base.
 - [DJD AgentScore](https://github.com/djd-agent-score/djd-agent-score) — On-chain reputation scoring for AI agent wallets. 0-100 trust score across 5 dimensions (identity, behavior, reliability, viability, capability) from x402 settlement history on Base. Free tier.
-- [ScoutScore](https://scoutscore.ai) — Trust scoring for x402 services (not agents). Monitors 1,700+ services with continuous health checks and fidelity probes.
+
+---
+
+## Endpoint Trust & Reputation
+
+- [ScoutScore](https://scoutscore.ai) — Trust scoring for x402 services. Monitors 1,700+ services with continuous health checks and fidelity probes.
+- [x402 Trust](https://x402.fuchss.app) — Autonomous trust and reliability scoring for every publicly listed x402 endpoint, derived from continuous live probing and on-chain USDC settlement. Live report via POST /v1/x402-trust, free preview via GET /v1/x402-trust-preview.
 
 ---
 
