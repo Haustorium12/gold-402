@@ -18,6 +18,7 @@ Development tools, CLI utilities, monitoring, analytics, and CI/CD integrations 
 - [key0](https://github.com/key0ai/key0) — Commercial gateway for AI agents. Discover, pay for, and access APIs autonomously via x402. Exposes `/discover`, `/x402/access`, `/.well-known/agent.json`, `/.well-known/mcp.json`, `/llms.txt`.
 - [World AgentKit](https://www.coindesk.com/tech/2026/03/17/sam-altman-s-world-teams-up-with-coinbase-to-prove-there-is-a-real-person-behind-every-ai-transaction) — Developer toolkit integrating World's WorldID biometric identity with x402. AI agents prove they act on behalf of a verified unique human. 18M+ verified humans.
 - [Red Team Blue Team Agent Fabric](https://github.com/msaleme/red-team-blue-team-agent-fabric) — Security testing harness for autonomous AI agents with dedicated x402 endpoint testing. MCP, A2A, x402/L402 support. 342-test suite.
+- [bridgenode](https://pypi.org/project/bridgenode-cli) — CLI for x402-paid LLM inference on Solana: chat completions + model listing with automatic USDC payment. `pip install bridgenode-cli`.
 
 ---
 
