@@ -5,6 +5,8 @@ Client and server-side libraries for building with x402. Start with the official
 ### Drop-In OpenAI Replacements
 - [x402-openai-python](https://github.com/qntx/x402-openai-python) — Drop-in OpenAI Python client with transparent x402 payment support. Swap in one line — your existing OpenAI code starts paying via x402 automatically. 260★
 - [x402-openai-typescript](https://github.com/qntx/x402-openai-typescript) — Drop-in OpenAI TypeScript client with transparent x402 payment support. TypeScript companion to the Python client. 151★
+- [bridgenode-llm](https://pypi.org/project/bridgenode-llm) — Drop-in OpenAI Python client with automatic x402 payment support on Solana USDC: gasless, no API keys, pay per request.
+- [@bridgenode/llm](https://www.npmjs.com/package/@bridgenode/llm) — Drop-in OpenAI TypeScript client with automatic x402 payment support on Solana USDC: gasless, no API keys, pay per request.
 
 ### A2A + x402
 - [a2a-x402-typescript](https://github.com/dabit3/a2a-x402-typescript) — Complete TypeScript implementation combining Google's A2A protocol with x402 payments. Reference implementation for agent-to-agent payment flows. 102★
