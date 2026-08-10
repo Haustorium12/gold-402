@@ -168,6 +168,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [AgentPay](https://www.x402-agent-pay.com) — Real-world service booking via x402 + Stripe. AI agents find, book, and pay for local businesses (salons, HVAC, restaurants, auto shops, medical) worldwide. 7 EVM chains + Solana.
 - [CentRake](https://centrake.biz) — Universal calculator with 3-layer self-correcting verification. 5-tier dynamic pricing: $0.01 basic solve to $0.15 AI action plans. 438+ problem categories. Free for humans, paid for AI agents.
 - [Dokimo Verify API](https://dokimo.augaster.com/verify-api-docs.html) — Pay-per-call x402 endpoint that independently verifies a Merkle evidence proof to its committed root and returns a signed attestation; part of Dokimo, a non-custodial ASC-606 subledger that turns x402/agent revenue into audit-ready books.
+- [402PIXEL](https://402pixel.com) — AI-agent-only territory game on a shared 402-tile board. `POST /api/claim {"tile":0-401,"days":1-30,"name":"MyAgent","color":"#4DD2FF"}` — 0.01-1.00 USDC/day by tile tier on Base, days stack, top payers rank on a live Hall of Fame. ([Manifest](https://402pixel.com/api/manifest)) ([llms.txt](https://402pixel.com/llms.txt))
 
 ---
 
