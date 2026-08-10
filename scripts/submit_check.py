@@ -1,9 +1,14 @@
 # scripts/submit_check.py
 # Gold-402: submission gate
 # Called by the submit.yml GitHub Action when a PR is opened.
-# Usage: python scripts/submit_check.py <url>
+# Usage: python scripts/submit_check.py <url> [<example_request_body>]
 # Exit 0 = pass (auto-merge). Exit 1 = fail (auto-close with reason).
 # SSRF protection baked in -- private IPs are rejected before any request.
+#
+# Example request body (optional, single-line JSON): endpoints that validate
+# request parameters BEFORE issuing the 402 challenge (e.g. OpenAI-compatible
+# APIs) cannot answer an empty-body probe with 402. When the PR body includes
+# an `Example: {...}` line, this script probes with that body instead of `{}`.
 
 import ipaddress
 import json
@@ -86,9 +91,10 @@ def check_already_listed(resource_url):
 
 def main():
     if len(sys.argv) < 2:
-        fail("no URL provided -- usage: python submit_check.py <url>")
+        fail("no URL provided -- usage: python submit_check.py <url> [<example_request_body>]")
 
     url = sys.argv[1].strip()
+    example_body = sys.argv[2].strip() if len(sys.argv) > 2 else ""
     print(f"[submit_check] Checking: {url}")
 
     # 1. URL format validation
@@ -120,11 +126,20 @@ def main():
         fail(f"already listed in Gold-402 (source: {source})")
 
     # 4. Probe for 402
-    print(f"[submit_check] Probing {url} for HTTP 402...")
+    probe_body = b"{}"
+    if example_body:
+        try:
+            json.loads(example_body)
+        except Exception as e:
+            fail(f"invalid example request body in PR (must be valid JSON): {e}")
+        probe_body = example_body.encode()
+        print(f"[submit_check] Probing {url} with example request body...")
+    else:
+        print(f"[submit_check] Probing {url} for HTTP 402...")
     try:
         req = urllib.request.Request(
             url,
-            data=b"{}",
+            data=probe_body,
             method="POST",
             headers={
                 "User-Agent":   USER_AGENT,
@@ -140,8 +155,13 @@ def main():
             if e.code == 402:
                 ok("endpoint returned HTTP 402 -- x402 compliant")
             else:
+                hint = ""
+                if e.code in (400, 422):
+                    hint = (" If your endpoint requires request parameters, add an "
+                            "`Example: {...}` line to the PR body so the gate can "
+                            "probe with a valid request.")
                 fail(f"endpoint returned HTTP {e.code} instead of 402. "
-                     f"x402 endpoints must return 402 on unauthenticated requests.")
+                     f"x402 endpoints must return 402 on unauthenticated requests.{hint}")
     except urllib.error.URLError as e:
         fail(f"could not reach endpoint: {e.reason}")
     except Exception as e:

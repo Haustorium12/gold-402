@@ -84,6 +84,13 @@ The unit of a listing is the **service**, not the provider.
 2. Add the entry to the bottom of the correct section in the relevant `directory/` file.
 3. Use the format above, and verify the link is live before submitting.
 4. One entry per PR where practical.
+5. **If your endpoint requires request parameters** before it can answer with 402 (e.g. an OpenAI-compatible API that validates the body first), add an `Example:` line with a single-line JSON request body to the PR description — the submission gate will probe your endpoint with that body instead of an empty `{}`:
+
+   ```
+   Example: {"model":"gpt-4o","messages":[{"role":"user","content":"hi"}]}
+   ```
+
+   Endpoints without an `Example:` line are probed with `{}` (existing behavior).
 
 To suggest an entry without writing the PR yourself, open an [issue](https://github.com/Haustorium12/gold-402/issues) with the name, URL, and a one-sentence description — we'll take it from there.
 

@@ -49,9 +49,27 @@ jobs:
           echo "Format: URL: https://your-service.com/api/endpoint"
           exit 1
 
+      - name: Extract example request body from PR body (optional)
+        id: extract_example
+        env:
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: |
+          # Optional `Example: {json}` line — endpoints that validate request
+          # parameters BEFORE the 402 challenge (e.g. OpenAI-compatible APIs)
+          # cannot answer an empty-body probe with 402. When present, the gate
+          # probes with this body instead of {}.
+          EXAMPLE=$(echo "$PR_BODY" | \
+            grep -oP '(?i)example\s*:\s*\K\{.*\}' | head -1)
+          echo "example=$EXAMPLE" >> "$GITHUB_OUTPUT"
+          if [ -n "$EXAMPLE" ]; then
+            echo "Extracted example request body: ${EXAMPLE:0:120}"
+          else
+            echo "No example request body — empty-body probe will be used"
+          fi
+
       - name: Run submission check
         id: check
-        run: python scripts/submit_check.py "${{ steps.extract_url.outputs.url }}"
+        run: python scripts/submit_check.py "${{ steps.extract_url.outputs.url }}" "${{ steps.extract_example.outputs.example }}"
 
       - name: Read check result
         id: result
@@ -112,6 +130,7 @@ jobs:
                 "- Endpoint does not return HTTP 402 on unauthenticated requests",
                 "- URL is unreachable or times out",
                 "- Service is already listed",
+                "- Endpoint requires request parameters before the 402 challenge (e.g. OpenAI-compatible API) — add an `Example: {json}` line to the PR body so the gate probes with a valid request",
                 "",
                 "---",
                 "*Gold-402 verifies x402 technical compliance only.*"
