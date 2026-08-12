@@ -93,7 +93,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [Stelar Digital](https://api.stelardigital.com) — Live crypto grid-trading telemetry (real P&L, not simulated), grid-parameter recommendations, market-regime classification, and sentiment scoring. 8 endpoints, $0.005-$2.50 USDC on Base. ([x402](https://api.stelardigital.com/.well-known/x402))
 - [GBLIN Protocol](https://gblin.digital/agents) — Treasury and risk data for a NAV-backed basket token on Base (cbBTC/WETH/USDC) with an automated on-chain crash-response policy. 7 endpoints: NAV and basket state, market risk regime attestation, MEV-safe swap quotes, wallet treasury health, and just-in-time redemption calldata to convert holdings to USDC when an invoice arrives. $0.001-$0.005 USDC on Base via the Coinbase CDP facilitator. ([x402](https://gblin.digital/.well-known/x402)) ([MCP](https://www.npmjs.com/package/@gblin-protocol/mcp-server))
 - [Node Scorecard API](https://nodescorecard.xyz/scorecard/nodes) — Scored directory of Sentinel dVPN network nodes: composite score per node, sorted best-first, active nodes by default with an optional full snapshot. $0.005 USDC per call on Base, Solana, Polygon, Arbitrum, and Avalanche.
-- [Token Risk](https://5-9-107-124.nip.io/token-risk?chain=base) — DeFi pool yield intelligence and EVM token or contract risk scanning for $0.01 USDC per call on Base via x402.
+- [Token Risk](https://viftode4-token-risk-402.loca.lt/token-risk?chain=base) — DeFi pool yield intelligence and EVM token or contract risk scanning for $0.01 USDC per call on Base via x402. ([x402](https://viftode4-token-risk-402.loca.lt/.well-known/x402))
 
 ---
 
