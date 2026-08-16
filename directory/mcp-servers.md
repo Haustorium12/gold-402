@@ -11,6 +11,7 @@ x402-enabled MCP servers. AI agents (Claude, Cursor, any MCP client) can call th
 
 ## General Utility
 
+- [Andreax](https://pagos.andreax.dev/tienda) — Remote MCP server with 54 pay-per-call AI tools: prompt compression, inference, web/PDF read, OCR, vision, embeddings, semantic search, translation, FX, and market data. $0.001-$0.50 USDC on Base. ([MCP](https://pagos.andreax.dev/mcp)) ([Registry](https://registry.modelcontextprotocol.io/v0.1/servers?search=andreax))
 - [Fry x402 MCP](https://github.com/Fry-Foundation/fry-x402-mcp) — MCP server for the fry.farm x402 API. Repo live 2026-07-30; storefront at [fry.farm/x402](https://fry.farm/x402/).
 - [blockrun-mcp](https://blockrun.ai) — Live data MCP for AI agents: search, research, markets, crypto, X/Twitter. Pay-per-use USDC on Base and Solana via x402. 31+ AI models, 600+ services indexed. 471★
 - [MetaMask MCP x402](https://github.com/metamask/mcp-x402) — Official MetaMask MCP server with x402 payment integration. Creates x402 payment headers using MetaMask wallet. 4★
