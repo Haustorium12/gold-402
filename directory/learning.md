@@ -16,7 +16,7 @@ Tutorials, videos, articles, blog posts, and interactive learning tools for x402
 - [One-Line Integration](https://github.com/x402-foundation/x402/tree/main/examples) — Add payment middleware in a single line of code. Official examples repo.
 - [Base Sepolia Testnet Setup](https://docs.cdp.coinbase.com/x402/network-support) — Get test USDC and start testing without real money.
 - [Solana x402 Developer Guide](https://solana.com/developers/guides/getstarted/intro-to-x402) — Official Solana guide for getting started with x402 payments.
-- [BridgeNode Solana x402 Quickstart](https://github.com/applefanaimail-blip/bridgenode-sdk-ts) — Pay-per-request LLM inference on Solana in minutes: OpenAI-compatible chat completions with automatic x402 USDC payments, gasless, no API keys or signup. TypeScript and Python SDKs, MCP server. ([Python](https://github.com/applefanaimail-blip/bridgenode-sdk-python)) ([MCP](https://github.com/applefanaimail-blip/bridgenode-mcp))
+- [BridgeNode Solana x402 Quickstart](https://github.com/applefanaimail-blip/bridgenode-sdk-ts/blob/main/QUICKSTART.md) — Step-by-step walkthrough that teaches the x402 payment flow on Solana: trigger the 402, sign a USDC transfer (fee-sponsored, no SOL needed), retry with PAYMENT-SIGNATURE, get the 200. Curl + TypeScript + Python examples, from first payment to SDK usage.
 
 ---
 
