@@ -54,6 +54,7 @@ Security tools, spending controls, audit resources, and best practices for x402 
 
 - [ScoutScore](https://scoutscore.ai) — Trust scoring for x402 services. Monitors 1,700+ services with continuous health checks and fidelity probes.
 - [x402 Trust](https://x402.fuchss.app) — Autonomous trust and reliability scoring for every publicly listed x402 endpoint, derived from continuous live probing and on-chain USDC settlement. Live report via POST /v1/x402-trust, free preview via GET /v1/x402-trust-preview.
+- [Cleared Index](https://clearedindex.com) — Trust provider and verification index with a conformant trust-evaluation endpoint: `POST /api/cleared/trust/evaluate` (`x402-trust-evaluation-v0.1`), Ed25519 signed attestations, and public JWKS at `GET /api/cleared/jwks`. Discovery manifest: `/.well-known/x402.json`.
 
 ---
 
