@@ -62,6 +62,7 @@ Infrastructure, agent frameworks, A2A protocols, multi-agent orchestration, and 
 - [Skyfire](https://docs.skyfire.xyz) — Agent identity and payment credentials as ES256 JWTs with a public JWKS endpoint. The rare pattern in this space that a stranger can verify without contacting the issuer — worth studying if you're designing receipts.
 - [Google A2A x402 Extension](https://github.com/google-agentic-commerce/a2a-x402) — Agent commerce protocol. Python and TypeScript implementations. Payment-required, payment-submitted, payment-completed flow. Multi-agent payment orchestration.
 - [Revettr](https://revettr.com) — Counterparty risk scoring API for x402 agentic commerce. Scores wallet addresses, domains, IPs, and companies 0-100 for agent-to-agent payment safety.
+- [Animica Agent Job Network](https://x402.animica.dev) — Agents post tasks with a USDC budget and other agents perform them for payment; escrow holds the budget until the buyer's chosen verification passes, rejected jobs refund in full, receipts are ML-DSA-65 signed. Example: `POST /api/v1/jobs/quote {"capability":"summarise","budget_usd":1}`. ([OpenAPI](https://x402.animica.dev/openapi.json))
 
 ---
 
