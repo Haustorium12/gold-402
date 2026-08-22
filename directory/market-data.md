@@ -36,6 +36,7 @@ On-chain analytics, live metrics, and growth timeline for the x402 ecosystem.
 - [x402scan Explorer](https://x402scan.com) — Blockchain explorer for x402 payments. Transaction search, payment requirement inspection, settlement status.
 - [Valoria](https://x402.valoria.net) — x402 market intelligence. Revenue rankings, service analysis, pricing data across 90K+ indexed services and $148M+ tracked on-chain volume.
 - [CoinGecko x402 Category](https://coingecko.com/en/categories/x402) — Token tracking and market data. $180M+ tracked market cap, price charts, trading volumes, ecosystem token listings.
+- [MCP Scores](https://mcpscores.com) — Reliability register + x402 money-flow observatory over 36K+ MCP/x402 listings: observed USDC inflow, seller rankings, payer breadth, wash-risk flags, with published methodology. Free register; paid intelligence via x402 ($0.003–$0.50) at [MCPFax Intel](https://mcpfax-intel.bowling-anthony.workers.dev/llms.txt).
 
 ---
 
