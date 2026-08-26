@@ -22,6 +22,7 @@ Security tools, spending controls, audit resources, and best practices for x402 
 
 ## Security Monitoring Tools
 
+- [DopamineDesk Transaction Preflight](https://ai-data-marketplace-1042299154756.us-central1.run.app/api/v1/transaction_preflight) — Checks an unsigned EVM transaction for simulation errors, gas, proxy evidence, and optional token-security or allowance issues before an agent signs it. `POST` only, $0.005 USDC on Base. ([OpenAPI](https://ai-data-marketplace-1042299154756.us-central1.run.app/openapi.json))
 - [ShieldAPI](https://shield.vainplex.dev) — x402-native security intelligence API. 9 endpoints: password/email breach check (900M+ HIBP hashes), domain/IP reputation, URL safety scanning, prompt injection detection, skill security analysis. Micropayments on Base. [MCP Server](https://www.npmjs.com/package/shieldapi-mcp)
 - [stripe-mcps](https://www.npmjs.com/package/stripe-mcps) — Trust verification + AML sanctions screening before Stripe/x402 payments. Agent identity (ECDSA), 75K+ sanctions entries (UK HMT + OFAC SDN), behavioural spend limits. OWASP MCP Security Cheat Sheet aligned.
 - [KaelAi](https://kaelai.io) — Wallet trust scoring API for the agentic economy. Scores wallets 0-100 across 10 chains with behavioural analysis. Built for x402 servers to vet incoming/outgoing payment wallets before serving or initiating requests.
