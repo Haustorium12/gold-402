@@ -175,6 +175,8 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 
 ---
 
+- [M0 Email Verification](https://m0.aiverall.com/v1/verify-email) — RFC-shaped email syntax check + live domain DNS resolution, so an agent can filter out dead leads before spending money on downstream enrichment. $0.005 USDC on Base mainnet via x402 v2. Does not claim mailbox/SMTP verification. Example: `POST /v1/verify-email {"email":"person@example.com"}`. ([OpenAPI](https://m0.aiverall.com/openapi.json))
+
 ## Infrastructure APIs
 
 - [Arch Tools](https://archtools.dev) — 58 production API tools for AI agents. Web scraping, AI generation, crypto data, OCR, browser automation. Patent-pending agent auth. 15+ chains. ([GitHub](https://github.com/Deesmo/Arch-AI-Tools))
