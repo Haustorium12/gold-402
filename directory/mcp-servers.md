@@ -50,6 +50,7 @@ x402-enabled MCP servers. AI agents (Claude, Cursor, any MCP client) can call th
 - [SolSigs MCP](https://solsigs.com) — 16-tool Solana blockchain intelligence MCP server: DEX prices, arbitrage, wallet scoring, token launches, NFT intel, whale tracking, smart money, staking, Polymarket predictions, social sentiment, RPC relay, price feeds, dev activity, alerts, on-chain summarizer, trending tokens. $0.001-$0.010 USDC on Solana.
 - [isocast-mcp](https://www.npmjs.com/package/isocast-mcp) — Per-signal Polymarket weather-market data across 37 cities, with market URLs and live bucket odds. USDC on Base. `npx isocast-mcp`.
 - [moltalyzer-mcp](https://www.npmjs.com/package/moltalyzer-mcp) — Polymarket and AI-agent-community intelligence: order-book microstructure movers, whale hold-to-resolution calibration, and multi-source digests. USDC on Base. `npx moltalyzer-mcp`.
+- [OrbitWan.io MCP](https://mcp.orbitwan.io/mcp) — 24-tool Wanchain explorer MCP server from an independent archive node: addresses, transactions, tokens, validators, verified contracts, and WanBridge cross chain transfers with both legs correlated; 18 tools free, 6 premium tools prepaid via OrbitPay on Wanchain at 0.0005 USDT per 100 rows. ([Docs](https://orbitwan.io/docs/mcp)) ([Manifest](https://orbitwan.io/.well-known/x402)) ([Registry](https://registry.modelcontextprotocol.io/v0.1/servers?search=orbitwan))
 
 ---
 
