@@ -174,7 +174,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 
 ---
 
-- [M0 Email Verification](https://m0.aiverall.com/v1/verify-email) — RFC-shaped email syntax check + live domain DNS resolution, so an agent can filter out dead leads before spending money on downstream enrichment. $0.005 USDC on Base mainnet via x402 v2. Does not claim mailbox/SMTP verification. Example: `POST /v1/verify-email {"email":"person@example.com"}`. ([OpenAPI](https://m0.aiverall.com/openapi.json))
+- [M0 URL Extraction](https://m0.aiverall.com/v1/extract) — Fetch a public URL, get back clean machine-consumable text (HTML noise stripped, SSRF-guarded). $0.002 USDC on Base mainnet via x402 v2. Example: `POST /v1/extract {"url":"https://example.com"}`. Also exposes email verification ($0.005, `/v1/verify-email`) and a lead-validation bundle ($0.015, `/v1/lead-validate` -- MX existence, disposable-domain, role-account detection). ([OpenAPI](https://m0.aiverall.com/openapi.json))
 
 ## Infrastructure APIs
 
