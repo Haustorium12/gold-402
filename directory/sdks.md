@@ -24,6 +24,9 @@ Client and server-side libraries for building with x402. Start with the official
 ### Official
 - [x402-typescript](https://github.com/x402-foundation/x402/tree/main/typescript) — Official TypeScript implementation. Core protocol types, payment verification and settlement logic, multi-chain support (Base, Base Sepolia, Ethereum, Solana).
 
+### Resource Servers
+- [solana-x402](https://github.com/SaylorInnovations/solana-x402) — Zero-dependency x402 resource server for Solana. Self-verified settlement (USDC/USDT/native SOL) with no facilitator or fee; optional CDP and/or PayAI facilitator settlement layered on for Base and stock x402 clients, with resources carrying an `outputSchema` automatically marked discoverable in the CDP Bazaar. MIT.
+
 ### HTTP Clients
 - [cipher-x402-client](https://github.com/cryptomotifs/cipher-x402-client) — Lightweight TS/JS x402 v2 client. Zero runtime deps, native fetch, ESM + CJS dual build. 34 tests, 89% coverage. Node 18+ / browsers. Optional `ethers` peer dep for signing.
 - [x402-got](https://www.npmjs.com/package/x402-got) — Got HTTP client integration for x402.
