@@ -35,6 +35,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [BridgeNode](https://bridgenode.cc) — OpenAI-compatible LLM inference bridge: 38 models (GLM, Kimi, MiniMax, DeepSeek, GPT-OSS), chat completions with SSE streaming, pay per call via x402 with Solana USDC. 5 models are free — `gpt-oss-20b`, `gpt-oss-120b`, `glm-4.7-flash`, `glm-4.5-flash`, `glm-4.6v-flash` return 200 on the first request with no payment, no API key and no registration. Paid models from $0.002 per call. Example: `POST /v1/chat/completions {"model":"deepseek-v4-flash","messages":[{"role":"user","content":"hi"}]}`. ([OpenAPI](https://bridgenode.cc/openapi.json)) ([llms.txt](https://bridgenode.cc/llms.txt)) ([GitHub](https://github.com/bridgenode-ai/bridgenode-skill))
 
 - [GPT55 Model Gateway](https://gpt55.558686.xyz/v1/chat/completions/standard) — OpenAI-compatible GPT-5.6 Luna Standard chat completions via x402 USDC on Base for $0.00293 per POST request.
+- [/deslop](https://mooch.agency/api/deslop) — Removes AI-writing tells (em dashes, hedging, throat-clearing) from a draft, returns cleaned text plus a changelog. $0.10 USDC on Base. Example: `POST /api/deslop {"text":"..."}`. ([Prompt page](https://mooch.agency/prompts/deslop))
 
 ---
 
