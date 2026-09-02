@@ -77,6 +77,8 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [BNM Data Shop](https://ticks.bnm.farm) — Official public-data caches on 37 paid GET routes (FDA, USDA, USCG, and US/UK/EU/Canadian agency texts and tables); $0.02 per document or $0.05 per page or table, USDC on Base, with free index/search at `/{door}/manifest.json`. Example: `GET /ticks`. ([Manifest](https://ticks.bnm.farm/.well-known/x402)) ([OpenAPI](https://ticks.bnm.farm/openapi.json)) ([MCP](https://ticks.bnm.farm/mcp)) ([llms.txt](https://ticks.bnm.farm/llms.txt))
 - [Citable](https://citable.run) — SEO and AI-visibility data on 17 paid GET routes: keyword research, on-page audits, AI-citation checks across ChatGPT, Claude, Gemini and Perplexity, plus rank, SERP, domain and backlink data; $0.005–$0.30 USDC on Solana mainnet, no account or API key, and any 4xx/5xx cancels the payment instead of settling it.
 
+- [Genuine Good Grants](https://genuinegood.online/v1/grants/preflight) — Sourced U.S. federal grant search, official notice detail, transparent mission-fit signals, application briefs, and deterministic shortlist preflight checks from current Grants.gov public records, priced from $0.05 to $5.00 USDC on Base through x402 v2. ([Manifest](https://genuinegood.online/.well-known/x402)) ([OpenAPI](https://genuinegood.online/openapi.json)) ([llms.txt](https://genuinegood.online/llms.txt))
+
 ## Crypto & DeFi Data
 
 - [AgentServices](https://agentservices.to) — Paid data APIs for AI agents: crypto prices, technical indicators, DeFi yields, IP geolocation, and URL metadata. $0.00-$0.02 USDC on Base. ([x402](https://agentservices.to/.well-known/x402))
