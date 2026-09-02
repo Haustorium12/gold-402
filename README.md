@@ -105,7 +105,7 @@ In July 2026 we ran a paid delivery check across our own shelf — actually buyi
 - **0** took payment and returned nothing
 - **$0.054** spent, every transaction reconciled on-chain
 
-The friction in this economy sits **before** the payment, not after it. Most services are fine; most front doors are not. A larger sample is in progress before we make a claim of it.
+The friction in this economy sits **before** the payment, not after it. Most services are fine; most front doors are not. **We are not claiming that as a finding yet — the sample is 16 services and one day, 2026-07-30.** A wider census was designed the same week and has not run; the blocker is ours, not the ecosystem's. We would rather say that than let the sentence stand.
 
 ### Coverage beyond the West
 
