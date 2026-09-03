@@ -24,7 +24,9 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: readme-numbers         # never two of these racing on the same file
+  group: readme-writers        # shared with weekly-additions: both write README.md.
+                                # Per-workflow groups (2026-09-02) let the two race and
+                                # rejected the loser's push three times. One group, one writer.
   cancel-in-progress: false
 
 permissions:
@@ -57,5 +59,15 @@ jobs:
             git config user.email "actions@github.com"
             git add README.md
             git commit -m "readme-numbers: entry count recounted from the shelves"
-            git push
+            # README has two writers (weekly-additions, readme-numbers). They share a
+            # concurrency group now, but a human merge can still land between our
+            # checkout and our push. Rebase and retry rather than fail the run:
+            # a non-fast-forward here is a race, not a defect in the number.
+            for i in 1 2 3; do
+              git pull --rebase --autostash origin main && git push && exit 0
+              echo "push rejected (attempt $i) -- refetching"
+              sleep $((i * 5))
+            done
+            echo "::error::could not push README after 3 rebase attempts"
+            exit 1
           fi
