@@ -36,6 +36,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 
 - [GPT55 Model Gateway](https://gpt55.558686.xyz/v1/chat/completions/standard) — OpenAI-compatible GPT-5.6 Luna Standard chat completions via x402 USDC on Base for $0.00293 per POST request.
 - [/deslop](https://mooch.agency/api/deslop) — Removes AI-writing tells (em dashes, hedging, throat-clearing) from a draft, returns cleaned text plus a changelog. $0.10 USDC on Base. Example: `POST /api/deslop {"text":"..."}`. ([Prompt page](https://mooch.agency/prompts/deslop))
+- [RGX](https://rgx.tail817c3b.ts.net) — Snap Router: task-to-tool selection over the merged x402 Bazaar and MCP Registry catalog (19k+ entries), one pass, no LLM call, $0.003 USDC. Example: `POST /v1/snap {"task":"check a base token for honeypot","k":4}`. Pricing-Truth: real tradeable depth vs headline TVL, depth-weighted multi-pool price corroboration, and a live buy-then-sell honeypot/transfer-tax check for tokens on Base, Ethereum, and Arbitrum, $0.005-$0.04 USDC. Example: `GET /v1/base/token/0x532f27101965dd16442E59d40670FaF5eBB142E4/report`. Free tier, CDP facilitator. ([Manifest](https://rgx.tail817c3b.ts.net/.well-known/x402)) ([OpenAPI](https://rgx.tail817c3b.ts.net/openapi.json)) ([llms.txt](https://rgx.tail817c3b.ts.net/llms.txt)) ([MCP](https://pypi.org/project/rgx-mcp/))
 
 ---
 
