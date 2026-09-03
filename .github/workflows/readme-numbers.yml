@@ -24,9 +24,13 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: readme-writers        # shared with weekly-additions: both write README.md.
-                                # Per-workflow groups (2026-09-02) let the two race and
-                                # rejected the loser's push three times. One group, one writer.
+  group: readme-numbers
+  # NOT shared with the other README writer. Tried that 2026-09-03 and it was worse:
+  # with cancel-in-progress:false GitHub keeps ONE pending run per group and CANCELS
+  # any further pending ones, so two pushes 20s apart cancelled readme-numbers twice
+  # and left the headline count stale at 517 against 518 on the shelves. A cancelled
+  # run reports no failure, which is the vault pattern. The cross-workflow race is
+  # handled at the push instead -- rebase and retry, below.
   cancel-in-progress: false
 
 permissions:
