@@ -13,7 +13,7 @@
 # Usage:
 #   GITHUB_TOKEN=... python scripts/weekly_additions.py [--print]
 #     --print : render the block to stdout, do NOT touch README (dry run)
-import argparse, datetime, json, os, re, sys, urllib.request
+import argparse, datetime, glob, json, os, re, sys, urllib.request
 
 EM = "\u2014"
 REPO = os.environ.get("WEEKLY_REPO", "Haustorium12/gold-402")
@@ -55,6 +55,26 @@ def parse_added(line):
     desc = re.sub(r"\s+", " ", desc).strip().strip("|").strip()
     return name, url, desc
 
+def shelf_now():
+    """The shelf as it stands, keyed by URL.
+
+    WHY: entries_for_pr() reads the PR's *patch* -- the line as submitted. Any
+    editorial correction made after the merge never reaches this block, so the
+    README can quote one number while the shelf beside it quotes another.
+    Happened 2026-09-03 with RGX: merged saying "19k+ entries", corrected to
+    "16k+" (the submitter's own manifest) thirty seconds later, and the New
+    This Week block went on saying 19k+ because it was reading the patch.
+    Same class as the bug it sits next to: report live state, not a snapshot.
+    """
+    live = {}
+    for f in sorted(glob.glob("directory/*.md")):
+        for ln in open(f, encoding="utf-8"):
+            if ln.startswith("- ["):
+                e = parse_added(ln)
+                if e:
+                    live[e[1]] = e
+    return live
+
 def entries_for_pr(num, token):
     out = []
     for f in api("/repos/%s/pulls/%d/files" % (REPO, num), token):
@@ -81,6 +101,7 @@ def build_block(token, today):
     prev_mon = cur_mon - datetime.timedelta(days=7)
     buckets = {cur_mon: [], prev_mon: []}
     seen = set()
+    live = shelf_now()
     closed = api("/repos/%s/pulls?state=closed&sort=updated&direction=desc&per_page=100" % REPO, token)
     merged = sorted([p for p in closed if p.get("merged_at")], key=lambda p: p["merged_at"])
     for p in merged:
@@ -92,7 +113,8 @@ def build_block(token, today):
             if url in seen:
                 continue
             seen.add(url)
-            buckets[mon].append((name, url, desc))
+            # prefer the line as it stands on the shelf over the line as merged
+            buckets[mon].append(live.get(url, (name, url, desc)))
 
     def render(mon, heading):
         rows = buckets[mon]
