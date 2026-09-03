@@ -31,6 +31,11 @@ on:
     branches: [main]
     paths:
       - 'directory/**'
+  # Manual trigger so the credential can be tested without faking a shelf change.
+  # Added 2026-09-03 when SITE_DISPATCH_PAT was first configured: a secret
+  # existing proves nothing about whether its VALUE authenticates, and the only
+  # way to find out used to be to merge something and hope.
+  workflow_dispatch:
 
 permissions: {}
 
