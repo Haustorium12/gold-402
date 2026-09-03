@@ -1,4 +1,4 @@
-﻿# Security & Audits
+﻿﻿# Security & Audits
 
 Security tools, spending controls, audit resources, and best practices for x402 implementations.
 
@@ -32,6 +32,7 @@ Security tools, spending controls, audit resources, and best practices for x402 
 - [x402 Manifest Check](https://github.com/ruizmr/x402-api-readiness-review) — Zero-dependency Python CLI and live x402-paid API for static manifest checks covering network, recipient, asset, and amount bindings; neither validates runtime enforcement or settlement.
 - [TaskMarket Trust Score](https://95-217-164-43.sslip.io) — Requester reputation scoring for TaskMarket (taskmarket.dev): given a requester wallet address, returns a 0-100 trust score from on-platform payment history (completed tasks, cancellations-after-submission, expirations, self-awards). $0.001 USDC per call on Base, self-facilitated EIP-3009 exact scheme. Example: `GET /trust/0xADDRESS`. Discovery: `GET /.well-known/x402`.
 - [x402 Preflight](https://x402-wallet-readiness-service.vercel.app/api/x402/preflight/audit?resource_url=https%3A%2F%2Fx402-wallet-readiness-service.vercel.app%2Fapi%2Fx402%2Fdev%2Frepo-snapshot%3Frepo%3Dchico10117%2Fbasepay-readiness-service&method=GET&expected_network=eip155%3A8453&max_price_usd=1) — Audits a public x402 endpoint before payment via required `resource_url` and optional `method=GET|HEAD`, `expected_network`, and `max_price_usd` query parameters; the audit costs $0.05 USDC on Base.
+- [MIDAX402](https://midax402.com) — Signed conformance verdicts for x402 services, published to a public registry anyone can audit. Verdicts cannot be bought.
 
 ---
 
