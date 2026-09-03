@@ -1,4 +1,4 @@
-﻿﻿# Security & Audits
+﻿# Security & Audits
 
 Security tools, spending controls, audit resources, and best practices for x402 implementations.
 
