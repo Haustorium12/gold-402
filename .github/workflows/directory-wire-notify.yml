@@ -1,11 +1,28 @@
-# On merge to main touching directory/, poke the site repo to run its
-# Directory Wire workflow (repository_dispatch: directory-merge). This is the
-# instant path; the site's nightly cron is the backstop either way.
+# On merge to main touching directory/, poke the site repo to run its Directory
+# Wire workflow (repository_dispatch: directory-merge). This is the instant path;
+# the site's nightly cron is the backstop either way.
 #
 # Needs SITE_DISPATCH_PAT: a fine-grained PAT on Haustorium12/24klabs-site with
-# Contents: read-write (repository_dispatch requires it), stored as an Actions
-# secret in THIS repo. Until it's configured this workflow exits green with a
-# note -- a missing PAT must not paint merges red; the nightly covers the gap.
+# Contents: read-write (repository_dispatch requires Contents, NOT Actions --
+# picking Actions returns a 403 that looks exactly like a bad token), stored as
+# an Actions secret in THIS repo.
+#
+# WHY THIS GOES RED NOW, when it used to exit green:
+# it used to `exit 0` on a missing secret, so a missing PAT would not paint a
+# merge red. Sound at the time. The cost showed up 2026-09-01: eight door PRs
+# merged, eight green ticks, ZERO dispatches, and the site sat at 505 against a
+# shelf of 514 until Sean noticed at 11pm. Green meant "the workflow ran," and
+# every reader took it to mean "the site was told."
+#
+# Same shape as #39 (SITE_PUSH_PAT unset, sweep green three nights, zero stamps
+# moved) and as a shared concurrency group tried on 2026-09-03 that CANCELLED
+# readme-numbers twice and reported no failure. `FALSEGATE` -- it does not
+# error, it passes. The rule this file now follows: GREEN MEANS THE SITE WAS
+# TOLD. Nothing else earns a tick.
+#
+# This does not block or revert anybody's merge. The merge is already done; this
+# is a separate workflow on main and it goes red on its own commit, not on a
+# contributor's pull request.
 
 name: Directory Wire Notify
 
@@ -25,14 +42,35 @@ jobs:
       - name: Dispatch to 24klabs-site
         env:
           PAT: ${{ secrets.SITE_DISPATCH_PAT }}
+          SHA: ${{ github.sha }}
         run: |
-          if [ -z "$PAT" ]; then
-            echo "SITE_DISPATCH_PAT not configured; the site's nightly wire run will pick this merge up."
-            exit 0
+          set -euo pipefail
+
+          if [ -z "${PAT:-}" ]; then
+            echo "::error title=Site was NOT told about this merge::SITE_DISPATCH_PAT is not configured in gold-402. The live site will not reflect this merge until the site's nightly cron runs -- up to ~24h. Fire the wire by hand (24klabs-site, Directory Wire, Run workflow) or configure the secret. See devs-skills#41."
+            exit 1
           fi
-          curl -sS -f -X POST \
+
+          # -f makes curl exit non-zero on 4xx/5xx, so a revoked or wrong-scoped
+          # PAT fails here instead of being swallowed. 204 is the success code.
+          code=$(curl -sS -o /tmp/resp -w '%{http_code}' -X POST \
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer $PAT" \
             https://api.github.com/repos/Haustorium12/24klabs-site/dispatches \
-            -d '{"event_type":"directory-merge","client_payload":{"gold402_sha":"${{ github.sha }}"}}'
-          echo "Dispatched directory-merge to 24klabs-site."
+            -d "{\"event_type\":\"directory-merge\",\"client_payload\":{\"gold402_sha\":\"$SHA\"}}") || true
+
+          if [ "$code" != "204" ]; then
+            echo "--- response body ---"; cat /tmp/resp || true; echo
+            case "$code" in
+              401) hint="the PAT is invalid, revoked, or expired." ;;
+              403) hint="the PAT is valid but lacks Contents: read-write on 24klabs-site. Contents is the permission repository_dispatch needs -- Actions is the intuitive wrong answer." ;;
+              404) hint="the PAT cannot see 24klabs-site at all -- check the repository is selected on the token." ;;
+              *)   hint="unexpected. Read the body above." ;;
+            esac
+            echo "::error title=Site was NOT told about this merge::Dispatch to 24klabs-site returned HTTP $code -- $hint The nightly cron is still the backstop, so the site self-corrects within ~24h, but this merge is not live yet."
+            exit 1
+          fi
+
+          echo "Dispatched directory-merge to 24klabs-site for $SHA (HTTP 204)."
+          echo "Green here means the site was told. It does not mean the build succeeded --"
+          echo "that is 24klabs-site's Directory Wire run, which is where a build failure shows."
