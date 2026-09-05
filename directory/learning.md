@@ -92,3 +92,5 @@ Tutorials, videos, articles, blog posts, and interactive learning tools for x402
 - [xpaysh/awesome-x402](https://github.com/xpaysh/awesome-x402) — The original community x402 awesome list. Accepts all contributions. gold-402 is the curated layer on top.
 - [sindresorhus/awesome](https://github.com/sindresorhus/awesome) — The awesome list of awesome lists.
 - [Awesome Ethereum](https://github.com/ttumiel/Awesome-Ethereum) — Ethereum development resources.
+
+<!-- maintainer gate self-test, not for merge -->
