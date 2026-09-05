@@ -44,6 +44,7 @@ Tutorials, videos, articles, blog posts, and interactive learning tools for x402
 - [DWF Labs: Inside x402](https://www.dwf-labs.com/research/inside-x402-how-a-forgotten-http-code-becomes-the-future-of-autonomous-payments) — Protocol mechanics, ecosystem adoption, real-world use cases.
 - [WorkOS: x402 vs Stripe MPP](https://workos.com/blog/x402-vs-stripe-mpp-how-to-choose-payment-infrastructure-for-ai-agents-and-mcp-tools-in-2026) — Comprehensive comparison for AI agents and MCP tools.
 - [Lushbinary: x402 & EmDash Content Monetization](https://lushbinary.com/blog/x402-emdash-content-monetization-ai-agent-era-2026/) — x402 + Cloudflare EmDash as the content monetization stack for the AI era.
+- [How x402 paid links work (Payfirst)](https://www.payfirst.app/guides/x402-paid-links) — Guide to x402 V2 payment headers, URL delivery, buyer-client requirements, and retry handling when settlement is uncertain.
 
 ### Use Case Articles
 - [The Agentic Economy](https://www.xpay.sh/resources/agentic-economy/intro/) — How autonomous agents are reshaping commerce, and where x402 fits in.
