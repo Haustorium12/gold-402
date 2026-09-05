@@ -23,7 +23,12 @@ name: Submission Gate
 
 on:
   pull_request_target:
-    types: [opened, synchronize]
+    # `edited` added 2026-09-05. Without it a submitter who corrects their PR
+    # body -- which is exactly what #183 did after the gate probed the wrong
+    # URL -- is left with a red X standing against a body that no longer
+    # exists, and no way to clear it. Safe here only because this job never
+    # checks out PR code; see the header.
+    types: [opened, synchronize, edited]
     paths:
       - 'directory/**'
       - 'README.md'
@@ -56,10 +61,15 @@ jobs:
         env:
           PR_BODY: ${{ github.event.pull_request.body }}
         run: |
+          # The label must START the line. Before 2026-09-05 it did not, so
+          # `Contact URL: https://x.com/...` matched on `url:` and the gate
+          # probed a submitter's social profile as if it were their service
+          # (PR #183, run 33972378408). A contact is not an endpoint.
           URL=$(echo "$PR_BODY" | \
-            grep -oP '(?i)(url|endpoint|service):\s*\K(https?://[^\s]+)' | head -1)
+            grep -oP '(?i)^\s*(url|endpoint|service)\s*:\s*\K(https?://[^\s]+)' | head -1)
           if [ -z "$URL" ]; then
-            URL=$(echo "$PR_BODY" | \
+            # Fallback: first URL anywhere -- but never one on a Contact: line.
+            URL=$(echo "$PR_BODY" | grep -viP '^\s*contact\s*:' | \
               grep -oP 'https?://[^\s\"]+' | head -1)
           fi
           echo "url=$URL" >> "$GITHUB_OUTPUT"
@@ -107,6 +117,48 @@ jobs:
             echo "No example request body -- empty-body probe will be used"
           fi
 
+      # WHICH ACCEPTANCE RULE APPLIES  (added 2026-09-05)
+      # CONTRIBUTING.md has always carried two: services must answer 402, while
+      # a library/framework/learning/community resource with no payable endpoint
+      # only has to be publicly reachable. The gate implemented the first and
+      # ignored the second, so every learning-resource submission failed by
+      # design while the guide said accept it. Found on #183 by the submitter.
+      #
+      # The mode is derived from the SHELF FILES the PR touches -- never from
+      # anything the submitter writes. A submitter cannot ask for the looser
+      # rule; they can only put their line on a shelf, and a human still merges.
+      # Reading the changed-file list is metadata, not code: safe under
+      # pull_request_target.
+      - name: Decide which acceptance rule applies
+        id: mode
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const RESOURCE_SHELVES = [
+              'directory/learning.md',
+              'directory/community.md',
+              'directory/sdks.md',
+              'directory/frameworks.md',
+            ]
+            const files = await github.paginate(github.rest.pulls.listFiles, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+              per_page: 100,
+            })
+            const touched = files
+              .map(f => f.filename)
+              .filter(n => n.startsWith('directory/'))
+            // Default is the STRICTER rule. Resource mode only when every
+            // directory file touched is a resource shelf -- a PR that also
+            // touches a service shelf gets probed for 402, as it should be.
+            const isResource =
+              touched.length > 0 && touched.every(n => RESOURCE_SHELVES.includes(n))
+            const mode = isResource ? 'resource' : 'service'
+            core.info('directory files touched: ' + (touched.join(', ') || '(none)'))
+            core.info('acceptance rule: ' + mode)
+            core.setOutput('mode', mode)
+
       - name: Run submission check
         id: check
         env:
@@ -114,7 +166,8 @@ jobs:
           # never spliced into the command line as expression text.
           SUBMIT_URL: ${{ steps.extract_url.outputs.url }}
           EXAMPLE_BODY: ${{ steps.extract_example.outputs.example }}
-        run: python scripts/submit_check.py "$SUBMIT_URL" "$EXAMPLE_BODY"
+          SUBMIT_MODE: ${{ steps.mode.outputs.mode }}
+        run: python scripts/submit_check.py "$SUBMIT_URL" "$EXAMPLE_BODY" "$SUBMIT_MODE"
 
       - name: Read check result
         id: result
@@ -136,10 +189,15 @@ jobs:
         env:
           SUBMIT_URL: ${{ steps.extract_url.outputs.url }}
           CHECK_REASON: ${{ steps.result.outputs.reason }}
+          SUBMIT_MODE: ${{ steps.mode.outputs.mode }}
         with:
           script: |
             const url = process.env.SUBMIT_URL || '';
             const reason = process.env.CHECK_REASON || '';
+            const mode = process.env.SUBMIT_MODE || 'service';
+            const rule = mode === 'resource'
+              ? "resource -- publicly reachable, no 402 required"
+              : "service -- must answer HTTP 402";
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
@@ -147,7 +205,8 @@ jobs:
               body: [
                 "**Gold-402 Verification: PASSED**",
                 "",
-                "Service URL: `" + url + "`",
+                "URL checked: `" + url + "`",
+                "Rule applied: " + rule,
                 "Result: " + reason,
                 "",
                 "This PR has been approved for merge. A maintainer will review and merge shortly.",
@@ -164,10 +223,15 @@ jobs:
         env:
           SUBMIT_URL: ${{ steps.extract_url.outputs.url }}
           CHECK_REASON: ${{ steps.result.outputs.reason }}
+          SUBMIT_MODE: ${{ steps.mode.outputs.mode }}
         with:
           script: |
             const url = process.env.SUBMIT_URL || '';
             const reason = process.env.CHECK_REASON || '';
+            const mode = process.env.SUBMIT_MODE || 'service';
+            const rule = mode === 'resource'
+              ? "resource -- publicly reachable, no 402 required"
+              : "service -- must answer HTTP 402";
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
@@ -175,16 +239,19 @@ jobs:
               body: [
                 "**Gold-402 Verification: FAILED**",
                 "",
-                "Service URL: `" + url + "`",
+                "URL checked: `" + url + "`",
+                "Rule applied: " + rule,
                 "Reason: " + reason,
                 "",
-                "This PR cannot be merged until the issue is resolved.",
-                "Fix the issue and push a new commit to re-run verification.",
+                "A maintainer will still read this by hand -- the PR stays open.",
+                "Push a new commit, or edit the PR body, to re-run the check.",
                 "",
                 "Common causes:",
-                "- Endpoint does not return HTTP 402 on unauthenticated requests",
-                "- URL is unreachable or times out",
-                "- Service is already listed",
+                "- The URL checked above is not the one you meant. The gate takes the",
+                "  first line that begins with `URL:`, `Endpoint:` or `Service:`.",
+                "- A service endpoint that does not answer HTTP 402 unauthenticated.",
+                "- A URL that is unreachable, times out, or sits behind a login.",
+                "- The entry is already listed.",
                 "",
                 "---",
                 "*Gold-402 verifies x402 technical compliance only.*"

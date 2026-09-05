@@ -1,8 +1,22 @@
 # scripts/submit_check.py
 # Gold-402: submission gate
 # Called by the submit.yml GitHub Action when a PR is opened.
-# Usage: python scripts/submit_check.py <url> [<example_request_body>]
-# Exit 0 = pass (auto-merge). Exit 1 = fail (auto-close with reason).
+# Usage: python scripts/submit_check.py <url> [<example_request_body>] [<mode>]
+# Exit 0 = pass. Exit 1 = fail (labelled needs-work; never auto-closed).
+#
+# TWO MODES, because CONTRIBUTING.md has always had two acceptance rules and
+# this script only ever implemented one (fixed 2026-09-05, found on PR #183):
+#
+#   service  (default) -- an API, MCP server, facilitator, anything with a live
+#                         payable endpoint. Must answer HTTP 402. POST probe.
+#   resource            -- a library, framework, or learning/community resource
+#                         with no payable endpoint of its own. Must be publicly
+#                         reachable. GET probe, 2xx/3xx passes, 402 is NOT
+#                         required and is not expected.
+#
+# Mode is chosen by the workflow from the shelf files the PR touches, never by
+# anything the submitter writes -- a submitter cannot talk their way into the
+# looser mode, they can only put their entry on a shelf a human then reads.
 # SSRF protection baked in -- private IPs are rejected before any request.
 #
 # Example request body (optional, single-line JSON): endpoints that validate
@@ -95,7 +109,12 @@ def main():
 
     url = sys.argv[1].strip()
     example_body = sys.argv[2].strip() if len(sys.argv) > 2 else ""
+    mode = (sys.argv[3].strip() if len(sys.argv) > 3 else "") or \
+           os.environ.get("SUBMIT_MODE", "") or "service"
+    if mode not in ("service", "resource"):
+        fail(f"internal: unknown mode '{mode}' -- expected 'service' or 'resource'")
     print(f"[submit_check] Checking: {url}")
+    print(f"[submit_check] Mode: {mode}")
 
     # 1. URL format validation
     try:
@@ -125,7 +144,36 @@ def main():
     elif listed:
         fail(f"already listed in Gold-402 (source: {source})")
 
-    # 4. Probe for 402
+    # 4a. Resource mode -- reachability, not payment.
+    if mode == "resource":
+        print(f"[submit_check] Probing {url} for a live public response (GET)...")
+        try:
+            req = urllib.request.Request(
+                url,
+                method="GET",
+                headers={"User-Agent": USER_AGENT, "Accept": "*/*"},
+            )
+            try:
+                resp = urllib.request.urlopen(req, timeout=PROBE_TIMEOUT)
+                ok(f"resource is publicly reachable -- HTTP {resp.getcode()}. "
+                   f"No 402 required for this shelf.")
+            except urllib.error.HTTPError as e:
+                if 300 <= e.code < 400:
+                    ok(f"resource is publicly reachable -- HTTP {e.code} redirect. "
+                       f"No 402 required for this shelf.")
+                if e.code in (401, 403):
+                    fail(f"resource returned HTTP {e.code} -- it is behind a login or "
+                         f"otherwise not publicly accessible. CONTRIBUTING.md requires "
+                         f"a resource to be reachable without an account.")
+                fail(f"resource returned HTTP {e.code} -- not a live public page.")
+        except urllib.error.URLError as e:
+            fail(f"could not reach resource: {e.reason}")
+        except Exception as e:
+            if "timed out" in str(e).lower():
+                fail(f"resource timed out after {PROBE_TIMEOUT}s")
+            fail(f"probe error: {e}")
+
+    # 4b. Service mode -- probe for 402
     probe_body = b"{}"
     if example_body:
         try:
