@@ -27,6 +27,7 @@ Infrastructure, agent frameworks, A2A protocols, multi-agent orchestration, and 
 - [XyncPay](https://xyncpay.com) — Protocol translation layer bridging x402, MPP, and AP2. One integration, every AI agent payment protocol. Atomic fee-split settlement via on-chain FeeSplit contract on Base.
 - [RustChain](https://github.com/Scottcjn/Rustchain) — Decentralized PoS blockchain with native x402 for AI agent micropayments. Attestation-based consensus, hardware-bound validators, RTC token economy.
 - [EntRoute](https://entroute.com) — Machine-first API discovery for AI agents. 110+ capabilities, semantic intent resolution, continuous 402 verification probes, quality ranking. MCP server, TypeScript SDK, REST API. ([Docs](https://entroute.com/docs))
+- [WickedAPI x402 Paywall](https://paywall.wickedapi.com) — Multi-tenant x402 paywall-as-a-service on Base mainnet via the Coinbase CDP facilitator. Self-serve signup, REST API to set price/network/payout wallet and forward to a real backend, live settlement views. Example: `GET https://paywall.wickedapi.com/wickedapi/weather` returns a live 402. ([OpenAPI](https://paywall-admin.wickedapi.com/openapi.json), [Cookbook](https://paywall.wickedapi.com/cookbook.html))
 
 ---
 
