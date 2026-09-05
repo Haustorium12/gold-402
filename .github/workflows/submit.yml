@@ -56,24 +56,18 @@ jobs:
         with:
           python-version: '3.11'
 
+      # WHICH URL IS THE DOOR  (moved into a script 2026-09-05)
+      # This was two greps and it picked wrong twice in three days -- once on a
+      # `Contact URL:` line (#183), once on an inline npm link with the trailing
+      # `),` of the markdown attached (#185). Both times a stranger was told
+      # their service failed a probe that never touched their service. The
+      # ordered rule, its reasons and its tests live in scripts/extract_url.py,
+      # which runs from main like everything else here.
       - name: Extract submitted URL from PR body
         id: extract_url
         env:
           PR_BODY: ${{ github.event.pull_request.body }}
-        run: |
-          # The label must START the line. Before 2026-09-05 it did not, so
-          # `Contact URL: https://x.com/...` matched on `url:` and the gate
-          # probed a submitter's social profile as if it were their service
-          # (PR #183, run 33972378408). A contact is not an endpoint.
-          URL=$(echo "$PR_BODY" | \
-            grep -oP '(?i)^\s*(url|endpoint|service)\s*:\s*\K(https?://[^\s]+)' | head -1)
-          if [ -z "$URL" ]; then
-            # Fallback: first URL anywhere -- but never one on a Contact: line.
-            URL=$(echo "$PR_BODY" | grep -viP '^\s*contact\s*:' | \
-              grep -oP 'https?://[^\s\"]+' | head -1)
-          fi
-          echo "url=$URL" >> "$GITHUB_OUTPUT"
-          echo "Extracted URL: $URL"
+        run: python scripts/extract_url.py
 
       - name: Fail if no URL found
         if: steps.extract_url.outputs.url == ''
@@ -167,6 +161,14 @@ jobs:
           SUBMIT_URL: ${{ steps.extract_url.outputs.url }}
           EXAMPLE_BODY: ${{ steps.extract_example.outputs.example }}
           SUBMIT_MODE: ${{ steps.mode.outputs.mode }}
+        # WHY continue-on-error (2026-09-05, found on #185).
+        # submit_check.py exits 1 on a fail. Every step after a failed step
+        # carries an implicit success(), so the fail COMMENT and the needs-work
+        # LABEL were skipped on every failing submission this gate ever saw --
+        # #185 got a red X and total silence, while CONTRIBUTING.md promises
+        # "never a silent rejection". The run still goes red: the last step
+        # reads the result and exits 1.
+        continue-on-error: true
         run: python scripts/submit_check.py "$SUBMIT_URL" "$EXAMPLE_BODY" "$SUBMIT_MODE"
 
       - name: Read check result
@@ -190,9 +192,11 @@ jobs:
           SUBMIT_URL: ${{ steps.extract_url.outputs.url }}
           CHECK_REASON: ${{ steps.result.outputs.reason }}
           SUBMIT_MODE: ${{ steps.mode.outputs.mode }}
+          URL_WHY: ${{ steps.extract_url.outputs.why }}
         with:
           script: |
             const url = process.env.SUBMIT_URL || '';
+            const why = process.env.URL_WHY || '';
             const reason = process.env.CHECK_REASON || '';
             const mode = process.env.SUBMIT_MODE || 'service';
             const rule = mode === 'resource'
@@ -205,7 +209,7 @@ jobs:
               body: [
                 "**Gold-402 Verification: PASSED**",
                 "",
-                "URL checked: `" + url + "`",
+                "URL checked: `" + url + "`" + (why ? "  _(" + why + ")_" : ""),
                 "Rule applied: " + rule,
                 "Result: " + reason,
                 "",
@@ -225,9 +229,11 @@ jobs:
           SUBMIT_URL: ${{ steps.extract_url.outputs.url }}
           CHECK_REASON: ${{ steps.result.outputs.reason }}
           SUBMIT_MODE: ${{ steps.mode.outputs.mode }}
+          URL_WHY: ${{ steps.extract_url.outputs.why }}
         with:
           script: |
             const url = process.env.SUBMIT_URL || '';
+            const why = process.env.URL_WHY || '';
             const reason = process.env.CHECK_REASON || '';
             const mode = process.env.SUBMIT_MODE || 'service';
             const rule = mode === 'resource'
@@ -240,7 +246,7 @@ jobs:
               body: [
                 "**Gold-402 Verification: FAILED**",
                 "",
-                "URL checked: `" + url + "`",
+                "URL checked: `" + url + "`" + (why ? "  _(" + why + ")_" : ""),
                 "Rule applied: " + rule,
                 "Reason: " + reason,
                 "",
@@ -248,8 +254,11 @@ jobs:
                 "Push a new commit, or edit the PR body, to re-run the check.",
                 "",
                 "Common causes:",
-                "- The URL checked above is not the one you meant. The gate takes the",
-                "  first line that begins with `URL:`, `Endpoint:` or `Service:`.",
+                "- The URL checked above is not the one you meant. The gate picks it in",
+                "  this order: a line starting `URL:`, `Endpoint:`, `Service:`, `Manifest:`",
+                "  or `API:`; then any `/.well-known/x402` manifest link; then the first",
+                "  link that is not a package, repo or social page. Add a `URL:` line to",
+                "  say it outright.",
                 "- A service endpoint that does not answer HTTP 402 unauthenticated.",
                 "- A URL that is unreachable, times out, or sits behind a login.",
                 "- The entry is already listed.",

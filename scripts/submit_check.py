@@ -14,6 +14,15 @@
 #                         reachable. GET probe, 2xx/3xx passes, 402 is NOT
 #                         required and is not expected.
 #
+# A MANIFEST IS A DOOR TOO (added 2026-09-05, found on PR #185)
+# CONTRIBUTING.md says it twice -- acceptance is "a valid HTTP 402 challenge ...
+# or serves a valid x402 manifest", and the ask is "the endpoint itself, or a
+# /.well-known/x402 manifest that points at it". This script only implemented the
+# first half, so a submitter who gave us the manifest we asked for was told their
+# service returned 2xx instead of 402. Service mode now follows a manifest to the
+# resources it declares and knocks one of THOSE for 402 -- the manifest is never
+# taken on trust, it is only a map to the door.
+#
 # Mode is chosen by the workflow from the shelf files the PR touches, never by
 # anything the submitter writes -- a submitter cannot talk their way into the
 # looser mode, they can only put their entry on a shelf a human then reads.
@@ -103,6 +112,67 @@ def check_already_listed(resource_url):
         return False, None
 
 
+def probe_for_402(url, probe_body=b"{}"):
+    """POST once. Returns (status, note). status is an int code or None if the
+    request never completed."""
+    req = urllib.request.Request(
+        url,
+        data=probe_body,
+        method="POST",
+        headers={
+            "User-Agent":   USER_AGENT,
+            "Content-Type": "application/json",
+            "Accept":       "application/json",
+        },
+    )
+    try:
+        resp = urllib.request.urlopen(req, timeout=PROBE_TIMEOUT)
+        return resp.getcode(), "2xx"
+    except urllib.error.HTTPError as e:
+        return e.code, "http error"
+    except urllib.error.URLError as e:
+        return None, str(e.reason)
+    except Exception as e:
+        return None, str(e)
+
+
+def looks_like_manifest(url):
+    return "/.well-known/x402" in urllib.parse.urlparse(url).path.lower()
+
+
+def manifest_resources(url):
+    """Fetch an x402 manifest and return the endpoint URLs it declares.
+    Returns (urls, error). Never raises."""
+    try:
+        req = urllib.request.Request(
+            url, method="GET",
+            headers={"User-Agent": USER_AGENT, "Accept": "application/json"},
+        )
+        raw = urllib.request.urlopen(req, timeout=PROBE_TIMEOUT).read()
+    except urllib.error.HTTPError as e:
+        return [], f"manifest returned HTTP {e.code}"
+    except Exception as e:
+        return [], f"could not fetch manifest: {e}"
+    try:
+        doc = json.loads(raw)
+    except Exception as e:
+        return [], f"manifest is not valid JSON: {e}"
+    if not isinstance(doc, dict):
+        return [], "manifest is not a JSON object"
+    urls = []
+    for item in (doc.get("resources") or []):
+        if isinstance(item, dict):
+            r = item.get("resource") or item.get("url")
+            if isinstance(r, str) and r.startswith(("http://", "https://")):
+                urls.append(r)
+    if not urls and isinstance(doc.get("resource"), str):
+        urls.append(doc["resource"])
+    if not urls:
+        return [], "manifest declares no resources"
+    return urls, None
+
+
+
 def main():
     if len(sys.argv) < 2:
         fail("no URL provided -- usage: python submit_check.py <url> [<example_request_body>]")
@@ -172,6 +242,35 @@ def main():
             if "timed out" in str(e).lower():
                 fail(f"resource timed out after {PROBE_TIMEOUT}s")
             fail(f"probe error: {e}")
+
+    # 4b0. Service mode, manifest form -- the URL we were given is a map, not the
+    # door. Read it, then knock the doors it names. Each one gets its own SSRF
+    # check: the manifest is a document a stranger controls.
+    if looks_like_manifest(url):
+        print(f"[submit_check] {url} is an x402 manifest -- reading the resources it declares")
+        resources, err = manifest_resources(url)
+        if err:
+            fail(f"{err}. A manifest at /.well-known/x402 must be valid JSON "
+                 f"declaring the endpoints it sells.")
+        print(f"[submit_check] manifest declares {len(resources)} resource(s)")
+        tried = []
+        for r in resources[:5]:
+            r_host = urllib.parse.urlparse(r).hostname
+            if not r_host:
+                continue
+            private, ip_addr = is_private_ip(r_host)
+            if private:
+                print(f"[submit_check] skipping {r} -- resolves to private/reserved IP ({ip_addr})")
+                continue
+            print(f"[submit_check] knocking {r} for HTTP 402...")
+            code, note = probe_for_402(r)
+            tried.append(f"{r} -> {code if code else note}")
+            if code == 402:
+                ok(f"manifest at {url} declares {len(resources)} resource(s); "
+                   f"{r} answered HTTP 402 -- x402 compliant")
+        detail = "; ".join(tried) if tried else "no publicly resolvable resource in the manifest"
+        fail(f"manifest at {url} is readable, but none of the endpoints it declares "
+             f"answered HTTP 402 ({detail}).")
 
     # 4b. Service mode -- probe for 402
     probe_body = b"{}"
