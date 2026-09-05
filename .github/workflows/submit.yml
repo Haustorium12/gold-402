@@ -212,8 +212,9 @@ jobs:
                 "This PR has been approved for merge. A maintainer will review and merge shortly.",
                 "",
                 "---",
-                "*Verified by Gold-402. Verification confirms x402 technical compliance only.*",
-                "*It does not constitute endorsement of the service.*"
+                mode === 'resource'
+                  ? "*Verified by Gold-402. This check confirms the resource is publicly reachable. It makes no claim about x402 compliance, and is not an endorsement.*"
+                  : "*Verified by Gold-402. Verification confirms x402 technical compliance only. It does not constitute endorsement of the service.*"
               ].join('\n')
             })
 
@@ -254,7 +255,9 @@ jobs:
                 "- The entry is already listed.",
                 "",
                 "---",
-                "*Gold-402 verifies x402 technical compliance only.*"
+                mode === 'resource'
+                  ? "*Gold-402 checked whether this resource is publicly reachable.*"
+                  : "*Gold-402 verifies x402 technical compliance only.*"
               ].join('\n')
             })
 
