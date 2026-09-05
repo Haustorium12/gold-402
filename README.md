@@ -181,6 +181,7 @@ The wire lives at **[24klabs.ai/news](https://24klabs.ai/news)** — dated editi
 - **[x402 Preflight](https://x402.chikocorp.com/api/x402/preflight/audit?resource_url=https%3A%2F%2Fx402.chikocorp.com%2Fapi%2Fx402%2Fdev%2Frepo-snapshot%3Frepo%3Dchico10117%2Fbasepay-readiness-service&method=GET&expected_network=eip155%3A8453&max_price_usd=1)** — Audits a public x402 endpoint before payment via required `resource_url` and optional `method=GET|HEAD`, `expected_network`, and `max_price_usd` query parameters; the audit costs $0.05 USDC on Base.
 - **[MIDAX402](https://midax402.com)** — Signed EIP-712 conformance verdicts for x402 services, appended to a public registry. Paid board position available ($1–$100 ladder) as a separate column; no payment changes a verdict or the verification-date ordering.
 - **[WickedAPI x402 Paywall](https://paywall.wickedapi.com)** — Multi-tenant x402 paywall-as-a-service on Base mainnet via the Coinbase CDP facilitator. Self-serve signup, REST API to set price/network/payout wallet and forward to a real backend, live settlement views. Example: `GET https://paywall.wickedapi.com/wickedapi/weather` returns a live 402. ([OpenAPI](https://paywall-admin.wickedapi.com/openapi.json), [Cookbook](https://paywall.wickedapi.com/cookbook.html))
+- **[How x402 paid links work (Payfirst)](https://www.payfirst.app/guides/x402-paid-links)** — Guide to x402 V2 payment headers, URL delivery, buyer-client requirements, and retry handling when settlement is uncertain.
 
 **Last week** (Aug 24—30)
 
