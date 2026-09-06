@@ -159,17 +159,59 @@ def manifest_resources(url):
         return [], f"manifest is not valid JSON: {e}"
     if not isinstance(doc, dict):
         return [], "manifest is not a JSON object"
+    # EVERY SHAPE THAT IS ACTUALLY OUT THERE (widened 2026-09-05, same day it shipped).
+    # The first version of this read only `resources: [{resource|url}]`. Knocking 329 live
+    # x402 manifests that afternoon found that shape is a minority: the wild also uses
+    # `resources: ["https://..."]`, `resources: ["POST /ask/haiku"]`, `endpoints:`,
+    # `services:`, and a `baseUrl` that relative paths hang off. The narrow reader found a
+    # door on 22 of them; this one finds 94 on the same set. Shipping the narrow version
+    # would have failed a submitter whose manifest is perfectly valid and just not shaped
+    # the way ours is -- which is the exact bug this whole function was added to fix.
+    # Relative refs hang off the ORIGIN, not off the manifest's own path -- joining them
+    # to ".../.well-known/x402" produces ".../.well-known/x402/ask/haiku", which 404s.
+    _p = urllib.parse.urlparse(url)
+    base = doc.get("baseUrl") or doc.get("base_url") or f"{_p.scheme}://{_p.netloc}"
     urls = []
-    for item in (doc.get("resources") or []):
-        if isinstance(item, dict):
-            r = item.get("resource") or item.get("url")
-            if isinstance(r, str) and r.startswith(("http://", "https://")):
-                urls.append(r)
-    if not urls and isinstance(doc.get("resource"), str):
-        urls.append(doc["resource"])
-    if not urls:
+
+    def add(ref):
+        if not isinstance(ref, str) or not ref.strip():
+            return
+        ref = ref.strip()
+        if " " in ref:                      # "POST /ask/haiku"
+            verb, _, rest = ref.partition(" ")
+            if verb.upper() in ("GET", "POST", "PUT", "PATCH", "DELETE"):
+                ref = rest.strip()
+        if ref.startswith(("http://", "https://")):
+            urls.append(ref)
+        else:
+            urls.append(urllib.parse.urljoin(base.rstrip("/") + "/", ref.lstrip("/")))
+
+    for key in ("resources", "endpoints", "services", "paths", "apis", "routes"):
+        val = doc.get(key)
+        if isinstance(val, list):
+            for item in val:
+                if isinstance(item, str):
+                    add(item)
+                elif isinstance(item, dict):
+                    add(item.get("resource") or item.get("url")
+                        or item.get("path") or item.get("endpoint"))
+        elif isinstance(val, dict):
+            for k, v in val.items():
+                if isinstance(v, str):
+                    add(v)
+                elif isinstance(v, dict):
+                    add(v.get("resource") or v.get("url") or v.get("path") or k)
+    if isinstance(doc.get("resource"), str):
+        add(doc["resource"])
+
+    seen, uniq = set(), []
+    for u in urls:
+        if u not in seen:
+            seen.add(u)
+            uniq.append(u)
+    if not uniq:
         return [], "manifest declares no resources"
-    return urls, None
+    return uniq, None
 
 
 
