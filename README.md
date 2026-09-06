@@ -7,7 +7,7 @@
 
 # gold-402
 
-> The gold standard for x402 resources. **<!--COUNT:START-->522<!--COUNT:END--> curated entries** — paid endpoints probed for a live 402 before listing, libraries and repos checked for real activity, and the whole shelf re-knocked every night with the result dated. No filler.
+> The gold standard for x402 resources. **<!--COUNT:START-->523<!--COUNT:END--> curated entries** — paid endpoints probed for a live 402 before listing, libraries and repos checked for real activity, and the whole shelf re-knocked every night with the result dated. No filler.
 
 [![GitHub stars](https://img.shields.io/github/stars/Haustorium12/gold-402?style=social)](https://github.com/Haustorium12/gold-402)
 [![Last Commit](https://img.shields.io/github/last-commit/Haustorium12/gold-402)](https://github.com/Haustorium12/gold-402/commits/main)
@@ -26,7 +26,7 @@ gold-402 is the other thing. Smaller on purpose. A person checked every entry, w
 
 ## The Directory
 
-The product. <!--COUNT:START-->522<!--COUNT:END--> entries across <!--SHELVES:START-->13<!--SHELVES:END--> shelves, in [`directory/`](directory/).
+The product. <!--COUNT:START-->523<!--COUNT:END--> entries across <!--SHELVES:START-->13<!--SHELVES:END--> shelves, in [`directory/`](directory/).
 
 | Shelf | What's on it |
 |---|---|
