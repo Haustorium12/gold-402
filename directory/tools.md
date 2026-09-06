@@ -25,7 +25,7 @@ Development tools, CLI utilities, monitoring, analytics, and CI/CD integrations 
 ## GitHub Actions & CI/CD
 
 - [24K Labs GitHub Action](https://github.com/Haustorium12/24klabs-action) — Automated AI code review on every PR. Runs explain, debug, review, and security audit via x402 micropayments. Drop into any GitHub Actions workflow.
-- [Obol GitHub Actions CI/CD](https://api.obol.sh) — Obol generates GitHub Actions CI/CD pipelines via x402. $5 USDC per call on Base.
+- [Obol GitHub Actions CI/CD](https://api.obol.sh/.well-known/x402) — Obol generates GitHub Actions CI/CD pipelines via x402. $5 USDC per call on Base.
 
 ---
 
@@ -35,7 +35,7 @@ Development tools, CLI utilities, monitoring, analytics, and CI/CD integrations 
 - [ScoutScore](https://scoutscore.ai) — Trust scoring infrastructure for x402 services. Monitors 1,700+ services with continuous health checks and fidelity probes. 4-pillar model: Contract Clarity, Availability, Response Fidelity, Identity & Safety. [npm SDK](https://www.npmjs.com/package/@scoutscore/sdk) [MCP Server](https://www.npmjs.com/package/@scoutscore/mcp-server)
 - [x402scan Explorer](https://x402scan.com) — Blockchain explorer for x402 payments. Transaction search and verification, payment requirement inspection, settlement status tracking.
 - [Agent Forensics](https://www.npmjs.com/package/agent-forensics) — Agent cost observability for Claude Code. Analyzes JSONL session logs: per-model cost breakdown, cache efficiency, waste patterns (model misallocation, debug loops, sub-agent sprawl). Free CLI: `npx agent-forensics analyze`. x402 API at $5/$15 tiers on Base.
-- [Valoria](https://x402.valoria.net) — x402 market intelligence with revenue rankings, service analysis, pricing data across 90K+ indexed services and $148M+ in tracked on-chain volume.
+- [Valoria](https://x402.valoria.net/.well-known/x402) — x402 market intelligence with revenue rankings, service analysis, pricing data across 90K+ indexed services and $148M+ in tracked on-chain volume.
 - [x402station](https://x402station.com) — Real-time monitoring and discovery platform for 20,000+ x402 endpoints. Probes every 10 minutes, tracks health scores, uptime, and latency. MCP server for agent access included.
 - [ToolMeter](https://snappedai.com/toolmeter/) — MCP/x402 seller-readiness tool with pricing metadata, `.well-known/x402`, OpenAPI, agent metadata, listing kit, and buyer-safety checks for paid endpoint launches.
 - [agenteconomy.to](https://agenteconomy.to) — Real-time dashboard tracking agentic economy across x402, ERC-8004, ERC-8183, and MPP protocols on 8 chains. Refreshes every 6 hours.
@@ -66,13 +66,13 @@ Development tools, CLI utilities, monitoring, analytics, and CI/CD integrations 
 
 ## Discovery & Search
 
-- [Agent Café](https://api.402.coffee/docs) — x402 developer service with published API documentation.
+- [Agent Café](https://api.402.coffee/.well-known/x402.json) — x402 developer service with published API documentation.
 - [x402 Service Discovery API](https://x402-discovery-api.onrender.com) — Enriched directory of 251+ x402-payable services. Trust signals, uptime, latency, health scores. Auto-scans x402.org/ecosystem every 6h. 6-tool MCP server.
 - [x402 RouteNet](https://x402-routenet.onrender.com) — Smart routing layer for x402-enabled services. Selects optimal endpoint from 251+ services based on price, latency, health, or composite trust. Four strategies: `best`, `cheapest`, `fastest`, `most_trusted`.
 - [OpenClaw Discovery Index](https://x402search.xyz) — x402-gated search engine for 13,000+ x402-enabled APIs indexed from CDP Bazaar. $0.01 USDC per search on Base.
-- [AgentIndex](https://agentndx-production.up.railway.app) — Unified search across 15,000+ MCP services, A2A agents, and x402 APIs from 5 registries (Smithery, official MCP, GitHub, Bazaar, A2A). x402 paid search ($0.005), analyze ($0.05), trending ($0.10).
+- [AgentIndex](https://agentndx-production.up.railway.app/.well-known/x402) — Unified search across 15,000+ MCP services, A2A agents, and x402 APIs from 5 registries (Smithery, official MCP, GitHub, Bazaar, A2A). x402 paid search ($0.005), analyze ($0.05), trending ($0.10).
 - [Cinderwright Discovery Hub](https://api.ideafactorylab.org) — x402 service search engine. 152+ services across 9 categories with daily crawling and health checks. Paid search, free submission, free stats. Built by a production autonomous AI agent.
-- [BlockRun](https://blockrun.ai) — AI Gateway + Service Directory. 600+ x402 services indexed, trust scores, 31+ AI models via pay-per-use USDC.
+- [BlockRun](https://blockrun.ai/.well-known/x402) — AI Gateway + Service Directory. 600+ x402 services indexed, trust scores, 31+ AI models via pay-per-use USDC.
 - [x402search MCP](https://github.com/x402-index/x402search-mcp) — Search 14,000+ x402-enabled HTTP APIs. Also live as ACP agent on Virtuals Protocol (ID 22531). ([npm](https://www.npmjs.com/package/x402search-mcp)) ([PyPI](https://pypi.org/project/x402search-mcp/))
 - [Animica x402 Index](https://animica.dev/x402/index) — Full-text search over ~18,000 machine-payable services indexed from their own 402 challenges (descriptions, input schemas, parameter names, prices, settlement networks), refreshed hourly; ~$0.006 USDC per query, free trial. Example: `POST /x402/index {"query":"wallet balance eip155:8453"}`. Free human-readable directory of ANM-settling services at [animica.dev/x402/scan](https://animica.dev/x402/scan). ([Manifest](https://animica.dev/.well-known/x402))
 - [nohumans.directory](https://nohumans.directory) — Directory of paid x402 APIs and datasets with continuous 402 probing plus paid delivery verification: 550 endpoints purchased from with real USDC, 332 delivered, with the full outcome breakdown and the SQL behind it published. Free MCP and REST discovery; payer reports require an EIP-191 signature bound to the on-chain transfer. ([MCP](https://api.nohumans.directory/mcp)) ([Stats](https://nohumans.directory/stats)) ([Skill](https://github.com/jalcodev/nohumans-directory-docs))

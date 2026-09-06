@@ -62,14 +62,14 @@ Infrastructure, agent frameworks, A2A protocols, multi-agent orchestration, and 
 - [Agent Commerce Kit (ACK)](https://github.com/agentcommercekit/ack) — MIT-licensed DID and verifiable-credential toolkit for agent identity. Builds owner-accountable delegation chains — the opposite design pole from ERC-8004's pseudonymous on-chain identity.
 - [Skyfire](https://docs.skyfire.xyz) — Agent identity and payment credentials as ES256 JWTs with a public JWKS endpoint. The rare pattern in this space that a stranger can verify without contacting the issuer — worth studying if you're designing receipts.
 - [Google A2A x402 Extension](https://github.com/google-agentic-commerce/a2a-x402) — Agent commerce protocol. Python and TypeScript implementations. Payment-required, payment-submitted, payment-completed flow. Multi-agent payment orchestration.
-- [Revettr](https://revettr.com) — Counterparty risk scoring API for x402 agentic commerce. Scores wallet addresses, domains, IPs, and companies 0-100 for agent-to-agent payment safety.
+- [Revettr](https://revettr.com/.well-known/x402.json) — Counterparty risk scoring API for x402 agentic commerce. Scores wallet addresses, domains, IPs, and companies 0-100 for agent-to-agent payment safety.
 - [Animica Agent Job Network](https://x402.animica.dev) — Agents post tasks with a USDC budget and other agents perform them for payment; escrow holds the budget until the buyer's chosen verification passes, rejected jobs refund in full, receipts are ML-DSA-65 signed. Example: `POST /api/v1/jobs/quote {"capability":"summarise","budget_usd":1}`. ([OpenAPI](https://x402.animica.dev/openapi.json))
 
 ---
 
 ## Multi-Agent Orchestration
 
-- [SwarmX](https://swarmx.io) — Multi-agent AI orchestration with native x402 micropayments on Solana. 49 endpoints, 39 MCP tools, dual LLM, knowledge/RAG with pgvector. ElizaOS v2 plugin. ([npm](https://www.npmjs.com/package/swarms-x402))
+- [SwarmX](https://swarmx.io/.well-known/x402) — Multi-agent AI orchestration with native x402 micropayments on Solana. 49 endpoints, 39 MCP tools, dual LLM, knowledge/RAG with pgvector. ElizaOS v2 plugin. ([npm](https://www.npmjs.com/package/swarms-x402))
 - [payagent](https://github.com/stevemilton/payagent) — Drop-in `fetch` wrapper that auto-handles HTTP 402 responses. Zero agent code changes required.
 - [AlphaClaw](https://github.com/diassique/alphaclaw) — Autonomous AI agent network hunting alpha on Polymarket and DeFi. 6 specialized microservices sell data streams via x402, one coordinator buys from all and synthesizes. ACP with stake-weighted voting.
 
@@ -84,9 +84,9 @@ Infrastructure, agent frameworks, A2A protocols, multi-agent orchestration, and 
 - [MAXIA](https://maxiaworld.app) — AI-to-AI marketplace implementing x402 V2 micropayments on Solana and Base for autonomous agent service payments.
 - [AgentStore](https://agentstore.tools) — Open-source marketplace for Claude Code plugins with x402 USDC payments, 80/20 publisher revenue split, permissionless publishing via CLI.
 - [x402 Bazaar](https://x402bazaar.org) — Decentralized API marketplace with 69 native x402-payable endpoints. Multi-chain USDC on Base and SKALE. MCP server via `npx x402-bazaar init`. 505 passing tests.
-- [Satring](https://satring.com) — Curated L402 + x402 API directory with human ratings, health monitoring, MCP server. Dual-protocol (Lightning + USDC on Base).
+- [Satring](https://satring.com/.well-known/x402) — Curated L402 + x402 API directory with human ratings, health monitoring, MCP server. Dual-protocol (Lightning + USDC on Base).
 - [minia2a.uk](https://minia2a.uk) — Open M2M micropayment marketplace. 173 x402-payable services across 50+ categories (crypto data, web scraping, email verification, token security, agent toolkits). 34 registered agents. 5% fee, USDC settlement on Base. MCP registry, CLI, and 5-minute hands-on tutorial.
-- [Frantic](https://gofrantic.com) — Bounty board where AI agents claim funded work, deliver artifacts in the open, and are paid in USDC on Base only when a delivery is accepted, with x402 pay-per-post at `POST /v1/vendor-postings/x402`, a manifest at `/.well-known/x402`, and every claim, judgment, and payout sealed to a public receipt ledger.
+- [Frantic](https://gofrantic.com/.well-known/x402) — Bounty board where AI agents claim funded work, deliver artifacts in the open, and are paid in USDC on Base only when a delivery is accepted, with x402 pay-per-post at `POST /v1/vendor-postings/x402`, a manifest at `/.well-known/x402`, and every claim, judgment, and payout sealed to a public receipt ledger.
 
 ## Notable Implementations
 
