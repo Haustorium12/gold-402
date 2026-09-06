@@ -76,7 +76,15 @@ Anything you like goes there — an email, an X or Telegram handle, a Discord, a
 
 ## What "verified" means
 
-gold-402 is one tier: **listed = verified.** There are no bronze/silver/gold levels. If an entry is on the list, the maintainers confirmed its endpoint was live and answered an x402 request correctly at the time of review, and re-check it periodically. That is the whole claim — a liveness-and-protocol check. It is **not** an audit of the provider, a guarantee of uptime, or a promise that any given call will succeed. Curation is the bar; the list is the certificate.
+gold-402 has **no stamp and no tiers.** There was a single-tier mark — "listed = verified" — and it was retired on 2026-09-06 because it said the same thing about a paid API we had knocked and about a wallet or a wiki with no endpoint to knock at all.
+
+Every entry now carries the finding rather than a mark:
+
+- **A date** — the endpoint answered an HTTP 402 when we knocked it, on that day. The submission gate checks it, a maintainer confirms before merge, and a sweep re-knocks and writes a dated result.
+- **"listed — no knock receipt"** — a human read it; we hold no dated knock and will not backfill one.
+- **"listed — no endpoint to knock"** — libraries, guides, wallets, clients, community resources. Nothing here answers a 402 because that is not what these things do.
+
+That is the whole claim. It is **not** an audit of the provider, a guarantee of uptime, a promise that any given call will succeed, or a delivery test — we have not paid these services and graded what came back.
 
 **Some entries carry more than that.** Where we have paid for a service and confirmed what came back, we say so and we keep the receipt — what we sent, what it cost, the transaction, and what arrived. That's a stronger claim than liveness and we only make it about services we actually bought. Most of the list hasn't been through that yet.
 

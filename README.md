@@ -48,20 +48,36 @@ The product. <!--COUNT:START-->526<!--COUNT:END--> entries across <!--SHELVES:ST
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/sections/verified-dark.svg">
-  <img src="assets/sections/verified-light.svg" alt="Section: What verified means here" width="680">
+  <img src="assets/sections/verified-light.svg" alt="Section: What being on this list means" width="680">
 </picture>
 
-## What "verified" means here
+## What being on this list means
 
-One tier: **listed = verified.** No bronze, silver, gold.
+There is no stamp. There was one — "Gold402 Verified," one tier, a gold tick — and it was
+retired on 2026-09-06 because it said the identical thing about a paid API we knocked last
+Tuesday, a community wiki with no endpoint to knock at all, and an entry we hold no dated
+receipt for. A mark that everything wears certifies nothing. We have made that criticism of
+other people's badges and it was true of ours.
 
-If an entry is on the list, its endpoint answered an x402 request correctly at review — checked
-by an automated gate on the submission, confirmed by a maintainer before the merge — and a nightly
-sweep re-knocks every entry on every shelf and writes a dated result. That is the whole claim.
+What every entry now carries instead is the finding, per entry:
 
-**It is not** an audit of the provider, a guarantee of uptime, or a promise any given call will succeed.
+- **A date** — *this endpoint answered an HTTP 402 when we knocked it, on this day.* An
+  automated gate checks the submission, a maintainer confirms it before merge, and a sweep
+  re-knocks and writes a dated result. A date is checkable. A tick is not.
+- **Or "listed — no knock receipt"** — a human read it and it is on the list. We hold no
+  dated knock, and we will not backfill a date we cannot show.
+- **Or "listed — no endpoint to knock"** — libraries, guides, wallets, clients and
+  community resources. Nothing here answers a 402 because that is not what these things
+  do. We read them, and we checked they were publicly reachable.
 
-**Some entries carry more.** Where we have paid for a service and confirmed what came back, we say so and keep the receipt — what we sent, what it cost, the transaction hash, what arrived. That's a stronger claim and we only make it about services we actually bought. Most of the list hasn't been through that yet, and we'd rather say so than imply otherwise.
+**None of it is a delivery test.** We have not paid these services and graded what came
+back. Read any of it as "we checked what is stated above," never as "this is worth the
+money."
+
+**Some entries carry more.** Where we have paid for a service and confirmed what came back,
+we say so and keep the receipt — what we sent, what it cost, the transaction hash, what
+arrived. That is a stronger claim and we only make it about services we actually bought.
+Most of the list has not been through that, and we would rather say so than imply otherwise.
 
 ---
 
