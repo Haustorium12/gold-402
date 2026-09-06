@@ -43,15 +43,12 @@ jobs:
             git config user.email "actions@github.com"
             git add README.md
             git commit -m "weekly additions: refresh New This Week block"
-            # README has two writers (weekly-additions, readme-numbers). They share a
-            # concurrency group now, but a human merge can still land between our
-            # checkout and our push. Rebase and retry rather than fail the run:
-            # a non-fast-forward here is a race, not a defect in the number.
-            for i in 1 2 3; do
-              git pull --rebase --autostash origin main && git push && exit 0
-              echo "push rejected (attempt $i) -- refetching"
-              sleep $((i * 5))
-            done
-            echo "::error::could not push README after 3 rebase attempts"
-            exit 1
+            # README has two writers (weekly-additions, readme-numbers) in separate
+            # concurrency groups, so a rejected push here is a race, not a defect in
+            # the block. scripts/push_readme.sh resolves it by regenerating against
+            # the new head rather than rebasing a stale diff -- see its header for the
+            # 2026-09-06 failure that replaced the old inline loop.
+            bash scripts/push_readme.sh \
+              "python scripts/weekly_additions.py" \
+              "weekly additions: refresh New This Week block"
           fi
