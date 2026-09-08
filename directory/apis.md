@@ -194,6 +194,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 ---
 
 - [M0 URL Extraction](https://m0.aiverall.com/v1/extract) — Fetch a public URL, get back clean machine-consumable text (HTML noise stripped, SSRF-guarded). $0.002 USDC on Base mainnet via x402 v2. Example: `POST /v1/extract {"url":"https://example.com"}`. Also exposes email verification ($0.005, `/v1/verify-email`) and a lead-validation bundle ($0.015, `/v1/lead-validate` -- MX existence, disposable-domain, role-account detection). ([OpenAPI](https://m0.aiverall.com/openapi.json))
+- [Gardenpatch Growth Coaches](https://gardenpatch.xyz/.well-known/x402) — Seven growth coaches (strategy, sales, marketing, operations, retention, technology, people) answering a mode plus messages with a typed JSON deliverable, USDC on Base at $0.18 to $0.45 per call. Example: `POST /api/v1/agents/mary/call {"mode":"diagnose_growth","messages":[{"role":"user","content":"Revenue is flat at $40k/mo. Where are we stuck?"}]}`. ([OpenAPI](https://gardenpatch.xyz/openapi.json)) ([Catalog](https://gardenpatch.xyz/api/v1/agents)) ([Skill](https://gardenpatch.xyz/skills/gardenpatch-x402/SKILL.md))
 
 ## Infrastructure APIs
 
