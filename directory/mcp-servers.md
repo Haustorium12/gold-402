@@ -43,6 +43,7 @@ x402-enabled MCP servers. AI agents (Claude, Cursor, any MCP client) can call th
 
 ## Crypto & DeFi Intelligence
 
+- [Base toolbox](https://basetoolbox.cartonpliant.workers.dev/.well-known/mcp.json) — Remote MCP for Base before you sign: Uniswap v3 swap preflight, leftover allowances, tx explain, transfer check ($0.10 USDC), plus $0.01 price/gas/ENS. GET /v1/constants free. ([MCP](https://basetoolbox.cartonpliant.workers.dev/mcp)) ([OpenAPI](https://basetoolbox.cartonpliant.workers.dev/openapi.json)) ([Skill](https://clawhub.ai/cartonpliant/skills/basetoolbox))
 - [Cerebrus Pulse MCP](https://cerebruspulse.xyz) — Real-time crypto intelligence: technical analysis (RSI, EMAs, Bollinger Bands), sentiment, funding rates for 30+ Hyperliquid perpetuals. x402 USDC on Base.
 - [BotIndex MCP](https://github.com/Cyberweasel777/botindex-mcp-server) — 17-tool signal intelligence: sports odds, crypto correlations, token graduations (Zora/Hyperliquid/Metaplex Genesis), DFS optimization, arbitrage detection. 50 free requests/wallet then x402 on Base. `npx botindex-mcp-server`. ([npm](https://npmjs.com/package/botindex-mcp-server))
 - [Harvey Intel](https://agents.rugslayer.com) — Solana token rug pull detection (DrainBrain ML ensemble), trading signals, social intelligence. 8 tools, $0.005-$0.05 USDC on Solana. ([npm](https://www.npmjs.com/package/@meltingpixels/harvey-intel))

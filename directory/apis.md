@@ -88,6 +88,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 
 ## Crypto & DeFi Data
 
+- [Base toolbox](https://basetoolbox.cartonpliant.workers.dev/.well-known/x402.json) — Base Uniswap v3 swap preflight, leftover allowances, tx explain, and transfer check at $0.10 USDC on Base via x402, plus $0.01 price/gas/ENS. Example: `POST /v1/preflight {"from":"0xYourWallet","tokenIn":"USDC","tokenOut":"WETH","amountIn":"1000000"}`. ([Skill](https://basetoolbox.cartonpliant.workers.dev/SKILL.md)) ([OpenAPI](https://basetoolbox.cartonpliant.workers.dev/openapi.json)) ([Constants](https://basetoolbox.cartonpliant.workers.dev/v1/constants)).
 - [AgentServices](https://agentservices.to/.well-known/x402.json) — Paid data APIs for AI agents: crypto prices, technical indicators, DeFi yields, IP geolocation, and URL metadata. $0.00-$0.02 USDC on Base. ([x402](https://agentservices.to/.well-known/x402))
 - [AgentData API](https://agentdata-api.com/.well-known/x402) — Real-time crypto market data. 16 pay-per-request endpoints: prices, funding rates, volatility, liquidation levels, DeFi yields, cross-exchange arbitrage, technical indicators (RSI/MACD/BB/ATR), support/resistance, sentiment, stablecoin health, historical OHLCV. Self-hosted facilitator.
 - [Polybot Arb Intelligence](https://github.com/packrvnner/polybot-arb-api) — Real-time cross-platform prediction market arb data (Polymarket + Kalshi + Myriad). x402 USDC on Base.
