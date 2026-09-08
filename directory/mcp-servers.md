@@ -11,6 +11,7 @@ x402-enabled MCP servers. AI agents (Claude, Cursor, any MCP client) can call th
 
 ## General Utility
 
+- [Council of AI GSPC MCP](https://councilof.ai/mcp) — Measurement MCP (not certification). Free board tools; paid tools over x402 (`art50_marking_evidence`, `rwa_evidence`, `receipts_batch`, `commission_card`). Remote `https://councilof.ai/mcp`. npm `csoai-gspc-mcp`. ([OpenAPI](https://councilof.ai/openapi.json)) ([Manifest](https://councilof.ai/.well-known/x402.json)) ([x402scan](https://www.x402scan.com/server/9b8bcb34-6c9f-45d6-b881-9a6afe7bf6b5)).
 - [Andreax](https://pagos.andreax.dev/.well-known/x402.json) — Remote MCP server with 54 pay-per-call AI tools: prompt compression, inference, web/PDF read, OCR, vision, embeddings, semantic search, translation, FX, and market data. $0.001-$0.50 USDC on Base. ([MCP](https://pagos.andreax.dev/mcp)) ([Registry](https://registry.modelcontextprotocol.io/v0.1/servers?search=andreax))
 - [BlockLabs Shop MCP](https://www.npmjs.com/package/@blocklabs/shop-mcp) — Mounts the BlockLabs physical-goods shop as MCP tools: paid product search, free order quotes, order placement with a spend cap the agent cannot exceed, tracking. USDC on Base via x402; runs with npx, no build step. ([llms.txt](https://shop.blocklabs.nl/llms.txt))
 - [Fry x402 MCP](https://github.com/Fry-Foundation/fry-x402-mcp) — MCP server for the fry.farm x402 API. Repo live 2026-07-30; storefront at [fry.farm/x402](https://fry.farm/x402/).
