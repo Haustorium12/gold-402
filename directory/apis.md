@@ -243,3 +243,8 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [Visibility AI Audit API](https://visibility.gleefulai.com) — AI-visibility and AEO audit for websites: agent-readiness scoring (llms.txt, schema, bot access, FAQ), generated fixes, and competitor gap analysis. Pay-per-call USDC on Base via x402, no API keys. ([OpenAPI](https://visibility.gleefulai.com/openapi.json)) ([Docs](https://visibility.gleefulai.com/docs))
 - [Verdoc](https://verdoc.dev/agents-md?repo=octocat/Hello-World) — Deterministic AGENTS.md generator for public GitHub repositories: build and test commands quoted from the repo's own manifests, each tagged with the file it came from, no language model involved — the same commit always returns the same file. `GET /agents-md?repo=owner/name` — $0.02 USDC on Base, Polygon or Arbitrum via CDP facilitator.
 - [openzoo](https://openzoo.fun/.well-known/x402.json) — OpenAI-compatible chat completions paid per request via x402 on Solana and Base, with no account or API key.
+
+- [Vega URL Extractor](https://extract.kramsg1online.com/extract) — Extract clean text from any web page URL. x402 on Base mainnet, $0.05 USDC per call. `POST /extract {"url": "..."}`. (OpenAPI: https://extract.kramsg1online.com/openapi.json)
+- [Vega PDF Extractor](https://pdf.kramsg1online.com/extract) — Extract text from PDF files. x402 on Base mainnet, $0.05 USDC per call. `POST /extract multipart/form-data file`. (OpenAPI: https://pdf.kramsg1online.com/openapi.json)
+- [Vega Article Summarizer](https://summarize.kramsg1online.com/summarize) — Summarize articles and URLs into key points. x402 on Base mainnet, $0.02 USDC per call. `POST /summarize {"url": "..."}`. (OpenAPI: https://summarize.kramsg1online.com/openapi.json)
+
