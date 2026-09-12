@@ -37,6 +37,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [GPT55 Model Gateway](https://gpt55.558686.xyz/v1/chat/completions/standard) — OpenAI-compatible GPT-5.6 Luna Standard chat completions via x402 USDC on Base for $0.00293 per POST request.
 - [/deslop](https://mooch.agency/api/deslop) — Removes AI-writing tells (em dashes, hedging, throat-clearing) from a draft, returns cleaned text plus a changelog. $0.10 USDC on Base. Example: `POST /api/deslop {"text":"..."}`. ([Prompt page](https://mooch.agency/prompts/deslop))
 - [RGX](https://rgx.tail817c3b.ts.net) — Snap Router: task-to-tool selection over the merged x402 Bazaar and MCP Registry catalog (16k+ entries), one pass, no LLM call, $0.003 USDC. Example: `POST /v1/snap?x402force=1 {"task":"check a base token for honeypot","k":4}`. Pricing-Truth: real tradeable depth vs headline TVL, depth-weighted multi-pool price corroboration, and a live buy-then-sell honeypot/transfer-tax check for tokens on Base, Ethereum, and Arbitrum, $0.005-$0.04 USDC. Example: `GET /v1/base/token/0x532f27101965dd16442E59d40670FaF5eBB142E4/report?x402force=1`. Free tier, CDP facilitator. ([Manifest](https://rgx.tail817c3b.ts.net/.well-known/x402)) ([OpenAPI](https://rgx.tail817c3b.ts.net/openapi.json)) ([llms.txt](https://rgx.tail817c3b.ts.net/llms.txt)) ([MCP](https://pypi.org/project/rgx-mcp/))
+- [AgentPay Summarize](https://agentpay.help/v1/summarize) — Summarizes up to 20,000 characters of text into a 250-word summary returned as JSON. `POST` only, $0.01 USDC on Base mainnet. Example: `POST /v1/summarize {"text":"..."}`. ([Manifest](https://agentpay.help/.well-known/x402)) ([MCP](https://agentpay.help/mcp)) ([OpenAPI](https://agentpay.help/openapi.json))
 
 ---
 
@@ -134,6 +135,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 ---
 
 - [Kael Ecosystem Pulse](https://kael-ecosystem-pulse.onrender.com/.well-known/x402) — Paid 24h Solana ecosystem digest for agents via x402 Exact SVM USDC on Solana mainnet (PayAI facilitator): full pulse $0.10, headlines $0.02, delta $0.08, evidence $0.05; free sample and tip-jar metadata. Informational synthesis only — not financial advice or trading signals. Example: `GET /v1/pulse?ecosystem=solana&window=24h`. ([llms.txt](https://kael-ecosystem-pulse.onrender.com/llms.txt) | [Sample](https://kael-ecosystem-pulse.onrender.com/v1/pulse/sample) | [Tip](https://kael-ecosystem-pulse.onrender.com/tip))
+- [AgentPay Token Safety](https://agentpay.help/v1/token-safety) — Reports rug-pull and honeypot risk signals and liquidity for a token contract address. `POST` only, $0.02 USDC on Base mainnet. Example: `POST /v1/token-safety {"address":"0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"}`. ([Manifest](https://agentpay.help/.well-known/x402)) ([MCP](https://agentpay.help/mcp)) ([OpenAPI](https://agentpay.help/openapi.json))
 
 
 ## Finance & FX
@@ -209,6 +211,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 
 - [M0 URL Extraction](https://m0.aiverall.com/v1/extract) — Fetch a public URL, get back clean machine-consumable text (HTML noise stripped, SSRF-guarded). $0.002 USDC on Base mainnet via x402 v2. Example: `POST /v1/extract {"url":"https://example.com"}`. Also exposes email verification ($0.005, `/v1/verify-email`) and a lead-validation bundle ($0.015, `/v1/lead-validate` -- MX existence, disposable-domain, role-account detection). ([OpenAPI](https://m0.aiverall.com/openapi.json))
 - [Gardenpatch Growth Coaches](https://gardenpatch.xyz/.well-known/x402) — Seven growth coaches (strategy, sales, marketing, operations, retention, technology, people) answering a mode plus messages with a typed JSON deliverable, USDC on Base at $0.18 to $0.45 per call. Example: `POST /api/v1/agents/mary/call {"mode":"diagnose_growth","messages":[{"role":"user","content":"Revenue is flat at $40k/mo. Where are we stuck?"}]}`. ([OpenAPI](https://gardenpatch.xyz/openapi.json)) ([Catalog](https://gardenpatch.xyz/api/v1/agents)) ([Skill](https://gardenpatch.xyz/skills/gardenpatch-x402/SKILL.md))
+- [AgentPay Insurance Lead Analysis](https://agentpay.help/v1/insurance-analysis) — Classifies an inbound insurance lead, extracts structured fields from it, and returns a lead summary in one call. `POST` only, $0.10 USDC on Base mainnet. Example: `POST /v1/insurance-analysis {"text":"..."}`. ([Manifest](https://agentpay.help/.well-known/x402)) ([MCP](https://agentpay.help/mcp)) ([OpenAPI](https://agentpay.help/openapi.json))
 
 ## Infrastructure APIs
 
