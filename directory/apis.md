@@ -87,6 +87,8 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 
 - [Council of AI](https://councilof.ai/api/eunomia-data?feed=1) — Independent AI-behaviour measurement packs and EU AI Act evidence over x402 on Base; GET /api/gspc is free, paid doors answer 402 with catalog query params. Example: `GET /api/eunomia-data?feed=1`. ([OpenAPI](https://councilof.ai/openapi.json)) ([Manifest](https://councilof.ai/.well-known/x402.json)) ([MCP](https://councilof.ai/mcp)).
 
+- [Nano CSV service](https://nano-csv-service.onrender.com/clean) — Deduplicates up to 5,000 CSV records by exact composite string keys, preserving the first row, for 0.1 XNO per request over x402 v2 on Nano mainnet ([source and usage](https://github.com/Reeyenn/nano-csv-service)).
+
 ## Crypto & DeFi Data
 
 - [Base toolbox](https://basetoolbox.cartonpliant.workers.dev/.well-known/x402.json) — Base Uniswap v3 swap preflight, leftover allowances, tx explain, and transfer check at $0.10 USDC on Base via x402, plus $0.01 price/gas/ENS. Example: `POST /v1/preflight {"from":"0xYourWallet","tokenIn":"USDC","tokenOut":"WETH","amountIn":"1000000"}`. ([Skill](https://basetoolbox.cartonpliant.workers.dev/SKILL.md)) ([OpenAPI](https://basetoolbox.cartonpliant.workers.dev/openapi.json)) ([Constants](https://basetoolbox.cartonpliant.workers.dev/v1/constants)).
