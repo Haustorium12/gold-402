@@ -151,6 +151,8 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 ---
 - [IBANforge](https://ibanforge.com) — Pre-payout IBAN screening: validation + issuing-bank identification against 6 national bank registers (CH/LI, DE, AT, BE, FI), Swiss clearing incl. QR-IID resolution, bank-level sanctions, SEPA + VoP reachability. 121k+ BICs, 89 IBAN countries. $0.002-$0.02 USDC on Base (CDP facilitator). MCP: `npx -y ibanforge-mcp`. ([OpenAPI](https://api.ibanforge.com/openapi.json), [x402 discovery](https://api.ibanforge.com/.well-known/x402))
 
+- [fr-legal-kit](https://fr-legal-kit.monnet-yanis1.workers.dev/.well-known/x402.json) — Offline French invoice helpers for agents: e-invoice obligation calendar (2026/2027), L441-10 late-payment interest + 40 € indemnity text, CGI 286 ter VAT key from SIREN, SIRET/IBAN checksums, due dates and L.3133-1 holidays. $0.01 USDC on Base per POST. Example: `POST /v1/vat-key {"siren":"404833048"}`. ([OpenAPI](https://fr-legal-kit.monnet-yanis1.workers.dev/openapi.json)) ([llms.txt](https://fr-legal-kit.monnet-yanis1.workers.dev/llms.txt)) ([GitHub](https://github.com/CartonPliant/fr-legal-kit))
+
 ## Web & Geospatial
 
 - [Visual API](https://visual.hugen.tokyo/.well-known/x402) — Screenshot and PDF capture API. Full-page scroll capture, CSS element targeting, mobile device emulation (iPhone 15, Pixel 7, iPad Pro), dark mode, ad/cookie banner blocking. $0.01 USDC on Base.
