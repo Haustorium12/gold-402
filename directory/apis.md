@@ -132,6 +132,9 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 
 ---
 
+- [Kael Ecosystem Pulse](https://kael-ecosystem-pulse.onrender.com/.well-known/x402) — Paid 24h Solana ecosystem digest for agents via x402 Exact SVM USDC on Solana mainnet (PayAI facilitator): full pulse $0.10, headlines $0.02, delta $0.08, evidence $0.05; free sample and tip-jar metadata. Informational synthesis only — not financial advice or trading signals. Example: `GET /v1/pulse?ecosystem=solana&window=24h`. ([llms.txt](https://kael-ecosystem-pulse.onrender.com/llms.txt) | [Sample](https://kael-ecosystem-pulse.onrender.com/v1/pulse/sample) | [Tip](https://kael-ecosystem-pulse.onrender.com/tip))
+
+
 ## Finance & FX
 
 - [Mercury402](https://mercury402.uk/.well-known/x402) — Pay-per-call U.S. Treasury and macro data API. FRED indicators, yield curves, GDP data with USDC micropayments on Base.
