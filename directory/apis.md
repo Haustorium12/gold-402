@@ -256,3 +256,6 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [Vega PDF Extractor](https://pdf.kramsg1online.com/extract) — Extract text from PDF files. x402 on Base mainnet, $0.05 USDC per call. `POST /extract multipart/form-data file`. (OpenAPI: https://pdf.kramsg1online.com/openapi.json)
 - [Vega Article Summarizer](https://summarize.kramsg1online.com/summarize) — Summarize articles and URLs into key points. x402 on Base mainnet, $0.02 USDC per call. `POST /summarize {"url": "..."}`. (OpenAPI: https://summarize.kramsg1online.com/openapi.json)
 
+
+
+- [x402 Crypto Research API](https://x402-crypto-research-api-production.up.railway.app/research) — Generates current, source-linked cryptocurrency ecosystem research reports for 0.01 USDC per POST request on Base mainnet. Example: `{"topic":"Give a concise current status update on the Base ecosystem."}`. ([GitHub](https://github.com/stgzwpzy8w-eng/x402-crypto-research-api))
