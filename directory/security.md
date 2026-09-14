@@ -49,6 +49,8 @@ Security tools, spending controls, audit resources, and best practices for x402 
 
 - [Revettr](https://revettr.com/.well-known/x402.json) — Counterparty risk scoring for x402 agentic commerce. Scores wallet addresses, domains, IPs, and companies 0-100 for payment safety.
 - [MoltGuard](https://api.moltrust.ch/.well-known/x402.json) — Agent trust scoring (0-100), Sybil detection with funding cluster analysis, Polymarket integrity, Ed25519 Verifiable Credentials. 7 MCP tools. $0.005-$0.05 USDC on Base.
+- [AffixIO](https://www.npmjs.com/package/affixio) — Agentic Pay Kit (npm `affixio`) with x402BeforePay host-side action attestation before pay (signed yes/no on host; not person KYC), agenticPay, mcpToolGate, and KYA createAgentTrust. ([GitHub](https://github.com/AffixIO/SDK)) ([docs](https://www.affix-io.com/agent-trust/))
+
 
 ---
 
