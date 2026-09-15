@@ -90,7 +90,6 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 
 - [Council of AI](https://councilof.ai/api/eunomia-data?feed=1) — Independent AI-behaviour measurement packs and EU AI Act evidence over x402 on Base; GET /api/gspc is free, paid doors answer 402 with catalog query params. Example: `GET /api/eunomia-data?feed=1`. ([OpenAPI](https://councilof.ai/openapi.json)) ([Manifest](https://councilof.ai/.well-known/x402.json)) ([MCP](https://councilof.ai/mcp)).
 
-- [Nano CSV service](https://nano-csv-service.onrender.com/clean) — Deduplicates up to 5,000 CSV records by exact composite string keys, preserving the first row, for 0.1 XNO per request over x402 v2 on Nano mainnet ([source and usage](https://github.com/Reeyenn/nano-csv-service)).
 
 ## Crypto & DeFi Data
 
