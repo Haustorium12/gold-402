@@ -92,6 +92,8 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 
 - [Nano CSV service](https://nano-csv-service.onrender.com/clean) — Deduplicates up to 5,000 CSV records by exact composite string keys, preserving the first row, for 0.1 XNO per request over x402 v2 on Nano mainnet ([source and usage](https://github.com/Reeyenn/nano-csv-service)).
 
+- [4yearcycle data catalog](https://4yearcycle.com/.well-known/x402) — Twelve pay-per-call data endpoints for agents covering EU tenders (TED) and grants (CORDIS), crypto derivatives, DeFi yields, ERC-20 token safety, gas, ECB FX rates, German weather (DWD), live flights, news headlines, Bitcoin on-chain state and web search, $0.005–$0.02 USDC on Base mainnet via the Coinbase CDP facilitator with no API key or account. Example: `GET https://4yearcycle.com/x402/fx-rates?base=USD&symbols=EUR,GBP,JPY`. ([OpenAPI](https://4yearcycle.com/openapi.json)) ([Manifest](https://4yearcycle.com/.well-known/x402)) ([Site](https://4yearcycle.com/x402/))
+
 ## Crypto & DeFi Data
 
 - [Base toolbox](https://basetoolbox.cartonpliant.workers.dev/.well-known/x402.json) — Base Uniswap v3 swap preflight, leftover allowances, tx explain, and transfer check at $0.10 USDC on Base via x402, plus $0.01 price/gas/ENS. Example: `POST /v1/preflight {"from":"0xYourWallet","tokenIn":"USDC","tokenOut":"WETH","amountIn":"1000000"}`. ([Skill](https://basetoolbox.cartonpliant.workers.dev/SKILL.md)) ([OpenAPI](https://basetoolbox.cartonpliant.workers.dev/openapi.json)) ([Constants](https://basetoolbox.cartonpliant.workers.dev/v1/constants)).
