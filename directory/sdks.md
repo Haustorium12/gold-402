@@ -63,7 +63,7 @@ Client and server-side libraries for building with x402. Start with the official
 - [x402-mock](https://pypi.org/project/x402-mock/) — Test/mock implementation of x402 for EVM blockchains. Useful for dev/testing without live payments.
 - [feeless402](https://pypi.org/project/feeless402/) — Client and merchant server for x402 over the Nano (XNO) rail: CLI pays any x402 v2 endpoint, FastAPI merchant verifies and self-settles without a facilitator (Nano has no gas), includes a read-only remote MCP server. ([GitHub](https://github.com/Feeless402/feeless402))
 
-- [openai-agents-nano](https://github.com/PANDeveloper001/openai-agents-nano-x402) — OpenAI Agents SDK payer tool for x402 over the Nano (XNO) rail: two-phase quote then capped redeem (0.01 XNO default) with a single-use quote token, refuses before signing and reports the ledger verdict. ([release v0.1.0](https://github.com/PANDeveloper001/openai-agents-nano-x402/releases/tag/v0.1.0))
+- [openai-agents-nano](https://github.com/PANDeveloper001/openai-agents-nano-x402) — OpenAI Agents SDK payer tool for x402 over the Nano (XNO) rail: two-phase quote then capped redeem (0.01 XNO default) with a single-use quote token, refuses before signing and reports the ledger verdict. ([wheel v0.1.0](https://github.com/PANDeveloper001/openai-agents-nano-x402/releases/download/v0.1.0/openai_agents_nano-0.1.0-py3-none-any.whl))
 
 ### XRPL
 - [xrpl-x402-core](https://pypi.org/project/xrpl-x402-core/) — Wire-level validation with CAIP-2 XRPL identifiers.
