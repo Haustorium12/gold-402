@@ -38,6 +38,8 @@ Client and server-side libraries for building with x402. Start with the official
 - [Azeth SDK](https://github.com/azeth-protocol/sdk) — TypeScript SDK with x402 client (`fetch402`), ERC-4337 smart accounts, on-chain reputation feedback, and ERC-8004 service discovery. ([npm](https://www.npmjs.com/package/@azeth/sdk))
 - [MoltsPay](https://github.com/Yaqing2023/moltspay) — Payment infrastructure for AI agents. CLI, TypeScript SDK, LangChain/CrewAI integrations. Gasless payments on Base, Polygon, Solana, BNB, Tempo. ([npm](https://www.npmjs.com/package/moltspay))
 
+- [AffixIO](https://www.npmjs.com/package/affixio) — TypeScript Agentic Pay Kit with x402BeforePay host-side action attestation before pay (signed yes/no on host; not person KYC), agenticPay, mcpToolGate, and KYA createAgentTrust. ([GitHub](https://github.com/AffixIO/SDK)) ([docs](https://www.affix-io.com/agent-trust/))
+
 ### Privacy
 - [PRXVT Privacy SDK](https://github.com/prxvt/sdk) — Privacy layer for x402. Fresh burner wallet per payment (unlinkable), Groth16 zero-knowledge proofs, AES-256-GCM encrypted notes, cross-chain deposits (Base to Polygon). ([Website](https://www.prxvt.com/))
 
