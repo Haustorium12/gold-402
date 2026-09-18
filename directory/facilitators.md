@@ -8,8 +8,8 @@ Payment verification and settlement services for x402. A facilitator verifies pa
 
 ---
 
-> ★ **Featured — August 2026: [Primev FastRPC](https://facilitator.primev.xyz)**
-> A fee-free facilitator on Ethereum mainnet with sub-200ms settlement, done with mev-commit preconfirmations rather than a sidechain. Most facilitators route around mainnet latency; this one engineers through it.
+> ★ **Featured — September 2026: [NEAR x402 Facilitator](https://x402.mikedotexe.com/)**
+> Open source and API-key-gated, and unusual for publishing its own sanitized paid-flow evidence for both NEAR and Base mainnet rather than asking you to take settlement on faith.
 
 ## Hosted Facilitators
 

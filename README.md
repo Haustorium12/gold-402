@@ -142,25 +142,25 @@ _All figures above are ours and reproducible. Where we could not reach something
 
 ## Featured This Month
 
-[![24K Featured](https://img.shields.io/badge/24K_Featured-2026--08-C0C0C0?style=plastic)](FEATURED.md)
+[![24K Featured](https://img.shields.io/badge/24K_Featured-2026--09-C0C0C0?style=plastic)](FEATURED.md)
 
-**August 2026 — one pick per shelf.** Each shelf opens with its pick and the write-up. Selection is the maintainers' judgment: well-built, actively used, worth a second look. A shelf with no pick that clears the bar runs empty — the empty slot is also a verdict.
+**September 2026 — one pick per shelf.** Each shelf opens with its pick and the write-up. Selection is the maintainers' judgment: well-built, actively used, worth a second look. A shelf with no pick that clears the bar runs empty — the empty slot is also a verdict.
 
-| Shelf | August pick |
+| Shelf | September pick |
 |---|---|
-| APIs & Services | [The Bot Wire](https://thebotwire.com) |
-| MCP Servers | [Razorpay MCP Server](https://github.com/razorpay/razorpay-mcp-server) |
-| SDKs & Libraries | [ra2a](https://github.com/qntx/ra2a) |
-| Facilitators | [Primev FastRPC](https://facilitator.primev.xyz) |
-| Frameworks | [machi](https://github.com/qntx/machi) |
-| Tools | [portal-tunnel](https://github.com/gosuda/portal-tunnel) |
-| Security | [Hermes Plant Action Safety](https://hermesplant.com/api/agent-services/action-safety/quick) |
-| Ecosystem | [Glama](https://glama.ai/mcp/servers) |
-| The Global Agent Economy | [ONDC](https://ondc.org) |
-| Learning | [Tangle Network: x402 Production Runway](https://dev.to/tangle_network/series/37294) |
-| Community | [WorkProtocol](https://workprotocol.ai) |
-| Market Data | [Valoria](https://x402.valoria.net) |
-| Aggregators & Proxies | — |
+| APIs & Services | [Forge Attestation](https://forgesignals.org/.well-known/forge-attestation) |
+| MCP Servers | [Council of AI GSPC MCP](https://councilof.ai/mcp) |
+| SDKs & Libraries | [x402-rs](https://github.com/x402-rs/x402-rs) |
+| Facilitators | [NEAR x402 Facilitator](https://x402.mikedotexe.com/) |
+| Frameworks | [@moltrust/x402](https://www.npmjs.com/package/@moltrust/x402) |
+| Tools | [nohumans.directory](https://nohumans.directory) |
+| Security | [MIDAX402](https://midax402.com/.well-known/x402.json) |
+| Ecosystem | [Skyfire](https://docs.skyfire.xyz) |
+| The Global Agent Economy | [Alipay Open Platform](https://open.alipay.com) |
+| Learning | [The Agent Times](https://theagenttimes.com) |
+| Community | [Human Pages](https://humanpages.ai) |
+| Market Data | [MCP Scores](https://mcpscores.com) |
+| Aggregators & Proxies | [402Signal](https://402signal.com/route) |
 
 [Past features →](FEATURED.md)
 

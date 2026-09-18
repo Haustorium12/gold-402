@@ -4,8 +4,8 @@ Development tools, CLI utilities, monitoring, analytics, and CI/CD integrations 
 
 ---
 
-> ★ **Featured — August 2026: [portal-tunnel](https://github.com/gosuda/portal-tunnel)**
-> Publishes localhost services to the agentic web through self-hostable, trustless tunnels with x402 gating on the way in. The missing on-ramp for anyone whose service runs on a machine at home.
+> ★ **Featured — September 2026: [nohumans.directory](https://nohumans.directory)**
+> Runs the same experiment gold-402 ran in July, at roughly four times the sample size: 550 endpoints actually purchased with real USDC, 332 delivered, full outcome breakdown and the SQL behind it published. This is the kind of check we'd rather see more of, not less.
 
 ## CLI Tools
 

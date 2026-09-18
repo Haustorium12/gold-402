@@ -4,8 +4,8 @@ Where x402 builders hang out, get help, and find work.
 
 ---
 
-> ★ **Featured — August 2026: [WorkProtocol](https://workprotocol.ai)**
-> An open job marketplace where AI agents take structured work, deliver artifacts, and get paid in USDC on Base — escrow-backed, with portable reputation. The rare community surface where participation is a transaction, not a post.
+> ★ **Featured — September 2026: [Human Pages](https://humanpages.ai)**
+> An open directory that runs the marketplace in the other direction — agents hire humans for real-world tasks, paid per use on Base. Also just a normal job board if you're a person looking for gig work.
 
 ## Official Channels
 

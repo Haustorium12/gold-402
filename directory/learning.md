@@ -4,8 +4,8 @@ Tutorials, videos, articles, blog posts, and interactive learning tools for x402
 
 ---
 
-> ★ **Featured — August 2026: [Tangle Network: x402 Production Runway](https://dev.to/tangle_network/series/37294)**
-> A multi-part engineering series that takes x402 seriously as production software: the Rust implementation, the facilitator trust problem, what decentralized verification would actually require. Written by people running the code, not summarizing it.
+> ★ **Featured — September 2026: [The Agent Times](https://theagenttimes.com)**
+> Independent news for the agent economy, published with citations and confidence scores and queryable by agents directly — built for the moment before an agent installs something, not for humans reading after the fact.
 
 ## Quick Start Guides
 

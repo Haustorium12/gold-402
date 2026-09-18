@@ -4,8 +4,8 @@ On-chain analytics, live metrics, and growth timeline for the x402 ecosystem.
 
 ---
 
-> ★ **Featured — August 2026: [Valoria](https://x402.valoria.net)**
-> Revenue rankings, service analysis, and pricing data across 90,000+ indexed services and $148M+ in tracked on-chain volume — their published figures. Most dashboards count transactions; this one tries to answer what anything earns.
+> ★ **Featured — September 2026: [MCP Scores](https://mcpscores.com)**
+> A money-flow observatory over 36,000+ MCP/x402 listings that publishes its own wash-risk flags and methodology instead of one clean number with no seams. The register itself is free.
 
 ## Market Overview (April 2026)
 

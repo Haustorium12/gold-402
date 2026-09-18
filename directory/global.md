@@ -6,8 +6,8 @@ Agent infrastructure and machine-payment rails by continent. Platforms, protocol
 
 ---
 
-> ★ **Featured — August 2026: [ONDC](https://ondc.org)**
-> India's government-backed open commerce network: an operating, population-scale version of what open agent commerce is trying to become, built on a different foundation. If you study one non-Western rail, study this one.
+> ★ **Featured — September 2026: [Alipay Open Platform](https://open.alipay.com)**
+> Read in full this month after being JavaScript-walled on the first pass in July — including AI收, Ant Group's own HTTP-402-shaped rail for agents, running on a one-time bounded human authorization at what is reportedly national scale.
 
 > **gold-402 note:** This shelf exists because we checked and found our own map was drawn in one language.
 >

@@ -4,8 +4,8 @@ Security tools, spending controls, audit resources, and best practices for x402 
 
 ---
 
-> ★ **Featured — August 2026: [Hermes Plant Action Safety](https://hermesplant.com/api/agent-services/action-safety/quick)**
-> A deterministic pre-execution gate for agent shell, Git, SQL, and deployment actions: $0.01 for a quick verdict, $0.25 for a signed-receipt workflow. One of the few paid x402 services with repeat buyers visible on-chain.
+> ★ **Featured — September 2026: [MIDAX402](https://midax402.com/.well-known/x402.json)**
+> Signed EIP-712 conformance verdicts on a public registry, with a paid board-position ladder kept in a separate column from the verdict itself — no payment changes a rating or its verification-date ordering. The pay-to-rank problem, solved by not letting the two touch.
 
 ## Smart Contract Audits
 

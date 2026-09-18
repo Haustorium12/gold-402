@@ -6,8 +6,8 @@ x402-enabled MCP servers. AI agents (Claude, Cursor, any MCP client) can call th
 
 ---
 
-> ★ **Featured — August 2026: [Razorpay MCP Server](https://github.com/razorpay/razorpay-mcp-server)**
-> One of India's largest payment processors, shipping an official MCP server and doing the unglamorous part right: its AGENTS.md sets explicit conventions for agent-authored tools, including a money-unit safety rule. Worth reading even if you never route a payment through it.
+> ★ **Featured — September 2026: [Council of AI GSPC MCP](https://councilof.ai/mcp)**
+> Calls itself a measurement MCP, not a certification — the same line gold-402 drew when it retired its own verified badge. Free board tools, paid evidence tools over x402.
 
 ## General Utility
 

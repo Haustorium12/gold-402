@@ -16,8 +16,8 @@ Client and server-side libraries for building with x402. Start with the official
 
 ---
 
-> ★ **Featured — August 2026: [ra2a](https://github.com/qntx/ra2a)**
-> A Rust SDK for the Agent2Agent protocol with x402 integration built in — the two halves of agent commerce, discovery and payment, in one typed crate.
+> ★ **Featured — September 2026: [x402-rs](https://github.com/x402-rs/x402-rs)**
+> The real Rust implementation — Axum middleware, reqwest client wrapper, self-hostable facilitator, 41 published versions. Worth naming directly this month: a thin placeholder crate named `x402` also exists on crates.io and ships no working code.
 
 ## TypeScript / JavaScript
 

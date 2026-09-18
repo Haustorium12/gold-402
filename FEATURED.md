@@ -6,6 +6,51 @@ Selection criteria are documented in [CONTRIBUTING.md](CONTRIBUTING.md#24k-featu
 
 ---
 
+## September 2026 — The Slate
+
+One pick per shelf.
+
+**APIs & Services — [Forge Attestation](https://forgesignals.org/.well-known/forge-attestation)**
+Signed third-party evidence for x402 transactions that labels every claim `witnessed` or `asserted` — the same distinction this shelf makes about its own entries, applied as a product. Nothing here claims correctness, only what was actually observed.
+
+**MCP Servers — [Council of AI GSPC MCP](https://councilof.ai/mcp)**
+Calls itself a measurement MCP, not a certification — the same line gold-402 drew when it retired its own verified badge. Free board tools, paid evidence tools over x402.
+
+**SDKs & Libraries — [x402-rs](https://github.com/x402-rs/x402-rs)**
+The real Rust implementation — Axum middleware, reqwest client wrapper, self-hostable facilitator, 41 published versions. Worth naming directly this month: a thin placeholder crate named `x402` also exists on crates.io and ships no working code.
+
+**Facilitators — [NEAR x402 Facilitator](https://x402.mikedotexe.com/)**
+Open source and API-key-gated, and unusual for publishing its own sanitized paid-flow evidence for both NEAR and Base mainnet rather than asking you to take settlement on faith.
+
+**Frameworks — [@moltrust/x402](https://www.npmjs.com/package/@moltrust/x402)**
+One line of middleware — `app.use(requireScore({ minScore: 60 }))` — reads a wallet's trust score off the X-Payment header and blocks anything below the bar before your endpoint ever runs. Zero dependencies.
+
+**Tools — [nohumans.directory](https://nohumans.directory)**
+Runs the same experiment gold-402 ran in July, at roughly four times the sample size: 550 endpoints actually purchased with real USDC, 332 delivered, full outcome breakdown and the SQL behind it published. This is the kind of check we'd rather see more of, not less.
+
+**Security — [MIDAX402](https://midax402.com/.well-known/x402.json)**
+Signed EIP-712 conformance verdicts on a public registry, with a paid board-position ladder kept in a separate column from the verdict itself — no payment changes a rating or its verification-date ordering. The pay-to-rank problem, solved by not letting the two touch.
+
+**Ecosystem — [Skyfire](https://docs.skyfire.xyz)**
+Agent identity and payment credentials as ES256 JWTs with a public JWKS endpoint — the rare pattern in this space a stranger can verify without contacting the issuer. Worth studying if you're designing receipts of your own.
+
+**Aggregators & Proxies — [402Signal](https://402signal.com/route)**
+A router that fails closed: it authorizes payment only once it has found a live, eligible endpoint, so a typed miss costs nothing. This shelf ran empty in August; this is its first pick.
+
+**The Global Agent Economy — [Alipay Open Platform](https://open.alipay.com)**
+Read in full this month after being JavaScript-walled on the first pass in July — including AI收, Ant Group's own HTTP-402-shaped rail for agents, running on a one-time bounded human authorization at what is reportedly national scale.
+
+**Learning — [The Agent Times](https://theagenttimes.com)**
+Independent news for the agent economy, published with citations and confidence scores and queryable by agents directly — built for the moment before an agent installs something, not for humans reading after the fact.
+
+**Community — [Human Pages](https://humanpages.ai)**
+An open directory that runs the marketplace in the other direction — agents hire humans for real-world tasks, paid per use on Base. Also just a normal job board if you're a person looking for gig work.
+
+**Market Data — [MCP Scores](https://mcpscores.com)**
+A money-flow observatory over 36,000+ MCP/x402 listings that publishes its own wash-risk flags and methodology instead of one clean number with no seams. The register itself is free.
+
+---
+
 ## August 2026 — The Slate
 
 One pick per shelf. Aggregators & Proxies ran empty.

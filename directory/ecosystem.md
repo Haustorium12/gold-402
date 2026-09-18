@@ -4,8 +4,8 @@ Infrastructure, agent frameworks, A2A protocols, multi-agent orchestration, and 
 
 ---
 
-> ★ **Featured — August 2026: [Glama](https://glama.ai/mcp/servers)**
-> An MCP registry indexing 64,000+ servers — and the only one publishing both its scoring rubric and its health data. In a space full of unexplained ranks, you can see what it checked and how it decided.
+> ★ **Featured — September 2026: [Skyfire](https://docs.skyfire.xyz)**
+> Agent identity and payment credentials as ES256 JWTs with a public JWKS endpoint — the rare pattern in this space a stranger can verify without contacting the issuer. Worth studying if you're designing receipts of your own.
 
 ## Foundation & Protocol
 

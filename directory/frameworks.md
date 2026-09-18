@@ -4,8 +4,8 @@ Server-side integrations for accepting x402 payments. Drop into your existing st
 
 ---
 
-> ★ **Featured — August 2026: [machi](https://github.com/qntx/machi)**
-> Agent behavior that compiles — an execution framework with x402 payment primitives baked in rather than bolted on. Payment as a language feature, not an afterthought.
+> ★ **Featured — September 2026: [@moltrust/x402](https://www.npmjs.com/package/@moltrust/x402)**
+> One line of middleware — `app.use(requireScore({ minScore: 60 }))` — reads a wallet's trust score off the X-Payment header and blocks anything below the bar before your endpoint ever runs. Zero dependencies.
 
 ## Node.js / TypeScript
 

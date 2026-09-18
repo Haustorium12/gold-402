@@ -10,8 +10,8 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 
 ---
 
-> ★ **Featured — August 2026: [The Bot Wire](https://thebotwire.com)**
-> Fifty-seven primary-source data wires — SEC EDGAR, Federal Register, federal courts, Fed and ECB, CISA, arXiv — behind one x402 gate at $0.005–$0.01 a call, with a free three-result preview on every wire. Agents get the source document, not a scrape of someone's summary of it. Manifest, OpenAPI, and a routing table published side by side.
+> ★ **Featured — September 2026: [Forge Attestation](https://forgesignals.org/.well-known/forge-attestation)**
+> Signed third-party evidence for x402 transactions that labels every claim `witnessed` or `asserted` — the same distinction this shelf makes about its own entries, applied as a product. Nothing here claims correctness, only what was actually observed.
 
 ## AI Services
 - [D-007 Document Classify and Rename Plan](https://friction-product-commerce-production.id4-score.workers.dev/v1/x402/document-classify-rename-plan) — Generates a dry-run classification, traversal-safe filename, folder proposal, and duplicate signals for one supplied document record. $0.01 USDC on Base mainnet via x402. Example: POST /v1/x402/document-classify-rename-plan {"originalFilename":"invoice-2026-09.txt","extension":".txt","size":1024,"textExcerpt":"Invoice for order","metadata":{}}.
