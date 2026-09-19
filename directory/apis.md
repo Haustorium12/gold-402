@@ -142,6 +142,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [x402 Crypto Research API](https://x402-crypto-research-api-production.up.railway.app/research) — Generates current, source-linked cryptocurrency ecosystem research reports for 0.01 USDC per POST request on Base mainnet. Example: `{"topic":"Give a concise current status update on the Base ecosystem."}`. ([GitHub](https://github.com/stgzwpzy8w-eng/x402-crypto-research-api))
 - [MadeOnSol](https://madeonsol.com/.well-known/x402) — Solana KOL trade feeds, deployer reputation, token risk/buyer-quality scoring, and wallet PnL for AI agents, $0.005-$0.02 USDC on Solana with self-verified settlement (no facilitator); manifest lists all 25 endpoints. Example: `GET /api/x402/token/{mint}`.
 
+- [Solana Wallet Research](https://solana-wallet-research.empty-thistle.workers.dev/.well-known/x402) — Returns bounded finalized public-data reports for Solana wallet addresses for $0.01 USDC per call on Solana mainnet via x402.
 
 ## Finance & FX
 
