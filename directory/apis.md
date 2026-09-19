@@ -139,6 +139,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [AgentPay Token Safety](https://agentpay.help/v1/token-safety) — Reports rug-pull and honeypot risk signals and liquidity for a token contract address. `POST` only, $0.02 USDC on Base mainnet. Example: `POST /v1/token-safety {"address":"0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"}`. ([Manifest](https://agentpay.help/.well-known/x402)) ([MCP](https://agentpay.help/mcp)) ([OpenAPI](https://agentpay.help/openapi.json))
 - [x402 Crypto Research API](https://x402-crypto-research-api-production.up.railway.app/research) — Generates current, source-linked cryptocurrency ecosystem research reports for 0.01 USDC per POST request on Base mainnet. Example: `{"topic":"Give a concise current status update on the Base ecosystem."}`. ([GitHub](https://github.com/stgzwpzy8w-eng/x402-crypto-research-api))
 
+- [Solana Wallet Research](https://solana-wallet-research.empty-thistle.workers.dev/.well-known/x402) — Returns bounded finalized public-data reports for Solana wallet addresses for $0.01 USDC per call on Solana mainnet via x402.
 
 ## Finance & FX
 
