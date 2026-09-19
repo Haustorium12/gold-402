@@ -252,6 +252,8 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [402cron](https://402cron.com/buy/trial) — Schedules signed HTTP deliveries to a registered endpoint on a cron schedule, paid per delivery in USDC on Base via x402, no account or card required.
 
 ---
+- [HydraTrader x402 Catalog](https://x402.hydratrader.ai/.well-known/x402) — Three pay-per-call Base USDC helpers via x402 (no API key): `POST /v1/cheap-errand` ($0.01) summarize/rewrite/classify/keywords/sentiment/translate; `POST /v1/structured-extract` ($0.03) schema-bound extract from pasted text or public URLs; `POST /v1/research-brief` ($0.08) short public-web briefs with citations (fair-use snippets only). ([SKILL](https://x402.hydratrader.ai/SKILL.md) | [OpenAPI](https://x402.hydratrader.ai/openapi.json) | [llms.txt](https://x402.hydratrader.ai/llms.txt))
+
 
 ## Production Deployments (High Volume)
 
