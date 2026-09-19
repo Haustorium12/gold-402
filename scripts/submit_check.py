@@ -112,13 +112,13 @@ def check_already_listed(resource_url):
         return False, None
 
 
-def probe_for_402(url, probe_body=b"{}"):
-    """POST once. Returns (status, note). status is an int code or None if the
+def _one_request(url, method, body):
+    """A single HTTP attempt. Returns (status, note); status is None if the
     request never completed."""
     req = urllib.request.Request(
         url,
-        data=probe_body,
-        method="POST",
+        data=body if method == "POST" else None,
+        method=method,
         headers={
             "User-Agent":   USER_AGENT,
             "Content-Type": "application/json",
@@ -134,6 +134,27 @@ def probe_for_402(url, probe_body=b"{}"):
         return None, str(e.reason)
     except Exception as e:
         return None, str(e)
+
+
+def probe_for_402(url, probe_body=b"{}"):
+    """POST once. On a 405 (Method Not Allowed), retry the SAME url with GET
+    before giving up -- a 405 is the server itself saying "wrong verb", not
+    "wrong service", and CONTRIBUTING.md never required POST specifically,
+    only a 402 challenge. Added 2026-09-19 (PR #224, MadeOnSol): a GET-only
+    manifest, every declared endpoint 402-compliant on GET, failed this gate
+    with 405 on every one, and the submitter had to explain that in the PR
+    body by hand to get read. One retry on the one status code that means
+    exactly "try the other verb" covers this without guessing at a manifest's
+    declared method field, which this script does not otherwise track.
+
+    Returns (status, note). status is an int code or None if neither attempt
+    completed."""
+    status, note = _one_request(url, "POST", probe_body)
+    if status == 405:
+        get_status, get_note = _one_request(url, "GET", None)
+        if get_status is not None:
+            return get_status, f"POST gave 405, retried GET -- {get_note}"
+    return status, note
 
 
 def looks_like_manifest(url):
@@ -314,7 +335,10 @@ def main():
         fail(f"manifest at {url} is readable, but none of the endpoints it declares "
              f"answered HTTP 402 ({detail}).")
 
-    # 4b. Service mode -- probe for 402
+    # 4b. Service mode -- probe for 402. Uses the shared probe_for_402(), which
+    # tries POST first and retries GET on a 405 -- see that function's docstring
+    # (PR #224) for why. Previously this block had its own inline POST-only
+    # request, duplicating (and drifting from) the manifest path's probe.
     probe_body = b"{}"
     if example_body:
         try:
@@ -325,39 +349,27 @@ def main():
         print(f"[submit_check] Probing {url} with example request body...")
     else:
         print(f"[submit_check] Probing {url} for HTTP 402...")
-    try:
-        req = urllib.request.Request(
-            url,
-            data=probe_body,
-            method="POST",
-            headers={
-                "User-Agent":   USER_AGENT,
-                "Content-Type": "application/json",
-                "Accept":       "application/json",
-            },
-        )
-        try:
-            urllib.request.urlopen(req, timeout=PROBE_TIMEOUT)
-            fail("endpoint did not return HTTP 402 -- got 2xx response. "
-                 "x402 endpoints must return 402 Payment Required on unauthenticated requests.")
-        except urllib.error.HTTPError as e:
-            if e.code == 402:
-                ok("endpoint returned HTTP 402 -- x402 compliant")
-            else:
-                hint = ""
-                if e.code in (400, 422):
-                    hint = (" If your endpoint requires request parameters, add an "
-                            "`Example: {...}` line to the PR body so the gate can "
-                            "probe with a valid request.")
-                fail(f"endpoint returned HTTP {e.code} instead of 402. "
-                     f"x402 endpoints must return 402 on unauthenticated requests.{hint}")
-    except urllib.error.URLError as e:
-        fail(f"could not reach endpoint: {e.reason}")
-    except Exception as e:
-        if "timed out" in str(e).lower():
+
+    code, note = probe_for_402(url, probe_body)
+    if code is None:
+        if note and "timed out" in note.lower():
             fail(f"endpoint timed out after {PROBE_TIMEOUT}s -- "
                  f"ensure your service is reachable and returns 402 promptly")
-        fail(f"probe error: {e}")
+        fail(f"could not reach endpoint: {note}")
+    elif code == 402:
+        ok(f"endpoint returned HTTP 402 -- x402 compliant"
+           + (f" ({note})" if note and note.startswith("POST gave 405") else ""))
+    elif 200 <= code < 300:
+        fail("endpoint did not return HTTP 402 -- got 2xx response. "
+             "x402 endpoints must return 402 Payment Required on unauthenticated requests.")
+    else:
+        hint = ""
+        if code in (400, 422):
+            hint = (" If your endpoint requires request parameters, add an "
+                    "`Example: {...}` line to the PR body so the gate can "
+                    "probe with a valid request.")
+        fail(f"endpoint returned HTTP {code} instead of 402. "
+             f"x402 endpoints must return 402 on unauthenticated requests.{hint}")
 
 
 if __name__ == "__main__":
