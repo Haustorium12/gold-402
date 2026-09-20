@@ -244,8 +244,14 @@ npm install x402-express        # or the core package: @coinbase/x402
 pip install x402
 ```
 
-_Checked 2026-08-30. There is no published `x402` crate on crates.io; if you are on Rust,
-call the HTTP flow directly — it is four steps and they are below._
+```bash
+# Rust
+cargo add x402-axum x402-reqwest   # x402-rs — see SDKs & Libraries shelf
+```
+
+_Checked 2026-09-20. A crate literally named `x402` exists on crates.io but is a placeholder
+with no working code — use `x402-rs`'s crates (`x402-axum` for servers, `x402-reqwest` for
+clients) instead._
 
 **3. Add payment middleware**
 
