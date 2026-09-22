@@ -273,3 +273,5 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [Vega PDF Extractor](https://pdf.kramsg1online.com/extract) — Extract text from PDF files. x402 on Base mainnet, $0.05 USDC per call. `POST /extract multipart/form-data file`. (OpenAPI: https://pdf.kramsg1online.com/openapi.json)
 - [Vega Article Summarizer](https://summarize.kramsg1online.com/summarize) — Summarize articles and URLs into key points. x402 on Base mainnet, $0.02 USDC per call. `POST /summarize {"url": "..."}`. (OpenAPI: https://summarize.kramsg1online.com/openapi.json)
 
+- [Agent Embassy](https://agent-embassy.fly.dev/v1/check/verify) — Agents pay per call in USDC via x402 for verified web checks with signed Outcome Receipts, encrypted recovery registration, and GPU market data.
+
