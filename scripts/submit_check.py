@@ -137,23 +137,32 @@ def _one_request(url, method, body):
 
 
 def probe_for_402(url, probe_body=b"{}"):
-    """POST once. On a 405 (Method Not Allowed), retry the SAME url with GET
-    before giving up -- a 405 is the server itself saying "wrong verb", not
-    "wrong service", and CONTRIBUTING.md never required POST specifically,
-    only a 402 challenge. Added 2026-09-19 (PR #224, MadeOnSol): a GET-only
-    manifest, every declared endpoint 402-compliant on GET, failed this gate
-    with 405 on every one, and the submitter had to explain that in the PR
-    body by hand to get read. One retry on the one status code that means
-    exactly "try the other verb" covers this without guessing at a manifest's
-    declared method field, which this script does not otherwise track.
+    """POST once. On a 405 (Method Not Allowed) or a 404 (Not Found), retry
+    the SAME url with GET before giving up.
+
+    405 is the server itself saying "wrong verb, right path" -- added
+    2026-09-19 (PR #224, MadeOnSol).
+
+    404 is added 2026-09-23 (issue #217, Obol): some routers return a plain
+    404 rather than 405 when a path exists for one verb but not another --
+    POSTing a GET-only route doesn't always get you a clean "method not
+    allowed". The retry is safe either way: the final pass criterion is still
+    "did the GET give us a 402 or a manifest", not "did the status change". A
+    genuinely dead or wrong URL gives a 404 (or worse) on the GET retry too
+    and still fails; nothing here can turn a real dead link into a pass.
+
+    CONTRIBUTING.md never required POST specifically, only a 402 challenge --
+    this one retry on the two status codes that plausibly mean "try the other
+    verb" covers both without guessing at a manifest's declared method field,
+    which this script does not otherwise track.
 
     Returns (status, note). status is an int code or None if neither attempt
     completed."""
     status, note = _one_request(url, "POST", probe_body)
-    if status == 405:
+    if status in (405, 404):
         get_status, get_note = _one_request(url, "GET", None)
         if get_status is not None:
-            return get_status, f"POST gave 405, retried GET -- {get_note}"
+            return get_status, f"POST gave {status}, retried GET -- {get_note}"
     return status, note
 
 

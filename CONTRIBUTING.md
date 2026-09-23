@@ -2,9 +2,9 @@
 
 **Built something on x402? Submit it.** gold-402 is a curated directory of x402 resources — facilitators, SDKs, frameworks, APIs, MCP servers, tools, and the services agents actually pay to use. Getting listed means builders and AI agents can find you.
 
-- **New entry?** Open a PR titled `Add [Name]` — takes five minutes, format below.
+- **New entry?** Open a PR titled `Add [Name]` — takes five minutes, format below. **This is the only way in.** An issue asking to be listed isn't a submission — see below.
 - **Question or discussion?** Open a [GitHub Discussion](https://github.com/Haustorium12/gold-402/discussions).
-- **Dead link or stale entry?** Open an [issue](https://github.com/Haustorium12/gold-402/issues) — we fix them fast.
+- **Dead link, stale entry, or something wrong with the repo?** Open an [issue](https://github.com/Haustorium12/gold-402/issues) — we fix them fast. **An issue titled "Add X" gets pointed back here, not landed by hand** — one intake lane, so every entry gets the same PR-gate check before a human reads it.
 
 The directory is updated continuously. Each week the newest additions are collected in the README's **New This Week** section, and the week's ecosystem developments in **This Week in x402**.
 

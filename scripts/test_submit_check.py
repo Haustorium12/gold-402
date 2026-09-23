@@ -1,10 +1,18 @@
 #!/usr/bin/env python3
 """
-test_submit_check.py -- probe_for_402's GET retry on a 405.
+test_submit_check.py -- probe_for_402's GET retry on a 405 or a 404.
 
 PR #224 (MadeOnSol, 2026-09-19): a GET-only manifest, every declared endpoint
 402-compliant on GET, failed this gate with 405 on every one, because the
-probe only ever tried POST. Run before touching probe_for_402:
+probe only ever tried POST.
+
+Issue #217 (Obol, 2026-09-23): a GET-only endpoint whose router answers a
+wrong-verb POST with a plain 404, not 405 -- the 2026-09-19 fix didn't cover
+it, so the submitter routed around the gate through an issue instead of a PR.
+Extended the retry to 404 as well; see probe_for_402's own docstring for why
+that can't turn a genuinely dead URL into a false pass.
+
+Run before touching probe_for_402:
     python3 scripts/test_submit_check.py
 """
 
@@ -23,8 +31,10 @@ class _Handler(http.server.BaseHTTPRequestHandler):
         pass
 
     def do_POST(self):
-        if self.path == "/get-only":
+        if self.path == "/get-only-405":
             self.send_response(405)
+        elif self.path in ("/get-only-404", "/dead"):
+            self.send_response(404)
         elif self.path == "/post-normal":
             self.send_response(402)
         else:
@@ -32,18 +42,23 @@ class _Handler(http.server.BaseHTTPRequestHandler):
         self.end_headers()
 
     def do_GET(self):
-        if self.path == "/get-only":
+        if self.path in ("/get-only-405", "/get-only-404"):
             self.send_response(402)
+        elif self.path == "/dead":
+            self.send_response(404)
         else:
             self.send_response(405)
         self.end_headers()
 
 
 CASES = [
-    ("#224 MadeOnSol shape -- POST 405, GET 402: retry finds it", "/get-only", 402),
+    ("#224 MadeOnSol shape -- POST 405, GET 402: retry finds it", "/get-only-405", 402),
+    ("#217 Obol shape -- POST 404, GET 402: retry finds it", "/get-only-404", 402),
     ("ordinary POST-only service -- 402 on first try, no retry needed", "/post-normal", 402),
-    ("neither verb works -- POST 200 is not a 405, must NOT retry into a false pass",
+    ("neither verb works -- POST 200 is not a 404/405, must NOT retry into a false pass",
      "/nothing", 200),
+    ("genuinely dead URL -- POST 404 triggers the retry, GET is 404 too: still fails, no false pass",
+     "/dead", 404),
 ]
 
 
