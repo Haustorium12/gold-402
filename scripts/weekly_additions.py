@@ -38,8 +38,17 @@ def parse_added(line):
     rest = t[m.end():]
     desc = ""
     if t.startswith("-"):
-        d = rest.split(EM, 1)
-        desc = d[1] if len(d) > 1 else ""
+        if EM in rest:
+            d = rest.split(EM, 1)
+            desc = d[1] if len(d) > 1 else ""
+        else:
+            # fallback: a small number of shelf entries use a plain hyphen
+            # separator instead of an em-dash (e.g. openai-agents-nano,
+            # found 2026-09-23). Without this, desc silently comes back
+            # empty and the entry ships in the weekly block with no
+            # description at all.
+            m2 = re.match(r"\s*-\s+(.*)", rest)
+            desc = m2.group(1) if m2 else ""
     elif t.startswith("|"):
         cells = [c.strip() for c in t.strip().strip("|").split("|")]
         cand = [c for c in cells if url not in c and c]

@@ -186,7 +186,7 @@ The wire lives at **[24klabs.ai/news](https://24klabs.ai/news)** — dated editi
 - **[Solana Wallet Research](https://solana-wallet-research.empty-thistle.workers.dev/.well-known/x402)** — Returns bounded finalized public-data reports for Solana wallet addresses for $0.01 USDC per call on Solana mainnet via x402.
 - **[HydraTrader x402 Catalog](https://x402.hydratrader.ai/.well-known/x402)** — Three pay-per-call Base USDC helpers via x402 (no API key): `POST /v1/cheap-errand` ($0.01) summarize/rewrite/classify/keywords/sentiment/translate; `POST /v1/structured-extract` ($0.03) schema-bound extract from pasted text or public URLs; `POST /v1/research-brief` ($0.08) short public-web briefs with citations (fair-use snippets only). ([SKILL](https://x402.hydratrader.ai/SKILL.md) | [OpenAPI](https://x402.hydratrader.ai/openapi.json) | [llms.txt](https://x402.hydratrader.ai/llms.txt))
 - **[Agent Bazaar](https://bazaar.saylorinnovations.com)** — Open, permissionless x402 discovery marketplace mirroring Coinbase's CDP Bazaar catalog (15,000+ resources) plus independently-submitted listings, with an MCP server and A2A agent registry, no account required to list or read.
-- **[openai-agents-nano](https://github.com/PANDeveloper001/openai-agents-nano-x402)**
+- **[openai-agents-nano](https://github.com/PANDeveloper001/openai-agents-nano-x402)** — Nano (XNO) x402 client for the OpenAI Agents SDK. Free, feeless pay-per-call for agent frameworks.
 - **[SignalHarness.ai](https://signalharness.ai/.well-known/x402)** — Publishes 330 production x402 API services for AI agents covering web and data processing, validation, AI utilities, and blockchain and crypto utilities.
 - **[100pro Token Contract Risk Screen](https://x402.rendraputra.dev/.well-known/x402)** — Pre-trade risk screen for EVM (Base) and Solana token contracts: honeypot, clone/mimic and owner-privilege signals returned with the evidence behind each flag, $0.05 USDC per call on Base. The report is served only after the USDC settlement is verified on Base, so a caller is never charged for a screening that did not settle. Example: `GET /screen?token=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913&chain=base`. ([OpenAPI](https://x402.rendraputra.dev/openapi.json), [llms.txt](https://x402.rendraputra.dev/llms.txt))
 - **[Agent Embassy](https://agent-embassy.fly.dev/v1/check/verify)** — Agents pay per call in USDC via x402 for verified web checks with signed Outcome Receipts, encrypted recovery registration, and GPU market data.
@@ -227,7 +227,7 @@ The wire lives at **[24klabs.ai/news](https://24klabs.ai/news)** — dated editi
 | Use case | Facilitator |
 |----------|-------------|
 | Most chains, full SDK support | [Coinbase CDP](https://docs.cdp.coinbase.com/x402) |
-| Edge deployment, global latency | [Cloudflare x402](https://developers.cloudflare.com/workers/examples/x402) |
+| Edge deployment, global latency | [Cloudflare x402](https://developers.cloudflare.com/agents/tools/payments/x402/) |
 | Enterprise billing + disputes | [Stripe Machine Payments](https://docs.stripe.com/payments/machine/x402) |
 
 **2. Install the SDK**
