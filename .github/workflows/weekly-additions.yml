@@ -25,14 +25,21 @@ jobs:
   update:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    env:
+      # Job-scoped, not step-scoped: push_readme.sh's retry path re-runs this
+      # same generator command on a rejected push (see its header), and that
+      # retry call needs the token too. It was step-scoped until 2026-09-23,
+      # when two merges landing seconds apart raced the push, the retry called
+      # `python scripts/weekly_additions.py` with no GITHUB_TOKEN in its
+      # environment, and the run failed instead of regenerating. A later push
+      # happened to supersede it this time; the bug was real either way.
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
       - name: Refresh New This Week block
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/weekly_additions.py
       - name: Commit if changed
         run: |
