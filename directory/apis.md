@@ -185,6 +185,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [DELTA Witness](https://delta-witness-api.ruphussten.workers.dev/.well-known/x402) — Public-web evidence capture, deterministic preflight verification, and guarded-action evidence endpoints, $1, $5 and $10 USDC per call on Base via x402. Example: `POST /v1/capture {"url":"https://example.com"}`. ([GitHub](https://github.com/15998194110/delta-witness))
 
 ---
+- [Gateway Website Quick Check](https://gateway-wallet-payments.jerryrnapier.workers.dev/api/agent/v1/services/website-quick-check) — Returns an asynchronous one-page website metadata report for $0.05 USDC on Base via x402, with private status and result retrieval.
 
 ## Security
 
