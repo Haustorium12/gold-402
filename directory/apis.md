@@ -186,6 +186,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [Vend API Merchant](https://extract.paypercall.dev) — Pay-per-call web intelligence settled in Nano (XNO), the feeless rail: URL-to-Markdown extraction, link check (status/redirect/time), domain intelligence (WHOIS/DNS/headers), web search, IP geolocation, nano-account info, YouTube transcripts, PDF text extraction, screenshot, browser render, CSS-selector extraction, page metadata, HTML table extraction, AI-jobs search, wiki summary, arXiv paper, HN feed, address verdict, and x402-lint (live-verify any x402 listing). 22+ live endpoints answer a valid x402 v2 402 challenge on `nano:mainnet`, $0.0001–$0.0005 XNO per call (≈<$0.01), no signup, no API keys, error responses not billed. ([Manifest](https://extract.paypercall.dev/.well-known/x402)) ([Docs](https://extract.paypercall.dev/)) ([OpenAPI](https://extract.paypercall.dev/openapi.json)) ([llms.txt](https://extract.paypercall.dev/llms.txt))
 
 ---
+- [Gateway Website Quick Check](https://gateway-wallet-payments.jerryrnapier.workers.dev/api/agent/v1/services/website-quick-check) — Returns an asynchronous one-page website metadata report for $0.05 USDC on Base via x402, with private status and result retrieval.
 
 ## Security
 
