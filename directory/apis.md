@@ -97,6 +97,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 
 - [4yearcycle data catalog](https://4yearcycle.com/.well-known/x402) — Twelve pay-per-call data endpoints for agents covering EU tenders (TED) and grants (CORDIS), crypto derivatives, DeFi yields, ERC-20 token safety, gas, ECB FX rates, German weather (DWD), live flights, news headlines, Bitcoin on-chain state and web search, $0.005–$0.02 USDC on Base mainnet via the Coinbase CDP facilitator with no API key or account. Example: `GET https://4yearcycle.com/x402/fx-rates?base=USD&symbols=EUR,GBP,JPY`. ([OpenAPI](https://4yearcycle.com/openapi.json)) ([Manifest](https://4yearcycle.com/.well-known/x402)) ([Site](https://4yearcycle.com/x402/))
 - [GlobalRules](https://globalrules.org) — Per-country practical facts for agents: VAT/GST rate, public holidays, visa requirements, tipping customs, power plug type, minimum wage, corporate tax, digital nomad visa, customs duty-free allowance and more, 186 countries × 57 fields with a sourced date on every value. $0.005–$0.05 USDC per call on Base. Example: `GET /api/v1/country/JP/tipping`. ([npm](https://www.npmjs.com/package/globalrules-mcp)) ([GitHub](https://github.com/yk647/globalrules-mcp))
+- [kepler-ops-tools](https://kepler-ops-tools.pn-26f.workers.dev/.well-known/x402) — Eight pay-per-call agent utility endpoints: hashing/HMAC (six algorithms), base64/hex/url encoding, JWT decode, CoinGecko prices, URL fetch, web search, a tested no-KYC crypto payout-rails dataset, and per-rail live status checks. $0.001-$0.02 USDC on Base, no API key, free sample at `/v1/no-kyc-rails/sample`, bazaar discovery extension on every 402.
 
 ## Crypto & DeFi Data
 
@@ -281,4 +282,3 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [Brian Booms x402 Store](https://pay.brianbooms.com/api/v1/buy/wallpaper-pack-vol1) — 33 digital products (music licenses, podcast packs, sample packs, custom commissions, wallpapers) sold via x402 micropayments in USDC on Base, Polygon, Arbitrum, Avalanche, and Solana, priced $0.05–$999 with instant download delivery. ([Catalog](https://brianbooms.com/.well-known/purchase-catalog.json))
 
 - [Agent Embassy](https://agent-embassy.fly.dev/v1/check/verify) — Agents pay per call in USDC via x402 for verified web checks with signed Outcome Receipts, encrypted recovery registration, and GPU market data.
-
