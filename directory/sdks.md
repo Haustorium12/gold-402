@@ -61,9 +61,11 @@ Client and server-side libraries for building with x402. Start with the official
 - [MoltsPay Python](https://github.com/Yaqing2023/moltspay-python) — Python SDK for x402 agent payments. LangChain compatible. Auto-creates wallets, discovers services, pays via x402. Base, Polygon, Solana, BNB. ([PyPI](https://pypi.org/project/moltspay/))
 - [x402 Payment Harness](https://github.com/rplryan/x402-payment-harness) — Python library + CLI for x402 without Coinbase CDP wallet. Works with any Ethereum EOA. Full HTTP 402 -> EIP-712 sign -> X-PAYMENT header flow. `pip install x402-payment-harness`.
 
-- [openai-agents-nano](https://github.com/PANDeveloper001/openai-agents-nano-x402) — Nano (XNO) x402 client for the OpenAI Agents SDK. Free, feeless pay-per-call for agent frameworks.
+- [openai-agents-nano](https://github.com/dhyabi2/openai-agents-nano-x402) — Nano (XNO) x402 client for the OpenAI Agents SDK. Free, feeless pay-per-call for agent frameworks.
 - [x402-mock](https://pypi.org/project/x402-mock/) — Test/mock implementation of x402 for EVM blockchains. Useful for dev/testing without live payments.
 - [feeless402](https://pypi.org/project/feeless402/) — Client and merchant server for x402 over the Nano (XNO) rail: CLI pays any x402 v2 endpoint, FastAPI merchant verifies and self-settles without a facilitator (Nano has no gas), includes a read-only remote MCP server. ([GitHub](https://github.com/Feeless402/feeless402))
+- [@x402nano/exact](https://www.npmjs.com/package/@x402nano/exact) — Exact-scheme implementation for fixed-amount Nano (XNO) payments over x402 (registry.npmjs.org/@x402nano/exact, v0.3.0). No facilitator fee; settlement is the single Nano block.
+- [pursekeeper/x402-nano-exact](https://github.com/pursekeeper/x402-nano-exact) — Python implementation of the x402 exact scheme for Nano (XNO): the 402 handshake with exact fixed-amount math, settling face-to-face on the Nano ledger with no facilitator or gas.
 
 ### XRPL
 - [xrpl-x402-core](https://pypi.org/project/xrpl-x402-core/) — Wire-level validation with CAIP-2 XRPL identifiers.
