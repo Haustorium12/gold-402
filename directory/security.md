@@ -67,6 +67,7 @@ Security tools, spending controls, audit resources, and best practices for x402 
 
 - [CYBERA Compliance API](https://compliance-api-ruddy.vercel.app) — VASP address identification (20,468 addresses, 29 chains), risk scoring, sanctions/mixer screening. $0.01 USDC on Base.
 - [SENTINEL](https://mru-oracle.com) — AML/CFT compliance intelligence. 77K+ sanctions entities (OFAC, UN, EU, PEP, Interpol, World Bank, crypto watchlists), 159-country jurisdiction risk scoring. MCP server at `/mcp`. $0.001-$0.015 USDC on Base.
+- [ScreenSeal](https://screenseal-site.agent-tollbooth.workers.dev) — Sanctions screening for AI agents against OFAC SDN, OFAC Consolidated Non-SDN, and EU FSF lists, returning match confidence scores with an EIP-712 attestation seal at $0.02 USDC per call on Base mainnet via x402.
 
 ---
 
