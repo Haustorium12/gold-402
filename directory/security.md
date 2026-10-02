@@ -69,6 +69,8 @@ Security tools, spending controls, audit resources, and best practices for x402 
 - [SENTINEL](https://mru-oracle.com) — AML/CFT compliance intelligence. 77K+ sanctions entities (OFAC, UN, EU, PEP, Interpol, World Bank, crypto watchlists), 159-country jurisdiction risk scoring. MCP server at `/mcp`. $0.001-$0.015 USDC on Base.
 
 ---
+- [Hermes Commerce impressum-check](https://agent.kihustle.tech/services/impressum-check/jobs) — DACH Impressum/imprint signal check for a public `.de`/`.at`/`.ch` URL (heuristics, not legal advice); $0.05 USDC on Base via x402. Example: `POST /services/impressum-check/jobs {"url":"https://example.de"}`. ([Catalog](https://agent.kihustle.tech/promo/catalog.json)) ([how-to-pay](https://agent.kihustle.tech/docs/how-to-pay)) ([Manifest](https://agent.kihustle.tech/.well-known/x402))
+
 
 ## Bug Bounty Programs
 
