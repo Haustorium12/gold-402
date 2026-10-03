@@ -52,6 +52,8 @@ Development tools, CLI utilities, monitoring, analytics, and CI/CD integrations 
 - [PaySentry](https://github.com/mkmkkkkk/paysentry) — Control plane for AI agent payments. Spending limits, circuit breakers, anomaly detection, audit trails for x402. npm: `@paysentry/x402`.
 - [Decision Anchor](https://api.decision-anchor.com) — External anchoring layer for agent payments and delegation. Records what was authorized, when, at what scope — before x402 payment execution. Content-blind.
 
+- [AI Agent Skill: Nano Wallet + Buy/Pay](https://github.com/dhyabi2/proof-agent-skill) — Installable agent skill for proof agents (OpenClaw runtime) that adds a Nano (XNO) wallet, buy, and pay capability. Gives any proof-agent the ability to hold XNO, pay x402 endpoints that settle in Nano, and receive payments — no API keys, no account setup. Part of the Unstuck agent network tool set. ([agentskills.io](https://agentskills.io))
+
 ---
 
 ## Testing & Development

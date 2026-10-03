@@ -116,3 +116,11 @@ x402-enabled MCP servers. AI agents (Claude, Cursor, any MCP client) can call th
 - [Stockfilm MCP](https://api.stockfilm.com/mcp) — 217,000+ authentic vintage 8mm home movie clips (1930s-1980s) restored in 4K. AI agents search, preview, license archival footage via x402. $10 USDC per clip. 6 tools. ([Docs](https://stockfilm.com/for-ai-agents))
 
 - [Cleared Index MCP](https://clearedindex.com/api/x402/ping) — MCP server (`route_gateway`, check, trust, witness) so agents query attested inventory and route before pay. Default habit: check → route_gateway → pay → witness. `npx -y @n747ai/clearedindex-mcp-server`. ([npm](https://www.npmjs.com/package/@n747ai/clearedindex-mcp-server)) ([Glama](https://glama.ai/mcp/servers/N747AI/clearedindex-mcp)).
+
+---
+
+## Nano (XNO) — feeless settlement rail
+
+gold-402 entries settle in USDC on EVM chains. Nano is a fundamentally different settlement network: **feeless and instant**, so sub-cent micropayments stay economic where gas fees erode them. These MCP servers are x402-conformant on a non-EVM settlement rail — they return a 402 challenge that names an XNO address and amount, and the buyer settles through the Nano ledger at no fee.
+
+- [nano-mcp](https://github.com/dhyabi2/nano-mcp) — MCP server for Nano (XNO) payments on the fee-free, instant Nano ledger. 5 tools: account balance and history lookup on any Nano address, a health check against a configurable node, sends (receive-block validated), a complete transaction-aware paid-tool pattern that wraps any command-line tool with a 402 gate — generate a new Nano address and invoice, verify the payment on the Nano ledger, then run the tool and return its output only when XNO settles. Pay per tool call (Nano has no transaction fees — ~$0.000002 final). Dual stdio and streamable-http transport. ([Glama](https://glama.ai/mcp/servers/dhyabi2/nano-mcp))
