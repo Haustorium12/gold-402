@@ -45,6 +45,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 
 ---
 - [Agent Council](https://council.cyberwarex.com/council) — Sends one question to three or four different LLMs that answer independently, then returns a single chaired verdict with a confidence score, the points all of them agreed on, and the dissent that held; a grounded tier buys evidence (honeypot simulation, OFAC sanctions screen, page content, SEC profile, web results) before the panel rules and itemises what it spent. $0.01 quick, $0.03 deep, $0.05-$0.12 grounded, USDC on Base mainnet. Example: `GET /council?q=Should+I+accept+a+token+launched+yesterday+as+payment%3F`. ([MCP endpoint](https://council.cyberwarex.com/mcp)) ([docs](https://cyberwarex.com/assets/council-quickstart.html))
+- [Agent Research Tools](https://x402-seller-pmlm.onrender.com/.well-known/x402) — Cited research brief from Wikipedia, DuckDuckGo, Hacker News and Crossref ($0.01), web page to markdown ($0.005) and x402 endpoint check ($0.005), USDC on Base mainnet via CDP. Errors are not billed. Example: `GET /report?q=history+of+the+transistor`. ([OpenAPI](https://x402-seller-pmlm.onrender.com/openapi.json)) ([llms.txt](https://x402-seller-pmlm.onrender.com/llms.txt)) ([GitHub](https://github.com/jimmybr-PDX/x402-seller))
 
 ## Data & Research
 
