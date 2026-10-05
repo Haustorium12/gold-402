@@ -6,6 +6,51 @@ Selection criteria are documented in [CONTRIBUTING.md](CONTRIBUTING.md#24k-featu
 
 ---
 
+## October 2026 — The Slate
+
+One pick per shelf.
+
+**APIs & Services — [crosscheck accept](https://crosscheckapi.com/v1/accept)**
+Checks what one agent delivers to another against the task it was given, before the buyer pays or releases escrow — counts, required fields and sums recomputed in code, every result bound to a signed receipt. The gap between "paid" and "delivered" that x402 itself doesn't cover, sold as a $0.03 call. New to the shelf this week, knocked live on a POST before it was listed.
+
+**MCP Servers — [Base toolbox](https://basetoolbox.cartonpliant.workers.dev/.well-known/mcp.json)**
+Checks a Base swap, a transfer, or your leftover token allowances before you sign — preflight as a tool call, on the chain most of this shelf settles on. The constants route is free, so you can see what it reads before you pay for anything.
+
+**SDKs & Libraries — [x402-dotnet](https://github.com/michielpost/x402-dotnet)**
+x402 for .NET, a runtime the Foundation's official SDKs don't ship. Still being worked on — last pushed 2026-09-18 — which is more than most single-language ports on this shelf can say.
+
+**Facilitators — [ArisPay](https://facilitator.arispay.app)**
+Free and public on Base mainnet, with EURC settling alongside USDC, and nothing to sign up for: /verify and /settle are open. It publishes its fee policy in machine-readable form at /supported instead of a pricing page you have to read.
+
+**Frameworks — [x402-rails](https://github.com/quiknode-labs/x402-rails)**
+QuickNode Labs' official Rails integration. If your API already lives in a Rails app, this is the shortest path to answering with a 402 — no new service to stand up beside it.
+
+**Tools — [ToolMeter](https://snappedai.com/toolmeter/)**
+Seller-readiness checks before a paid endpoint launches: pricing metadata, `.well-known/x402`, OpenAPI, agent metadata, buyer-safety. Our July delivery check found most failures were front doors, not services. This tool works on the front door.
+
+**Security — [ICME Labs](https://docs.icme.io)**
+Turns a plain-language spending policy into SMT-LIB logic and has a solver check an agent's action against it — a proof the rule held, not a score that says it probably did. $0.10 USDC on Base.
+
+**Ecosystem — [Bermuda](https://www.bermudabay.xyz)**
+Sender privacy for x402: Noir zero-knowledge proofs on Base, so an agent can pay without showing its balance and payment history to every seller it calls. Nearly every payment on these shelves is public on-chain; this is one of the few entries working on that.
+
+**The Global Agent Economy — [Beckn Protocol](https://github.com/ONDC-Official)**
+The open protocol underneath India's ONDC network. Its signing specification carries no human-verification requirement, which makes an agent buyer app protocol-legal today — gated by network-registry onboarding, not by the spec.
+
+**Learning — [How x402 paid links work (Payfirst)](https://www.payfirst.app/guides/x402-paid-links)**
+The part most tutorials skip: what a buyer does when it can't tell whether settlement went through. x402 V2 headers, URL delivery and retry handling, written for the side that pays.
+
+**Community — [Dev.to #x402](https://dev.to/t/x402)**
+Where builders are writing at length about x402 right now — five posts in the week to 2026-09-30, several of them measuring catalogs and probes the way this shelf does. The field's own field notes.
+
+**Market Data — [Dune Analytics x402](https://dune.com/x402)**
+On-chain x402 metrics — volumes, chains, facilitator comparison, fees — built on Dune, where queries are public by default. After an outside audit found published volume for the same 30 days ranging from under $2M to $24M, a number you can re-run beats a number you're asked to trust.
+
+**Aggregators & Proxies — [x402-list](https://x402-list.com)**
+A directory built for the machine reading it: a no-auth REST feed and a hosted MCP server for finding and checking an endpoint before an agent pays, not after.
+
+---
+
 ## September 2026 — The Slate
 
 One pick per shelf.

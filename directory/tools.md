@@ -4,8 +4,8 @@ Development tools, CLI utilities, monitoring, analytics, and CI/CD integrations 
 
 ---
 
-> ★ **Featured — September 2026: [nohumans.directory](https://nohumans.directory)**
-> Runs the same experiment gold-402 ran in July, at roughly four times the sample size: 550 endpoints actually purchased with real USDC, 332 delivered, full outcome breakdown and the SQL behind it published. This is the kind of check we'd rather see more of, not less.
+> ★ **Featured — October 2026: [ToolMeter](https://snappedai.com/toolmeter/)**
+> Seller-readiness checks before a paid endpoint launches: pricing metadata, `.well-known/x402`, OpenAPI, agent metadata, buyer-safety. Our July delivery check found most failures were front doors, not services. This tool works on the front door.
 
 ## CLI Tools
 
@@ -69,9 +69,6 @@ Development tools, CLI utilities, monitoring, analytics, and CI/CD integrations 
 ## Discovery & Search
 
 - [Agent Café](https://api.402.coffee/.well-known/x402.json) — x402 developer service with published API documentation.
-- [x402 Service Discovery API](https://x402-discovery-api.onrender.com) — Enriched directory of 251+ x402-payable services. Trust signals, uptime, latency, health scores. Auto-scans x402.org/ecosystem every 6h. 6-tool MCP server.
-- [x402 RouteNet](https://x402-routenet.onrender.com) — Smart routing layer for x402-enabled services. Selects optimal endpoint from 251+ services based on price, latency, health, or composite trust. Four strategies: `best`, `cheapest`, `fastest`, `most_trusted`.
-- [OpenClaw Discovery Index](https://x402search.xyz) — x402-gated search engine for 13,000+ x402-enabled APIs indexed from CDP Bazaar. $0.01 USDC per search on Base.
 - [AgentIndex](https://agentndx-production.up.railway.app/.well-known/x402) — Unified search across 15,000+ MCP services, A2A agents, and x402 APIs from 5 registries (Smithery, official MCP, GitHub, Bazaar, A2A). x402 paid search ($0.005), analyze ($0.05), trending ($0.10).
 - [Cinderwright Discovery Hub](https://api.ideafactorylab.org) — x402 service search engine. 152+ services across 9 categories with daily crawling and health checks. Paid search, free submission, free stats. Built by a production autonomous AI agent.
 - [BlockRun](https://blockrun.ai/.well-known/x402) — AI Gateway + Service Directory. 600+ x402 services indexed, trust scores, 31+ AI models via pay-per-use USDC.

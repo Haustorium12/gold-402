@@ -31,6 +31,11 @@ THE ORDER
      those are things ABOUT a service, never the payable door
   4. the first url, whatever it is -- a library or learning submission legitimately
      has nothing but a repo link, and tier 3 must not starve it
+  5. ONLY when the description has no url at all: the link in the entry line the PR
+     adds to a shelf (`- [Name](url) — ...`).  Added 2026-10-01 after #268: a body
+     that listed its routes as bare paths and no host made the gate fail red with
+     no comment, while the submitted line named the door the whole time.  The diff
+     is read as data through the API (PR_ADDED), never checked out or executed.
 
 `Contact:` lines are never candidates at any tier.
 
@@ -38,7 +43,7 @@ Trailing punctuation is stripped, because a url written inside a sentence or a
 markdown link carries the sentence home with it.
 
 USAGE
-    PR_BODY="..." python3 scripts/extract_url.py
+    PR_BODY="..." [PR_ADDED="<added shelf lines>"] python3 scripts/extract_url.py
 prints the url on stdout, writes `url=` and `tier=` to $GITHUB_OUTPUT when set.
 Exit 0 with empty output when there is no url at all -- the workflow decides what
 that means, not this script.
@@ -93,10 +98,21 @@ def is_offsite(url: str) -> bool:
     return any(h == d or h.endswith("." + d) for d in OFFSITE)
 
 
-def pick(body: str):
-    """Return (url, tier, why). Empty url when the body has none."""
+ENTRY_RE = re.compile(r"^[ \t]*[-*][ \t]+\[[^\]]+\]\((https?://[^)\s]+)\)", re.M)
+
+
+def from_entry(added: str):
+    """Tier 5: the url in the first shelf entry line the PR adds."""
+    m = ENTRY_RE.search(added or "")
+    if m:
+        return trim(m.group(1)), 5, "link in the entry line this PR adds"
+    return None
+
+
+def pick(body: str, added: str = ""):
+    """Return (url, tier, why). Empty url when neither the body nor the entry has one."""
     if not body:
-        return "", 0, "PR body is empty"
+        return from_entry(added) or ("", 0, "PR body is empty and no entry line found")
 
     m = LABEL_RE.search(body)
     if m:
@@ -106,7 +122,7 @@ def pick(body: str):
     urls = [trim(u) for u in URL_RE.findall("\n".join(lines))]
     urls = [u for u in urls if u]
     if not urls:
-        return "", 0, "no url found in the description"
+        return from_entry(added) or ("", 0, "no url in the description or the entry line")
 
     for u in urls:
         if "/.well-known/x402" in u:
@@ -120,7 +136,7 @@ def pick(body: str):
 
 
 def main() -> int:
-    url, tier, why = pick(os.environ.get("PR_BODY", ""))
+    url, tier, why = pick(os.environ.get("PR_BODY", ""), os.environ.get("PR_ADDED", ""))
     print(f"[extract_url] tier {tier}: {why}")
     print(f"[extract_url] url: {url or '(none)'}")
     out = os.environ.get("GITHUB_OUTPUT")

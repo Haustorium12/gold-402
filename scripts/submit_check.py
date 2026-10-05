@@ -2,7 +2,7 @@
 # Gold-402: submission gate
 # Called by the submit.yml GitHub Action when a PR is opened.
 # Usage: python scripts/submit_check.py <url> [<example_request_body>] [<mode>]
-# Exit 0 = pass. Exit 1 = fail (labelled needs-work; never auto-closed).
+# Exit 0 = pass. Exit 1 = fail (labelled gate-failed; never auto-closed).
 #
 # TWO MODES, because CONTRIBUTING.md has always had two acceptance rules and
 # this script only ever implemented one (fixed 2026-09-05, found on PR #183):
@@ -26,7 +26,8 @@
 # Mode is chosen by the workflow from the shelf files the PR touches, never by
 # anything the submitter writes -- a submitter cannot talk their way into the
 # looser mode, they can only put their entry on a shelf a human then reads.
-# SSRF protection baked in -- private IPs are rejected before any request.
+# SSRF protection baked in -- private IPs are rejected before any request, and the
+# address actually connected to is checked again on every hop, redirects included.
 #
 # Example request body (optional, single-line JSON): endpoints that validate
 # request parameters BEFORE issuing the 402 challenge (e.g. OpenAI-compatible
@@ -34,6 +35,7 @@
 # an `Example: {...}` line, this script probes with that body instead of `{}`.
 
 import ipaddress
+import http.client
 import json
 import os
 import re
@@ -88,6 +90,95 @@ def is_private_ip(hostname):
         return True, str(e)
 
 
+# --- the one door every request goes through -------------------------------------
+# The hostname check above looks at the address a URL names. A stranger's server can
+# answer with a redirect to somewhere else, and a hostname can resolve differently the
+# second time. So the check that matters is on the connection itself: resolve once,
+# refuse unless every address is public, connect to the address that was checked, and
+# do the same on every redirect hop. Redirects are followed (plenty of real services
+# redirect), but only to http(s), at most five of them.
+
+def _blocked_ip(ip_str):
+    """True unless ip_str is a public, globally routable address."""
+    try:
+        ip = ipaddress.ip_address(ip_str.split("%")[0])
+    except ValueError:
+        return True
+    mapped = getattr(ip, "ipv4_mapped", None)
+    if mapped is not None:
+        ip = mapped
+    return not ip.is_global
+
+
+def _connect_checked(host, port, timeout, source_address):
+    infos = socket.getaddrinfo(host, port, type=socket.SOCK_STREAM)
+    if not infos:
+        raise OSError(f"{host} did not resolve")
+    for _, _, _, _, sockaddr in infos:
+        if _blocked_ip(sockaddr[0]):
+            raise OSError(f"refused: {host} resolves to a private or reserved address")
+    last = None
+    for _, _, _, _, sockaddr in infos:
+        try:
+            sock = socket.create_connection((sockaddr[0], sockaddr[1]), timeout, source_address)
+            try:
+                sock.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
+            except OSError:
+                pass
+            return sock
+        except OSError as e:
+            last = e
+    raise last
+
+
+class _SafeHTTPConnection(http.client.HTTPConnection):
+    def connect(self):
+        self.sock = _connect_checked(self.host, self.port, self.timeout, self.source_address)
+
+
+class _SafeHTTPSConnection(http.client.HTTPSConnection):
+    def connect(self):
+        sock = _connect_checked(self.host, self.port, self.timeout, self.source_address)
+        self.sock = self._context.wrap_socket(sock, server_hostname=self.host)
+
+
+class _SafeHTTPHandler(urllib.request.HTTPHandler):
+    def http_open(self, req):
+        return self.do_open(_SafeHTTPConnection, req)
+
+
+class _SafeHTTPSHandler(urllib.request.HTTPSHandler):
+    def https_open(self, req):
+        return self.do_open(_SafeHTTPSConnection, req, context=self._context)
+
+
+class _SafeRedirect(urllib.request.HTTPRedirectHandler):
+    max_redirections = 5
+
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        if urllib.parse.urlparse(newurl).scheme not in ("http", "https"):
+            raise urllib.error.HTTPError(req.full_url, code,
+                                         "redirect to a non-http address refused", headers, fp)
+        return super().redirect_request(req, fp, code, msg, headers, newurl)
+
+
+def _build_opener():
+    opener = urllib.request.OpenerDirector()
+    for handler in (urllib.request.UnknownHandler(), urllib.request.HTTPDefaultErrorHandler(),
+                    _SafeRedirect(), urllib.request.HTTPErrorProcessor(),
+                    _SafeHTTPHandler(), _SafeHTTPSHandler()):
+        opener.add_handler(handler)
+    return opener
+
+
+_OPENER = _build_opener()
+
+
+def safe_open(req, timeout=PROBE_TIMEOUT):
+    """urlopen, minus the ways it reaches somewhere it should not."""
+    return _OPENER.open(req, timeout=timeout)
+
+
 def check_already_listed(resource_url):
     """Return True if this exact endpoint URL is already in the curated
     directory (directory/*.md). Matches on host+path, not just host --
@@ -126,7 +217,7 @@ def _one_request(url, method, body):
         },
     )
     try:
-        resp = urllib.request.urlopen(req, timeout=PROBE_TIMEOUT)
+        resp = safe_open(req, timeout=PROBE_TIMEOUT)
         return resp.getcode(), "2xx"
     except urllib.error.HTTPError as e:
         return e.code, "http error"
@@ -178,7 +269,7 @@ def manifest_resources(url):
             url, method="GET",
             headers={"User-Agent": USER_AGENT, "Accept": "application/json"},
         )
-        raw = urllib.request.urlopen(req, timeout=PROBE_TIMEOUT).read()
+        raw = safe_open(req, timeout=PROBE_TIMEOUT).read()
     except urllib.error.HTTPError as e:
         return [], f"manifest returned HTTP {e.code}"
     except Exception as e:
@@ -296,7 +387,7 @@ def main():
                 headers={"User-Agent": USER_AGENT, "Accept": "*/*"},
             )
             try:
-                resp = urllib.request.urlopen(req, timeout=PROBE_TIMEOUT)
+                resp = safe_open(req, timeout=PROBE_TIMEOUT)
                 ok(f"resource is publicly reachable -- HTTP {resp.getcode()}. "
                    f"No 402 required for this shelf.")
             except urllib.error.HTTPError as e:

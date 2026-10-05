@@ -4,8 +4,8 @@ Security tools, spending controls, audit resources, and best practices for x402 
 
 ---
 
-> ★ **Featured — September 2026: [MIDAX402](https://midax402.com/.well-known/x402.json)**
-> Signed EIP-712 conformance verdicts on a public registry, with a paid board-position ladder kept in a separate column from the verdict itself — no payment changes a rating or its verification-date ordering. The pay-to-rank problem, solved by not letting the two touch.
+> ★ **Featured — October 2026: [ICME Labs](https://docs.icme.io)**
+> Turns a plain-language spending policy into SMT-LIB logic and has a solver check an agent's action against it — a proof the rule held, not a score that says it probably did. $0.10 USDC on Base.
 
 ## Smart Contract Audits
 
@@ -32,6 +32,7 @@ Security tools, spending controls, audit resources, and best practices for x402 
 - [x402 Manifest Check](https://github.com/ruizmr/x402-api-readiness-review) — Zero-dependency Python CLI and live x402-paid API for static manifest checks covering network, recipient, asset, and amount bindings; neither validates runtime enforcement or settlement.
 - [TaskMarket Trust Score](https://95-217-164-43.sslip.io) — Requester reputation scoring for TaskMarket (taskmarket.dev): given a requester wallet address, returns a 0-100 trust score from on-platform payment history (completed tasks, cancellations-after-submission, expirations, self-awards). $0.001 USDC per call on Base, self-facilitated EIP-3009 exact scheme. Example: `GET /trust/0xADDRESS`. Discovery: `GET /.well-known/x402`.
 - [x402 Preflight](https://x402.chikocorp.com/api/x402/preflight/audit?resource_url=https%3A%2F%2Fx402.chikocorp.com%2Fapi%2Fx402%2Fdev%2Frepo-snapshot%3Frepo%3Dchico10117%2Fbasepay-readiness-service&method=GET&expected_network=eip155%3A8453&max_price_usd=1) — Audits a public x402 endpoint before payment via required `resource_url` and optional `method=GET|HEAD`, `expected_network`, and `max_price_usd` query parameters; the audit costs $0.05 USDC on Base.
+- [GPT-6 Agent Guard & Calldata Decoder](https://gpt.558686.xyz/v1/guard/tx) — Pre-transaction safety analyzer and calldata decoder for autonomous agents to vet contracts and prevent wallet draining, $0.15 USDC on Base. ([OpenAPI](https://gpt.558686.xyz/openapi.json))
 
 ---
 
@@ -49,6 +50,7 @@ Security tools, spending controls, audit resources, and best practices for x402 
 
 - [Revettr](https://revettr.com/.well-known/x402.json) — Counterparty risk scoring for x402 agentic commerce. Scores wallet addresses, domains, IPs, and companies 0-100 for payment safety.
 - [MoltGuard](https://api.moltrust.ch/.well-known/x402.json) — Agent trust scoring (0-100), Sybil detection with funding cluster analysis, Polymarket integrity, Ed25519 Verifiable Credentials. 7 MCP tools. $0.005-$0.05 USDC on Base.
+- [ChainWard](https://api.chainward.ai/.well-known/x402) — Evidence-linked on-chain risk report for a Base or BNB Chain address before an agent pays it, $0.05 USDC on Base per call (`GET /api/risk/x402?address=0xADDRESS`, add `&chain=bsc` for BNB Chain), never charged when the check fails.
 
 ---
 
@@ -66,6 +68,7 @@ Security tools, spending controls, audit resources, and best practices for x402 
 
 - [CYBERA Compliance API](https://compliance-api-ruddy.vercel.app) — VASP address identification (20,468 addresses, 29 chains), risk scoring, sanctions/mixer screening. $0.01 USDC on Base.
 - [SENTINEL](https://mru-oracle.com) — AML/CFT compliance intelligence. 77K+ sanctions entities (OFAC, UN, EU, PEP, Interpol, World Bank, crypto watchlists), 159-country jurisdiction risk scoring. MCP server at `/mcp`. $0.001-$0.015 USDC on Base.
+- [ScreenSeal](https://api-1-screening.agent-tollbooth.workers.dev/screen) — Sanctions screening for AI agents against OFAC SDN, OFAC Consolidated Non-SDN, and EU FSF lists, returning match confidence scores with an EIP-712 attestation seal at $0.02 USDC per call on Base mainnet via x402.
 
 ---
 

@@ -28,7 +28,7 @@ on:
     # URL -- is left with a red X standing against a body that no longer
     # exists, and no way to clear it. Safe here only because this job never
     # checks out PR code; see the header.
-    types: [opened, synchronize, edited]
+    types: [opened, synchronize, edited, reopened]
     paths:
       - 'directory/**'
       - 'README.md'
@@ -63,18 +63,48 @@ jobs:
       # their service failed a probe that never touched their service. The
       # ordered rule, its reasons and its tests live in scripts/extract_url.py,
       # which runs from main like everything else here.
+      # THE ENTRY LINE AS A FALLBACK DOOR  (added 2026-10-01, found on #268)
+      # A body that names its routes as bare paths has no url in it. The gate
+      # used to stop dead there -- red X, no comment, no label -- while the
+      # line the PR adds to the shelf named the host the whole time. The added
+      # lines are read through the API as text (metadata, like the file list
+      # below), never checked out and never executed.
+      - name: Read the shelf lines this PR adds
+        id: added
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const files = await github.paginate(github.rest.pulls.listFiles, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+              per_page: 100,
+            })
+            const lines = []
+            for (const f of files) {
+              if (!f.filename.startsWith('directory/') || !f.patch) continue
+              for (const l of f.patch.split('\n')) {
+                if (l.startsWith('+') && !l.startsWith('+++')) lines.push(l.slice(1))
+              }
+            }
+            core.setOutput('lines', lines.join('\n'))
+
       - name: Extract submitted URL from PR body
         id: extract_url
         env:
           PR_BODY: ${{ github.event.pull_request.body }}
+          PR_ADDED: ${{ steps.added.outputs.lines }}
         run: python scripts/extract_url.py
 
-      - name: Fail if no URL found
+      # NO URL ANYWHERE  (rewritten 2026-10-01, found on #268)
+      # This step used to `exit 1`, which skipped every step after it -- the
+      # fail comment included. "Never a silent rejection" was broken for exactly
+      # the submitter who most needed telling. Now it writes a fail result and
+      # lets the comment, label and final red X run as for any other fail.
+      - name: Record a fail if no URL found
         if: steps.extract_url.outputs.url == ''
         run: |
-          echo "No URL found in PR body. Please include your endpoint URL."
-          echo "Format: URL: https://your-service.com/api/endpoint"
-          exit 1
+          python -c "import json; json.dump({'result':'fail','reason':'no URL found -- not in the PR description and not in the line added to the shelf. Add a line like URL: https://your-service.com/endpoint to the description.'}, open('submit_result.json','w'))"
 
       - name: Note whether a contact was supplied (optional, never blocks)
         env:
@@ -155,6 +185,7 @@ jobs:
 
       - name: Run submission check
         id: check
+        if: steps.extract_url.outputs.url != ''
         env:
           # PR-derived values reach the shell as environment variables only --
           # never spliced into the command line as expression text.
@@ -207,18 +238,20 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               body: [
-                "**Gold-402 Verification: PASSED**",
+                "**Gold-402 Gate: PASSED**",
                 "",
                 "URL checked: `" + url + "`" + (why ? "  _(" + why + ")_" : ""),
                 "Rule applied: " + rule,
                 "Result: " + reason,
                 "",
-                "This PR has been approved for merge. A maintainer will review and merge shortly.",
+                mode === 'resource'
+                  ? "Gate passed: the resource is publicly reachable. A maintainer will check it before merging."
+                  : "Gate passed: the endpoint answers 402 as described. A maintainer will knock it live before merging.",
                 "",
                 "---",
                 mode === 'resource'
-                  ? "*Verified by Gold-402. This check confirms the resource is publicly reachable. It makes no claim about x402 compliance, and is not an endorsement.*"
-                  : "*Verified by Gold-402. Verification confirms x402 technical compliance only. It does not constitute endorsement of the service.*"
+                  ? "*Checked by Gold-402. This check confirms the resource is publicly reachable. It makes no claim about x402 compliance, and is not an endorsement.*"
+                  : "*Checked by Gold-402. The check confirms x402 technical compliance only. It does not constitute endorsement of the service.*"
               ].join('\n')
             })
 
@@ -244,7 +277,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               body: [
-                "**Gold-402 Verification: FAILED**",
+                "**Gold-402 Gate: FAILED**",
                 "",
                 "URL checked: `" + url + "`" + (why ? "  _(" + why + ")_" : ""),
                 "Rule applied: " + rule,
@@ -257,8 +290,9 @@ jobs:
                 "- The URL checked above is not the one you meant. The gate picks it in",
                 "  this order: a line starting `URL:`, `Endpoint:`, `Service:`, `Manifest:`",
                 "  or `API:`; then any `/.well-known/x402` manifest link; then the first",
-                "  link that is not a package, repo or social page. Add a `URL:` line to",
-                "  say it outright.",
+                "  link that is not a package, repo or social page; and only if the",
+                "  description has no link at all, the link in the line you added to the",
+                "  shelf. Add a `URL:` line to say it outright.",
                 "- A service endpoint that does not answer HTTP 402 unauthenticated.",
                 "- A URL that is unreachable, times out, or sits behind a login.",
                 "- The entry is already listed.",
@@ -277,36 +311,34 @@ jobs:
       # stranger's PR shut contradicts the door doctrine: a hold gets a warm comment
       # and a route back in. A closed PR is not a route back in -- pushing a fix to a
       # closed PR does not reopen it. So: label it, leave it open, let a hand look.
-      - name: Label failing PRs for a human look
-        if: steps.result.outputs.result != 'pass'
+      # LABELS. The gate owns gate-passed and gate-failed and keeps exactly one of them on
+      # the PR: each run removes the other, then adds its own. needs-work belongs to
+      # maintainers and this job never touches it. All three come off when the PR closes
+      # (label-cleanup.yml). Failing PRs are still never auto-closed: label it, leave it
+      # open, let a hand look.
+      - name: Set the gate label
         uses: actions/github-script@v7
+        env:
+          GATE_RESULT: ${{ steps.result.outputs.result }}
         with:
           script: |
+            const passed = process.env.GATE_RESULT === 'pass';
+            const add = passed ? 'gate-passed' : 'gate-failed';
+            const drop = passed ? 'gate-failed' : 'gate-passed';
+            const base = {
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo
+            };
             try {
-              await github.rest.issues.addLabels({
-                issue_number: context.issue.number,
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                labels: ['needs-work']
-              })
-            } catch(e) {
-              console.log('Label not found, skipping:', e.message)
+              await github.rest.issues.removeLabel({ ...base, name: drop });
+            } catch (e) {
+              console.log('Nothing to remove:', e.message);
             }
-
-      - name: Label passing PRs
-        if: steps.result.outputs.result == 'pass'
-        uses: actions/github-script@v7
-        with:
-          script: |
             try {
-              await github.rest.issues.addLabels({
-                issue_number: context.issue.number,
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                labels: ['verified', 'ready-to-merge']
-              })
-            } catch(e) {
-              console.log('Labels not found, skipping:', e.message)
+              await github.rest.issues.addLabels({ ...base, labels: [add] });
+            } catch (e) {
+              console.log('Label not found, skipping:', e.message);
             }
 
       - name: Fail workflow if check failed

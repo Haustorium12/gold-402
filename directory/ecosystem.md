@@ -4,8 +4,8 @@ Infrastructure, agent frameworks, A2A protocols, multi-agent orchestration, and 
 
 ---
 
-> ★ **Featured — September 2026: [Skyfire](https://docs.skyfire.xyz)**
-> Agent identity and payment credentials as ES256 JWTs with a public JWKS endpoint — the rare pattern in this space a stranger can verify without contacting the issuer. Worth studying if you're designing receipts of your own.
+> ★ **Featured — October 2026: [Bermuda](https://www.bermudabay.xyz)**
+> Sender privacy for x402: Noir zero-knowledge proofs on Base, so an agent can pay without showing its balance and payment history to every seller it calls. Nearly every payment on these shelves is public on-chain; this is one of the few entries working on that.
 
 ## Foundation & Protocol
 
@@ -33,10 +33,8 @@ Infrastructure, agent frameworks, A2A protocols, multi-agent orchestration, and 
 
 ## Agent Wallets
 
-- [CardZero](https://cardzero.ai) — ERC-4337 smart contract wallets for AI agents. Owner-controlled spending rules (per-tx limits, daily caps, whitelist, freeze). x402 buyer support via `POST /v1/x402/pay`. [GitHub](https://github.com/mrocker/CardZero)
 - [Coinbase Agentic Wallets](https://www.abhs.in/blog/ai-agents-crypto-wallets-coinbase-x402-brian-armstrong-2026) — Wallet infrastructure purpose-built for autonomous AI agents. 50M+ transactions processed since protocol launch.
 - [ATXP](https://github.com/atxp-dev/atxp) — Agent identity and funding platform. One command gives an agent a USDC wallet, `@atxp.email` inbox, phone number, and 100+ paid tools. x402-compatible, $5 free credit, no KYC. ([Docs](https://docs.atxp.ai))
-- [OpenVPS](https://openvps.sh) — AI-agent VPS hosting. Pay USDC on Base, Celo, or Tempo — get root SSH to Ubuntu 24.04 Firecracker microVMs in seconds. x402 + MPP dual-protocol. From $0.005/hr. ([GitHub](https://github.com/kartojal/openvps))
 
 ---
 
@@ -45,7 +43,6 @@ Infrastructure, agent frameworks, A2A protocols, multi-agent orchestration, and 
 - [Franklin](https://github.com/blockrunai/franklin) — The AI agent with a wallet — spends USDC autonomously to get real work done. Agentic payment-native framework by BlockRun. 636★
 - [Lucid Agents](https://github.com/daydreamsai/lucid-agents) — Commerce SDK by Daydreams. Bootstrap AI agents in 60 seconds that can pay, sell, and transact autonomously via x402. 188★
 - [Agenti](https://github.com/nirholas/agenti) — Give any AI agent a crypto wallet. Agents pay x402 APIs with USDC on Base. Simple drop-in wallet integration. 68★
-- [Faremeter](https://faremeter.io) — Universal framework for transparent API cost integration into agent workflows. Agents discover, negotiate, and pay for services via x402. 66★
 - [mcpay](https://github.com/microchipgnu/mcpay) — Open-source infrastructure for MCP and x402. Payment primitives for building monetized MCP servers. 90★
 - [use-agently](https://github.com/agentlyhq/use-agently) — Routing and settlement layer for AI agents. x402-native payment coordination for multi-agent workflows. 69★
 - [Vault-0](https://github.com/0-Vault/Vault-0) — Encrypted secret vault, agent monitor, and x402 wallet for OpenClaw. Handles 402 detection, EIP-3009 signing, policy-gated auto-settlement.

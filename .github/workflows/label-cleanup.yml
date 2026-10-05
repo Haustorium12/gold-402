@@ -1,0 +1,35 @@
+name: Clear PR labels on close
+
+# Once a PR is merged or closed, GitHub's own state is the status. The gate labels and
+# needs-work described a PR in progress, so they come off.
+#
+# Labels only. This job checks out nothing and runs no code from the pull request.
+on:
+  pull_request_target:
+    types: [closed]
+
+permissions:
+  pull-requests: write
+  issues: write
+
+jobs:
+  clear:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Remove gate and needs-work labels
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const base = {
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo
+            };
+            for (const name of ['gate-passed', 'gate-failed', 'needs-work']) {
+              try {
+                await github.rest.issues.removeLabel({ ...base, name });
+              } catch (e) {
+                console.log(name + ': ' + (e.status === 404 ? 'not on this PR' : e.message));
+              }
+            }

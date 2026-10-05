@@ -8,8 +8,8 @@ Payment verification and settlement services for x402. A facilitator verifies pa
 
 ---
 
-> ★ **Featured — September 2026: [NEAR x402 Facilitator](https://x402.mikedotexe.com/)**
-> Open source and API-key-gated, and unusual for publishing its own sanitized paid-flow evidence for both NEAR and Base mainnet rather than asking you to take settlement on faith.
+> ★ **Featured — October 2026: [ArisPay](https://facilitator.arispay.app)**
+> Free and public on Base mainnet, with EURC settling alongside USDC, and nothing to sign up for: /verify and /settle are open. It publishes its fee policy in machine-readable form at /supported instead of a pricing page you have to read.
 
 ## Hosted Facilitators
 

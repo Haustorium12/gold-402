@@ -4,8 +4,8 @@ Tutorials, videos, articles, blog posts, and interactive learning tools for x402
 
 ---
 
-> ★ **Featured — September 2026: [The Agent Times](https://theagenttimes.com)**
-> Independent news for the agent economy, published with citations and confidence scores and queryable by agents directly — built for the moment before an agent installs something, not for humans reading after the fact.
+> ★ **Featured — October 2026: [How x402 paid links work (Payfirst)](https://www.payfirst.app/guides/x402-paid-links)**
+> The part most tutorials skip: what a buyer does when it can't tell whether settlement went through. x402 V2 headers, URL delivery and retry handling, written for the side that pays.
 
 ## Quick Start Guides
 
@@ -43,7 +43,6 @@ Tutorials, videos, articles, blog posts, and interactive learning tools for x402
 - [HTX Ventures: x402 + ERC-8004 Research Report](https://coinzooma.com/htx-ventures-explores-x402-and-erc-8004-in-new-report-signaling-web3s-next-technical-inflection-point/) — Research report exploring x402 (value transfer) and ERC-8004 (trust/identity) as complementary Web3 infrastructure.
 - [DWF Labs: Inside x402](https://www.dwf-labs.com/research/inside-x402-how-a-forgotten-http-code-becomes-the-future-of-autonomous-payments) — Protocol mechanics, ecosystem adoption, real-world use cases.
 - [WorkOS: x402 vs Stripe MPP](https://workos.com/blog/x402-vs-stripe-mpp-how-to-choose-payment-infrastructure-for-ai-agents-and-mcp-tools-in-2026) — Comprehensive comparison for AI agents and MCP tools.
-- [Lushbinary: x402 & EmDash Content Monetization](https://lushbinary.com/blog/x402-emdash-content-monetization-ai-agent-era-2026/) — x402 + Cloudflare EmDash as the content monetization stack for the AI era.
 - [How x402 paid links work (Payfirst)](https://www.payfirst.app/guides/x402-paid-links) — Guide to x402 V2 payment headers, URL delivery, buyer-client requirements, and retry handling when settlement is uncertain.
 
 ### Use Case Articles
@@ -51,7 +50,6 @@ Tutorials, videos, articles, blog posts, and interactive learning tools for x402
 - [Agentic Economy Timeline](https://www.xpay.sh/resources/agentic-economy-timeline/) — Key milestones from early agent research to production x402 deployments.
 - [Agentic Payments Are Finally Useful](https://shorupan.hashnode.dev/agentic-payments-are-finally-useful-what-x402-means-for-founders-in-2026) — What x402 means for founders in 2026.
 - [James Bachini: Why x402 Is An Important Opportunity For Developers](https://www.linkedin.com/pulse/why-x402-important-opportunity-developers-james-bachini-fsjpe) — LinkedIn overview.
-- [Calmops: x402 Protocol Complete Guide 2026](https://calmops.com/web3/x402-protocol-programmable-payments-ai-agents-2026/) — Programmable payments for AI agents guide.
 
 ---
 

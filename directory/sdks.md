@@ -16,8 +16,8 @@ Client and server-side libraries for building with x402. Start with the official
 
 ---
 
-> ★ **Featured — September 2026: [x402-rs](https://github.com/x402-rs/x402-rs)**
-> The real Rust implementation — Axum middleware, reqwest client wrapper, self-hostable facilitator, 41 published versions. Worth naming directly this month: a thin placeholder crate named `x402` also exists on crates.io and ships no working code.
+> ★ **Featured — October 2026: [x402-dotnet](https://github.com/michielpost/x402-dotnet)**
+> x402 for .NET, a runtime the Foundation's official SDKs don't ship. Still being worked on — last pushed 2026-09-18 — which is more than most single-language ports on this shelf can say.
 
 ## TypeScript / JavaScript
 
@@ -29,11 +29,9 @@ Client and server-side libraries for building with x402. Start with the official
 
 ### HTTP Clients
 - [cipher-x402-client](https://github.com/cryptomotifs/cipher-x402-client) — Lightweight TS/JS x402 v2 client. Zero runtime deps, native fetch, ESM + CJS dual build. 34 tests, 89% coverage. Node 18+ / browsers. Optional `ethers` peer dep for signing.
-- [x402-got](https://www.npmjs.com/package/x402-got) — Got HTTP client integration for x402.
 
 ### AI Agent SDKs
 - [x402-mcp](https://www.npmjs.com/package/x402-mcp) — Vercel's library for adding x402 paywalls to MCP servers via the AI SDK. The `paidTool` primitive — declare a price on any MCP tool, require payment before execution. ([Blog](https://vercel.com/blog/introducing-x402-mcp-open-protocol-payments-for-mcp-tools))
-- [PayBot SDK](https://github.com/RBKunnela/paybot-sdk) — TypeScript SDK for integrating x402 into AI agents and bots. Automatic 402 detection, wallet management, USDC on Base. ([npm](https://www.npmjs.com/package/paybot-sdk))
 - [ClawPay MCP](https://www.npmjs.com/package/clawpay-mcp) — Non-custodial x402 payment layer for AI agents. Agents sign locally with their own keys. USDC on Base.
 - [Azeth SDK](https://github.com/azeth-protocol/sdk) — TypeScript SDK with x402 client (`fetch402`), ERC-4337 smart accounts, on-chain reputation feedback, and ERC-8004 service discovery. ([npm](https://www.npmjs.com/package/@azeth/sdk))
 - [MoltsPay](https://github.com/Yaqing2023/moltspay) — Payment infrastructure for AI agents. CLI, TypeScript SDK, LangChain/CrewAI integrations. Gasless payments on Base, Polygon, Solana, BNB, Tempo. ([npm](https://www.npmjs.com/package/moltspay))
@@ -61,9 +59,11 @@ Client and server-side libraries for building with x402. Start with the official
 - [MoltsPay Python](https://github.com/Yaqing2023/moltspay-python) — Python SDK for x402 agent payments. LangChain compatible. Auto-creates wallets, discovers services, pays via x402. Base, Polygon, Solana, BNB. ([PyPI](https://pypi.org/project/moltspay/))
 - [x402 Payment Harness](https://github.com/rplryan/x402-payment-harness) — Python library + CLI for x402 without Coinbase CDP wallet. Works with any Ethereum EOA. Full HTTP 402 -> EIP-712 sign -> X-PAYMENT header flow. `pip install x402-payment-harness`.
 
-- [openai-agents-nano](https://github.com/PANDeveloper001/openai-agents-nano-x402) - Nano (XNO) x402 client for the OpenAI Agents SDK. Free, feeless pay-per-call for agent frameworks.
+- [openai-agents-nano](https://github.com/dhyabi2/openai-agents-nano-x402) — Nano (XNO) x402 client for the OpenAI Agents SDK. Free, feeless pay-per-call for agent frameworks.
 - [x402-mock](https://pypi.org/project/x402-mock/) — Test/mock implementation of x402 for EVM blockchains. Useful for dev/testing without live payments.
 - [feeless402](https://pypi.org/project/feeless402/) — Client and merchant server for x402 over the Nano (XNO) rail: CLI pays any x402 v2 endpoint, FastAPI merchant verifies and self-settles without a facilitator (Nano has no gas), includes a read-only remote MCP server. ([GitHub](https://github.com/Feeless402/feeless402))
+- [@x402nano/exact](https://www.npmjs.com/package/@x402nano/exact) — Exact-scheme implementation for fixed-amount Nano (XNO) payments over x402 (registry.npmjs.org/@x402nano/exact, v0.3.0). No facilitator fee; settlement is the single Nano block.
+- [pursekeeper/x402-nano-exact](https://github.com/pursekeeper/x402-nano-exact) — Python implementation of the x402 exact scheme for Nano (XNO): the 402 handshake with exact fixed-amount math, settling face-to-face on the Nano ledger with no facilitator or gas.
 
 ### XRPL
 - [xrpl-x402-core](https://pypi.org/project/xrpl-x402-core/) — Wire-level validation with CAIP-2 XRPL identifiers.

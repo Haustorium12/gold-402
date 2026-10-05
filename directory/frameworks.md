@@ -4,8 +4,8 @@ Server-side integrations for accepting x402 payments. Drop into your existing st
 
 ---
 
-> ★ **Featured — September 2026: [@moltrust/x402](https://www.npmjs.com/package/@moltrust/x402)**
-> One line of middleware — `app.use(requireScore({ minScore: 60 }))` — reads a wallet's trust score off the X-Payment header and blocks anything below the bar before your endpoint ever runs. Zero dependencies.
+> ★ **Featured — October 2026: [x402-rails](https://github.com/quiknode-labs/x402-rails)**
+> QuickNode Labs' official Rails integration. If your API already lives in a Rails app, this is the shortest path to answering with a 402 — no new service to stand up beside it.
 
 ## Node.js / TypeScript
 

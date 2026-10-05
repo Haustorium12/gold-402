@@ -63,13 +63,38 @@ CASES = [
         "",
         0,
     ),
+    (
+        "#268 x402risk -- body names paths only, no host; the entry line is the door",
+        "## Add x402risk\n\nBase, USDC, x402 v2 exact, payTo `0x8F9C3f91628497E2A72D6740022D46f87A9eB417`.\n\n"
+        "Endpoints:\n- POST /v1/token-check $0.01\n\n"
+        'Example: {"token":"0x532f27101965dd16442E59d40670FaF5eBB142E4"}\n',
+        "https://api.x402risk.com/v1/token-check",
+        5,
+        "- [x402risk](https://api.x402risk.com/v1/token-check) — Base token scam/safety check.",
+    ),
+    (
+        "tier 5 never outranks the body -- a url in the description still wins",
+        "Manifest: https://svc.example.com/.well-known/x402\n",
+        "https://svc.example.com/.well-known/x402",
+        1,
+        "- [Svc](https://svc.example.com/other) — Thing.",
+    ),
+    (
+        "nothing anywhere -- empty, not a guess",
+        "Please add us.",
+        "",
+        0,
+        "",
+    ),
 ]
 
 
 def main() -> int:
     failures = 0
-    for name, body, want_url, want_tier in CASES:
-        url, tier, why = pick(body)
+    for case in CASES:
+        name, body, want_url, want_tier = case[:4]
+        added = case[4] if len(case) > 4 else ""
+        url, tier, why = pick(body, added)
         ok = url == want_url and tier == want_tier
         print(f"{'PASS' if ok else 'FAIL'}  {name}")
         if not ok:

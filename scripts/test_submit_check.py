@@ -21,7 +21,13 @@ import sys
 import threading
 
 sys.path.insert(0, __file__.rsplit("/", 1)[0])
+import submit_check  # noqa: E402
 from submit_check import probe_for_402  # noqa: E402
+
+# The gate refuses private addresses on every connection, which includes the loopback
+# server these tests run against. Allow exactly that one address here; the refusal itself
+# is tested in test_safe_open.py.
+submit_check._blocked_ip = lambda ip: ip != "127.0.0.1"
 
 PORT = 8931
 

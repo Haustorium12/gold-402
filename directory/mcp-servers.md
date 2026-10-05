@@ -6,8 +6,8 @@ x402-enabled MCP servers. AI agents (Claude, Cursor, any MCP client) can call th
 
 ---
 
-> ★ **Featured — September 2026: [Council of AI GSPC MCP](https://councilof.ai/mcp)**
-> Calls itself a measurement MCP, not a certification — the same line gold-402 drew when it retired its own verified badge. Free board tools, paid evidence tools over x402.
+> ★ **Featured — October 2026: [Base toolbox](https://basetoolbox.cartonpliant.workers.dev/.well-known/mcp.json)**
+> Checks a Base swap, a transfer, or your leftover token allowances before you sign — preflight as a tool call, on the chain most of this shelf settles on. The constants route is free, so you can see what it reads before you pay for anything.
 
 ## General Utility
 
@@ -41,6 +41,7 @@ x402-enabled MCP servers. AI agents (Claude, Cursor, any MCP client) can call th
 - [Cheapest Grocery Basket](https://grocery-basket.bowling-anthony.workers.dev/) — Whole-list grocery optimization: send a shopping list and a ZIP, get what it costs at each nearby store and which store — or split of stores — is cheapest. Package sizes are normalized before anything is compared, so a $3.55 gallon correctly beats a $2.15 half gallon. Live prices from ALDI, Publix, Kroger banners, Walmart, Target and Ingles across US metros, with stock, sale prices, purchase links and when each price was last read. $0.01–$0.20 USDC on Base (x402 v1+v2); an uncovered ZIP or unknown product returns an error and is never charged. ([llms.txt](https://grocery-basket.bowling-anthony.workers.dev/llms.txt)) ([OpenAPI](https://grocery-basket.bowling-anthony.workers.dev/openapi.json)) ([MCP](https://grocery-basket.bowling-anthony.workers.dev/mcp))
 - [aiworker-data MCP](https://aiworker.duckdns.org/mcp) — Remote streamable-http MCP with four paid tools: `defi_yields` and `defi_protocol` (DefiLlama data, refreshed every 5 minutes), `scrape_markdown` and `scrape_summary` (public page to clean Markdown, optionally LLM-summarised). $0.01–$0.04 USDC per call on Base and Solana via x402, settled only after a successful response; listed in the official MCP Registry as `org.duckdns.aiworker/aiworker-data`. Example tool call: `defi_protocol {"slug":"aave-v3"}`. ([OpenAPI](https://aiworker.duckdns.org/openapi.json)) ([Registry](https://registry.modelcontextprotocol.io/v0.1/servers?search=aiworker-data))
 - [Ardaro Purchase Document Review](https://agents.getardaro.com/mcp/documents) — Remote MCP server with five tools for receipt extraction, invoice-to-PO matching, and receipt/invoice/purchase-order reconciliation; advisory only, requires human review, does not persist source documents. $0.25–$0.50 USDC per call on Base via the PayAI facilitator. ([Discovery](https://agents.getardaro.com/.well-known/mcp.json)) ([OpenAPI](https://agents.getardaro.com/openapi.json))
+- [WhiteMagic](https://mcp.whitemagic.dev/mcp) — Local-first governed memory and session continuity for AI coding agents; the read-only hosted recall lane answers tool calls metered over x402 (USDC on Base, $0.002 per call, leases from $0.01) with keyless discovery and free evaluation keys. ([GitHub](https://github.com/lbailey94/whitemagic)) ([Guide](https://www.whitemagic.dev/whitemagic/guide))
 
 ## Crypto & DeFi Intelligence
 
@@ -62,7 +63,6 @@ x402-enabled MCP servers. AI agents (Claude, Cursor, any MCP client) can call th
 
 - [ShieldAPI MCP](https://www.npmjs.com/package/shieldapi-mcp) — 9-tool security MCP: password breach, email breach, domain/IP reputation, URL safety, full security scan, prompt injection detection, skill security scanning. x402 USDC on Base or free demo mode. `npx shieldapi-mcp`.
 - [MCP Security Snapshot Server](https://github.com/Seiya-wasabi/mcp-server-security-snapshot) — Pay-per-call HTTP security header scanning. $0.05 USDC on Base.
-- [lso-mcp](https://mcp.lonestaroracle.xyz) — 46 LoneStarOracle data tools: token and wallet risk, contract audits, whale tracking, DeFi and stablecoin risk, market and macro data, weather. x402-metered USDC on Base. ([GitHub](https://github.com/Homie4570/lso-mcp))
 
 ---
 
@@ -87,7 +87,6 @@ x402-enabled MCP servers. AI agents (Claude, Cursor, any MCP client) can call th
 - [Razorpay MCP Server](https://github.com/razorpay/razorpay-mcp-server) — Official MCP server from one of India's largest payment processors. Its `AGENTS.md` is worth reading on its own — an explicit convention set for agent-authored tools, including a money-unit safety rule.
 - [PayCrow](https://github.com/michu5696/paycrow) — Escrow protection for autonomous agent payments. Trust scoring from 4 on-chain sources + USDC escrow with dispute resolution on Base. 10 MCP tools: `safe_pay` (trust-informed escrow) and `trust_gate` (go/no-go before payment). ([npm](https://www.npmjs.com/package/paycrow))
 - [Arbitova](https://arbitova.com) — Escrow + transparent AI arbitration (N=3 LLM majority vote). Sub-task chained escrow for agent swarms. 0.5% success fee, 2% dispute only. 8 MCP tools. ([npm SDK](https://www.npmjs.com/package/@arbitova/sdk)) ([MCP](https://www.npmjs.com/package/@arbitova/mcp-server))
-- [PayBot MCP](https://github.com/RBKunnela/paybot-mcp) — Claude and AI agents make autonomous x402 payments. Wallet management, transaction history, configurable spending limits. ([npm](https://www.npmjs.com/package/paybot-mcp))
 - [agentpay-mcp](https://github.com/up2itnow0822/agentpay-mcp) — Native x402 client-side payment execution inside the agent loop. Detects 402 responses and completes transactions with no human handoff. ([npm](https://www.npmjs.com/package/agentpay-mcp))
 - [402-mcp](https://github.com/forgesworn/402-mcp) — Payment-rail-agnostic x402 MCP client. No Lightning node required, multi-wallet support, encrypted credentials.
 

@@ -24,9 +24,13 @@ In scope — anything that genuinely uses the x402 protocol:
 - **Tools & Utilities** — proxies, monitoring, analytics, spending controls, CLIs, and CI/CD integrations. → `directory/tools.md`
 - **Security & Compliance** — audits, trust scoring, sanctions/AML screening, and spend controls. → `directory/security.md`
 - **Ecosystem & Wallets** — agent wallets, marketplaces, and x402-integrated infrastructure. → `directory/ecosystem.md`
-- **Learning** — quickstarts, tutorials, and reference material directly useful to x402 builders. → `directory/learning.md`
+- **Learning** — quickstarts, tutorials, videos and talks, and reference material directly useful to x402 builders. → `directory/learning.md`
 - **Community** — channels, newsletters, jobs, and events for x402 builders. → `directory/community.md`
 - **Market Data** — on-chain analytics and dashboards for the x402 economy. → `directory/market-data.md`
+- **Examples** — working x402 example projects: full-stack apps, API examples, and client examples. → `directory/examples.md`
+- **Use Cases & Patterns** — documented x402 deployments and payment patterns, by industry. → `directory/use-cases.md`
+- **Research & Audits** — published studies, security audits, and papers about x402, with the method disclosed. → `directory/research.md`
+- **Publisher & Crawler Monetization** — x402 pay-per-crawl and publisher paywall tooling and services. → `directory/publishers.md`
 
 Out of scope: general crypto wallets, general USDC infrastructure, and AI-agent platforms with no specific x402 integration.
 

@@ -4,8 +4,8 @@ Where x402 builders hang out, get help, and find work.
 
 ---
 
-> ★ **Featured — September 2026: [Human Pages](https://humanpages.ai)**
-> An open directory that runs the marketplace in the other direction — agents hire humans for real-world tasks, paid per use on Base. Also just a normal job board if you're a person looking for gig work.
+> ★ **Featured — October 2026: [Dev.to #x402](https://dev.to/t/x402)**
+> Where builders are writing at length about x402 right now — five posts in the week to 2026-09-30, several of them measuring catalogs and probes the way this shelf does. The field's own field notes.
 
 ## Official Channels
 
@@ -42,5 +42,4 @@ Where x402 builders hang out, get help, and find work.
 
 ## Events
 
-- [ETHDenver x402 Workshop](https://www.youtube.com/watch?v=ethdenver-x402) — Hands-on workshop from ETHDenver 2025.
 - x402 Hackathons — Check the official Discord for upcoming hackathon announcements and prizes.
