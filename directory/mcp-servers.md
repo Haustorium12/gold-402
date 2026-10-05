@@ -98,6 +98,7 @@ x402-enabled MCP servers. AI agents (Claude, Cursor, any MCP client) can call th
 - [x402 Service Discovery MCP](https://github.com/rplryan/x402-discovery-mcp) — MCP for discovering 251+ x402-payable services with quality signals (uptime, latency, trust scores). 6 tools. Smithery 100/100.
 - [Intelligence Aeternum](https://github.com/codex-curator/intelligence-aeternum-mcp) — Monetized MCP server marketplace. 2M+ museum artworks. 16 MCP tools for search, enrichment, delivery. [Live](https://data-portal-172867820131.us-west1.run.app/mcp)
 - [ToolOracle](https://tooloracle.io) — x402 entitlement gateway with 10 intelligence products and 90+ MCP tools: RankOracle (SEO), ShopOracle, MemeOracle, SmartMoneyOracle (whale flows), YieldOracle (DeFi), FlightOracle, HotelOracle, NewsOracle, JobOracle, MacroOracle. Unit-based pricing ($0.01/unit, 2-15 units per call). USDC on Base.
+- [Verified x402 Catalog](https://verified-catalog-lookup.withgrokbot.workers.dev/mcp) — Remote MCP server (streamable HTTP) that reports which x402 endpoints delivered for a task at a price, from the maintainers' own paid calls. Free tools: search_catalog, get_service, lookup; paid twin `/v1/lookup/paid` is $0.02 USDC on Base via x402. ([GitHub](https://github.com/withgrokbot/verified-catalog)) ([Glama](https://glama.ai/mcp/servers/withgrokbot/verified-catalog))
 
 ---
 
