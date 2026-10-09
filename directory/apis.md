@@ -257,6 +257,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [HydraTrader x402 Catalog](https://x402.hydratrader.ai/.well-known/x402) — Three pay-per-call Base USDC helpers via x402 (no API key): `POST /v1/cheap-errand` ($0.01) summarize/rewrite/classify/keywords/sentiment/translate; `POST /v1/structured-extract` ($0.03) schema-bound extract from pasted text or public URLs; `POST /v1/research-brief` ($0.08) short public-web briefs with citations (fair-use snippets only). ([SKILL](https://x402.hydratrader.ai/SKILL.md) | [OpenAPI](https://x402.hydratrader.ai/openapi.json) | [llms.txt](https://x402.hydratrader.ai/llms.txt))
 
 - [Penny Press](https://www.pennypress.org/.well-known/x402) — Original essays on freedom, economics and philosophy; free for humans, pay-per-read for machines ($0.01–$0.25 per read) via x402 micropayments in USDC on Base mainnet.
+- [Instant Expert](https://instant.expert/api/x402/asks) — Pay per question for a written or voice answer from a real professional the agent names (name and company, email or LinkedIn URL) or the best match for a description, from $40 USDC on Base via x402 v2 and the CDP facilitator, refunded in full if nobody answers within 7 days. Example: `POST /api/x402/asks {"query":"a VP of Sales at a Series A fintech","question":"What is the first metric you check when a new sales rep ramps slowly?","offer_cents":3200}`. ([Docs](https://instant.expert/docs/x402)) ([Manifest](https://instant.expert/.well-known/x402))
 
 ## Production Deployments (High Volume)
 
