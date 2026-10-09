@@ -51,6 +51,7 @@ Development tools, CLI utilities, monitoring, analytics, and CI/CD integrations 
 - [ICME Labs](https://docs.icme.io) — Formal verification for AI agent actions. Natural language policies compile to SMT-LIB formal logic, checked by SMT solver. Wrapped in zero knowledge proofs for sub-1s verification. $0.10 USDC on Base.
 - [PaySentry](https://github.com/mkmkkkkk/paysentry) — Control plane for AI agent payments. Spending limits, circuit breakers, anomaly detection, audit trails for x402. npm: `@paysentry/x402`.
 - [Decision Anchor](https://api.decision-anchor.com) — External anchoring layer for agent payments and delegation. Records what was authorized, when, at what scope — before x402 payment execution. Content-blind.
+- [Burnbound](https://www.npmjs.com/package/@burnbound/mcp) — Buyer-side spending controls for x402: per-agent daily caps, per-payment limits, allowed hosts and human approval are checked before the customer's own wallet signs, through the MCP server `@burnbound/mcp`.
 
 ---
 
