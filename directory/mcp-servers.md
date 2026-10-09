@@ -116,5 +116,3 @@ x402-enabled MCP servers. AI agents (Claude, Cursor, any MCP client) can call th
 - [Stockfilm MCP](https://api.stockfilm.com/mcp) — 217,000+ authentic vintage 8mm home movie clips (1930s-1980s) restored in 4K. AI agents search, preview, license archival footage via x402. $10 USDC per clip. 6 tools. ([Docs](https://stockfilm.com/for-ai-agents))
 
 - [Cleared Index MCP](https://clearedindex.com/api/x402/ping) — MCP server (`route_gateway`, check, trust, witness) so agents query attested inventory and route before pay. Default habit: check → route_gateway → pay → witness. `npx -y @n747ai/clearedindex-mcp-server`. ([npm](https://www.npmjs.com/package/@n747ai/clearedindex-mcp-server)) ([Glama](https://glama.ai/mcp/servers/N747AI/clearedindex-mcp)).
-
-- [nano-mcp](https://github.com/dhyabi2/nano-mcp) — MCP server for Nano (XNO): balance and history on any account, sends, and a wrapper that gates a tool behind a 402 and runs it only after the XNO payment is seen on the ledger. stdio and streamable-http.
