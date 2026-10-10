@@ -44,6 +44,8 @@ Security tools, spending controls, audit resources, and best practices for x402 
 - [Decision Anchor](https://api.decision-anchor.com) — External anchoring layer for accountability before x402 payment execution. Records what was authorized, when, and at what scope. Content-blind. Non-judgmental.
 - [Hermes Plant Action Safety](https://hermesplant.com/api/agent-services/action-safety/quick) — Deterministic pre-execution gate for agent shell, Git, SQL, infrastructure, and deployment actions, with a $0.01 quick check and a $0.25 signed-receipt workflow on Base.
 
+- [SpendPreflight](https://api.spendpreflight.com/.well-known/x402) — Operated by SpendPreflight, an x402 service providing OFAC/domain screening and allow/hold/block payment preflight with signed receipts for $0.01/$0.02 USDC on Base.
+
 ---
 
 ## Agent Trust & Reputation
