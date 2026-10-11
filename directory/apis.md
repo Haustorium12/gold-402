@@ -273,3 +273,4 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [Brian Booms x402 Store](https://pay.brianbooms.com/api/v1/buy/wallpaper-pack-vol1) — 33 digital products (music licenses, podcast packs, sample packs, custom commissions, wallpapers) sold via x402 micropayments in USDC on Base, Polygon, Arbitrum, Avalanche, and Solana, priced $0.05–$999 with instant download delivery. ([Catalog](https://brianbooms.com/.well-known/purchase-catalog.json))
 
 - [Agent Embassy](https://agent-embassy.fly.dev/v1/check/verify) — Agents pay per call in USDC via x402 for verified web checks with signed Outcome Receipts, encrypted recovery registration, and GPU market data.
+- [Tanod](https://tanod.dev/.well-known/x402) — Pay-per-call API and MCP server (https://tanod.dev/mcp) for document, PDF, web, on-chain and security tools, priced from $0.001 USDC on Base and Polygon. Example: `POST /v1/docs/to-markdown`.
