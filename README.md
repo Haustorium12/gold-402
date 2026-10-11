@@ -7,13 +7,13 @@
 
 # gold-402
 
-> The gold standard for x402 resources. **<!--COUNT:START-->553<!--COUNT:END--> curated entries** — paid endpoints probed for a live 402 before listing, libraries and repos checked for real activity, and the whole shelf re-knocked every night with the result dated. No filler. Entries that stop answering move to [DEPARTURES.md](DEPARTURES.md) and keep getting knocked; the night one answers again, it comes back.
+> The gold standard for x402 resources. **<!--COUNT:START-->553<!--COUNT:END--> curated entries** — paid endpoints probed for a live 402 before listing, libraries and repos checked for real activity, and the whole shelf re-knocked every night with the result dated. No filler. Entries that stop answering move to [DEPARTURES.md](DEPARTURES.md) and keep getting knocked.
 
 [![GitHub stars](https://img.shields.io/github/stars/Haustorium12/gold-402?style=social)](https://github.com/Haustorium12/gold-402)
 [![Last Commit](https://img.shields.io/github/last-commit/Haustorium12/gold-402)](https://github.com/Haustorium12/gold-402/commits/main)
 [![Curated by 24K Labs](https://img.shields.io/badge/Curated_by-24K_Labs-gold)](https://24klabs.ai)
 
-gold-402 is the other thing. Smaller on purpose. A person checked every entry, we publish what we checked and what we didn't, and in July 2026 we started **buying services and reporting what came back**. Automated monitors now do the machine half of that continuously and do it well; what they do not do — by their own published scope — is judge whether the thing that came back was any good. That judgement is what this list is.
+gold-402 is small on purpose. A person reads every entry before it goes on the list, and any paid endpoint submitted today has to answer a live 402 before we merge it. We say what we checked and what we didn't.
 
 ---
 
@@ -24,7 +24,7 @@ gold-402 is the other thing. Smaller on purpose. A person checked every entry, w
 
 ## The Directory
 
-The product. <!--COUNT:START-->553<!--COUNT:END--> entries across <!--SHELVES:START-->13<!--SHELVES:END--> shelves, in [`directory/`](directory/).
+The product. <!--COUNT:START-->553<!--COUNT:END--> entries across <!--SHELVES:START-->17<!--SHELVES:END--> shelves, in [`directory/`](directory/).
 
 | Shelf | What's on it |
 |---|---|
@@ -41,6 +41,10 @@ The product. <!--COUNT:START-->553<!--COUNT:END--> entries across <!--SHELVES:ST
 | [Learning](directory/learning.md) | Quickstarts, tutorials, reference docs, news. |
 | [Community](directory/community.md) | Channels, newsletters, jobs, events. |
 | [Market Data](directory/market-data.md) | On-chain analytics, dashboards, adoption. |
+| [Examples](directory/examples.md) | Working x402 example projects: full-stack apps, API examples, client examples. |
+| [Use Cases & Patterns](directory/use-cases.md) | Documented x402 deployments and payment patterns, by industry. |
+| [Research & Audits](directory/research.md) | Published studies, security audits and papers about x402, with the method disclosed. |
+| [Publisher & Crawler Monetization](directory/publishers.md) | x402 pay-per-crawl and publisher paywall tooling and services. |
 
 ---
 
@@ -51,31 +55,13 @@ The product. <!--COUNT:START-->553<!--COUNT:END--> entries across <!--SHELVES:ST
 
 ## What being on this list means
 
-There is no stamp. There was one — "Gold402 Verified," one tier, a gold tick — and it was
-retired on 2026-09-06 because it said the identical thing about a paid API we knocked last
-Tuesday, a community wiki with no endpoint to knock at all, and an entry we hold no dated
-receipt for. A mark that everything wears certifies nothing. We have made that criticism of
-other people's badges and it was true of ours.
+Every entry shows what we know about it:
 
-What every entry now carries instead is the finding, per entry:
+- **A date** — the endpoint answered a live 402 when we checked it that day.
+- **"Listed — no knock receipt"** — we read it, but hold no dated check.
+- **"Listed — no endpoint to knock"** — libraries, guides and other resources with nothing to knock.
 
-- **A date** — *this endpoint answered an HTTP 402 when we knocked it, on this day.* An
-  automated gate checks the submission, a maintainer confirms it before merge, and a sweep
-  re-knocks and writes a dated result. A date is checkable. A tick is not.
-- **Or "listed — no knock receipt"** — a human read it and it is on the list. We hold no
-  dated knock, and we will not backfill a date we cannot show.
-- **Or "listed — no endpoint to knock"** — libraries, guides, wallets, clients and
-  community resources. Nothing here answers a 402 because that is not what these things
-  do. We read them, and we checked they were publicly reachable.
-
-**None of it is a delivery test.** We have not paid these services and graded what came
-back. Read any of it as "we checked what is stated above," never as "this is worth the
-money."
-
-**Some entries carry more.** Where we have paid for a service and confirmed what came back,
-we say so and keep the receipt — what we sent, what it cost, the transaction hash, what
-arrived. That is a stronger claim and we only make it about services we actually bought.
-Most of the list has not been through that, and we would rather say so than imply otherwise.
+None of it is a delivery test. A listing means we checked what it says, not that it's worth the money.
 
 ---
 
@@ -88,46 +74,11 @@ Most of the list has not been through that, and we would rather say so than impl
 
 Numbers we measured ourselves, each with its date, sample size and method. Where measurements disagree, both are shown — they were taken on different days by different methods, and blending them into one tidy figure would be the kind of thing this directory exists to argue against.
 
-### How much of the ecosystem is alive
-
-| Measured | Population | Live | Dead | Method |
-|---|---|---|---|---|
-| 2026-07 | 22,545 CDP Bazaar services | 5,792 | **74%** | full probe crawl, valid 402 required |
-| 2026-07-10 | 25,614 catalog services | 5,344 | **79%** | catalog snapshot, verify-state carried forward |
-| 2026-07-29 | 24,583 catalog services | — | **~67%** | earlier full crawl, cited in the liveness study |
-
-Three runs, three numbers, one direction: **the large free-listing catalogs are majority dead, and have been all month.** Anyone quoting a single decimal-point figure for this is quoting a moment, not a fact.
-
-### Liveness is predicted by listing friction
-
-Across four independent registries — 204,500 registered agents and services — the dead share tracks one variable: what it costs to get listed.
-
-| Registry | Entry cost | Dead |
-|---|---|---|
-| CDP Bazaar | free | ~67–79% |
-| ERC-8004 on-chain identity | gas only | 85–97% |
-| Glama MCP registry | curation + scoring | 47% unhealthy _(their own published figure)_ |
-
-**Free entry selects for abandonment.** Full method, limits, and an open invitation to refute it: [The Liveness Law →](articles/2026-07-the-liveness-law.md)
-
-### Buying is harder than finding
-
-In July 2026 we ran a paid delivery check across our own shelf — actually buying services and recording what came back.
-
-- **16** of 126 listed services were purchasable by a machine at a discoverable address
-- **8** delivered exactly what they advertised
-- **0** took payment and returned nothing
-- **$0.054** spent, every transaction reconciled on-chain
-
-The friction in this economy sits **before** the payment, not after it. Most services are fine; most front doors are not. **We are not claiming that as a finding yet — the sample is 16 services and one day, 2026-07-30.** A wider census was designed the same week and has not run; the blocker is ours, not the ecosystem's. We would rather say that than let the sentence stand.
-
 ### Coverage beyond the West
 
 x402 is a US-governed rail. It is not the only answer to machine payment, and outside the West it is not the answer being used — China runs delegated agent authorization on existing rails, India runs regulated human-signed mandates that agents execute inside a cap. Both were operating at scale before the x402 Foundation was a month old.
 
 We index that world too, including surfaces no English-language directory carries: [The Global Agent Economy →](directory/global.md)
-
-_All figures above are ours and reproducible. Where we could not reach something, we say so rather than leaving the gap invisible._
 
 ---
 
@@ -161,17 +112,6 @@ _All figures above are ours and reproducible. Where we could not reach something
 | Aggregators & Proxies | [x402-list](https://x402-list.com) |
 
 [Past features →](FEATURED.md)
-
----
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/sections/wire-dark.svg">
-  <img src="assets/sections/wire-light.svg" alt="Section: This Week in x402" width="680">
-</picture>
-
-## This Week in x402
-
-The wire lives at **[24klabs.ai/news](https://24klabs.ai/news)** — dated editions with permanent links, every claim cited. Four editions so far; the most recent is [2026-08-10](https://24klabs.ai/news/2026-08-10/). It is not on a schedule.
 
 ---
 
@@ -243,7 +183,7 @@ _No new listings yet._
 
 ```bash
 # TypeScript
-npm install x402-express        # or the core package: @coinbase/x402
+npm install @x402/express @x402/core @x402/evm
 
 # Python
 pip install x402
@@ -261,11 +201,20 @@ clients) instead._
 **3. Add payment middleware**
 
 ```typescript
-import { paymentMiddleware } from '@coinbase/x402-express';
+import { paymentMiddleware, x402ResourceServer } from "@x402/express";
+import { HTTPFacilitatorClient } from "@x402/core/server";
+import { ExactEvmScheme } from "@x402/evm/exact/server";
 
-app.use(paymentMiddleware(wallet, {
-  '/api/data': { price: '$0.01', network: 'base-mainnet' }
-}));
+const facilitator = new HTTPFacilitatorClient({ url: "https://x402.org/facilitator" });
+const server = new x402ResourceServer(facilitator)
+  .register("eip155:84532", new ExactEvmScheme()); // Base Sepolia testnet
+
+app.use(paymentMiddleware({
+  "GET /api/data": {
+    accepts: [{ scheme: "exact", price: "$0.01", network: "eip155:84532", payTo: "0xYourAddress" }],
+    description: "Paid data endpoint",
+  },
+}, server));
 ```
 
 That's it. The middleware returns 402 with payment details, verifies the client's payment header, and lets the request through.
@@ -286,10 +235,10 @@ That's it. The middleware returns 402 with payment details, verifies the client'
 2. Server  ←  402 Payment Required                       (payment details in header)
                payment-required: <base64 challenge>       (v2; v1 used X-Payment-Required
                                                            and put the detail in the body)
-3. Client  →  EIP-3009 gasless USDC transfer             (client signs + submits)
-4. Client  →  GET /api/data  +  X-Payment: {signed tx}  (retry with payment)
+3. Client  →  EIP-3009 gasless USDC authorization        (client signs only)
+4. Client  →  GET /api/data  +  PAYMENT-SIGNATURE         (retry with payment)
 5. Facilitator  →  verify + settle on-chain              (~2 seconds)
-6. Server  ←  200 OK  +  X-Payment-Response              (resource returned)
+6. Server  ←  200 OK  +  PAYMENT-RESPONSE                (resource returned)
 ```
 
 No gas for the sender. No subscription. No API key. Payment IS authentication.
@@ -307,8 +256,6 @@ No gas for the sender. No subscription. No API key. Payment IS authentication.
 
 This README is the front door. The full curated directory — every shelf, every entry — is in [`directory/`](directory/).
 
-**Other lists worth knowing:** the community [awesome-x402](https://github.com/xpaysh/awesome-x402) accepts everything and is the right place for exhaustive coverage. [Glama](https://glama.ai/mcp/servers) indexes MCP servers at enormous scale and publishes its own health data, which is rarer than it should be. Different jobs. Use all three.
-
 ---
 
 <picture>
@@ -318,12 +265,12 @@ This README is the front door. The full curated directory — every shelf, every
 
 ## Contributing
 
-gold-402 is curated, not exhaustive. Every entry earns its place.
+gold-402 is curated. Every entry earns its place.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the curation standard, badge system, acceptance criteria, and submission process.
 
 **Quick rules:**
-- Entry must use the x402 protocol (HTTP 402 + X-Payment), not just USDC or general crypto payments.
+- Entry must use the x402 protocol (HTTP 402 + PAYMENT-SIGNATURE), not just USDC or general crypto payments.
 - Live URL or public GitHub repo. Link must work.
 - Last activity within 12 months (for libraries and resources without a live endpoint).
 - One entry per pull request. Format: `[Name](url) — Description starting uppercase, ending with period.`
