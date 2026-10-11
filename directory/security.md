@@ -46,16 +46,11 @@ Security tools, spending controls, audit resources, and best practices for x402 
 
 ---
 
-## Agent Trust & Reputation
+## Trust & Reputation
 
 - [Revettr](https://revettr.com/.well-known/x402.json) — Counterparty risk scoring for x402 agentic commerce. Scores wallet addresses, domains, IPs, and companies 0-100 for payment safety.
 - [MoltGuard](https://api.moltrust.ch/.well-known/x402.json) — Agent trust scoring (0-100), Sybil detection with funding cluster analysis, Polymarket integrity, Ed25519 Verifiable Credentials. 7 MCP tools. $0.005-$0.05 USDC on Base.
 - [ChainWard](https://api.chainward.ai/.well-known/x402) — Evidence-linked on-chain risk report for a Base or BNB Chain address before an agent pays it, $0.05 USDC on Base per call (`GET /api/risk/x402?address=0xADDRESS`, add `&chain=bsc` for BNB Chain), never charged when the check fails.
-
----
-
-## Endpoint Trust & Reputation
-
 - [ScoutScore](https://scoutscore.ai) — Trust scoring for x402 services. Monitors 1,700+ services with continuous health checks and fidelity probes.
 - [x402 Trust](https://x402.fuchss.app/.well-known/x402) — Autonomous trust and reliability scoring for every publicly listed x402 endpoint, derived from continuous live probing and on-chain USDC settlement. Live report via POST /v1/x402-trust, free preview via GET /v1/x402-trust-preview.
 - [Cleared Index](https://clearedindex.com/.well-known/x402.json) — Trust provider and verification index with a conformant trust-evaluation endpoint: `POST /api/cleared/trust/evaluate` (`x402-trust-evaluation-v0.1`), Ed25519 signed attestations, and public JWKS at `GET /api/cleared/jwks`. Discovery manifest: `/.well-known/x402.json`.
