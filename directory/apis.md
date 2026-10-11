@@ -258,6 +258,8 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 
 - [Penny Press](https://www.pennypress.org/.well-known/x402) — Original essays on freedom, economics and philosophy; free for humans, pay-per-read for machines ($0.01–$0.25 per read) via x402 micropayments in USDC on Base mainnet.
 
+- [Astro Agents](https://astro-agent.dev/.well-known/x402) — Deterministic Western and Vedic astrology computed from NASA/JPL DE440 with no LLM (natal charts, transits, synastry, kundli, Vimshottari dashas, doshas, panchang, Gun Milan), paid per call via x402 in USDC on Base or Solana ($0.01–$0.50), each result carrying a SHA-256 that `POST /v1/verify` recomputes. ([OpenAPI](https://astro-agent.dev/openapi.json) | [llms.txt](https://astro-agent.dev/llms.txt))
+
 ## Production Deployments (High Volume)
 
 - [AIsa](https://aisa.network) — Leading x402 payment processor. **10.5M+ cumulative transactions** on the x402 network. The benchmark for production scale.
