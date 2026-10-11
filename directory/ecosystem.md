@@ -1,6 +1,6 @@
 ﻿# Ecosystem Projects
 
-Infrastructure, agent frameworks, A2A protocols, multi-agent orchestration, and marketplace platforms building on or extending x402.
+Infrastructure, A2A protocols, multi-agent orchestration, and marketplace platforms building on or extending x402.
 
 ---
 
@@ -35,21 +35,6 @@ Infrastructure, agent frameworks, A2A protocols, multi-agent orchestration, and 
 
 - [Coinbase Agentic Wallets](https://www.abhs.in/blog/ai-agents-crypto-wallets-coinbase-x402-brian-armstrong-2026) — Wallet infrastructure purpose-built for autonomous AI agents. 50M+ transactions processed since protocol launch.
 - [ATXP](https://github.com/atxp-dev/atxp) — Agent identity and funding platform. One command gives an agent a USDC wallet, `@atxp.email` inbox, phone number, and 100+ paid tools. x402-compatible, $5 free credit, no KYC. ([Docs](https://docs.atxp.ai))
-
----
-
-## Agent Frameworks
-
-- [Franklin](https://github.com/blockrunai/franklin) — The AI agent with a wallet — spends USDC autonomously to get real work done. Agentic payment-native framework by BlockRun. 636★
-- [Lucid Agents](https://github.com/daydreamsai/lucid-agents) — Commerce SDK by Daydreams. Bootstrap AI agents in 60 seconds that can pay, sell, and transact autonomously via x402. 188★
-- [Agenti](https://github.com/nirholas/agenti) — Give any AI agent a crypto wallet. Agents pay x402 APIs with USDC on Base. Simple drop-in wallet integration. 68★
-- [mcpay](https://github.com/microchipgnu/mcpay) — Open-source infrastructure for MCP and x402. Payment primitives for building monetized MCP servers. 90★
-- [use-agently](https://github.com/agentlyhq/use-agently) — Routing and settlement layer for AI agents. x402-native payment coordination for multi-agent workflows. 69★
-- [Vault-0](https://github.com/0-Vault/Vault-0) — Encrypted secret vault, agent monitor, and x402 wallet for OpenClaw. Handles 402 detection, EIP-3009 signing, policy-gated auto-settlement.
-- [Nevermined](https://nevermined.ai/blog/building-agentic-payments-with-nevermined-x402-a2a-and-ap2) — Integrated Visa Intelligent Commerce + x402 for autonomous AI agent commerce (April 9, 2026). Agents get delegated credit card spending authority with budget limits, per-purchase caps, merchant restrictions, time windows.
-- [Phidata Agents](https://github.com/phidatahq/phidata) — Multi-modal agents with x402 integration.
-- [NEAR AI](https://near.ai) — Cross-chain agent settlements.
-- [World AgentKit](https://www.coindesk.com/tech/2026/03/17/sam-altman-s-world-teams-up-with-coinbase-to-prove-there-is-a-real-person-behind-every-ai-transaction) — Integrates World's WorldID biometric identity with x402. AI agents prove they act on behalf of a verified unique human during x402 transactions. 18M+ verified humans.
 
 ---
 

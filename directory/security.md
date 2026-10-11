@@ -43,6 +43,7 @@ Security tools, spending controls, audit resources, and best practices for x402 
 - [ICME Labs](https://docs.icme.io) — Formal verification for AI agent actions. Natural language policies compile to SMT-LIB logic, checked by SMT solver. Wrapped in zero knowledge proofs. $0.10 USDC on Base.
 - [Decision Anchor](https://api.decision-anchor.com) — External anchoring layer for accountability before x402 payment execution. Records what was authorized, when, and at what scope. Content-blind. Non-judgmental.
 - [Hermes Plant Action Safety](https://hermesplant.com/api/agent-services/action-safety/quick) — Deterministic pre-execution gate for agent shell, Git, SQL, infrastructure, and deployment actions, with a $0.01 quick check and a $0.25 signed-receipt workflow on Base.
+- [agent.pw](https://github.com/smithery-ai/agent.pw) — Self-hostable MIT credential vault for agent API keys and OAuth tokens. Addresses the gap nobody in the pay-per-call world talks about: agents still need somewhere safe to keep the keys x402 didn't replace.
 
 ---
 

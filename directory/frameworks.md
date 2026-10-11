@@ -1,6 +1,6 @@
 ﻿# Server Frameworks & Middleware
 
-Server-side integrations for accepting x402 payments. Drop into your existing stack with minimal changes.
+Server-side integrations for accepting x402 payments, and agent frameworks with x402 support. Drop into your existing stack with minimal changes.
 
 ---
 
@@ -70,3 +70,20 @@ Server-side integrations for accepting x402 payments. Drop into your existing st
 ## Cloudflare Workers
 
 - [Cloudflare Agents SDK v0.4.0](https://developers.cloudflare.com/agents/) — x402 v2 migration support: `ClientEvmSigner` type, auto-selection from payment requirements, dual-header support (v2 `PAYMENT-SIGNATURE` + v1 `X-PAYMENT`), lazy facilitator initialization.
+
+---
+
+## Agent Frameworks
+
+- [Franklin](https://github.com/blockrunai/franklin) — The AI agent with a wallet — spends USDC autonomously to get real work done. Agentic payment-native framework by BlockRun. 636★
+- [Lucid Agents](https://github.com/daydreamsai/lucid-agents) — Commerce SDK by Daydreams. Bootstrap AI agents in 60 seconds that can pay, sell, and transact autonomously via x402. 188★
+- [Agenti](https://github.com/nirholas/agenti) — Give any AI agent a crypto wallet. Agents pay x402 APIs with USDC on Base. Simple drop-in wallet integration. 68★
+- [mcpay](https://github.com/microchipgnu/mcpay) — Open-source infrastructure for MCP and x402. Payment primitives for building monetized MCP servers. 90★
+- [use-agently](https://github.com/agentlyhq/use-agently) — Routing and settlement layer for AI agents. x402-native payment coordination for multi-agent workflows. 69★
+- [Vault-0](https://github.com/0-Vault/Vault-0) — Encrypted secret vault, agent monitor, and x402 wallet for OpenClaw. Handles 402 detection, EIP-3009 signing, policy-gated auto-settlement.
+- [Nevermined](https://nevermined.ai/blog/building-agentic-payments-with-nevermined-x402-a2a-and-ap2) — Integrated Visa Intelligent Commerce + x402 for autonomous AI agent commerce (April 9, 2026). Agents get delegated credit card spending authority with budget limits, per-purchase caps, merchant restrictions, time windows.
+- [Phidata Agents](https://github.com/phidatahq/phidata) — Multi-modal agents with x402 integration.
+- [NEAR AI](https://near.ai) — Cross-chain agent settlements.
+- [World AgentKit](https://www.coindesk.com/tech/2026/03/17/sam-altman-s-world-teams-up-with-coinbase-to-prove-there-is-a-real-person-behind-every-ai-transaction) — Integrates World's WorldID biometric identity with x402. AI agents prove they act on behalf of a verified unique human during x402 transactions. 18M+ verified humans.
+
+---
