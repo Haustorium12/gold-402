@@ -179,6 +179,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [Gateway Website Quick Check](https://gateway-wallet-payments.jerryrnapier.workers.dev/api/agent/v1/services/website-quick-check) — Returns an asynchronous one-page website metadata report for $0.05 USDC on Base via x402, with private status and result retrieval.
 - [grist.tools](https://grist.tools/.well-known/x402) — Deterministic HTTP micro-utilities for AI agents: page cleaning and metadata, document conversion (PDF, DOCX, EPUB, XLSX, PPTX), image and media probing, DNS, WHOIS and TLS data. `POST` only, $0.002 to $0.005 USDC per call on Base via x402, no API key. Example: `POST /v1/whois {"domain":"example.com"}`. ([OpenAPI](https://grist.tools/openapi.json)) ([llms.txt](https://grist.tools/llms.txt))
 - [AgentPay Web Extract](https://agentpay-extract.agentpay-apis.workers.dev/.well-known/x402) — Fetches any URL and returns the main content as markdown with title, Open Graph metadata, canonical URL and outbound links. $0.005 USDC on Base or Algorand.
+- [PageWire](https://pagewire.dev/.well-known/x402) — Pay-per-call web reading for agents: page to clean Markdown with links ($0.01), page metadata with OpenGraph/Twitter/JSON-LD ($0.005), and a page plus up to 4 same-site pages ($0.03); USDC on Base via x402 or MPP, plus a remote MCP server; failed fetches are never charged.
 
 ---
 
