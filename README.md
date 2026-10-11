@@ -7,7 +7,7 @@
 
 # gold-402
 
-> The gold standard for x402 resources. **<!--COUNT:START-->553<!--COUNT:END--> curated entries** — paid endpoints probed for a live 402 before listing, libraries and repos checked for real activity, and the whole shelf re-knocked every night with the result dated. No filler. Entries that stop answering move to [DEPARTURES.md](DEPARTURES.md) and keep getting knocked.
+> The gold standard for x402 resources. **<!--COUNT:START-->548<!--COUNT:END--> curated entries** — paid endpoints probed for a live 402 before listing, libraries and repos checked for real activity, and the whole shelf re-knocked every night with the result dated. No filler. Entries that stop answering move to [DEPARTURES.md](DEPARTURES.md) and keep getting knocked.
 
 [![GitHub stars](https://img.shields.io/github/stars/Haustorium12/gold-402?style=social)](https://github.com/Haustorium12/gold-402)
 [![Last Commit](https://img.shields.io/github/last-commit/Haustorium12/gold-402)](https://github.com/Haustorium12/gold-402/commits/main)
@@ -24,7 +24,7 @@ gold-402 is small on purpose. A person reads every entry before it goes on the l
 
 ## The Directory
 
-The product. <!--COUNT:START-->553<!--COUNT:END--> entries across <!--SHELVES:START-->17<!--SHELVES:END--> shelves, in [`directory/`](directory/).
+The product. <!--COUNT:START-->548<!--COUNT:END--> entries across <!--SHELVES:START-->13<!--SHELVES:END--> shelves, in [`directory/`](directory/).
 
 | Shelf | What's on it |
 |---|---|
