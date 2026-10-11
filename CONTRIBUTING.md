@@ -6,11 +6,9 @@
 - **Question or discussion?** Open a [GitHub Discussion](https://github.com/Haustorium12/gold-402/discussions).
 - **Dead link, stale entry, or something wrong with the repo?** Open an [issue](https://github.com/Haustorium12/gold-402/issues) — we fix them fast. **An issue titled "Add X" gets pointed back here, not landed by hand** — one intake lane, so every entry gets the same PR-gate check before a human reads it.
 
-The directory is updated continuously. Each week the newest additions are collected in the README's **New This Week** section, and the week's ecosystem developments in **This Week in x402**.
+The directory is updated continuously. Each week the newest additions are collected in the README's **New This Week** section.
 
 ---
-
-gold-402 is curated, not exhaustive. Every entry earns its place.
 
 ## What Gets Listed
 
@@ -18,14 +16,16 @@ In scope — anything that genuinely uses the x402 protocol:
 
 - **Facilitators** — hosted or self-hosted x402 payment facilitators settling real USDC (or a supported stablecoin). → `directory/facilitators.md`
 - **SDKs & Libraries** — client and server libraries for implementing x402, in any language. → `directory/sdks.md`
-- **Frameworks & Middleware** — server middleware and framework integrations (Express, Hono, Next.js, FastAPI, Axum, Cloudflare Workers, and more). → `directory/frameworks.md`
+- **Frameworks & Middleware** — server middleware and framework integrations (Express, Hono, Next.js, FastAPI, Axum, Cloudflare Workers, and more), and agent frameworks with x402 support. → `directory/frameworks.md`
 - **APIs & Services** — x402-payable API endpoints agents call and pay for per request. → `directory/apis.md`
 - **MCP Servers** — Model Context Protocol servers that gate access behind x402. → `directory/mcp-servers.md`
-- **Tools & Utilities** — proxies, monitoring, analytics, spending controls, CLIs, and CI/CD integrations. → `directory/tools.md`
+- **Tools & Utilities** — proxies, monitoring, analytics, CLIs, and CI/CD integrations. → `directory/tools.md`
 - **Security & Compliance** — audits, trust scoring, sanctions/AML screening, and spend controls. → `directory/security.md`
 - **Ecosystem & Wallets** — agent wallets, marketplaces, and x402-integrated infrastructure. → `directory/ecosystem.md`
 - **Learning** — quickstarts, tutorials, videos and talks, and reference material directly useful to x402 builders. → `directory/learning.md`
 - **Community** — channels, newsletters, jobs, and events for x402 builders. → `directory/community.md`
+- **Aggregators & Proxies** — one integration, many upstreams: services that unify or resell access to other providers' APIs and data. → `directory/aggregators.md`
+- **The Global Agent Economy** — agent payment infrastructure outside the West. → `directory/global.md`
 - **Market Data** — on-chain analytics and dashboards for the x402 economy. → `directory/market-data.md`
 - **Examples** — working x402 example projects: full-stack apps, API examples, and client examples. → `directory/examples.md`
 - **Use Cases & Patterns** — documented x402 deployments and payment patterns, by industry. → `directory/use-cases.md`
@@ -39,7 +39,7 @@ Out of scope: general crypto wallets, general USDC infrastructure, and AI-agent 
 For a **service** — an API, MCP server, facilitator, or anything with a live endpoint — all of the following:
 
 - **It's live.** The URL resolves and the endpoint returns a valid HTTP 402 challenge with correct payment headers, or serves a valid x402 manifest.
-- **It's actually x402.** It implements the protocol (HTTP 402 + `X-Payment`), not just "we accept USDC" or general crypto payments.
+- **It's actually x402.** It implements the protocol (HTTP 402 + `PAYMENT-SIGNATURE`), not just "we accept USDC" or general crypto payments.
 - **It settles on a supported chain.** Base is the norm; other chains are fine as long as the x402 flow is real.
 - **It's not a duplicate service** (see the one-entry-per-service rule below).
 - **The description is one factual line.** No marketing language.
@@ -50,9 +50,7 @@ For a **library, framework, or learning/community resource** with no payable end
 
 We probe every submitted endpoint before merging. Anything that fails gets a friendly note explaining what to fix — never a silent rejection. Fix it and resubmit.
 
-**Why we ask for the last two.** We buy things now. In July 2026 we ran the first paid delivery check across our own shelf and found that of 126 listed services, only 16 could be purchased by a machine at a findable address — and four of those still failed because the request shape wasn't documented anywhere a caller could find it. The services were fine. The front doors weren't.
-
-That's not a complaint about anyone's product. It's the single biggest thing standing between a working service and an agent that would have paid for it. So we ask for the door, and the shape of the knock.
+**Why we ask for the last two.** An agent can only pay for what it can find and call. A homepage isn't a door, and an undocumented request shape is a locked one. So we ask for the door, and the shape of the knock.
 
 ## How we reach you
 
@@ -76,7 +74,7 @@ Anything you like goes there — an email, an X or Telegram handle, a Discord, a
 
 **Where it lives.** In the pull request description — **not in your directory entry.** Public markdown gets scraped by address harvesters within days, and we're not going to be the reason your inbox fills up. We keep it privately and only while your entry is listed. Ask us to delete it and we will, and your listing is unaffected.
 
-**Where this breaks, honestly.** Two thirds of the current directory doesn't link a repo at all — a lot of entries are a bare endpoint and nothing else. For those we have no way to reach anyone, and a dead endpoint just gets delisted. That's the gap this line exists to close, one entry at a time.
+**Where this breaks, honestly.** A lot of entries are a bare endpoint with no repo. For those we have no way to reach anyone, and a dead endpoint just moves to departures. That's the gap this line exists to close, one entry at a time.
 
 ## What "verified" means
 
@@ -89,8 +87,6 @@ Every entry now carries the finding rather than a mark:
 - **"listed — no endpoint to knock"** — libraries, guides, wallets, clients, community resources. Nothing here answers a 402 because that is not what these things do.
 
 That is the whole claim. It is **not** an audit of the provider, a guarantee of uptime, a promise that any given call will succeed, or a delivery test — we have not paid these services and graded what came back.
-
-**Some entries carry more than that.** Where we have paid for a service and confirmed what came back, we say so and we keep the receipt — what we sent, what it cost, the transaction, and what arrived. That's a stronger claim than liveness and we only make it about services we actually bought. Most of the list hasn't been through that yet.
 
 ## One entry per service (multiple services welcome)
 
@@ -117,7 +113,7 @@ The unit of a listing is the **service**, not the provider.
 ## How to Submit
 
 1. Open a Pull Request titled `Add [Name]`.
-2. Add the entry to the bottom of the correct section in the relevant `directory/` file.
+2. Add the entry to the bottom of the correct section in the relevant `directory/` file. We may move it to a different shelf if we think it fits better there.
 3. Use the format above, and verify the link is live before submitting.
 4. One entry per PR where practical.
 5. **If your endpoint requires request parameters** before it can answer with 402 (e.g. an OpenAI-compatible API that validates the body first), add an `Example:` line with a single-line JSON request body to the PR description — the submission gate will probe your endpoint with that body instead of an empty `{}`:
@@ -136,17 +132,15 @@ The unit of a listing is the **service**, not the provider.
 
    Email, X, Telegram, a Discord, a contact form, anything. Entirely optional; leave it out and we'll open an issue on your repo instead. [What we'd use it for](#how-we-reach-you).
 
-To suggest an entry without writing the PR yourself, open an [issue](https://github.com/Haustorium12/gold-402/issues) with the name, URL, and a one-sentence description — we'll take it from there.
-
 ## Featured
 
 On the 1st of each month the maintainers select one **Featured** pick per shelf, shown at the top of each shelf and indexed in the README, with past slates archived in [FEATURED.md](FEATURED.md). Featured is an editorial pick — a judgment that something is well-built, actively used, and worth a second look, with a preference for excellent work that hasn't already had wide coverage. A shelf with no entry that clears the bar runs empty that month; the empty slot is also a verdict. Featured is the one editorial mark gold-402 carries, and it is always awarded by the maintainers, never requested onto your own entry.
 
 ## Maintenance
 
-- **Weekly** — refresh **This Week in x402** (ecosystem developments) and **New This Week** (the week's additions).
+- **Weekly** — refresh **New This Week** (the week's additions).
 - **Monthly** — rotate the Featured slate (one pick per shelf) and archive the previous month to `FEATURED.md`.
-- **Ongoing** — probe listed endpoints for liveness, remove or fix dead links, and scan the ecosystem for new entries worth adding.
+- **Ongoing** — probe listed endpoints for liveness, move dead entries to departures, and scan the ecosystem for new entries worth adding.
 
 ---
 
