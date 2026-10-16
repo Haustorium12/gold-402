@@ -127,6 +127,8 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [glim.sh](https://glim.sh/.well-known/x402) — Live social-profile data for agents (profiles, followers, user search and follow checks), 24 routes at $0.001–$0.01 USDC on Base, Solana and one other chain. Example: `GET /api/v1/twitter/users/:ref`.
 - [Apify](https://agi.apify.com/protocols/x402/prepaid-tokens) — Apify's marketplace of web-scraping and automation Actors, reached by buying prepaid tokens over x402 for $1 USDC on Base or Solana. Example: `GET /protocols/x402/prepaid-tokens`.
 
+- [x402 Bounty Radar](https://x402-bounty-radar.nikolas-sapalidis.workers.dev/bounties) — Provides a $0.01 USDC Base x402 endpoint advertised for ranked developer-bounty discovery with scam filtering and competition scores.
+
 ## Crypto & DeFi Data
 - [Base Wallet Profile API](https://x402-wallet-profile-api-production.up.railway.app/wallet/0x0000000000000000000000000000000000000001) — Returns a Base wallet activity profile with native balance, transaction counts, token transfers, first/last activity, and a heuristic 0–100 activity score; $0.01 USDC per GET via x402. History fields can be null when upstream data is unavailable.
 
