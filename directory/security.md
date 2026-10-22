@@ -79,6 +79,7 @@ Security tools, spending controls, audit resources, and best practices for x402 
 
 ---
 - [Checkpoint402 Sanctions Screening](https://api.checkpoint402.com/v1/sanctions-screen) — Screens a person or company name (fuzzy, alias-aware) and/or a crypto wallet address against the US Treasury OFAC SDN list including its extended remarks, for $0.05 USDC per call on Base; informational, not a compliance determination. Example: `GET /v1/sanctions-screen?address=0x098B716B8Aaf21512996dC57EB0615e2383E2f96`. ([OpenAPI](https://api.checkpoint402.com/openapi.json))
+- [Johto Data Sanctions Screen](https://johto-x402-api.johtodata.workers.dev/v1/sanctions-screen?name=Acme%20Trading) — Screens a person or company name against the US OFAC SDN list and the UK Sanctions List and returns a verdict plus candidate matches (list, programs, score, matchType) as a screening aid (not legal advice), $0.0025 USDC per call on Base. Example: `GET /v1/sanctions-screen?name=Acme%20Trading` (free sample: add `&sample=1`). ([Discovery](https://johto-x402-api.johtodata.workers.dev/.well-known/x402)) ([MCP](https://johto-x402-api.johtodata.workers.dev/mcp))
 
 ## Bug Bounty Programs
 
