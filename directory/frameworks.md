@@ -26,6 +26,7 @@ Server-side integrations for accepting x402 payments, and agent frameworks with 
 ### API Gateways
 - [Zuplo x402](https://zuplo.com/blog/mcp-api-payments-with-x402) — API gateway with x402 paywalls. Add pay-per-request monetization to any API or MCP server. Sub-cent transaction fees on Base and Solana. ([Docs](https://zuplo.com/docs/articles/monetization))
 - [Agent Commerce Gateway](https://github.com/devlab-group/agent-commerce) — Self-hosted, non-custodial TypeScript gateway that puts x402 v2 payments in front of an existing HTTP API and serves it to agents over HTTP, MCP and A2A.
+- [Payzum x402](https://payzum.com/x402/) — Hosted no-code x402 proxy that puts a per-call USDC price on Base in front of an existing HTTP API, verifies payment through an external facilitator (currently Coinbase's) and forwards the paid call to the origin with its stored API credential. ([Docs](https://merchant.payzum.com/docs/agents/x402-overview))
 
 ---
 
