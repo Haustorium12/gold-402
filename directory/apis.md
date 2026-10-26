@@ -119,6 +119,8 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 
 - [EDGAR Data API](https://keplerops--ddb76fd4cf5411f1be831607ee4eb77e.web.val.run/v1/ticker/AAPL) — SEC EDGAR data for agents: company profiles by ticker, recent filings, full XBRL company facts, single-concept time series, cross-company concept frames, and full-text filing search. $0.001–$0.005 USDC per call on Base mainnet via x402 v2 (PayAI facilitator). Example: `GET /v1/ticker/AAPL`; search: `GET /v1/search?q=artificial+intelligence`. ([OpenAPI](https://keplerops--ddb76fd4cf5411f1be831607ee4eb77e.web.val.run/openapi.json))
 
+- [Pharos Atlas](https://billing.pharosatlas.com/api/x402/resources/offset-printing-review) — Fixed English editorial trade-reference JSON snapshots with review questions, workflow, subjects and provenance, priced at $0.01 native USDC per parameter-free GET on Base via x402 v2; search and AI input allowed, AI training excluded.
+
 ## Crypto & DeFi Data
 - [Base Wallet Profile API](https://x402-wallet-profile-api-production.up.railway.app/wallet/0x0000000000000000000000000000000000000001) — Returns a Base wallet activity profile with native balance, transaction counts, token transfers, first/last activity, and a heuristic 0–100 activity score; $0.01 USDC per GET via x402. History fields can be null when upstream data is unavailable.
 
