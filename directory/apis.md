@@ -276,6 +276,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 
 ---
 - [Wren Pre-sign Check](https://wren-presign-check.wrenonbase.workers.dev/check) — Returns block, review or allow for a transaction or EIP-712 message before an agent signs, flagging unlimited approvals, permits, EIP-7702 delegations and injected instructions; 0.01 USDC on Base per call. `POST /check {"tx":{"to":"0x…","data":"0x…"}}`; free examples at `/demo/<name>`.
+- [SCV — Smart Contract Verification](https://scv-agent.online/.well-known/x402) — Rug-pull/honeypot/security scoring for EVM contracts (mint, pause, blacklist, taxes, proxy, ownership) across arbitrum, base, bsc, eth, polygon; score 0–100 JSON report; $0.005–$0.01 per call in USDC via x402 v2 on Base.
 
 ## Business Intelligence
 
