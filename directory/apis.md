@@ -194,6 +194,8 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [TapeOut CPU0 Report](https://vm5-openapi-x402.onrender.com/v1/tapeout-cpu0-report) — Returns pinned-block X Layer TapeOut factory, market fee and genesis processor state as JSON for 0.005 native Circle USDC on Base through x402 v2.
 - [On-Chain Activity Index](https://onchain-activity-index-325572559480.us-central1.run.app) — 0-100 quantitative DeFi Protocol Activity Index computed from real public DefiLlama data (TVL trend, fee/volume activity trend, chain diversification); explicitly a descriptive index, not trading advice. $0.30 USDC on Base Sepolia (testnet) via x402. Example: `POST /activity-index {"protocol_slug":"uniswap"}`. ([OpenAPI](https://onchain-activity-index-325572559480.us-central1.run.app/openapi.json)) ([Agent Card](https://onchain-activity-index-325572559480.us-central1.run.app/.well-known/agent-card.json)) ([GitHub](https://github.com/nexus-mcp-infra/onchain-activity-index))
 
+- [SafeRoute](https://api.usesaferoute.com/v1/swap-safety-check) — Supported-token Base swap preflights at 0.001 USDC and wallet-bound quotes at 0.01 USDC via x402; signing and trade execution remain with the caller.
+
 ## Finance & FX
 
 - [Mercury402](https://mercury402.uk/.well-known/x402) — Pay-per-call U.S. Treasury and macro data API. FRED indicators, yield curves, GDP data with USDC micropayments on Base.
@@ -353,6 +355,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [Appraxa IP Valuation](https://api.appraxa.com/.well-known/x402) — Patent valuations to the DIN 77100 standard in basic, standard and premium tiers, with a lookup by patent number. Its manifest lists four routes, from $0.99 USDC per call on Base. Example: `GET /v1/ip/basic`.
 - [Melvea](https://api.melvea.com/.well-known/x402) — A structured catalog of honey varieties (color grade, intensity, flavor, texture, uses) with research citations per variety, producers and a recommender. Its manifest lists five routes, from $0.02 USDC per call on Base. Example: `GET /v1/catalog` ($0.05).
 - [Regression Incoming](https://api.regressionincoming.fyi/.well-known/x402.json) — Model-driven 2026 NFL preseason fantasy football rankings and draft boards. Its manifest lists four routes. Example: `GET /v1/rankings/preseason` ($1.00 USDC on Base).
+
 
 ---
 - [HydraTrader x402 Catalog](https://x402.hydratrader.ai/.well-known/x402) — Three pay-per-call Base USDC helpers via x402 (no API key): `POST /v1/cheap-errand` ($0.01) summarize/rewrite/classify/keywords/sentiment/translate; `POST /v1/structured-extract` ($0.03) schema-bound extract from pasted text or public URLs; `POST /v1/research-brief` ($0.08) short public-web briefs with citations (fair-use snippets only). ([SKILL](https://x402.hydratrader.ai/SKILL.md) | [OpenAPI](https://x402.hydratrader.ai/openapi.json) | [llms.txt](https://x402.hydratrader.ai/llms.txt))
