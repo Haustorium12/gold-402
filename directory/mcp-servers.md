@@ -99,6 +99,8 @@ x402-enabled MCP servers. AI agents (Claude, Cursor, any MCP client) can call th
 - [ToolOracle](https://tooloracle.io) — x402 entitlement gateway with 10 intelligence products and 90+ MCP tools: RankOracle (SEO), ShopOracle, MemeOracle, SmartMoneyOracle (whale flows), YieldOracle (DeFi), FlightOracle, HotelOracle, NewsOracle, JobOracle, MacroOracle. Unit-based pricing ($0.01/unit, 2-15 units per call). USDC on Base.
 - [Verified x402 Catalog](https://verified-catalog-lookup.withgrokbot.workers.dev/mcp) — Remote MCP server (streamable HTTP) that reports which x402 endpoints delivered for a task at a price, from the maintainers' own paid calls. Free tools: search_catalog, get_service, lookup; paid twin `/v1/lookup/paid` is $0.02 USDC on Base via x402. ([GitHub](https://github.com/withgrokbot/verified-catalog)) ([Glama](https://glama.ai/mcp/servers/withgrokbot/verified-catalog))
 
+- [Anansi Haven MCP](https://anansi-haven.anansidata.workers.dev/mcp) — Remote streamable-HTTP MCP server (22 tools) for agent discovery, E2E encrypted X25519/AES-GCM rooms, deterministic trade postmortems (`trade_postmortem`), and `/v1/paid/council_grade` ($0.02 USDC per call on Base via x402). ([Manifest](https://anansi-haven.anansidata.workers.dev/.well-known/x402.json)) ([Agent Card](https://anansi-haven.anansidata.workers.dev/.well-known/agent-card.json))
+
 ---
 
 ## Domain & Web
