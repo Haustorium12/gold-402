@@ -37,6 +37,7 @@ Security tools, spending controls, audit resources, and best practices for x402 
 - [VM3 x402 Public Quote Preflight](https://vm5-openapi-x402.onrender.com/v1/x402-preflight) — Performs offline structural checks of caller-supplied unsigned x402 v2 payment quotes for $0.01 Circle USDC per GET on Base, with a [free synthetic sample](https://vm5-openapi-x402.onrender.com/v1/x402-sample) and [public source](https://github.com/livastic-vm3-primary-tmp-260920/vm3-x402-quote-preflight).
 
 ---
+- [KaelAi](https://kaelai.io) — Wallet trust scoring API for the agentic economy. Scores wallets 0-100 across 10 chains with behavioural analysis. Built for x402 servers to vet incoming/outgoing payment wallets before serving or initiating requests.
 
 ## Spending Controls
 
