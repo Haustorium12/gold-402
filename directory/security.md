@@ -56,6 +56,7 @@ Security tools, spending controls, audit resources, and best practices for x402 
 
 ## Trust & Reputation
 
+- [agent-exec](https://agent-exec.448c.org/check/address?via=223) — Address and URL risk checks from public risk feeds: verdict, score and reasons, $0.02 USDC flat on Base or Solana, charged only on success. `POST /check/address` and `POST /check/url`. ([OpenAPI](https://agent-exec.448c.org/openapi.json?via=223))
 - [Revettr](https://revettr.com/.well-known/x402.json) — Counterparty risk scoring for x402 agentic commerce. Scores wallet addresses, domains, IPs, and companies 0-100 for payment safety.
 - [MoltGuard](https://api.moltrust.ch/.well-known/x402.json) — Agent trust scoring (0-100), Sybil detection with funding cluster analysis, Polymarket integrity, Ed25519 Verifiable Credentials. 7 MCP tools. $0.005-$0.05 USDC on Base.
 - [ChainWard](https://api.chainward.ai/.well-known/x402) — Evidence-linked on-chain risk report for a Base or BNB Chain address before an agent pays it, $0.05 USDC on Base per call (`GET /api/risk/x402?address=0xADDRESS`, add `&chain=bsc` for BNB Chain), never charged when the check fails.
