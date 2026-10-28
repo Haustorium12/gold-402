@@ -48,6 +48,10 @@ For a **service** — an API, MCP server, facilitator, or anything with a live e
 
 For a **library, framework, or learning/community resource** with no payable endpoint of its own: it must be publicly accessible (live URL or public repo), demonstrably x402-specific, with a commit or release in the last 12 months (an older resource that still matters, such as a finished spec, needs a maintainer's exception written on its PR), and described in one factual line.
 
+**The door you name stays on file.** The `URL:` line and any `Example:` in your PR aren't only for the check before merge — we keep them and use them in the nightly knock, so a listing link that a bot can't read isn't mistaken for a dead service. If your endpoint moves, open a PR with the new one.
+
+**Optional, for people:** your website, and one line on who you are. Like contact, it's never required and no entry is rejected without it — and like everything in a PR description, it's public.
+
 We probe every submitted endpoint before merging. Every submission that fails gets a comment saying what failed and how to fix it — never a silent rejection. Fix it and resubmit.
 
 **Why we ask for the last two.** An agent can only pay for what it can find and call. A homepage isn't a door, and an undocumented request shape is a locked one. So we ask for the door, and the shape of the knock.
