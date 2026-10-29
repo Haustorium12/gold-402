@@ -13,7 +13,6 @@ Server-side integrations for accepting x402 payments, and agent frameworks with 
 - [machi](https://github.com/qntx/machi) — Agent behavior that compiles. x402-native agent execution framework with payment primitives baked in. 562★
 - [aixyz](https://github.com/agentlyhq/aixyz) — Next.js-like framework for building payment-native AI agents. Bootstrap agents that pay and receive via x402 out of the box. 81★
 - [x402-gateway-template](https://github.com/azep-ninja/x402-gateway-template) — Production-ready x402 gateway template. Widely referenced starting point for new x402 server deployments. 94★
-- [monapi](https://monapi.dev) — One-line API monetization SDK. Wraps x402 setup into a single function call. Express, Next.js, and MCP support. Per-route pricing, Base/Arbitrum/Polygon, gas-free agent payments via EIP-3009. ([npm](https://www.npmjs.com/package/@monapi/sdk)) ([GitHub](https://github.com/DenisTheM/monapi))
 
 ### Express / Hono
 - [@moltrust/x402](https://www.npmjs.com/package/@moltrust/x402) — Trust score middleware for x402 endpoints. One line: `app.use(requireScore({ minScore: 60 }))`. Extracts paying wallet from X-Payment header, looks up MolTrust trust score, blocks agents below threshold with 403. Zero dependencies. ([GitHub](https://github.com/MoltyCel/moltrust-x402))

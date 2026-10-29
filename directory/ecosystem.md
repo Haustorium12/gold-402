@@ -30,6 +30,7 @@ Infrastructure, A2A protocols, multi-agent orchestration, and marketplace platfo
 - [Wicked Sanity](https://sanity.wickedapi.com) — Hallucination / claim-check API for agents mid-loop. POST a claim plus context (grounded mode, real HHEM-2.1-Open entailment inference) or let it check live web evidence (open mode, Tavily retrieval scored by the same model) and get `supported` / `unsupported` / `contradicted` / `insufficient_evidence` with a consistency score and the evidence used, never a guessed verdict. Open mode checks consistency with the web, not objective truth. x402 pay-per-call on Base mainnet via the Coinbase CDP facilitator: $0.003 per request plus $0.001 per grounded claim ($0.015 per open-mode claim), or free with an API key. ([llms.txt](https://sanity.wickedapi.com/llms.txt) | [OpenAPI](https://sanity.wickedapi.com/openapi.json) | [Discovery](https://sanity.wickedapi.com/.well-known/x402) | [MCP](https://mcp.wickedapi.com/mcp))
 
 ---
+- [RustChain](https://github.com/Scottcjn/Rustchain) — Decentralized PoS blockchain with native x402 for AI agent micropayments. Attestation-based consensus, hardware-bound validators, RTC token economy.
 
 ## Agent Wallets
 
