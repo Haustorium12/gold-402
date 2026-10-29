@@ -389,3 +389,9 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 ## Blockchain Bridges
 
 - [Argos Bot CTS Bridge API](https://bridge-api.argosbot.io/v1/lookup?token=0xe86688530c456e099732f953ed7aa7c583026680&chain=arc) — Provides Arc/Base token mappings, wrapped supply and ownerless Circle CTS bridge verification for 0.005 USDC per lookup through x402 on Base or Arc Gateway.
+
+## RPC & Onchain Data Infrastructure
+
+- [Goldsky Edge RPC](https://edge.goldsky.com/standard/evm/8453) — Pay-per-call EVM JSON-RPC across 150+ chains, 5 atomic USDC ($0.000005) per call, x402 or API key.
+- [Goldsky Feeds: Prediction markets and Chain datasets](https://edge.goldsky.com/data/blocks/base?number=1) — Pay-per-call Polymarket activity and EVM block data, 10 atomic USDC ($0.00001) per request flat.
+- [Goldsky Feeds: Wallets and Tokens](https://edge.goldsky.com/data/feeds/wallets/balances?address=0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045) — Pay-per-call wallet balances, transfers, and token prices, 350 atomic USDC ($0.00035) per request.
