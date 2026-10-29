@@ -389,3 +389,4 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 ## Blockchain Bridges
 
 - [Argos Bot CTS Bridge API](https://bridge-api.argosbot.io/v1/lookup?token=0xe86688530c456e099732f953ed7aa7c583026680&chain=arc) — Provides Arc/Base token mappings, wrapped supply and ownerless Circle CTS bridge verification for 0.005 USDC per lookup through x402 on Base or Arc Gateway.
+- [x402 Filing Digest](https://x402-filing-digest.ecmforge-cloudflare.workers.dev) — Returns a structured digest of SEC EDGAR filings; POST /v1/filings/digest at $0.005 USDC on Base (x402 v2), free sample route, OpenAPI at /openapi.json.
