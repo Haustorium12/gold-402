@@ -40,6 +40,7 @@ Development tools, CLI utilities, monitoring, analytics, and CI/CD integrations 
 
 ---
 - [Wren x402 Doctor](https://wren-x402-doctor.wrenonbase.workers.dev/check?payTo=0xb8003C6190AA56EA25309B36107FA41bB9518A5F) — Free `POST /lint` checks an x402 v2 402 against the spec and CDP Bazaar listing rules; `GET /check?payTo=0x…` reports a seller's live Bazaar listings, 30-day calls, payers and estimated delisting dates for 0.10 USDC on Base.
+- [x402 Preflight](https://x402.chikocorp.com) — Read-only launch diagnostics for x402 endpoints: one unauthenticated request decodes the live 402 and reports price, network, asset and payTo consistency, Bazaar metadata, CORS, cache and redirects with evidence, plus a free browser verifier at /verify. Paid audit ($0.05) and diagnostic report ($5) in USDC on Base; MCP server and JSON API. Never signs or spends. ([MCP](https://x402.chikocorp.com/mcp), [Docs](https://github.com/chico10117/x402-preflight-docs))
 
 ## Testing & Development
 
