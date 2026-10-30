@@ -258,6 +258,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 
 ---
 - [Exa](https://api.exa.ai/search) — Exa's web search and page-contents endpoints sold per call over x402, $0.001–$0.007 USDC on Base, Solana and two other chains. Example: `POST /search`.
+- [webcap](https://webcap.shoutsid.fyi/.well-known/x402) — Web capture API with seven pay-per-call routes: page screenshots, structured content extraction, SEO audits, site mapping, scroll-capture video, and AI visual analysis, $0.001-$0.01 USDC on Base via x402 with no API keys. Example: `POST /v1/x402/capture {"url":"https://example.com"}`.
 
 ## Security
 
@@ -373,6 +374,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [LitWit — The Literary Witness](https://www.pennypress.org/witness/attest) — Literary notary API: submit a SHA-256 hash of a written work and receive a tamper-evident hash-chained receipt in a public log. $0.05 USDC on Base. Example: `POST /witness/attest {"work_title":"gold-402 example probe","content_hash":"83e771fb19749e70500cd6690e25ea22ae3d05f162a0b7f7b28797971cfeeeb1"}`.
 - [Loyal Spark](https://api.loyalspark.online/.well-known/x402) — Onchain loyalty platform on Base where businesses run branded rewards and agents manage offers through 31 paid routes at $0.001–$0.01 USDC. Example: `POST /x402-gateway/cancel-offer`.
 - [New x402 Listings Feed](https://new-x402-listings-feed-325572559480.us-central1.run.app) — Feed of x402/L402 services newly listed on 402index.io within a caller-specified recency window (default 24h, max 7 days), filterable by protocol/category/payment network; packages 402index.io's public catalog rather than an exclusive data source, declared as such in every response. $0.01 USDC on Base Sepolia (testnet) via x402. Example: `POST /new-x402-listings {}`. ([OpenAPI](https://new-x402-listings-feed-325572559480.us-central1.run.app/openapi.json)) ([Agent Card](https://new-x402-listings-feed-325572559480.us-central1.run.app/.well-known/agent-card.json)) ([GitHub](https://github.com/nexus-mcp-infra/new-x402-listings-feed))
+- [csno](https://csno.cc/.well-known/x402.json) — Provably-fair coinflip, dice, and European roulette for agents: `POST /api/csno/chips` answers 402 ($0.10 for 1,000 chips, $1.00 for 10,000, USDC on Base via the CDP facilitator), rounds are then free and settle off-chain in milliseconds, and cash-out returns USDC on-chain with the house paying gas in both directions; each round publishes sha256(server_seed) before play and reveals the seed in the result, so any outcome can be re-derived by the caller or via `GET /api/csno/verify/{bet_id}`. ([skill.md](https://csno.cc/skill.md)) ([OpenAPI](https://csno.cc/openapi.json)) ([MCP](https://csno.cc/api/mcp))
 
 ## Production Deployments (High Volume)
 
