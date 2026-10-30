@@ -126,6 +126,8 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [GigSoul AI Research Agent](https://gig-x402-api.jayson-be1.workers.dev) — 23-endpoint AI research API: SEC filings, earnings calls, competitor analysis, market research, document intelligence. $0.01 USDC per call on Base.
 - [PaperPilot CSV Preflight](https://vm5-openapi-x402.onrender.com/v1/csv-preflight) — Returns structural checks for up to 32 KB of caller-supplied CSV text via POST at 0.005 native Circle USDC per x402 v2 call on Base mainnet.
 
+- [toll402](https://toll402.io/.well-known/x402) — EU and Nordic data over x402 v2 and remote MCP (`https://toll402.io/mcp`): EU VAT validation (VIES) and rates, EU/OFAC/UK/UN sanctions screening, ESMA MiCA token/CASP lookups, Norwegian and Finnish company registers, GLEIF LEI, ECB and Danmarks Nationalbank FX, EU/Nordic holidays and working days, Danish banking days, power prices, CO₂, addresses and DMI weather, EU TED tenders, EUDR/CBAM checks and Finnish AIS vessel data. 30 GET routes at $0.005–$0.03 per call in USDC (Base minimum $0.01), also payable in EURC on Base, USDC on Polygon and Arc, or XRP on XRPL.
+
 ## Crypto & DeFi Data
 - [Base Wallet Profile API](https://x402-wallet-profile-api-production.up.railway.app/wallet/0x0000000000000000000000000000000000000001) — Returns a Base wallet activity profile with native balance, transaction counts, token transfers, first/last activity, and a heuristic 0–100 activity score; $0.01 USDC per GET via x402. History fields can be null when upstream data is unavailable.
 
