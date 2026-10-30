@@ -255,6 +255,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [StableEnrich](https://stableenrich.dev/.well-known/x402) — Google Maps, Places, Solar and Aerial View data served per call, 15 routes from $0.002 to $0.28 USDC on Base and Solana. Example: `GET /api/google-maps/solar/building-insights`.
 - [x402 Atlas Web Search](https://websearch.use.x402atlas.com/.well-known/x402) — Web search, bulk search, deep research and page-to-markdown reading for agents, $0.01–$0.108 USDC per call on Base, Solana, Polygon and Arbitrum. Example: `GET /search`.
 - [WebExtract](https://api.webextract.dev/.well-known/x402) — Web page to clean Markdown or fixed-schema JSON (product price, tables, article metadata), $0.002–$0.005 USDC per call via x402 v2 on Base, Polygon, Arbitrum, Optimism, Avalanche, World Chain and Monad. Example: `GET /v1/markdown?url=https://example.com`. ([Docs](https://webextract.dev/docs)) ([OpenAPI](https://api.webextract.dev/openapi.json)) ([llms.txt](https://webextract.dev/llms.txt))
+- [Audit Alpha](https://135-181-53-91.sslip.io/.well-known/x402) — Returns bounded static-HTML landing-page findings and suggested fixes for copy, calls to action, and accessibility, paid per request in USDC on Base.
 
 ---
 - [Exa](https://api.exa.ai/search) — Exa's web search and page-contents endpoints sold per call over x402, $0.001–$0.007 USDC on Base, Solana and two other chains. Example: `POST /search`.
