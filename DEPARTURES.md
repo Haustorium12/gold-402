@@ -31,6 +31,7 @@ Dates for every entry (first failed knock, last answer, returns) are in [24klabs
 ### Business Intelligence
 
 - [Kerdos Market Intelligence](https://nonvisceral-eloisa-mousily.ngrok-free.dev) — AI market intelligence for agents and traders. 8 endpoints: live crypto sentiment, BTC/ETH regime direction, Hyperliquid funding rates, gold/oil signals, whale alerts, liquidation cascade risk. $0.01-$0.05 USDC on Base.
+- [M0 URL Extraction](https://m0.aiverall.com/v1/extract) — Fetch a public URL, get back clean machine-consumable text (HTML noise stripped, SSRF-guarded). $0.002 USDC on Base mainnet via x402 v2. Example: `POST /v1/extract {"url":"https://example.com"}`. Also exposes email verification ($0.005, `/v1/verify-email`) and a lead-validation bundle ($0.015, `/v1/lead-validate` -- MX existence, disposable-domain, role-account detection). ([OpenAPI](https://m0.aiverall.com/openapi.json))
 
 ### Crypto & DeFi Data
 
