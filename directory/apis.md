@@ -272,6 +272,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [Exa](https://api.exa.ai/search) — Exa's web search and page-contents endpoints sold per call over x402, $0.001–$0.007 USDC on Base, Solana and two other chains. Example: `POST /search`.
 - [webcap](https://webcap.shoutsid.fyi/.well-known/x402) — Web capture API with seven pay-per-call routes: page screenshots, structured content extraction, SEO audits, site mapping, scroll-capture video, and AI visual analysis, $0.001-$0.01 USDC on Base via x402 with no API keys. Example: `POST /v1/x402/capture {"url":"https://example.com"}`.
 - [Signal Desk](https://x402-paywall.huntercarver24.workers.dev) — Five pay-per-call routes on Base: page render to Markdown, PNG or PDF in headless Chrome ($0.01), file hosting ($0.01), delayed callbacks ($0.005), a pump.fun launch feed ($0.005) and a trend radar ($0.01), also served as MCP tools at x402-mcp.huntercarver24.workers.dev/mcp. Example: `POST /render {"url":"https://example.com"}`.
+- [Useful Work tools](https://tools.usefulwork.app/tools/read-page?url=https://example.com/) — Reads a public web page as text, checks up to 15 links on a page, or looks up DNS records (A, AAAA, CNAME, MX, NS, TXT, CAA) for 0.002 USDC per call on Base via x402 v2, or lets an agent that sends an X-Useful-Work-Agent header pay by passing a checkable job instead. Example: `GET /tools/dns?name=example.com&type=A`.
 
 ## Security
 
