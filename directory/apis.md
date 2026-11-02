@@ -392,6 +392,6 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 
 ## RPC & Onchain Data Infrastructure
 
-- [Goldsky Edge RPC](https://edge.goldsky.com/standard/evm/8453) — Pay-per-call EVM JSON-RPC across 150+ chains, 5000 atomic USDC ($0.005) per call, x402 or API key.
-- [Goldsky Feeds: Prediction markets and Chain datasets](https://edge.goldsky.com/data/blocks/base?number=1) — Pay-per-call Polymarket activity and EVM block data, 5000 atomic USDC ($0.005) per request flat.
-- [Goldsky Feeds: Wallets and Tokens](https://edge.goldsky.com/data/feeds/wallets/balances?address=0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045) — Pay-per-call wallet balances, transfers, and token prices, 50000 atomic USDC ($0.05) per request.
+- [Goldsky Edge RPC](https://edge.goldsky.com/standard/evm/8453) — Pay-per-call EVM JSON-RPC across 150+ chains, 5 atomic USDC ($0.000005) per call, x402 or API key. The 402 challenge asks for a 5000 atomic USDC ($0.005) prepaid top-up, which funds about 1,000 calls.
+- [Goldsky Feeds: Prediction markets and Chain datasets](https://edge.goldsky.com/data/blocks/base?number=1) — Pay-per-call Polymarket activity and EVM block data, 10 atomic USDC ($0.00001) per request flat. The 402 challenge asks for a 5000 atomic USDC ($0.005) prepaid top-up, which funds about 500 requests.
+- [Goldsky Feeds: Wallets and Tokens](https://edge.goldsky.com/data/feeds/wallets/balances?address=0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045) — Pay-per-call wallet balances, transfers, and token prices, 350 atomic USDC ($0.00035) per request. The 402 challenge asks for a 50000 atomic USDC ($0.05) prepaid top-up, which funds about 142 requests.
