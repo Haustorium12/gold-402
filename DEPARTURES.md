@@ -27,6 +27,7 @@ Dates for every entry (first failed knock, last answer, returns) are in [24klabs
 - [GPT55 Model Gateway](https://gpt55.558686.xyz/v1/chat/completions/standard) — OpenAI-compatible GPT-5.6 Luna Standard chat completions via x402 USDC on Base for $0.00293 per POST request.
 - [Agent Hub](https://agents.torbrooknews.com/.well-known/x402) — 48 pay-per-call tools for agents behind one wallet: web search, page-to-Markdown, scraping and JSON extraction, PDF and screenshots, LLM chat, speech-to-text and text-to-speech, translation, image generation and OCR, embeddings and reranking, SEC filings, papers, crypto prices, token risk reports, DeFi yields, perp funding rates and Polymarket odds; $0.002–$0.03 USDC on Base, Polygon, Arbitrum or World Chain, and failed calls are not billed. Example: `GET https://agents.torbrooknews.com/v1/weather?place=Toronto`. ([OpenAPI](https://agents.torbrooknews.com/openapi.json)) ([llms.txt](https://agents.torbrooknews.com/llms.txt)) ([Status](https://agents.torbrooknews.com/status))
 - [AgentRXI](https://agentrxi.com/.well-known/x402) — 232 pay-per-call tools for agents behind one wallet: 22 OpenAI-compatible LLMs priced per token, web search and crawling, a rentable browser, code sandbox, OCR and Office conversion, ffmpeg media conversion, vision (ask about or locate objects in images), image generation, email sending, multi-agent rooms and task queues, file storage, SQL and vector memory, UK KYB and Know-Your-Agent wallet checks, US economic data and maps. From $0.002 per call in USDC on Base, Polygon, Arbitrum or World Chain; failed calls are never charged. ([Site](https://agentrxi.com)) ([OpenAPI](https://agentrxi.com/openapi.json)) ([llms.txt](https://agentrxi.com/llms.txt))
+- [GLEE Acceptance Verifier](https://gleephoenix.com/api/x402/verify/patch) — Deterministic git unified diff acceptance verifier: checks delivered code patches against caller-declared path policies, static safety rules, and literal assertions; returns PASS/FAIL with an offline-verifiable Ed25519 cryptographic receipt. $0.05 USDC on Base mainnet. Includes sub-cent diagnostic health canary at $0.005 USDC (`GET /api/x402/ping`). ([OpenAPI](https://gleephoenix.com/openapi.json)) ([Discovery](https://gleephoenix.com/.well-known/x402)) ([Docs](https://platform.gleephoenix.com/docs/x402))
 
 ### Business Intelligence
 
@@ -65,10 +66,12 @@ Dates for every entry (first failed knock, last answer, returns) are in [24klabs
 ### Finance & FX
 
 - [Colombia TRM](https://x402.lagaceta.net/trm) — Official Superintendencia Financiera daily USD/COP TRM as prepaid x402 at $0.005 USDC on Base. ([OpenAPI](https://x402.lagaceta.net/openapi.json)) ([llms.txt](https://x402.lagaceta.net/llms.txt))
+- [ZARONIA Verify](https://api.zaroniacalculator.co.za/.well-known/x402.json) — Coupon verification for South African floating-rate notes and money-market instruments, plus index lookups. Its manifest lists five routes, from $0.005 USDC per call on Base. Example: `GET /v1/index/2026-01-15`.
 
 ### Infrastructure APIs
 
 - [WebSocket Session Manager API](https://npm-package-ws-has-241560546-w-production.up.railway.app) — Stateful WebSocket session registry that proxies a connection to a target URL and scores each inbound frame with a Shannon entropy delta for schema-divergence detection; free once a session is open. $0.01 USDC on Base Sepolia (testnet) via x402, charged only on session open. Example: `POST /ws-sessions/open {"target_url":"wss://echo.websocket.org"}`. ([OpenAPI](https://npm-package-ws-has-241560546-w-production.up.railway.app/openapi.json)) ([Agent Card](https://npm-package-ws-has-241560546-w-production.up.railway.app/.well-known/agent-card.json)) ([GitHub](https://github.com/nexus-mcp-infra/npm-package-ws-has-241560546-weekly-downloads-but-sdk))
+- [Hyrule Cloud](https://cloud.hyrule.host/.well-known/x402.json) — IPv6-native VMs with root SSH from $0.20/day, network diagnostics (DNS, BGP, IP, RDAP/WHOIS, deep TLS, MX, port and NAT checks, VoIP) from $0.001, and one-shot requests over Direct, Tor, I2P or Yggdrasil from $0.01, on its own network AS215932. USDC on Base, Polygon and Arbitrum. Example: `POST /v1/dns/lookup {"name":"example.com","type":"AAAA"}`. ([OpenAPI](https://cloud.hyrule.host/openapi.json)) ([GitHub](https://github.com/AS215932/hyrule-cloud))
 
 ### Niche & Specialty
 
@@ -174,6 +177,10 @@ Dates for every entry (first failed knock, last answer, returns) are in [24klabs
 ### Security Monitoring Tools
 
 - [TaskMarket Trust Score](https://95-217-164-43.sslip.io) — Requester reputation scoring for TaskMarket (taskmarket.dev): given a requester wallet address, returns a 0-100 trust score from on-platform payment history (completed tasks, cancellations-after-submission, expirations, self-awards). $0.001 USDC per call on Base, self-facilitated EIP-3009 exact scheme. Example: `GET /trust/0xADDRESS`. Discovery: `GET /.well-known/x402`.
+
+### Trust & Reputation
+
+- [x402 Trust](https://x402.fuchss.app/.well-known/x402) — Autonomous trust and reliability scoring for every publicly listed x402 endpoint, derived from continuous live probing and on-chain USDC settlement. Live report via POST /v1/x402-trust, free preview via GET /v1/x402-trust-preview.
 
 ## tools
 
