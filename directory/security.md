@@ -72,6 +72,7 @@ Security tools, spending controls, audit resources, and best practices for x402 
 - [Lumi Trades Vendor Trust](https://lumitrades.io) — Free 0-100 trust scores for XRPL-payable x402 sellers, built from unpaid 402-quote probes every 30 minutes and daily paid test-buys verified on the XRP Ledger, plus a per-vendor observation report for $0.02 USDC on Base, $0.02 RLUSD/USDC or 0.015 XRP on the XRP Ledger. Free list: `GET /v1/trust/vendors`; paid report: `GET /v1/trust/vendors/{id}/report`. ([API](https://api.lumitrades.io)) ([Manifest](https://api.lumitrades.io/.well-known/x402)) ([OpenAPI](https://api.lumitrades.io/openapi.json))
 
 ---
+- [x402 Trust](https://x402.fuchss.app/.well-known/x402) — Autonomous trust and reliability scoring for every publicly listed x402 endpoint, derived from continuous live probing and on-chain USDC settlement. Live report via POST /v1/x402-trust, free preview via GET /v1/x402-trust-preview.
 
 ## Compliance & Sanctions
 

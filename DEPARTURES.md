@@ -50,6 +50,7 @@ Dates for every entry (first failed knock, last answer, returns) are in [24klabs
 - [BTC Intel](https://9eouter-0f49c8.abyte.my.id/.well-known/x402) — Live Stacks/Bitcoin market intelligence for AI agents: STX/BTC/USD spot, STX-BTC ratio and sats-per-STX; live PoX cycle (stacked ustx, cycle phases, block height); Bitcoin fee tiers plus Stacks mempool fee recommendations; sBTC supply on Stacks; npm/PyPI dependency version and health lookups. Dual-rail x402: USDC on Base (eip155:8453) or STX on Stacks mainnet, $0.01/call, no API keys or accounts. Example: `GET /market`. ([OpenAPI](https://9eouter-0f49c8.abyte.my.id/openapi.json)) ([llms.txt](https://9eouter-0f49c8.abyte.my.id/llms.txt)) ([Discovery](https://9eouter-0f49c8.abyte.my.id/.well-known/x402))
 - [Forge Launch Signals](https://forgesignals.org) — Live pump.fun launch-signal feed: up to 100 newest launches with normalized screening verdicts (class, reason, measured holder concentration), current price multiple, 5-minute buy/sell flow, liquidity, dev token history, and smart-money aggregates without wallet addresses; staleness disclosed on every response. $0.03 USDC per call on Base; a $0.015 x402 endpoint verifier is served at `/verify-x402`.
 - [CryptoSignalBot](https://frog03-20494.wykr.es) — x402-gated crypto volume anomaly scanner. Tokens with unusual trading volume vs 30-day average. $0.01 USDC on Ethereum via Primev facilitator.
+- [Onchain Safety (wick.pics)](https://onchain.wick.pics/.well-known/x402.json) — Token-safety verdicts across several chains: contract risk, liquidity and honeypot checks, a fresh-pool rug check, exit safety and smart-money reads. Its manifest lists 12 routes, from $0.01 USDC per call on Base. Example: `GET /v1/token-safety`.
 
 ### Data & Research
 
@@ -71,7 +72,6 @@ Dates for every entry (first failed knock, last answer, returns) are in [24klabs
 ### Infrastructure APIs
 
 - [WebSocket Session Manager API](https://npm-package-ws-has-241560546-w-production.up.railway.app) — Stateful WebSocket session registry that proxies a connection to a target URL and scores each inbound frame with a Shannon entropy delta for schema-divergence detection; free once a session is open. $0.01 USDC on Base Sepolia (testnet) via x402, charged only on session open. Example: `POST /ws-sessions/open {"target_url":"wss://echo.websocket.org"}`. ([OpenAPI](https://npm-package-ws-has-241560546-w-production.up.railway.app/openapi.json)) ([Agent Card](https://npm-package-ws-has-241560546-w-production.up.railway.app/.well-known/agent-card.json)) ([GitHub](https://github.com/nexus-mcp-infra/npm-package-ws-has-241560546-weekly-downloads-but-sdk))
-- [Hyrule Cloud](https://cloud.hyrule.host/.well-known/x402.json) — IPv6-native VMs with root SSH from $0.20/day, network diagnostics (DNS, BGP, IP, RDAP/WHOIS, deep TLS, MX, port and NAT checks, VoIP) from $0.001, and one-shot requests over Direct, Tor, I2P or Yggdrasil from $0.01, on its own network AS215932. USDC on Base, Polygon and Arbitrum. Example: `POST /v1/dns/lookup {"name":"example.com","type":"AAAA"}`. ([OpenAPI](https://cloud.hyrule.host/openapi.json)) ([GitHub](https://github.com/AS215932/hyrule-cloud))
 
 ### Niche & Specialty
 
@@ -97,6 +97,8 @@ Dates for every entry (first failed knock, last answer, returns) are in [24klabs
 - [Rue Render API](https://rue.mossgate.dev) — Renders a URL or raw HTML to PDF, PNG, or JPEG via headless Chromium, SSRF-guarded. $0.003 USDC on Base via x402.
 - [Venture Reader](https://api.venturebot.party/extract) — Extracts one public web page to clean Markdown for LLM pipelines using Mozilla Readability and Turndown with GFM tables, $0.01 USDC per call on Base verified on-chain with no facilitator, and no charge for failed extracts; operated as a disclosed autonomous AI-agent business. Example: `GET /extract?url=https://example.com`. ([Manifest](https://api.venturebot.party/.well-known/x402.json)) ([OpenAPI](https://api.venturebot.party/openapi.json))
 - [Vend API Merchant](https://extract.paypercall.dev) — Pay-per-call web intelligence settled in Nano (XNO), the feeless rail: URL-to-Markdown extraction, link check (status/redirect/time), domain intelligence (WHOIS/DNS/headers), web search, IP geolocation, nano-account info, YouTube transcripts, PDF text extraction, screenshot, browser render, CSS-selector extraction, page metadata, HTML table extraction, AI-jobs search, wiki summary, arXiv paper, HN feed, address verdict, and x402-lint (live-verify any x402 listing). 22+ live endpoints answer a valid x402 v2 402 challenge on `nano:mainnet`, 0.0001–0.0005 XNO per call (≈<$0.01), no signup, no API keys, error responses not billed. ([Manifest](https://extract.paypercall.dev/.well-known/x402)) ([Docs](https://extract.paypercall.dev/)) ([OpenAPI](https://extract.paypercall.dev/openapi.json)) ([llms.txt](https://extract.paypercall.dev/llms.txt))
+- [scrape402](https://x402.shizu.me/.well-known/x402.json) — Utility calls for agents: a web page as clean JSON or Markdown, PDF to text, structured extraction, weather and more. Its manifest lists 69 routes, from $0.002 USDC per call on Base. Example: `GET /scrape` ($0.006).
+- [webcap](https://webcap.shoutsid.fyi/.well-known/x402) — Web capture API with seven pay-per-call routes: page screenshots, structured content extraction, SEO audits, site mapping, scroll-capture video, and AI visual analysis, $0.001-$0.01 USDC on Base via x402 with no API keys. Example: `POST /v1/x402/capture {"url":"https://example.com"}`.
 
 ## ecosystem
 
@@ -180,7 +182,6 @@ Dates for every entry (first failed knock, last answer, returns) are in [24klabs
 
 ### Trust & Reputation
 
-- [x402 Trust](https://x402.fuchss.app/.well-known/x402) — Autonomous trust and reliability scoring for every publicly listed x402 endpoint, derived from continuous live probing and on-chain USDC settlement. Live report via POST /v1/x402-trust, free preview via GET /v1/x402-trust-preview.
 
 ## tools
 
