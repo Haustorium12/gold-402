@@ -38,6 +38,7 @@ Client and server-side libraries for building with x402. Start with the official
 - [MoltsPay](https://github.com/Yaqing2023/moltspay) — Payment infrastructure for AI agents. CLI, TypeScript SDK, LangChain/CrewAI integrations. Gasless payments on Base, Polygon, Solana, BNB, Tempo. ([npm](https://www.npmjs.com/package/moltspay))
 - [AffixIO](https://www.npmjs.com/package/affixio) — TypeScript Agentic Pay Kit with x402BeforePay host-side action attestation before pay (signed yes/no on host; not person KYC), agenticPay, mcpToolGate, and KYA createAgentTrust. ([GitHub](https://github.com/AffixIO/SDK)) ([docs](https://www.affix-io.com/agent-trust/))
 - [PayBot SDK](https://github.com/RBKunnela/paybot-sdk) — TypeScript SDK for integrating x402 into AI agents and bots. Automatic 402 detection, wallet management, USDC on Base. ([npm](https://www.npmjs.com/package/paybot-sdk))
+- [useful-work-agent](https://github.com/dav3trad3r/useful-work-agent) — MIT TypeScript agent and tool-maker kit for the useful-work x402 extension: the agent pays for x402 calls by passing a proofreading or link-check job instead of paying USDC, and a tool maker's server can offer those jobs and is paid 0.002 USDC per passed check on Base. ([npm](https://www.npmjs.com/package/useful-work-agent))
 
 ### Privacy
 - [PRXVT Privacy SDK](https://github.com/prxvt/sdk) — Privacy layer for x402. Fresh burner wallet per payment (unlinkable), Groth16 zero-knowledge proofs, AES-256-GCM encrypted notes, cross-chain deposits (Base to Polygon). ([Website](https://www.prxvt.com/))
