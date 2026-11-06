@@ -84,6 +84,7 @@ Security tools, spending controls, audit resources, and best practices for x402 
 ---
 - [Checkpoint402 Sanctions Screening](https://api.checkpoint402.com/v1/sanctions-screen) — Screens a person or company name (fuzzy, alias-aware) and/or a crypto wallet address against the US Treasury OFAC SDN list including its extended remarks, for $0.05 USDC per call on Base; informational, not a compliance determination. Example: `GET /v1/sanctions-screen?address=0x098B716B8Aaf21512996dC57EB0615e2383E2f96`. ([OpenAPI](https://api.checkpoint402.com/openapi.json))
 - [x402-sanctions-guard](https://github.com/acarchidi/x402-sanctions-guard) — Express and Hono middleware for x402 sellers that screens each payer wallet against OFAC sanctions and scam-wallet lists and refuses it with a 403 before the payment is verified or settled; payer extraction for EVM (EIP-3009, Permit2) and Solana payments, per-payer cache, screening via AgentForge at $0.003 per new payer. MIT.
+- [OceanAlt](https://oceanalt.com/.well-known/x402) — Pre-payment check for agents: takes a payee address and returns allow, review or decline with supporting evidence. $0.002 USDC per call on Base, X Layer or Solana.
 
 ## Bug Bounty Programs
 
