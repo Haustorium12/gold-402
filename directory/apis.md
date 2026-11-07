@@ -308,6 +308,8 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [DevX Crypto Link Check](https://crypto-link-check.nextill-pos.workers.dev/v1/check) — Checks 1-10 URLs for wallet, exchange and dapp lookalikes, punycode, RDAP domain age, DNS, redirects and page code asking for seed phrases or drainer approvals before a wallet connects, for $0.005 USDC on Base via x402. Example: `GET /v1/check?url=https://example.com`. ([OpenAPI](https://crypto-link-check.nextill-pos.workers.dev/openapi.json))
 - [DevX Repo Run Check](https://repo-run-check.nextill-pos.workers.dev/v1/check) — Scans 1-3 GitHub repos' README, install scripts, package.json, VS Code tasks and Makefile for download-and-execute one-liners, obfuscated payloads, typosquatted dependencies and agent-targeted prompt injection before an AI coding agent runs them, for $0.005 USDC on Base via x402. Example: `GET /v1/check?repo=github.com/owner/repo`. ([OpenAPI](https://repo-run-check.nextill-pos.workers.dev/openapi.json))
 
+- [x402nic by easyDNS](https://app.domainhelp.com/.well-known/x402) — Registers domain names and provisions them into easyDNS accounts using x402 v2 USDC payments on Base, with domain-specific quotes and a prepared registration order required before payment. ([Website](https://x402nic.com)) ([Registration workflow](https://dnsskills.md/register-domain/SKILL.md)) ([OpenAPI](https://dnsskills.md/register-domain/openapi.yaml))
+
 ## Business Intelligence
 
 - [Strale](https://strale.dev) — Trust layer for AI agents with 250+ independently tested business data and compliance capabilities: IBAN validation, VAT checks, sanctions screening, company lookups, SSL checks, and more. Quality-scored (SQS). $0.02-$1.00 USDC. [MCP](https://api.strale.io/mcp)
