@@ -310,6 +310,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 
 ## Business Intelligence
 
+- [JPVerify](https://api.jpverify.com/.well-known/x402.json) — Japanese business document OCR and public-registry verification: receipt, invoice and business-card extraction, corporate-number and qualified-invoice (T-number) checks against NTA public data, and Japanese address normalization; 24 paid routes at $0.001–$0.10 USDC per call on Base mainnet, with invalid input rejected with HTTP 422 before payment. Example: `POST /jp-company/verify {"corporate_number":"1010001008846"}`. ([OpenAPI](https://api.jpverify.com/openapi.json)) ([llms.txt](https://api.jpverify.com/llms.txt)) ([Site](https://www.jpverify.com))
 - [Strale](https://strale.dev) — Trust layer for AI agents with 250+ independently tested business data and compliance capabilities: IBAN validation, VAT checks, sanctions screening, company lookups, SSL checks, and more. Quality-scored (SQS). $0.02-$1.00 USDC. [MCP](https://api.strale.io/mcp)
 - [Intel API](https://intel.hugen.tokyo/.well-known/x402) — AI-synthesized token due diligence. Aggregates 4 GoPlus security checks + CoinGecko market data into risk-scored verdicts. One call replaces 5+ separate APIs. $0.50 USDC on Base.
 - [PayAPI Market](https://payapi.market) — First marketplace for x402-powered APIs. 65 endpoints: UK property data, email verification, company enrichment, postcode lookup, currency/crypto rates, screenshots, DNS intelligence, web scraping, IP geolocation, QR codes. $0.001-$0.01 USDC on Base.
