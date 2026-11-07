@@ -215,7 +215,8 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [Onchain Safety (wick.pics)](https://onchain.wick.pics/.well-known/x402.json) — Token-safety verdicts across several chains: contract risk, liquidity and honeypot checks, a fresh-pool rug check, exit safety and smart-money reads. Its manifest lists 12 routes, from $0.01 USDC per call on Base. Example: `GET /v1/token-safety`.
 - [Momentum Brief](https://momentum-brief.fly.dev/v1/brief) — Pay-per-call 8–12 line crypto momentum brief (price, 24h/7d change, market cap, trending rank, top DEX pair, liquidity, volume, buy/sell mix) cited to CoinGecko or DexScreener; $0.10 USDC on Base via x402, no account; not trading advice; no charge if no data. Example: `POST /v1/brief {"query":"ETH"}`. ([OpenAPI](https://momentum-brief.fly.dev/openapi.json)) ([Pricing](https://momentum-brief.fly.dev/.well-known/pricing))
 
-## Finance & FX
+- [BSC Agent Utilities](https://bsc-agent-utilities.raninndia.workers.dev) — 8 pay-per-call utility APIs for AI agents at $0.001 USDC per call on Base via x402 v2, no API key: BSC gas price, token price, tx status, contract safety check, email check, IP lookup, WHOIS, and QR code. Example: `GET /v1/gas`. ([OpenAPI](https://bsc-agent-utilities.raninndia.workers.dev/openapi.json)) ([Discovery](https://bsc-agent-utilities.raninndia.workers.dev/.well-known/x402))
+- ## Finance & FX
 
 - [Mercury402](https://mercury402.uk/.well-known/x402) — Pay-per-call U.S. Treasury and macro data API. FRED indicators, yield curves, GDP data with USDC micropayments on Base.
 - [Gotobi Calendar API](https://gotobi.hugen.tokyo/.well-known/x402) — Japanese FX gotobi date intelligence for trading agents. Holiday-aware USD settlement day detection. $0.01 USDC on Base and Solana.
