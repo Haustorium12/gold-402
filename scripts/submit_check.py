@@ -72,6 +72,15 @@ def fail(reason):
     sys.exit(1)
 
 
+def review(reason):
+    """Yellow: a trip on OUR side, not the submitter's fault. The PR is not
+    failed; it waits for a maintainer to knock by hand."""
+    print(f"REVIEW: {reason}")
+    with open("submit_result.json", "w") as f:
+        json.dump({"result": "review", "reason": reason}, f)
+    sys.exit(0)
+
+
 def ok(reason):
     print(f"PASS: {reason}")
     with open("submit_result.json", "w") as f:
@@ -392,7 +401,7 @@ def main():
     mode = (sys.argv[3].strip() if len(sys.argv) > 3 else "") or \
            os.environ.get("SUBMIT_MODE", "") or "service"
     if mode not in ("service", "resource"):
-        fail(f"internal: unknown mode '{mode}' -- expected 'service' or 'resource'")
+        review(f"internal: unknown mode '{mode}' -- expected 'service' or 'resource'")
     print(f"[submit_check] Checking: {url}")
     print(f"[submit_check] Mode: {mode}")
 
@@ -404,7 +413,7 @@ def main():
     # legitimately links a repo while its docs live elsewhere.
     entry = os.environ.get("ENTRY_URL", "").strip()
     if mode == "service" and entry and not same_site(url, entry):
-        fail(f"the url checked ({site(url)}) is not on the same site as the link in "
+        review(f"the url checked ({site(url)}) is not on the same site as the link in "
              f"the line this PR adds ({site(entry)}). The gate only passes a knock on "
              f"the service being listed -- put that service's endpoint or "
              f"/.well-known/x402 manifest in the entry line or a `URL:` line.")
@@ -435,7 +444,8 @@ def main():
         print(f"[submit_check] Already in CDP Bazaar -- fast-track")
         # Still probe to confirm it's still live
     elif listed:
-        fail(f"already listed in Gold-402 (source: {source})")
+        review(f"this operator is already listed in Gold-402 (source: {source}); "
+             "a maintainer will knock the new endpoints by hand")
 
     # 4a. Resource mode -- reachability, not payment.
     if mode == "resource":
@@ -464,7 +474,7 @@ def main():
         except Exception as e:
             if "timed out" in str(e).lower():
                 fail(f"resource timed out after {PROBE_TIMEOUT}s")
-            fail(f"probe error: {e}")
+            review(f"the checker itself hit an error: {e}")
 
     # 4b0. Service mode, manifest form -- the URL we were given is a map, not the
     # door. Read it, then knock the doors it names. Each one gets its own SSRF

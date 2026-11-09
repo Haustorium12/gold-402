@@ -26,7 +26,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo
             };
-            for (const name of ['gate-passed', 'gate-failed', 'needs-work']) {
+            for (const name of ['gate-passed', 'gate-failed', 'gate-review', 'needs-work']) {
               try {
                 await github.rest.issues.removeLabel({ ...base, name });
               } catch (e) {

@@ -257,8 +257,37 @@ jobs:
               ].join('\n')
             })
 
+      - name: Comment on PR -- needs a maintainer look
+        if: steps.result.outputs.result == 'review'
+        uses: actions/github-script@v7
+        env:
+          SUBMIT_URL: ${{ steps.extract_url.outputs.url }}
+          CHECK_REASON: ${{ steps.result.outputs.reason }}
+          URL_WHY: ${{ steps.extract_url.outputs.why }}
+        with:
+          script: |
+            const url = process.env.SUBMIT_URL || '';
+            const why = process.env.URL_WHY || '';
+            const reason = process.env.CHECK_REASON || '';
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: [
+                "**Gold-402 Gate: NEEDS A MAINTAINER LOOK**",
+                "",
+                "URL checked: `" + url + "`" + (why ? "  _(" + why + ")_" : ""),
+                "Why: " + reason,
+                "",
+                "This is not a failure, and there is nothing for you to fix yet. The automatic check could not decide on its own, so a maintainer will knock your endpoints by hand and reply here.",
+                "",
+                "---",
+                "*Gold-402 verifies x402 technical compliance only.*"
+              ].join('\n')
+            })
+
       - name: Comment on PR -- fail
-        if: steps.result.outputs.result != 'pass'
+        if: steps.result.outputs.result == 'fail' || steps.result.outputs.result == ''
         uses: actions/github-script@v7
         env:
           SUBMIT_URL: ${{ steps.extract_url.outputs.url }}
@@ -297,7 +326,6 @@ jobs:
                 "  shelf. Add a `URL:` line to say it outright.",
                 "- A service endpoint that does not answer HTTP 402 unauthenticated.",
                 "- A URL that is unreachable, times out, or sits behind a login.",
-                "- The entry is already listed.",
                 "",
                 "---",
                 mode === 'resource'
@@ -325,8 +353,9 @@ jobs:
         with:
           script: |
             const passed = process.env.GATE_RESULT === 'pass';
-            const add = passed ? 'gate-passed' : 'gate-failed';
-            const drop = passed ? 'gate-failed' : 'gate-passed';
+            const result = process.env.GATE_RESULT || '';
+            const add = passed ? 'gate-passed' : (result === 'review' ? 'gate-review' : 'gate-failed');
+            const drop = ['gate-passed', 'gate-failed', 'gate-review'].filter(n => n !== add);
             const base = {
               issue_number: context.issue.number,
               owner: context.repo.owner,
@@ -344,5 +373,5 @@ jobs:
             }
 
       - name: Fail workflow if check failed
-        if: steps.result.outputs.result != 'pass'
+        if: steps.result.outputs.result != 'pass' && steps.result.outputs.result != 'review'
         run: exit 1
