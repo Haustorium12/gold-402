@@ -43,7 +43,6 @@ Tutorials, videos, articles, blog posts, and interactive learning tools for x402
 - [HTX Ventures: x402 + ERC-8004 Research Report](https://coinzooma.com/htx-ventures-explores-x402-and-erc-8004-in-new-report-signaling-web3s-next-technical-inflection-point/) — Research report exploring x402 (value transfer) and ERC-8004 (trust/identity) as complementary Web3 infrastructure.
 - [DWF Labs: Inside x402](https://www.dwf-labs.com/research/inside-x402-how-a-forgotten-http-code-becomes-the-future-of-autonomous-payments) — Protocol mechanics, ecosystem adoption, real-world use cases.
 - [WorkOS: x402 vs Stripe MPP](https://workos.com/blog/x402-vs-stripe-mpp-how-to-choose-payment-infrastructure-for-ai-agents-and-mcp-tools-in-2026) — Comprehensive comparison for AI agents and MCP tools.
-- [How x402 paid links work (Payfirst)](https://www.payfirst.app/guides/x402-paid-links) — Guide to x402 V2 payment headers, URL delivery, buyer-client requirements, and retry handling when settlement is uncertain.
 - [Settlens payment-policy regression guide](https://settlens.com/blog/check-x402-payment-policy) — Reproduce five synthetic x402 V2 payment-policy decisions with a browser demo, curl and a Node.js CI runner without making payments.
 
 ### Use Case Articles
