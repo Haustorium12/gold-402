@@ -240,6 +240,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 
 ## Web & Geospatial
 
+- [Aura Verification](https://aura-home.aura-5d4.workers.dev/.well-known/x402) — Deterministic checks for agents and x402 sellers: verify a public HTTPS page's reachability, backlink, canonical URL, noindex and content digest ($0.005 USDC), or audit an unpaid x402 v2 endpoint's challenge, price, asset, network and discovery ($0.05 USDC). Base, no API key. Example: `POST /x402/verify {"url":"https://www.cloudflare.com/"}`.
 - [Visual API](https://visual.hugen.tokyo/.well-known/x402) — Screenshot and PDF capture API. Full-page scroll capture, CSS element targeting, mobile device emulation (iPhone 15, Pixel 7, iPad Pro), dark mode, ad/cookie banner blocking. $0.01 USDC on Base.
 - [geo-gateway](https://nj4epne560.execute-api.us-west-2.amazonaws.com) — Pay-per-call Mapbox geospatial proxy. 6 endpoints: directions, isochrones, geocoding (forward + reverse), map matching, route optimization, distance matrices. $0.002-$0.0635 USDC on Base.
 - [Domain Intelligence API](https://domain.hugen.tokyo/.well-known/x402) — 8-endpoint domain analysis: WHOIS, multi-resolver DNS, SSL/TLS grading, Wappalyzer tech stack detection, security headers, CT log subdomains, redirect chains. $0.001-$0.02 USDC on Base.
