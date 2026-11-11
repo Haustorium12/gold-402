@@ -34,6 +34,7 @@ Payment verification and settlement services for x402. A facilitator verifies pa
 - [Roundhouse Facilitator](https://x402.roundhouseai.io/supported) — Public x402 facilitator for exact USDC payments on Base mainnet (eip155:8453) via EIP-3009, accepting x402 v1 and v2. Open /verify and /settle with no API key, and the facilitator pays settlement gas. [Docs](https://roundhouseai.io/docs/guides/use-the-roundhouse-facilitator) · [Test 402 resource](https://x402.roundhouseai.io/test/x402).
 - [Vauban Pay Facilitator](https://pay.vauban.tech/x402-tiers-base-mainnet/supported) — Public x402 facilitator for exact USDC payments on Base (eip155:8453) and Base Sepolia (eip155:84532), x402 v2, open /supported, /verify and /settle without API key; third-party sellers register with a per-seller split contract and withdraw themselves. [Docs](https://pay.vauban.tech/#sell) · [Base Sepolia /supported](https://demo.pay.vauban.tech/x402-tiers-base-sepolia/supported).
 - [agent-exec Relay](https://agent-exec.448c.org/relay?via=223) — Gasless USDC relay for wallets holding no gas: sign an EIP-3009 TransferWithAuthorization on Base and agent-exec broadcasts it with its own ETH. $0.02 USDC flat per relay, $100 max per order, a refused order costs nothing. A free 503 `relay_gas_exhausted` fires before any charge if the relayer's own gas key runs dry, instead of a broadcast without a response. ([OpenAPI](https://agent-exec.448c.org/openapi.json?via=223))
+- [Toll Facilitator](https://x402.t0ll.xyz/supported) — Free, keyless x402 facilitator for USDG on Robinhood Chain (eip155:4663), x402 v1 and v2, via EIP-3009 or Permit2: exact, upto, auth-capture escrow and batch-settlement. Open /verify and /settle with no API key, the facilitator pays gas, and each payTo is checked against the seller's ERC-8004 agent wallet before settling. [Docs](https://x402.t0ll.xyz/docs) · [Test 402 resource](https://t0ll.xyz/api/x402/pulse).
 
 ---
 
@@ -60,6 +61,7 @@ Payment verification and settlement services for x402. A facilitator verifies pa
 | TRON         | Production | MERX                             | <3s           |
 | XRPL         | Production | t54.ai / Virtuals                | Instant       |
 | Base Sepolia | Testnet    | Coinbase CDP                     | 2s instant    |
+| Robinhood Chain | Production | Toll                         | ~1s           |
 | 33+ chains   | Production | Ultravioleta DAO                 | Varies        |
 
 
