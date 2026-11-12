@@ -214,6 +214,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 
 - [BSC Agent Utilities](https://bsc-agent-utilities.raninndia.workers.dev) — 8 pay-per-call utility APIs for AI agents at $0.001 USDC per call on Base via x402 v2, no API key: BSC gas price, token price, tx status, contract safety check, email check, IP lookup, WHOIS, and QR code. Example: `GET /v1/gas`. ([OpenAPI](https://bsc-agent-utilities.raninndia.workers.dev/openapi.json)) ([Discovery](https://bsc-agent-utilities.raninndia.workers.dev/.well-known/x402))
 - [Forge Launch Signals](https://forgesignals.org) — Live pump.fun launch-signal feed: up to 100 newest launches with normalized screening verdicts (class, reason, measured holder concentration), current price multiple, 5-minute buy/sell flow, liquidity, dev token history, and smart-money aggregates without wallet addresses; staleness disclosed on every response. $0.03 USDC per call on Base; a $0.015 x402 endpoint verifier is served at `/verify-x402`.
+- [Scrapling Data](https://scraplingdata.xyz/.well-known/x402) — Pay-per-call crypto, DeFi, prediction-market, stock and GPU-price datasets and lookups for AI agents via x402 (USDC on Base, Polygon, Arbitrum or Solana; USDC or USDT on BNB Chain). Example: `GET /v1/lookup/coin?coin=bitcoin`. ([MCP](https://scraplingdata.xyz/mcp)) ([OpenAPI](https://scraplingdata.xyz/openapi.json)) ([llms.txt](https://scraplingdata.xyz/llms.txt))
 
 ## Finance & FX
 
