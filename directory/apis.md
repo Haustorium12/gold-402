@@ -1,6 +1,6 @@
 # APIs & Pay-Per-Call Services
 
-x402-enabled APIs and production services. No API keys. No accounts. Pay USDC per call via x402 and get the data. Wallet is authentication.
+x402-enabled APIs and production services. No API keys. No accounts. Pay USDC per call via x402 and get the data. An entry marked * is paid in another asset, named in its line. Wallet is authentication.
 
 > Sorted by category. For discovery tooling that indexes these services, see [ecosystem.md](ecosystem.md).
 
@@ -52,6 +52,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [GLEE Acceptance Verifier](https://gleephoenix.com/api/x402/verify/patch) — Deterministic git unified diff acceptance verifier: checks delivered code patches against caller-declared path policies, static safety rules, and literal assertions; returns PASS/FAIL with an offline-verifiable Ed25519 cryptographic receipt. $0.05 USDC on Base mainnet. Includes sub-cent diagnostic health canary at $0.005 USDC (`GET /api/x402/ping`). ([OpenAPI](https://gleephoenix.com/openapi.json)) ([Discovery](https://gleephoenix.com/.well-known/x402)) ([Docs](https://platform.gleephoenix.com/docs/x402))
 - [AgentRXI](https://agentrxi.com/.well-known/x402) — 232 pay-per-call tools for agents behind one wallet: 22 OpenAI-compatible LLMs priced per token, web search and crawling, a rentable browser, code sandbox, OCR and Office conversion, ffmpeg media conversion, vision (ask about or locate objects in images), image generation, email sending, multi-agent rooms and task queues, file storage, SQL and vector memory, UK KYB and Know-Your-Agent wallet checks, US economic data and maps. From $0.002 per call in USDC on Base, Polygon, Arbitrum or World Chain; failed calls are never charged. ([Site](https://agentrxi.com)) ([OpenAPI](https://agentrxi.com/openapi.json)) ([llms.txt](https://agentrxi.com/llms.txt))
 - [HTML Pack](https://174-138-26-48.sslip.io/v1/html-to-markdown) — Converts one caller-supplied HTML document to Markdown for 0.002 USDC on Base via x402 v2. Example: `POST /v1/html-to-markdown {"html":"<h1>Hi</h1><p>Hello</p>"}`. ([OpenAPI](https://174-138-26-48.sslip.io/openapi.json))
+- [Bot Agora x402 Q&A desk](https://agora-x402-desk.sirgrokkius.workers.dev/ask?question=hello) — *sBTC, not USDC. Pay-per-answer AI Q&A (`GET /ask?question=...`) and bash lint (`POST /lint`) for agents at 10 sats sBTC on Stacks mainnet via the AIBTC x402 relay; `POST /lint/free` and `GET /health` are free. Example: `GET /ask?question=hello`.
 
 ## Data & Research
 
@@ -131,8 +132,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [City Table Clean](https://priceplain.onrender.com/v1/clean) — Cleans a Socrata or CKAN city open-data CSV by URL (trims whitespace, normalizes headers, ISO dates, plain numbers, de-duplicates rows) and returns the cleaned CSV with a per-cell change log; $0.02 USDC per call on Base mainnet. Example: `POST /v1/clean {"url":"https://data.cityofchicago.org/resource/ijzp-q8t2.csv?$limit=100"}`. ([OpenAPI](https://priceplain.onrender.com/openapi.json))
 - [PricePlain](https://priceplain.onrender.com/.well-known/x402) — Posted US hospital prices from CMS price-transparency machine-readable files, cleaned (Twin Cities, MN first): gross charge, discounted cash price and payer-negotiated rates per CPT/DRG code with canonical insurer names, percent/algorithm rates flagged, data-quality flags, and source file URL + date. Posted prices, not quotes. $0.02 USDC per call on Base mainnet. Example: `GET /v1/price?code=70553&hospital=regions`. ([OpenAPI](https://priceplain.onrender.com/openapi.json)) ([Docs](https://priceplain.onrender.com/docs)) ([Discovery](https://priceplain.onrender.com/.well-known/x402))
 - [GlobalRules](https://globalrules.org) — Per-country practical facts for agents: VAT/GST rate, public holidays, visa requirements, tipping customs, power plug type, minimum wage, corporate tax, digital nomad visa, customs duty-free allowance and more, 186 countries × 57 fields with a sourced date on every value. $0.005–$0.05 USDC per call on Base. Example: `GET /api/v1/country/JP/tipping`. ([npm](https://www.npmjs.com/package/globalrules-mcp)) ([GitHub](https://github.com/yk647/globalrules-mcp))
-- [Bot Agora x402 Q&A desk](https://agora-x402-desk.sirgrokkius.workers.dev/ask?question=hello) — Pay-per-answer AI Q&A (`GET /ask?question=...`) and bash lint (`POST /lint`) for agents at 10 sats sBTC on Stacks mainnet via the AIBTC x402 relay; `POST /lint/free` and `GET /health` are free. Example: `GET /ask?question=hello`.
-- 
+
 ## Crypto & DeFi Data
 
 - [Base toolbox](https://basetoolbox.cartonpliant.workers.dev/.well-known/x402.json) — Base Uniswap v3 swap preflight, leftover allowances, tx explain, and transfer check at $0.10 USDC on Base via x402, plus $0.01 price/gas/ENS. Example: `POST /v1/preflight {"from":"0xYourWallet","tokenIn":"USDC","tokenOut":"WETH","amountIn":"1000000"}`. ([Skill](https://basetoolbox.cartonpliant.workers.dev/SKILL.md)) ([OpenAPI](https://basetoolbox.cartonpliant.workers.dev/openapi.json)) ([Constants](https://basetoolbox.cartonpliant.workers.dev/v1/constants)).
