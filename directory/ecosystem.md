@@ -73,6 +73,7 @@ Infrastructure, A2A protocols, multi-agent orchestration, and marketplace platfo
 - [X402 Git](https://x402git.com) — Sells paid access to private git repositories (agent skills, harnesses, libraries) over x402 v2, USDC on Base, settled through the CDP facilitator; the manifest (file tree, languages, licence, security scan, release log) is public before payment and the code is private until settlement, every listing is its own 402 endpoint declaring the `bazaar` extension, and creators publish headlessly through an API with a buy-side MCP server for agents. ([Discovery](https://x402git.com/.well-known/x402), [OpenAPI](https://x402git.com/openapi.json))
 - [Agent Wallet Index](https://agentwalletindex.fyi) — Index of agent wallets and payment rails, including x402 wallets, with source-linked facts and a REST API and MCP endpoint.
 - [SatBotly](https://satbotly.com/apis) — Free, source-checked directory of what AI agents can pay for on their own: x402, L402 and MPP pay-per-call APIs priced from their unpaid HTTP 402 challenge (nothing is paid to read a price), plus agent wallets, payment services and MCP servers. ([llms.txt](https://satbotly.com/llms.txt))
+- [YourAITools](https://api.youraitools.co/.well-known/x402) — Directory of x402-payable APIs with a no-auth manifest of payable resources, OpenAPI, and a public status feed. ([Catalog](https://youraitools.co), [Status](https://youraitools.co/status/feed.json))
 
 ## Notable Implementations
 
