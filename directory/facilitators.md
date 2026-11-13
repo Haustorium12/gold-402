@@ -61,7 +61,6 @@ Payment verification and settlement services for x402. A facilitator verifies pa
 | TRON         | Production | MERX                             | <3s           |
 | XRPL         | Production | t54.ai / Virtuals                | Instant       |
 | Base Sepolia | Testnet    | Coinbase CDP                     | 2s instant    |
-| Robinhood Chain | Production | Toll                         | ~1s           |
 | 33+ chains   | Production | Ultravioleta DAO                 | Varies        |
 
 
