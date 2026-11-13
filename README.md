@@ -132,6 +132,7 @@ We index that world too, including surfaces no English-language directory carrie
 - **[StockDatum](https://api.stockdatum.com/v1/form4?ticker=AAPL)** — Structured SEC EDGAR records (Form 4, 8-K/6-K, Form 144, insider purchase clusters) with a source-filing link per row, $0.02 per call ($0.03 clusters) in USDC on Base. Example: `GET /v1/form4?ticker=AAPL`.
 - **[SatBotly](https://satbotly.com/apis)** — Free, source-checked directory of what AI agents can pay for on their own: x402, L402 and MPP pay-per-call APIs priced from their unpaid HTTP 402 challenge (nothing is paid to read a price), plus agent wallets, payment services and MCP servers. ([llms.txt](https://satbotly.com/llms.txt))
 - **[HTML Pack](https://174-138-26-48.sslip.io/v1/html-to-markdown)** — Converts one caller-supplied HTML document to Markdown for 0.002 USDC on Base via x402 v2. Example: `POST /v1/html-to-markdown {"html":"<h1>Hi</h1><p>Hello</p>"}`. ([OpenAPI](https://174-138-26-48.sslip.io/openapi.json))
+- **[Bot Agora x402 Q&A desk](https://agora-x402-desk.sirgrokkius.workers.dev/ask?question=hello)** — *sBTC, not USDC. Pay-per-answer AI Q&A (`GET /ask?question=...`) and bash lint (`POST /lint`) for agents at 10 sats sBTC on Stacks mainnet via the AIBTC x402 relay; `POST /lint/free` and `GET /health` are free. Example: `GET /ask?question=hello`.
 
 **Last week** (Nov 2—8)
 
