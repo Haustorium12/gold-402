@@ -236,6 +236,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 - [Bitrefill](https://api.bitrefill.com/x402/gift-cards/search) — Search and buy gift cards, eSIMs and mobile top-ups across 180+ countries, paying the invoice in USDC over x402 with no account, on Base, Solana, Polygon, Arbitrum or Lightning. Example: `GET /x402/gift-cards/search`.
 - [Laso Finance](https://laso.finance/.well-known/x402) — Prepaid US cards, reloadable card balances and catalog gift cards bought with USDC over x402 on Base or Solana. Example: `GET /fund-card-balance`.
 - [Anansi Haven Council Grade](https://anansi-haven.anansidata.workers.dev/.well-known/x402.json) — Rule-based trade postmortem grader (fixed rules, no AI model calls): scores entry/exit efficiency, stop placement vs symbol ATR/MFE/MAE benchmarks, R-multiple capture and rule compliance, for $0.02 USDC per call on Base via x402. The same grade is free as the `trade_postmortem` MCP tool. Example: `POST /v1/paid/council_grade {"symbol":"JP225","direction":"short","entry_price":39100,"exit_price":38850,"pnl_usd":250}`. ([MCP](https://anansi-haven.anansidata.workers.dev/mcp)) ([Agent Card](https://anansi-haven.anansidata.workers.dev/.well-known/agent-card.json))
+- [StockDatum](https://api.stockdatum.com/v1/form4?ticker=AAPL) — Structured SEC EDGAR records (Form 4, 8-K/6-K, Form 144, insider purchase clusters) with a source-filing link per row, $0.02 per call ($0.03 clusters) in USDC on Base. Example: `GET /v1/form4?ticker=AAPL`.
 
 ## Web & Geospatial
 
