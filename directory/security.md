@@ -75,6 +75,8 @@ Security tools, spending controls, audit resources, and best practices for x402 
 ---
 - [x402 Trust](https://x402.fuchss.app/.well-known/x402) — Autonomous trust and reliability scoring for every publicly listed x402 endpoint, derived from continuous live probing and on-chain USDC settlement. Live report via POST /v1/x402-trust, free preview via GET /v1/x402-trust-preview.
 
+- [Paxiom Receipt Verifier](https://api.paxiom.org/v1/x402/preflight) — Pre-payment x402 endpoint readiness check (`POST /v1/x402/preflight`, $0.01 USDC on Base) and on-chain Base USDC settlement counter-attestation for Ed25519 `paxiom.receipt.v0` delivery receipts (`POST /v1/receipt/verify-live`, $0.002 USDC), with free offline verification at `POST /v1/receipt/verify` and remote MCP at `/mcp`, never charged on invalid input. ([Manifest](https://api.paxiom.org/.well-known/x402.json)) ([OpenAPI](https://paxiom.org/standards/receipts/v0/openapi.json)) ([GitHub](https://github.com/k-luecke/paxiom-static))
+
 ## Compliance & Sanctions
 
 - [CYBERA Compliance API](https://compliance-api-ruddy.vercel.app) — VASP address identification (20,468 addresses, 29 chains), risk scoring, sanctions/mixer screening. $0.01 USDC on Base.
