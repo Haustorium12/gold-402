@@ -46,7 +46,7 @@ Client and server-side libraries for building with x402. Start with the official
 ### Wallet Integration
 - [Agent Wallet SDK](https://www.npmjs.com/package/agentwallet-sdk) — Non-custodial smart contract wallets for AI agents. On-chain spend limits, operator model. Base L2.
 - [viem](https://viem.sh/) — TypeScript library used for signing x402 payments.
-- [ethers.js](https://docs.ethers.org/) — Alternative Ethereum library for signing.
+- [ethers.js](https://docs.ethers.org/v6/) — Alternative Ethereum library for signing.
 
 ---
 

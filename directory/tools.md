@@ -32,7 +32,7 @@ Development tools, CLI utilities, monitoring, analytics, and CI/CD integrations 
 
 - [Sentinel/Valeo](https://sentinel.valeocash.com) — Enterprise audit and compliance layer for x402 payments. Budget enforcement (per-call, hourly, daily), structured audit trails, real-time dashboard, public payment explorer. SDK: [`@x402sentinel/x402`](https://npmjs.com/package/@x402sentinel/x402).
 - [ScoutScore](https://scoutscore.ai) — Trust scoring infrastructure for x402 services. Monitors 1,700+ services with continuous health checks and fidelity probes. 4-pillar model: Contract Clarity, Availability, Response Fidelity, Identity & Safety. [npm SDK](https://www.npmjs.com/package/@scoutscore/sdk) [MCP Server](https://www.npmjs.com/package/@scoutscore/mcp-server)
-- [x402scan Explorer](https://x402scan.com) — Blockchain explorer for x402 payments. Transaction search and verification, payment requirement inspection, settlement status tracking.
+- [x402scan Explorer](https://www.x402scan.com/) — Blockchain explorer for x402 payments. Transaction search and verification, payment requirement inspection, settlement status tracking.
 - [Agent Forensics](https://www.npmjs.com/package/agent-forensics) — Agent cost observability for Claude Code. Analyzes JSONL session logs: per-model cost breakdown, cache efficiency, waste patterns (model misallocation, debug loops, sub-agent sprawl). Free CLI: `npx agent-forensics analyze`. x402 API at $5/$15 tiers on Base.
 - [ToolMeter](https://snappedai.com/toolmeter/) — MCP/x402 seller-readiness tool with pricing metadata, `.well-known/x402`, OpenAPI, agent metadata, listing kit, and buyer-safety checks for paid endpoint launches.
 - [agenteconomy.to](https://agenteconomy.to) — Real-time dashboard tracking agentic economy across x402, ERC-8004, ERC-8183, and MPP protocols on 8 chains. Refreshes every 6 hours.
@@ -45,7 +45,7 @@ Development tools, CLI utilities, monitoring, analytics, and CI/CD integrations 
 
 - [x402-mock](https://pypi.org/project/x402-mock/) — Test/mock implementation of x402 for EVM blockchains. Dev/testing without live payments.
 - [AWS CloudFront x402 content monetization sample](https://github.com/aws-samples/sample-x402-content-monetization-with-cloudfront-and-waf) — AWS-published reference implementation for monetizing content behind CloudFront and WAF using x402 and USDC payments. Published March 2026.
-- [Base Sepolia Testnet](https://docs.base.org/docs/network-information) — Primary testnet for x402 development.
+- [Base Sepolia Testnet](https://docs.base.org/get-started/connect-to-base) — Primary testnet for x402 development.
 - [Base Sepolia USDC Faucet](https://faucet.circle.com/) — Get test USDC for development.
 - [Base Sepolia Bridge](https://bridge.base.org/) — Bridge test ETH to Base Sepolia.
 - [Tate Programs x402 Surface Checks](https://the402.tateprograms.com/.well-known/x402.json) — Paid launch-readiness checks of a public x402, MPP, Pay.sh or A2A surface, plus a 402 Index health watch and an agent-skill trust check. Its manifest lists four routes, $0.01 USDC per call on Base. Example: `POST /api/x402/triage`.

@@ -33,7 +33,7 @@ On-chain analytics, live metrics, and growth timeline for the x402 ecosystem.
 
 - [agenteconomy.to](https://agenteconomy.to) — Real-time dashboard tracking the agentic economy across x402, ERC-8004, ERC-8183, and MPP protocols on 8 chains. Aggregated event counter, chain distribution, facilitator share, time-series charts. Refreshes every 6 hours.
 - [Dune Analytics x402](https://dune.com/x402) — Comprehensive on-chain metrics: transaction volumes, chain analytics, facilitator comparison, revenue/fee metrics.
-- [x402scan Explorer](https://x402scan.com) — Blockchain explorer for x402 payments. Transaction search, payment requirement inspection, settlement status.
+- [x402scan Explorer](https://www.x402scan.com/) — Blockchain explorer for x402 payments. Transaction search, payment requirement inspection, settlement status.
 
 ---
 

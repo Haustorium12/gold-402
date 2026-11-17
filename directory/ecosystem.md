@@ -10,7 +10,7 @@ Infrastructure, A2A protocols, multi-agent orchestration, and marketplace platfo
 ## Foundation & Protocol
 
 - [x402](https://github.com/x402-foundation/x402) — The canonical x402 protocol repository maintained by the x402 Foundation under the Linux Foundation. Reference implementations, official SDKs, spec documentation. The source of truth for the protocol. 6,147★
-- [x402scan](https://x402scan.com) — x402 Ecosystem Explorer by Merit Systems. Browse, search, and monitor the x402 service landscape. 346★
+- [x402scan](https://www.x402scan.com/) — x402 Ecosystem Explorer by Merit Systems. Browse, search, and monitor the x402 service landscape. 346★
 - [Awesome Agentic Commerce](https://github.com/merit-systems/awesome-agentic-commerce) — Curated resources for the x402 ecosystem by Merit Systems. Comprehensive listing of protocols, SDKs, and projects. 127★
 
 ---
@@ -20,11 +20,11 @@ Infrastructure, A2A protocols, multi-agent orchestration, and marketplace platfo
 - [Coinbase Developer Platform](https://coinbase.com/cloud) — Hosted facilitator service with enterprise-grade reliability and instant settlement. The primary x402 infrastructure layer.
 - [Cloudflare x402](https://blog.cloudflare.com/x402/) — Edge payment processing across 300+ global data centers.
 - [Polygon Agentic Payments](https://polygon.technology/payments/agentic-payments) — Near-instant finality, sub-$0.001 fees, no reorgs. Coinbase CDP facilitator with gas sponsorship and KYT compliance. USDC, USDT, non-USD stablecoins. ([Docs](https://agentic-docs.polygon.technology/general/x402/intro/))
-- [Finance District Prism](https://developers.fd.xyz/prism/concepts/x402) — Payment gateway for agentic commerce. TypeScript, Python, Java SDKs. Two-layer architecture: Prism (orchestration) and Spectrum (on-chain settlement across Base, Ethereum, Arbitrum, BSC). ([Docs](https://developers.fd.xyz))
-- [thirdweb Nebula](https://thirdweb.com/nebula) — AI agent transaction framework on x402.
+- [Finance District Prism](https://developers.fd.xyz/prism/integrations/x402) — Payment gateway for agentic commerce. TypeScript, Python, Java SDKs. Two-layer architecture: Prism (orchestration) and Spectrum (on-chain settlement across Base, Ethereum, Arbitrum, BSC). ([Docs](https://developers.fd.xyz))
+- [thirdweb Nebula](https://thirdweb.com/ai) — AI agent transaction framework on x402.
 - [MoltsPay](https://moltspay.com) — Open payment protocol for AI agents. One JSON file to accept x402 payments. Gasless for both providers and clients. Multi-chain. CLI, TypeScript/Python SDKs, testnet faucet. ([Docs](https://moltspay.com/docs))
 - [Bermuda](https://www.bermudabay.xyz) — ZK-private HTTP payments for x402. Adds sender privacy via Noir zero-knowledge proofs on Base. Agents pay without exposing wallet balances or transaction history.
-- [XyncPay](https://xyncpay.com) — Protocol translation layer bridging x402, MPP, and AP2. One integration, every AI agent payment protocol. Atomic fee-split settlement via on-chain FeeSplit contract on Base.
+- [XyncPay](https://www.xyncpay.com/) — Protocol translation layer bridging x402, MPP, and AP2. One integration, every AI agent payment protocol. Atomic fee-split settlement via on-chain FeeSplit contract on Base.
 - [EntRoute](https://entroute.com) — Machine-first API discovery for AI agents. 110+ capabilities, semantic intent resolution, continuous 402 verification probes, quality ranking. MCP server, TypeScript SDK, REST API. ([Docs](https://entroute.com/docs))
 - [WickedAPI x402 Paywall](https://paywall.wickedapi.com) — Multi-tenant x402 paywall-as-a-service on Base mainnet via the Coinbase CDP facilitator. Self-serve signup, REST API to set price/network/payout wallet and forward to a real backend, live settlement views. Example: `GET https://paywall.wickedapi.com/wickedapi/weather` returns a live 402. ([OpenAPI](https://paywall-admin.wickedapi.com/openapi.json), [Cookbook](https://paywall.wickedapi.com/cookbook.html))
 - [Wicked Sanity](https://sanity.wickedapi.com) — Hallucination / claim-check API for agents mid-loop. POST a claim plus context (grounded mode, real HHEM-2.1-Open entailment inference) or let it check live web evidence (open mode, Tavily retrieval scored by the same model) and get `supported` / `unsupported` / `contradicted` / `insufficient_evidence` with a consistency score and the evidence used, never a guessed verdict. Open mode checks consistency with the web, not objective truth. x402 pay-per-call on Base mainnet via the Coinbase CDP facilitator: $0.003 per request plus $0.001 per grounded claim ($0.015 per open-mode claim), or free with an API key. ([llms.txt](https://sanity.wickedapi.com/llms.txt) | [OpenAPI](https://sanity.wickedapi.com/openapi.json) | [Discovery](https://sanity.wickedapi.com/.well-known/x402) | [MCP](https://mcp.wickedapi.com/mcp))
@@ -34,7 +34,7 @@ Infrastructure, A2A protocols, multi-agent orchestration, and marketplace platfo
 
 ## Agent Wallets
 
-- [Coinbase Agentic Wallets](https://www.abhs.in/blog/ai-agents-crypto-wallets-coinbase-x402-brian-armstrong-2026) — Wallet infrastructure purpose-built for autonomous AI agents. 50M+ transactions processed since protocol launch.
+- [Coinbase Agentic Wallets](https://abhs.in/blog/ai-agents-crypto-wallets-coinbase-x402-brian-armstrong-2026) — Wallet infrastructure purpose-built for autonomous AI agents. 50M+ transactions processed since protocol launch.
 - [ATXP](https://github.com/atxp-dev/atxp) — Agent identity and funding platform. One command gives an agent a USDC wallet, `@atxp.email` inbox, phone number, and 100+ paid tools. x402-compatible, $5 free credit, no KYC. ([Docs](https://docs.atxp.ai))
 - [Open Solid](https://opensolid.ai) — Agent wallet holding USDC on Base and Solana that pays x402 APIs from the agent's balance within a per-payment limit set by its human owner, alongside a US bank account, prepaid cards and payouts through Laso Finance. ([Docs](https://opensolid.ai/docs/paid-apis))
 
@@ -44,7 +44,7 @@ Infrastructure, A2A protocols, multi-agent orchestration, and marketplace platfo
 
 - [AP2 — Agent Payments Protocol](https://ap2-protocol.org) — Apache-2.0 authorization layer sitting above payment rails, built on signed user mandates. Notable for what it concedes: its Trusted Surface must be non-agentic UI, which puts a human screen at the trust anchor of an agent-payments protocol.
 - [Agent Commerce Kit (ACK)](https://github.com/agentcommercekit/ack) — MIT-licensed DID and verifiable-credential toolkit for agent identity. Builds owner-accountable delegation chains — the opposite design pole from ERC-8004's pseudonymous on-chain identity.
-- [Skyfire](https://docs.skyfire.xyz) — Agent identity and payment credentials as ES256 JWTs with a public JWKS endpoint. The rare pattern in this space that a stranger can verify without contacting the issuer — worth studying if you're designing receipts.
+- [Skyfire](https://docs.skyfire.xyz/docs/introduction-to-skyfire) — Agent identity and payment credentials as ES256 JWTs with a public JWKS endpoint. The rare pattern in this space that a stranger can verify without contacting the issuer — worth studying if you're designing receipts.
 - [Google A2A x402 Extension](https://github.com/google-agentic-commerce/a2a-x402) — Agent commerce protocol. Python and TypeScript implementations. Payment-required, payment-submitted, payment-completed flow. Multi-agent payment orchestration.
 - [Revettr](https://revettr.com/.well-known/x402.json) — Counterparty risk scoring API for x402 agentic commerce. Scores wallet addresses, domains, IPs, and companies 0-100 for agent-to-agent payment safety.
 
@@ -66,7 +66,7 @@ Infrastructure, A2A protocols, multi-agent orchestration, and marketplace platfo
 - [WorkProtocol](https://workprotocol.ai) — Open job marketplace where AI agents find structured work, deliver artifacts, and get paid in USDC on Base. Escrow-backed, portable on-chain reputation, framework-agnostic.
 - [MAXIA](https://maxiaworld.app) — AI-to-AI marketplace implementing x402 V2 micropayments on Solana and Base for autonomous agent service payments.
 - [AgentStore](https://agentstore.tools) — Open-source marketplace for Claude Code plugins with x402 USDC payments, 80/20 publisher revenue split, permissionless publishing via CLI.
-- [x402 Bazaar](https://x402bazaar.org) — Decentralized API marketplace with 69 native x402-payable endpoints. Multi-chain USDC on Base and SKALE. MCP server via `npx x402-bazaar init`. 505 passing tests.
+- [x402 Bazaar](https://www.x402bazaar.org/) — Decentralized API marketplace with 69 native x402-payable endpoints. Multi-chain USDC on Base and SKALE. MCP server via `npx x402-bazaar init`. 505 passing tests.
 - [Satring](https://satring.com/.well-known/x402) — Curated L402 + x402 API directory with human ratings, health monitoring, MCP server. Dual-protocol (Lightning + USDC on Base).
 - [minia2a.uk](https://minia2a.uk) — Open M2M micropayment marketplace. 173 x402-payable services across 50+ categories (crypto data, web scraping, email verification, token security, agent toolkits). 34 registered agents. 5% fee, USDC settlement on Base. MCP registry, CLI, and 5-minute hands-on tutorial.
 - [Frantic](https://gofrantic.com/.well-known/x402) — Bounty board where AI agents claim funded work, deliver artifacts in the open, and are paid in USDC on Base only when a delivery is accepted, with x402 pay-per-post at `POST /v1/vendor-postings/x402`, a manifest at `/.well-known/x402`, and every claim, judgment, and payout sealed to a public receipt ledger.
