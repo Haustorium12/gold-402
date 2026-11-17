@@ -65,3 +65,23 @@ def test_no_before_commit_refuses(monkeypatch):
 def test_listings_parser_reads_shelf_lines():
     text = "## apis\n- [A](https://a.example/x) — desc\nnot a line\n- [B C](https://b.example) — d\n"
     assert B.listings(text) == {"https://a.example/x": "A", "https://b.example": "B C"}
+
+def test_rerun_of_a_big_night_posts_nothing_and_stays_green(monkeypatch):
+    many = [(f"L{i}", f"https://l{i}.example") for i in range(11)]
+    assert run(monkeypatch, departed=many, posts={k: ("D", "") for k in many}) == []
+
+
+def test_name_fallback_is_scoped_to_the_same_host(monkeypatch):
+    asked = []
+    def fake_first_pr(repo, needle):
+        asked.append(needle)
+        return (None, None) if len(asked) == 1 else ({"number": 9, "user": {"login": "x"}, "merged_at": "2026-08-01T00:00:00Z"}, "2026-08-01")
+    monkeypatch.setattr(B, "first_pr", fake_first_pr)
+    assert B.submitter("o/r", "Coinbase Developer Platform", "https://coinbase.com/cloud") == (9, "x", "2026-08-01")
+    assert asked[1] == "[Coinbase Developer Platform](https://coinbase.com"
+
+
+def test_a_failed_git_read_refuses_instead_of_reading_empty():
+    with pytest.raises(SystemExit) as e:
+        B.git("show", "0123456789abcdef0123456789abcdef01234567:DEPARTURES.md")
+    assert "REFUSED" in str(e.value)

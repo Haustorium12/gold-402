@@ -9,7 +9,7 @@ Safe to re-run: a listing that already has a notice gets nothing new.
 Refuses (exit 1) to post more than MAX_POSTS notices in one run unless --allow-many.
 Needs GITHUB_TOKEN with discussions: write. Exit 0 = every post it owed was made.
 """
-import argparse, json, os, re, subprocess, sys, urllib.error, urllib.request
+import argparse, json, os, re, subprocess, sys, urllib.error, urllib.parse, urllib.request
 from datetime import datetime, timezone
 
 CATEGORY = "Departures"
@@ -21,7 +21,11 @@ API = "https://api.github.com"
 
 
 def git(*args):
-    return subprocess.run(["git", *args], capture_output=True, text=True, encoding="utf-8").stdout
+    """Fails loudly: a git read that silently returned "" once meant 'every listing departed'."""
+    r = subprocess.run(["git", *args], capture_output=True, text=True, encoding="utf-8")
+    if r.returncode:
+        sys.exit(f"REFUSED: git {' '.join(args[:2])} failed ({r.stderr.strip()[:200]}). Nothing posted.")
+    return r.stdout
 
 
 def listings(text):
@@ -84,10 +88,12 @@ def first_pr(repo, needle):
 
 def submitter(repo, name, url):
     """(pr_number, login, listed_date) of the PR that first listed this entry. By URL first;
-    if the URL was rebound later by a direct commit, by the listing's name."""
+    if that finds no PR (the URL was rebound later by a direct commit), by name AND host, so
+    two listings that share a name on different hosts can never borrow each other's @."""
     p, date = first_pr(repo, url)
     if not p:
-        p2, date2 = first_pr(repo, f"[{name}](")
+        u = urllib.parse.urlsplit(url)
+        p2, date2 = first_pr(repo, f"[{name}]({u.scheme}://{u.netloc}")
         if p2:
             p, date = p2, date2
     if not p:
@@ -169,18 +175,21 @@ def main():
     departed, returned = changes(a.before, a.after)
     today = git("show", "-s", "--format=%cs", a.after).strip() or datetime.now(timezone.utc).date().isoformat()
     print(f"{len(departed)} departed, {len(returned)} returned between {a.before[:7]} and {a.after[:7]}")
-    if len(departed) > MAX_POSTS and not a.allow_many:
-        sys.exit(f"REFUSED: {len(departed)} departures in one change (limit {MAX_POSTS}). "
-                 "A person re-runs with allow_many if this is real. Nothing posted.")
     if not departed and not returned:
         return
     repo_id, cat, posts = board(repo)
-    made = []
-    for name, url in departed:
+    owed = []
+    for name, url in departed:                    # idempotency first, so a re-run owes nothing
         old = posts.get((name, url))
         if old and not old[1].startswith("Back on the shelf"):
             print(f"skip (notice exists): {name}")
-            continue
+        else:
+            owed.append((name, url, old))
+    if len(owed) > MAX_POSTS and not a.allow_many:
+        sys.exit(f"REFUSED: {len(owed)} departure notices owed in one change (limit {MAX_POSTS}). "
+                 "A person re-runs with allow_many if this is real. Nothing posted.")
+    made = []
+    for name, url, old in owed:
         saw = look(url)
         if old:                                   # it came back once and left again
             body, act = f"Departed again {today}: {saw}.", "reply"
