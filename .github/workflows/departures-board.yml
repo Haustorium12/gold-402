@@ -1,0 +1,46 @@
+# One notice in Discussions > Departures for each listing that moves to DEPARTURES.md,
+# and one reply when it goes back to its shelf. Forward-only and safe to re-run.
+#
+# Green means every notice it owed was posted. It goes red (and posts nothing) if the
+# Departures category is missing, if the change has no usable "before" commit, or if
+# more than 10 listings depart in one change -- a person re-runs it by hand with
+# allow_many if that is real.
+
+name: Departures Board
+
+on:
+  push:
+    branches: [main]
+    paths: [DEPARTURES.md]
+  workflow_dispatch:
+    inputs:
+      before: { description: "commit before the change", required: true }
+      after: { description: "commit after the change", required: true }
+      allow_many: { description: "allow more than 10 notices", type: boolean, default: false }
+
+permissions:
+  contents: read
+  discussions: write
+  pull-requests: read
+
+concurrency:
+  group: departures-board
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Post departure notices
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          BEFORE: ${{ inputs.before || github.event.before }}
+          AFTER: ${{ inputs.after || github.sha }}
+          MANY: ${{ inputs.allow_many && '--allow-many' || '' }}
+        run: python scripts/departures_board.py --before "$BEFORE" --after "$AFTER" $MANY
