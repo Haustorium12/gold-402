@@ -25,7 +25,7 @@ Agent infrastructure and machine-payment rails by continent. Platforms, protocol
 
 - [Coze](https://www.coze.com) — ByteDance's agent-building platform ([coze.cn](https://www.coze.cn) for the domestic market). The one significant proprietary holdout on tooling standards — and it monetizes paid plugins *through* MCP rather than around it. Currently the only place we found anyone selling agent capabilities as a product.
 - [Dify](https://dify.ai) — Open-source platform for production agentic workflows, Chinese-origin with broad international adoption. Self-hostable or cloud. [Docs](https://docs.dify.ai).
-- [AgentScope](https://github.com/modelscope/agentscope) — Agent framework from the ModelScope team. Built around making agent runs observable and traceable rather than opaque.
+- [AgentScope](https://github.com/agentscope-ai/agentscope) — Agent framework from the ModelScope team. Built around making agent runs observable and traceable rather than opaque.
 
 ### China — Model & Tool Hubs
 

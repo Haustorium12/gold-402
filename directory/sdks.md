@@ -3,8 +3,8 @@
 Client and server-side libraries for building with x402. Start with the official Coinbase SDKs, then layer in community libraries as your stack demands.
 
 ### Drop-In OpenAI Replacements
-- [x402-openai-python](https://github.com/qntx/x402-openai-python) — Drop-in OpenAI Python client with transparent x402 payment support. Swap in one line — your existing OpenAI code starts paying via x402 automatically. 260★
-- [x402-openai-typescript](https://github.com/qntx/x402-openai-typescript) — Drop-in OpenAI TypeScript client with transparent x402 payment support. TypeScript companion to the Python client. 151★
+- [x402-openai-python](https://github.com/qntx/openai-python) — Drop-in OpenAI Python client with transparent x402 payment support. Swap in one line — your existing OpenAI code starts paying via x402 automatically. 260★
+- [x402-openai-typescript](https://github.com/qntx/openai) — Drop-in OpenAI TypeScript client with transparent x402 payment support. TypeScript companion to the Python client. 151★
 - [bridgenode-llm](https://pypi.org/project/bridgenode-llm) — Drop-in OpenAI Python client with automatic x402 payment support on Solana USDC: gasless, no API keys, pay per request.
 - [@bridgenode/llm](https://www.npmjs.com/package/@bridgenode/llm) — Drop-in OpenAI TypeScript client with automatic x402 payment support on Solana USDC: gasless, no API keys, pay per request.
 
@@ -81,7 +81,7 @@ Client and server-side libraries for building with x402. Start with the official
 ## Rust
 
 - [r402](https://github.com/qntx/r402) — Rust SDK for the x402 payment protocol by qntx. High-performance, type-safe implementation. 147★
-- [ra2a](https://github.com/qntx/ra2a) — Rust SDK for the Agent2Agent (A2A) Protocol with x402 integration. 165★
+- [ra2a](https://github.com/qntx-labs/ra2a) — Rust SDK for the Agent2Agent (A2A) Protocol with x402 integration. 165★
 - [x402-rs](https://github.com/x402-rs/x402-rs) — Production-grade Rust implementation. Axum middleware, reqwest client wrapper, self-hostable facilitator, multi-chain support.
 - [x402-kit](https://github.com/bitrouter/x402-kit) — Fully modular, framework-agnostic Rust SDK. Composable buyer (signer) and seller (server) primitives. ([crates.io](https://crates.io/crates/x402-paywall))
 - [alloy](https://github.com/alloy-rs/alloy) — High-performance Ethereum library used for Rust x402 signing.

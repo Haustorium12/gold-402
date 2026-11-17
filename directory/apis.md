@@ -410,7 +410,7 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 ## Production Deployments (High Volume)
 
 - [AIsa](https://aisa.network) — Leading x402 payment processor. **10.5M+ cumulative transactions** on the x402 network. The benchmark for production scale.
-- [Coinbase Developer Platform](https://coinbase.com/developer-platform) — Official CDP implementation processing hundreds of thousands of transactions weekly. Enterprise-grade, 2-second settlement.
+- [Coinbase Developer Platform](https://www.coinbase.com/developer-platform) — Official CDP implementation processing hundreds of thousands of transactions weekly. Enterprise-grade, 2-second settlement.
 - [Cloudflare Workers](https://www.cloudflare.com/products/workers/) — Edge payment verification at scale across 300+ data centers globally.
 - [AVT x402 Data Services](https://api.aventtech.com) — 16 pay-per-call data and validation APIs: field-verified AV/IT device-integration knowledge base (curated by working systems integrators), IBAN / EU-VAT (VIES) / email / phone / card / GTIN validation, DNS and RDAP domain lookup, timezone and ECB currency conversion. $0.002–$0.03 USDC on Base; free catalog, llms.txt, and OpenAPI. ([llms.txt](https://api.aventtech.com/llms.txt)) ([MCP server](https://github.com/ttsempelis/avt-x402-mcp))
 - [Verdoc](https://verdoc.dev/agents-md?repo=octocat/Hello-World) — Deterministic AGENTS.md generator for public GitHub repositories: build and test commands quoted from the repo's own manifests, each tagged with the file it came from, no language model involved — the same commit always returns the same file. `GET /agents-md?repo=owner/name` — $0.02 USDC on Base, Polygon or Arbitrum via CDP facilitator.

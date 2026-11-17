@@ -17,7 +17,7 @@ Infrastructure, A2A protocols, multi-agent orchestration, and marketplace platfo
 
 ## Infrastructure
 
-- [Coinbase Developer Platform](https://coinbase.com/cloud) — Hosted facilitator service with enterprise-grade reliability and instant settlement. The primary x402 infrastructure layer.
+- [Coinbase Developer Platform](https://www.coinbase.com/developer-platform) — Hosted facilitator service with enterprise-grade reliability and instant settlement. The primary x402 infrastructure layer.
 - [Cloudflare x402](https://blog.cloudflare.com/x402/) — Edge payment processing across 300+ global data centers.
 - [Polygon Agentic Payments](https://polygon.technology/payments/agentic-payments) — Near-instant finality, sub-$0.001 fees, no reorgs. Coinbase CDP facilitator with gas sponsorship and KYT compliance. USDC, USDT, non-USD stablecoins. ([Docs](https://agentic-docs.polygon.technology/general/x402/intro/))
 - [Finance District Prism](https://developers.fd.xyz/prism/integrations/x402) — Payment gateway for agentic commerce. TypeScript, Python, Java SDKs. Two-layer architecture: Prism (orchestration) and Spectrum (on-chain settlement across Base, Ethereum, Arbitrum, BSC). ([Docs](https://developers.fd.xyz))
@@ -52,7 +52,7 @@ Infrastructure, A2A protocols, multi-agent orchestration, and marketplace platfo
 
 ## Multi-Agent Orchestration
 
-- [payagent](https://github.com/stevemilton/payagent) — Drop-in `fetch` wrapper that auto-handles HTTP 402 responses. Zero agent code changes required.
+- [payagent](https://github.com/arispay-inc/payagent) — Drop-in `fetch` wrapper that auto-handles HTTP 402 responses. Zero agent code changes required.
 - [AlphaClaw](https://github.com/diassique/alphaclaw) — Autonomous AI agent network hunting alpha on Polymarket and DeFi. 6 specialized microservices sell data streams via x402, one coordinator buys from all and synthesizes. ACP with stake-weighted voting.
 
 ---
