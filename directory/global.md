@@ -30,7 +30,7 @@ Agent infrastructure and machine-payment rails by continent. Platforms, protocol
 ### China — Model & Tool Hubs
 
 - [ModelScope MCP Plaza](https://www.modelscope.cn/mcp) — Alibaba's MCP hub (魔搭社区), hosting free Streamable-HTTP servers for tools unreachable from Western registries: Amap, 12306 rail booking, DingTalk, Alipay subscription. Likely the largest MCP surface no English-language directory indexes.
-- [Gitee AI](https://ai.gitee.com/docs/integrations/mcp) — MCP integration on China's dominant code-hosting platform. The Gitee ecosystem is substantially invisible from GitHub-centred tooling.
+- [Gitee AI](https://moark.com/docs/integrations/mcp) — MCP integration on China's dominant code-hosting platform. The Gitee ecosystem is substantially invisible from GitHub-centred tooling.
 - [Zhipu Open Platform](https://open.bigmodel.cn) — GLM model API platform with an agent and tool layer.
 - [Aliyun Bailian](https://www.aliyun.com/product/bailian) — Alibaba's model platform. MCP-compatible, with a free evaluation tier.
 - [Baidu AI Cloud](https://ai.baidu.com) — Baidu's model and agent platform. Publishes official MCP servers, including Baidu Maps.

@@ -11,8 +11,8 @@ Tutorials, videos, articles, blog posts, and interactive learning tools for x402
 
 - [x402-starter-kit](https://github.com/dabit3/x402-starter-kit) — Widely-referenced x402 starter kit by Nader Dabit. Full end-to-end example for getting a payment-gated API running quickly. 181★
 - [x402-ai-starter](https://github.com/vercel-labs/x402-ai-starter) — Vercel's official x402 AI starter template. Next.js + x402 + AI SDK. High-discoverability starting point for Vercel deployments. 74★
-- [5-Minute Quickstart for Sellers](https://docs.cdp.coinbase.com/x402/quickstart-for-sellers) — Official Coinbase guide. Accept your first x402 payment in minutes.
-- [Buyer/Client Setup](https://docs.cdp.coinbase.com/x402/quickstart-for-buyers) — Official guide for making automated x402 payments.
+- [5-Minute Quickstart for Sellers](https://docs.cdp.coinbase.com/x402/seller/quickstart) — Official Coinbase guide. Accept your first x402 payment in minutes.
+- [Buyer/Client Setup](https://docs.cdp.coinbase.com/x402/buyer/quickstart) — Official guide for making automated x402 payments.
 - [One-Line Integration](https://github.com/x402-foundation/x402/tree/main/examples) — Add payment middleware in a single line of code. Official examples repo.
 - [Base Sepolia Testnet Setup](https://docs.cdp.coinbase.com/x402/network-support) — Get test USDC and start testing without real money.
 - [Solana x402 Developer Guide](https://solana.com/developers/guides/getstarted/intro-to-x402) — Official Solana guide for getting started with x402 payments.
@@ -30,7 +30,7 @@ Tutorials, videos, articles, blog posts, and interactive learning tools for x402
 
 ### Official
 - [Introducing x402](https://www.coinbase.com/developer-platform/discover/launches/x402) — Coinbase announcement post.
-- [x402 V2 Specification](https://www.x402.org/writing/x402-v2-launch) — Major protocol upgrade overview: standardized headers, CAIP-2 network identifiers, modular SDK architecture, Extensions framework.
+- [x402 V2 Specification](https://x402.org/x402-v2-launch/) — Major protocol upgrade overview: standardized headers, CAIP-2 network identifiers, modular SDK architecture, Extensions framework.
 - [Vercel: Introducing x402-mcp](https://vercel.com/blog/introducing-x402-mcp-open-protocol-payments-for-mcp-tools) — Open protocol payments for MCP tools using AI SDK and `paidTool` primitives.
 - [Polygon: Agentic Payments Infrastructure](https://polygon.technology/payments/agentic-payments) — Polygon's dedicated x402 agentic payments page.
 
@@ -75,12 +75,12 @@ Tutorials, videos, articles, blog posts, and interactive learning tools for x402
 
 ## Reference Documentation
 
-- [Agent Skills](https://agentskills.io) — The open Skills format (CC-BY-4.0) with roughly 44 adopter clients including Codex, Gemini CLI and ByteDance TRAE. One artifact, every harness — the portability story MCP made for tools, applied to instructions.
+- [Agent Skills](https://agentskills.io/home) — The open Skills format (CC-BY-4.0) with roughly 44 adopter clients including Codex, Gemini CLI and ByteDance TRAE. One artifact, every harness — the portability story MCP made for tools, applied to instructions.
 - [x402 Protocol Specification](https://github.com/x402-foundation/x402) — Official open-source protocol implementation by Coinbase.
-- [Coinbase Developer Platform Docs](https://docs.cdp.coinbase.com/x402) — Complete implementation guide and API reference.
-- [x402 Whitepaper](https://x402.org/x402-whitepaper.pdf) — Technical deep dive into protocol architecture.
+- [Coinbase Developer Platform Docs](https://docs.cdp.coinbase.com/x402/welcome) — Complete implementation guide and API reference.
+- [x402 Whitepaper](https://x402.org/wp-content/uploads/sites/10/2026/06/x402-whitepaper.pdf) — Technical deep dive into protocol architecture.
 - [EIP-3009 TransferWithAuthorization](https://eips.ethereum.org/EIPS/eip-3009) — Gasless transfer standard used by x402.
-- [HTTP 402 Status Code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402) — The long-dormant HTTP status code, now very much alive.
+- [HTTP 402 Status Code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/402) — The long-dormant HTTP status code, now very much alive.
 
 ---
 

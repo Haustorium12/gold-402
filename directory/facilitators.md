@@ -13,7 +13,7 @@ Payment verification and settlement services for x402. A facilitator verifies pa
 
 ## Hosted Facilitators
 
-- [Coinbase CDP](https://docs.cdp.coinbase.com/x402) — Official facilitator on Base and Base Sepolia. Instant settlement, supports all ERC-20 tokens (not just USDC). Most widely used in the ecosystem.
+- [Coinbase CDP](https://docs.cdp.coinbase.com/x402/welcome) — Official facilitator on Base and Base Sepolia. Instant settlement, supports all ERC-20 tokens (not just USDC). Most widely used in the ecosystem.
 - [Stripe x402](https://docs.stripe.com/payments/machine/x402) [![24K Featured](https://img.shields.io/badge/24K_Featured-2026--04-C0C0C0?style=plastic)](../FEATURED.md) — Stripe's Machine Payments infrastructure. Deposit addresses, automatic PaymentIntent capture on settlement, dashboard monitoring, webhooks. USDC on Base. ([Quickstart](https://docs.stripe.com/payments/machine/x402/quickstart))
 - [Cloudflare x402](https://developers.cloudflare.com/agents/tools/payments/x402/) — Edge computing facilitator on Base and Ethereum. Deferred settlement. Global distribution via 300+ data centers.
 - [Polygon x402 Facilitator](https://docs.polygon.technology/payment-services/agentic-payments/x402/intro) — Coinbase CDP on Polygon with gas sponsorship, automated KYT compliance screening, 1,000 free transactions/month. USDC on Polygon.
@@ -24,7 +24,7 @@ Payment verification and settlement services for x402. A facilitator verifies pa
 - [Dexter DAO](https://github.com/Dexter-DAO/dexter-x402-sdk) — Open-source x402 facilitator and SDK. Chain-agnostic v2 with client, server, React hooks, and Express middleware.
 - [Ultravioleta DAO](https://facilitator.ultravioletadao.xyz) — Multi-chain hosted facilitator supporting 33+ networks including EVM, Solana, NEAR, Stellar, Algorand, and Sui. REST API with chain-specific settlement routing.
 - [BNB Chain Pieverse](https://www.pieverse.io) — BNB Chain x402 facilitator using pieUSD (a 1:1 USDT wrapper) to enable EIP-3009 gasless payments on BNB. Generates jurisdiction-compliant receipts immutably stored on BNB Greenfield for audit purposes. ([x402b GitHub](https://github.com/Pieverse-Eng/x402b))
-- [MERX x402 for TRON](https://x402.merx.exchange) — First TRON facilitator. USDT, USDC, USDD on TRON mainnet. Sub-3-second confirmation. [Express middleware](https://npmjs.com/package/merx-x402).
+- [MERX x402 for TRON](https://merx.exchange/x402) — First TRON facilitator. USDT, USDC, USDD on TRON mainnet. Sub-3-second confirmation. [Express middleware](https://npmjs.com/package/merx-x402).
 - [XRPL / t54.ai Facilitator](https://xrpl-x402.t54.ai/) — x402 facilitator for XRP Ledger by t54.ai, supporting native XRP and RLUSD payments. Handles on-chain verification and settlement for autonomous agent transactions without requiring API keys or custodial wallets.
 - [x402 Sponsor Relay](https://github.com/aibtcdev/x402-sponsor-relay) — x402 sponsor relay for AI on Bitcoin (aibtcdev). Agents access gated endpoints without managing their own wallets — relay sponsors on their behalf. ([aibtc.dev](https://aibtc.dev))
 - [Satoshi Facilitator](https://bitcoinsapi.com) — Independent facilitator for Bitcoin-focused pay-per-call services. Base, Base Sepolia, Solana Mainnet, Solana Devnet. [Supported networks](https://facilitator.bitcoinsapi.com/supported)
