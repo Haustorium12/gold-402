@@ -41,6 +41,7 @@ Security tools, spending controls, audit resources, and best practices for x402 
 ---
 - [KaelAi](https://kaelai.io) — Wallet trust scoring API for the agentic economy. Scores wallets 0-100 across 10 chains with behavioural analysis. Built for x402 servers to vet incoming/outgoing payment wallets before serving or initiating requests.
 - [x402check](https://x402check.dev/preflight?url=https://example.com) — Preflight check for a live x402 seller URL that returns ok|caution|avoid plus payTo, price, and history before an agent pays; $0.002 Exact USDC on Base per URL. ([MCP](https://x402check.dev/mcp)) ([OpenAPI](https://x402check.dev/openapi.json)) ([GitHub](https://github.com/nwilliams005/x402check))
+- [Screwtape](https://screwtape.ai/v1/payment-check) — Checks whether a seller is safe to pay before an agent pays, returning allow, review or block with a signed receipt at $0.005 USDC per call on Base and Solana via POST /v1/payment-check, with hosted MCP at https://screwtape.ai/mcp. ([OpenAPI](https://screwtape.ai/openapi.json))
 
 ## Spending Controls
 
