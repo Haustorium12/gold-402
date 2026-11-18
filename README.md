@@ -120,7 +120,7 @@ We index that world too, including surfaces no English-language directory carrie
 
 **This week** (Nov 16—22)
 
-_No new listings yet._
+- **[Toll Facilitator](https://x402.t0ll.xyz/supported)** — Free, keyless x402 facilitator for USDG on Robinhood Chain (eip155:4663), x402 v1 and v2, via EIP-3009 or Permit2: exact, upto, auth-capture escrow and batch-settlement. Open /verify and /settle with no API key, the facilitator pays gas, and each payTo is checked against the seller's ERC-8004 agent wallet before settling. [Docs](https://x402.t0ll.xyz/docs) · [Test 402 resource](https://t0ll.xyz/api/x402/pulse).
 
 **Last week** (Nov 9—15)
 
