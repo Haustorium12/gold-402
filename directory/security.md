@@ -56,6 +56,8 @@ Security tools, spending controls, audit resources, and best practices for x402 
 - [Burnbound](https://www.npmjs.com/package/@burnbound/mcp) — Buyer-side spending controls for x402: per-agent daily caps, per-payment limits, allowed hosts and human approval are checked before the customer's own wallet signs, through the MCP server `@burnbound/mcp`.
 - [MoneySwitch](https://github.com/dongsheng123132/moneyswitch) — Self-hosted x402 payer with per-agent spending keys, budget and host limits, revocation, and human approval for payments above a configured threshold.
 
+- [MoneyTools x402-guard](https://www.npmjs.com/package/@moneytools-dev/x402-guard) — Buyer-side TypeScript hook that attaches to an official x402Client's onBeforePaymentCreation hook to run Pay Precheck, local per-payment and daily caps, optional Approval Relay, and a payment log before anything is signed; it never loads a key or sends a payment.
+
 ---
 - [wren-guard Pro](https://wren-guard-pro.wrenonbase.workers.dev/sample) — TypeScript/viem guard for agent wallets (capped, simulated sends; approval, permit and EIP-7702 decoding; injection screen) with an 89-scenario drain corpus and a GitHub Action. `GET /sample` returns 5 scenarios for 0.01 USDC on Base; `GET /buy/19` (or 49, 99) returns a 7-day download link to the kit. MIT core: [wren-guard](https://github.com/claudeisgod/wren-guard).
 
