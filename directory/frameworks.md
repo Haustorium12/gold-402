@@ -4,8 +4,8 @@ Server-side integrations for accepting x402 payments, and agent frameworks with 
 
 ---
 
-> ★ **Featured — October 2026: [x402-rails](https://github.com/quiknode-labs/x402-rails)**
-> QuickNode Labs' official Rails integration. If your API already lives in a Rails app, this is the shortest path to answering with a 402 — no new service to stand up beside it.
+> ★ **Featured — November 2026: [Agent Commerce Gateway](https://github.com/devlab-group/agent-commerce)**
+> A self-hosted gateway that puts x402 in front of an HTTP API you already run and serves it over HTTP or MCP, with funds going straight to your wallet. It ships a doctor command and an adversarial-payment test among 184 test files. Release 2.7.2 landed 2026-11-14.
 
 ## Node.js / TypeScript
 

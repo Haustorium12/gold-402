@@ -91,25 +91,25 @@ We index that world too, including surfaces no English-language directory carrie
 
 ## Featured This Month
 
-[![24K Featured](https://img.shields.io/badge/24K_Featured-2026--10-C0C0C0?style=plastic)](FEATURED.md)
+[![24K Featured](https://img.shields.io/badge/24K_Featured-2026--11-C0C0C0?style=plastic)](FEATURED.md)
 
-**October 2026 — one pick per shelf.** Each shelf opens with its pick and the write-up. Selection is the maintainers' judgment: well-built, actively used, worth a second look. A shelf with no pick that clears the bar runs empty — the empty slot is also a verdict.
+**November 2026 — one pick per shelf.** Each shelf opens with its pick and the write-up. Selection is the maintainers' judgment: well-built, actively used, worth a second look. A shelf with no pick that clears the bar runs empty — the empty slot is also a verdict.
 
-| Shelf | October pick |
+| Shelf | November pick |
 |---|---|
-| APIs & Services | [crosscheck accept](https://crosscheckapi.com/v1/accept) |
-| MCP Servers | [Base toolbox](https://basetoolbox.cartonpliant.workers.dev/.well-known/mcp.json) |
-| SDKs & Libraries | [x402-dotnet](https://github.com/michielpost/x402-dotnet) |
-| Facilitators | [ArisPay](https://facilitator.arispay.app) |
-| Frameworks | [x402-rails](https://github.com/quiknode-labs/x402-rails) |
-| Tools | [ToolMeter](https://snappedai.com/toolmeter/) |
-| Security | [ICME Labs](https://docs.icme.io) |
-| Ecosystem | [Bermuda](https://www.bermudabay.xyz) |
-| The Global Agent Economy | [Beckn Protocol](https://github.com/ONDC-Official) |
-| Learning | [How x402 paid links work (Payfirst)](https://www.payfirst.app/guides/x402-paid-links) |
-| Community | [Dev.to #x402](https://dev.to/t/x402) |
-| Market Data | [Dune Analytics x402](https://dune.com/x402) |
-| Aggregators & Proxies | [x402-list](https://x402-list.com) |
+| APIs & Services | [zaref](https://zaref.dev/.well-known/x402.json) |
+| MCP Servers | — |
+| SDKs & Libraries | [pay-kit](https://github.com/solana-foundation/pay-kit) |
+| Facilitators | [Ultravioleta DAO](https://facilitator.ultravioletadao.xyz) |
+| Frameworks | [Agent Commerce Gateway](https://github.com/devlab-group/agent-commerce) |
+| Tools | [Red Team Blue Team Agent Fabric](https://github.com/msaleme/red-team-blue-team-agent-fabric) |
+| Security | — |
+| Ecosystem | — |
+| The Global Agent Economy | — |
+| Learning | [Settlens payment-policy regression guide](https://settlens.com/blog/check-x402-payment-policy) |
+| Community | — |
+| Market Data | — |
+| Aggregators & Proxies | — |
 
 [Past features →](FEATURED.md)
 

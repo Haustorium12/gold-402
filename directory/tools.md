@@ -4,8 +4,8 @@ Development tools, CLI utilities, monitoring, analytics, and CI/CD integrations 
 
 ---
 
-> ★ **Featured — October 2026: [ToolMeter](https://snappedai.com/toolmeter/)**
-> Seller-readiness checks before a paid endpoint launches: pricing metadata, `.well-known/x402`, OpenAPI, agent metadata, buyer-safety. Our July delivery check found most failures were front doors, not services. This tool works on the front door.
+> ★ **Featured — November 2026: [Red Team Blue Team Agent Fabric](https://github.com/msaleme/red-team-blue-team-agent-fabric)**
+> A security harness for agent endpoints that will not count a test as passed when the target never answered it. Its README says that against a v1 or v2 x402 server only 5 of its x402 probes grade and the rest report INCONCLUSIVE with a reason. Last commit 2026-11-11.
 
 ## CLI Tools
 

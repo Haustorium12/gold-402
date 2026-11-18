@@ -4,9 +4,6 @@ On-chain analytics, live metrics, and growth timeline for the x402 ecosystem.
 
 ---
 
-> ★ **Featured — October 2026: [Dune Analytics x402](https://dune.com/x402)**
-> On-chain x402 metrics — volumes, chains, facilitator comparison, fees — built on Dune, where queries are public by default. After an outside audit found published volume for the same 30 days ranging from under $2M to $24M, a number you can re-run beats a number you're asked to trust.
-
 ## Market Overview (April 2026)
 
 | Metric               | Value         | Source                         |

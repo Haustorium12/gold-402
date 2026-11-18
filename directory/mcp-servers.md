@@ -6,9 +6,6 @@ x402-enabled MCP servers. AI agents (Claude, Cursor, any MCP client) can call th
 
 ---
 
-> ★ **Featured — October 2026: [Base toolbox](https://basetoolbox.cartonpliant.workers.dev/.well-known/mcp.json)**
-> Checks a Base swap, a transfer, or your leftover token allowances before you sign — preflight as a tool call, on the chain most of this shelf settles on. The constants route is free, so you can see what it reads before you pay for anything.
-
 ## General Utility
 
 - [agent-exec](https://agent-exec.448c.org/mcp?via=223) — Streamable HTTP MCP server with 49 tools: every paid route (sandboxed python3/node execution, durable storage, atomic key claims, signed URL attestations, watches, disposable email, rented DNS, address/URL risk checks, x402 pay-delivery) buyable from $0.001 USDC on Base or Solana, plus 29 free tools (quotes, directory, owner-signed reads, offline x402 verification). ([OpenAPI](https://agent-exec.448c.org/openapi.json?via=223)) ([Manifest](https://agent-exec.448c.org/.well-known/x402.json?via=223))

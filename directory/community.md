@@ -4,9 +4,6 @@ Where x402 builders hang out, get help, and find work.
 
 ---
 
-> ★ **Featured — October 2026: [Dev.to #x402](https://dev.to/t/x402)**
-> Where builders are writing at length about x402 right now — five posts in the week to 2026-09-30, several of them measuring catalogs and probes the way this shelf does. The field's own field notes.
-
 ## Official Channels
 
 - [x402 Foundation Discord](https://discord.com/invite/x402) — Official community server. Best place for protocol questions and ecosystem announcements.

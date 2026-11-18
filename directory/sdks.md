@@ -16,8 +16,8 @@ Client and server-side libraries for building with x402. Start with the official
 
 ---
 
-> ★ **Featured — October 2026: [x402-dotnet](https://github.com/michielpost/x402-dotnet)**
-> x402 for .NET, a runtime the Foundation's official SDKs don't ship. Still being worked on — last pushed 2026-09-18 — which is more than most single-language ports on this shelf can say.
+> ★ **Featured — November 2026: [pay-kit](https://github.com/solana-foundation/pay-kit)**
+> The Solana Foundation's toolkit for putting a stablecoin paywall on an HTTP route, with source in nine languages: TypeScript, Rust, Go, Python, Ruby, PHP, Lua, Kotlin and Swift. Each has its own test files. Last commit 2026-11-09.
 
 ## TypeScript / JavaScript
 

@@ -6,6 +6,30 @@ Selection criteria are documented in [CONTRIBUTING.md](CONTRIBUTING.md#24k-featu
 
 ---
 
+## November 2026 — The Slate
+
+One pick per shelf. MCP Servers, Security, Ecosystem, The Global Agent Economy, Community, Market Data and Aggregators & Proxies ran empty.
+
+**APIs & Services — [zaref](https://zaref.dev/.well-known/x402.json)**
+South African reference data as JSON: fuel prices, repo and prime rates, CPI, tax tables, VAT, tolls. Every answer carries its source URL and an effective date. The free public-holidays route, read 2026-11-18, lists the 4 November election-day holiday with its Gazette notice.
+
+**SDKs & Libraries — [pay-kit](https://github.com/solana-foundation/pay-kit)**
+The Solana Foundation's toolkit for putting a stablecoin paywall on an HTTP route, with source in nine languages: TypeScript, Rust, Go, Python, Ruby, PHP, Lua, Kotlin and Swift. Each has its own test files. Last commit 2026-11-09.
+
+**Facilitators — [Ultravioleta DAO](https://facilitator.ultravioletadao.xyz)**
+No key to point at it, and it publishes its own counts at /api/stats, failures included: on 2026-11-18 it showed 59,132 settled and 14,600 failed by its own records. Receipts are signed, with the public keys at /.well-known/receipt-keys.json.
+
+**Frameworks — [Agent Commerce Gateway](https://github.com/devlab-group/agent-commerce)**
+A self-hosted gateway that puts x402 in front of an HTTP API you already run and serves it over HTTP or MCP, with funds going straight to your wallet. It ships a doctor command and an adversarial-payment test among 184 test files. Release 2.7.2 landed 2026-11-14.
+
+**Tools — [Red Team Blue Team Agent Fabric](https://github.com/msaleme/red-team-blue-team-agent-fabric)**
+A security harness for agent endpoints that will not count a test as passed when the target never answered it. Its README says that against a v1 or v2 x402 server only 5 of its x402 probes grade and the rest report INCONCLUSIVE with a reason. Last commit 2026-11-11.
+
+**Learning — [Settlens payment-policy regression guide](https://settlens.com/blog/check-x402-payment-policy)**
+How to test x402 payment terms before a release: change the price or the recipient and watch the decision flip, with curl and no wallet. Published 2026-10-15. We ran its approved case and a doubled price on 2026-11-18 and got pay, then do_not_pay.
+
+---
+
 ## October 2026 — The Slate
 
 One pick per shelf.

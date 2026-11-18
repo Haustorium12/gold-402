@@ -8,8 +8,8 @@ Payment verification and settlement services for x402. A facilitator verifies pa
 
 ---
 
-> ★ **Featured — October 2026: [ArisPay](https://facilitator.arispay.app)**
-> Free and public on Base mainnet, with EURC settling alongside USDC, and nothing to sign up for: /verify and /settle are open. It publishes its fee policy in machine-readable form at /supported instead of a pricing page you have to read.
+> ★ **Featured — November 2026: [Ultravioleta DAO](https://facilitator.ultravioletadao.xyz)**
+> No key to point at it, and it publishes its own counts at /api/stats, failures included: on 2026-11-18 it showed 59,132 settled and 14,600 failed by its own records. Receipts are signed, with the public keys at /.well-known/receipt-keys.json.
 
 ## Hosted Facilitators
 

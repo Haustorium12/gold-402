@@ -4,9 +4,6 @@ Infrastructure, A2A protocols, multi-agent orchestration, and marketplace platfo
 
 ---
 
-> ★ **Featured — October 2026: [Bermuda](https://www.bermudabay.xyz)**
-> Sender privacy for x402: Noir zero-knowledge proofs on Base, so an agent can pay without showing its balance and payment history to every seller it calls. Nearly every payment on these shelves is public on-chain; this is one of the few entries working on that.
-
 ## Foundation & Protocol
 
 - [x402](https://github.com/x402-foundation/x402) — The canonical x402 protocol repository maintained by the x402 Foundation under the Linux Foundation. Reference implementations, official SDKs, spec documentation. The source of truth for the protocol. 6,147★

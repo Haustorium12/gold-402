@@ -4,8 +4,8 @@ Tutorials, videos, articles, blog posts, and interactive learning tools for x402
 
 ---
 
-> ★ **Featured — October 2026: [How x402 paid links work (Payfirst)](https://www.payfirst.app/guides/x402-paid-links)**
-> The part most tutorials skip: what a buyer does when it can't tell whether settlement went through. x402 V2 headers, URL delivery and retry handling, written for the side that pays.
+> ★ **Featured — November 2026: [Settlens payment-policy regression guide](https://settlens.com/blog/check-x402-payment-policy)**
+> How to test x402 payment terms before a release: change the price or the recipient and watch the decision flip, with curl and no wallet. Published 2026-10-15. We ran its approved case and a doubled price on 2026-11-18 and got pay, then do_not_pay.
 
 ## Quick Start Guides
 

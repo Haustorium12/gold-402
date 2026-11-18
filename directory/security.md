@@ -4,9 +4,6 @@ Security tools, spending controls, audit resources, and best practices for x402 
 
 ---
 
-> ★ **Featured — October 2026: [ICME Labs](https://docs.icme.io)**
-> Turns a plain-language spending policy into SMT-LIB logic and has a solver check an agent's action against it — a proof the rule held, not a score that says it probably did. $0.10 USDC on Base.
-
 ## Smart Contract Audits
 
 - [AskZephy Solana Audit](https://audit.askzephy.com/audit) — Static PATTERN scan of a Solana/Anchor Rust repository: flags risky code shapes (missing signer/owner checks, account confusion, PDA seed issues, unsafe CPI, unchecked arithmetic) with file:line, evidence and suggested fix. Deterministic, no LLM. $0.05 USDC on Base per `GET /audit?repo=owner/name`; one-line verdict at `GET /quick-scan?repo=owner/name` for $0.005. Honest limits: scored 0/11 recall on Anchor's labelled vulnerability corpus — findings are leads for human review, not an audit verdict. ([OpenAPI](https://audit.askzephy.com/openapi.json))

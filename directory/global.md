@@ -6,9 +6,6 @@ Agent infrastructure and machine-payment rails by continent. Platforms, protocol
 
 ---
 
-> ★ **Featured — October 2026: [Beckn Protocol](https://github.com/ONDC-Official)**
-> The open protocol underneath India's ONDC network. Its signing specification carries no human-verification requirement, which makes an agent buyer app protocol-legal today — gated by network-registry onboarding, not by the spec.
-
 > **gold-402 note:** This shelf exists because we checked and found our own map was drawn in one language.
 >
 > x402 is a US-governed rail: USDC, Base, dollar-denominated, crypto-native. It is not the only answer to machine-to-machine payment, and outside the West it is not the answer being used. China solved delegated agent authorization on existing rails. India solved it with regulated, human-signed mandates that agents execute inside a cap. Neither needed a blockchain, and both were running at scale while the x402 Foundation was weeks old.

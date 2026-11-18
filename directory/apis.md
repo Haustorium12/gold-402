@@ -10,8 +10,8 @@ x402-enabled APIs and production services. No API keys. No accounts. Pay USDC pe
 
 ---
 
-> ★ **Featured — October 2026: [crosscheck accept](https://crosscheckapi.com/v1/accept)**
-> Checks what one agent delivers to another against the task it was given, before the buyer pays or releases escrow — counts, required fields and sums recomputed in code, every result bound to a signed receipt. The gap between "paid" and "delivered" that x402 itself doesn't cover, sold as a $0.03 call. New to the shelf this week, knocked live on a POST before it was listed.
+> ★ **Featured — November 2026: [zaref](https://zaref.dev/.well-known/x402.json)**
+> South African reference data as JSON: fuel prices, repo and prime rates, CPI, tax tables, VAT, tolls. Every answer carries its source URL and an effective date. The free public-holidays route, read 2026-11-18, lists the 4 November election-day holiday with its Gazette notice.
 
 ## AI Services
 - [Liam Tools](https://liam-tools-x402-lab.evangrant69420.workers.dev/v1/numbers) — JSON utilities for agents (numeric summaries, text metrics, normalization, budget checks). HTTP POST to /v1/numbers with {"values":[1,2,3]} returns x402 v2 HTTP 402 with XRP 0.01 on XRPL mainnet (xrpl:0); verified payment returns numeric summary JSON. [Discovery](https://liam-tools-x402-lab.evangrant69420.workers.dev/.well-known/x402) | [OpenAPI](https://liam-tools-x402-lab.evangrant69420.workers.dev/openapi.json).
