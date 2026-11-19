@@ -91,6 +91,7 @@ x402-enabled MCP servers. AI agents (Claude, Cursor, any MCP client) can call th
 - [agentpay-mcp](https://github.com/up2itnow0822/agentpay-mcp) — Native x402 client-side payment execution inside the agent loop. Detects 402 responses and completes transactions with no human handoff. ([npm](https://www.npmjs.com/package/agentpay-mcp))
 - [402-mcp](https://github.com/forgesworn/402-mcp) — Payment-rail-agnostic x402 MCP client. No Lightning node required, multi-wallet support, encrypted credentials.
 - [PayBot MCP](https://github.com/RBKunnela/paybot-mcp) — Claude and AI agents make autonomous x402 payments. Wallet management, transaction history, configurable spending limits. ([npm](https://www.npmjs.com/package/paybot-mcp))
+- [URLGate MCP](https://urlgate.xyz/mcp) — Remote Streamable HTTP MCP server that wraps URLGate pay-to-open short links, with tools to create links and to open a paid link using two EIP-3009 signatures (PAYMENT-SIGNATURE and PAYMENT-SIGNATURE-FEE) settled in USDC. ([Server card](https://urlgate.xyz/mcp/server-card)) ([Demo 402](https://urlgate.xyz/3coins))
 
 ---
 
