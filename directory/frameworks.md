@@ -78,5 +78,6 @@ Server-side integrations for accepting x402 payments, and agent frameworks with 
 - [Phidata Agents](https://github.com/phidatahq/phidata) — Multi-modal agents with x402 integration.
 - [NEAR AI](https://near.ai) — Cross-chain agent settlements.
 - [World AgentKit](https://www.coindesk.com/tech/2026/03/17/sam-altman-s-world-teams-up-with-coinbase-to-prove-there-is-a-real-person-behind-every-ai-transaction) — Integrates World's WorldID biometric identity with x402. AI agents prove they act on behalf of a verified unique human during x402 transactions. 18M+ verified humans.
+- [dropengine-agentkit](https://github.com/Ahmet11159/dropengine-agentkit) — Coinbase AgentKit action provider that pays per call in USDC on Base via x402 from the agent's own wallet, with a per-call spend cap, for whale activity, transaction simulation, token security audit, wallet risk and a pre-action allow/deny gate. ([npm](https://www.npmjs.com/package/dropengine-agentkit))
 
 ---
