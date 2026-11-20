@@ -115,6 +115,7 @@ x402-enabled MCP servers. AI agents (Claude, Cursor, any MCP client) can call th
 - [Scout MCP](https://scout.hugen.tokyo/.well-known/x402) — Multi-source search across code, academic, social, community platforms. From $0.01 USDC on Base. ([Source](https://github.com/bartonguestier1725-collab/scout-mcp))
 - [TweetClaw](https://xquik.com/mcp) — Real-time X (Twitter) data. 7 pay-per-use endpoints via x402. ([GitHub](https://github.com/Xquik-dev/tweetclaw)) ([npm](https://www.npmjs.com/package/@xquik/tweetclaw))
 - [Agent Evidence API](https://agent-evidence.thx93.dev/v1/evidence) — MCP server and HTTP API for cited web evidence: `initialize` and `tools/list` are free, and each $0.01 USDC x402 call on Base returns source-grounded passages that support, contradict or fail to settle a claim, with source URL, retrieval time and content hash for every excerpt, and no charge when no source is retrieved. ([MCP](https://agent-evidence.thx93.dev/mcp)) ([GitHub](https://github.com/Thx93/agent-evidence-api))
+- [ApexSEO GEO & AI-Crawler Audit MCP](https://apexseo-geo-mcp.vercel.app/.well-known/x402) — Audits web pages for AI crawler access (GPTBot, ClaudeBot, PerplexityBot), llms.txt readiness, and schema/citation signals on Base USDC from $0.01 to $0.05 per call, with free health and pricing tools. ([MCP](https://apexseo-geo-mcp.vercel.app/mcp)) ([GitHub](https://github.com/kwizzlesurp10-ctrl/apexseo-geo-mcp))
 
 ---
 
