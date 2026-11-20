@@ -1,4 +1,4 @@
-﻿# MCP Servers
+# MCP Servers
 
 x402-enabled MCP servers. AI agents (Claude, Cursor, any MCP client) can call these tools and pay automatically per invocation via USDC micropayments. No API keys. No accounts. Wallet is authentication.
 
@@ -9,6 +9,7 @@ x402-enabled MCP servers. AI agents (Claude, Cursor, any MCP client) can call th
 ## General Utility
 
 - [agent-exec](https://agent-exec.448c.org/mcp?via=223) — Streamable HTTP MCP server with 49 tools: every paid route (sandboxed python3/node execution, durable storage, atomic key claims, signed URL attestations, watches, disposable email, rented DNS, address/URL risk checks, x402 pay-delivery) buyable from $0.001 USDC on Base or Solana, plus 29 free tools (quotes, directory, owner-signed reads, offline x402 verification). ([OpenAPI](https://agent-exec.448c.org/openapi.json?via=223)) ([Manifest](https://agent-exec.448c.org/.well-known/x402.json?via=223))
+- [AutoTasker Hub](https://autotasker.highkingflower.com/api/x402/hotlist) — x402 pay-per-call data API + streamable HTTP MCP server with 84 tools: free discovery and sample, plus pay-per-call China social trending data (Weibo, Douban, Zhihu, Bilibili) from $0.05 USDC per call on Base via x402. The linked endpoint is a real x402 endpoint: an unauthenticated GET returns HTTP 402 with payment requirements; the MCP transport is at /mcp (initialize + tools/call, protocol 2025-06-18). ([MCP](https://autotasker.highkingflower.com/mcp)) ([Manifest](https://autotasker.highkingflower.com/.well-known/x402.json)) ([Proof](https://autotasker.highkingflower.com/api/x402/proof))
 - [Council of AI GSPC MCP](https://councilof.ai/mcp) — Measurement MCP (not certification). Free board tools; paid tools over x402 (`art50_marking_evidence`, `rwa_evidence`, `receipts_batch`, `commission_card`). Remote `https://councilof.ai/mcp`. npm `csoai-gspc-mcp`. ([OpenAPI](https://councilof.ai/openapi.json)) ([Manifest](https://councilof.ai/.well-known/x402.json)) ([x402scan](https://www.x402scan.com/server/9b8bcb34-6c9f-45d6-b881-9a6afe7bf6b5)).
 - [Andreax](https://pagos.andreax.dev/.well-known/x402.json) — Remote MCP server with 54 pay-per-call AI tools: prompt compression, inference, web/PDF read, OCR, vision, embeddings, semantic search, translation, FX, and market data. $0.001-$0.50 USDC on Base. ([MCP](https://pagos.andreax.dev/mcp)) ([Registry](https://registry.modelcontextprotocol.io/v0.1/servers?search=andreax))
 - [BlockLabs Shop MCP](https://www.npmjs.com/package/@blocklabs/shop-mcp) — Mounts the BlockLabs physical-goods shop as MCP tools: paid product search, free order quotes, order placement with a spend cap the agent cannot exceed, tracking. USDC on Base via x402; runs with npx, no build step. ([llms.txt](https://shop.blocklabs.nl/llms.txt))
@@ -91,6 +92,7 @@ x402-enabled MCP servers. AI agents (Claude, Cursor, any MCP client) can call th
 - [agentpay-mcp](https://github.com/up2itnow0822/agentpay-mcp) — Native x402 client-side payment execution inside the agent loop. Detects 402 responses and completes transactions with no human handoff. ([npm](https://www.npmjs.com/package/agentpay-mcp))
 - [402-mcp](https://github.com/forgesworn/402-mcp) — Payment-rail-agnostic x402 MCP client. No Lightning node required, multi-wallet support, encrypted credentials.
 - [PayBot MCP](https://github.com/RBKunnela/paybot-mcp) — Claude and AI agents make autonomous x402 payments. Wallet management, transaction history, configurable spending limits. ([npm](https://www.npmjs.com/package/paybot-mcp))
+- [URLGate MCP](https://urlgate.xyz/mcp) — Remote Streamable HTTP MCP server that wraps URLGate pay-to-open short links, with tools to create links and to open a paid link using two EIP-3009 signatures (PAYMENT-SIGNATURE and PAYMENT-SIGNATURE-FEE) settled in USDC. ([Server card](https://urlgate.xyz/mcp/server-card)) ([Demo 402](https://urlgate.xyz/3coins))
 
 ---
 
