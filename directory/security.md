@@ -58,7 +58,6 @@ Security tools, spending controls, audit resources, and best practices for x402 
 - [MoneyTools x402-guard](https://www.npmjs.com/package/@moneytools-dev/x402-guard) — Buyer-side TypeScript hook that attaches to an official x402Client's onBeforePaymentCreation hook to run Pay Precheck, local per-payment and daily caps, optional Approval Relay, and a payment log before anything is signed; it never loads a key or sends a payment.
 
 ---
-- [wren-guard Pro](https://wren-guard-pro.wrenonbase.workers.dev/sample) — TypeScript/viem guard for agent wallets (capped, simulated sends; approval, permit and EIP-7702 decoding; injection screen) with an 89-scenario drain corpus and a GitHub Action. `GET /sample` returns 5 scenarios for 0.01 USDC on Base; `GET /buy/19` (or 49, 99) returns a 7-day download link to the kit. MIT core: [wren-guard](https://github.com/claudeisgod/wren-guard).
 
 ## Trust & Reputation
 

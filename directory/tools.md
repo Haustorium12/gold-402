@@ -39,7 +39,6 @@ Development tools, CLI utilities, monitoring, analytics, and CI/CD integrations 
 - [Dune Analytics x402](https://dune.com/x402) — On-chain metrics: transaction volumes, chain-by-chain analytics, facilitator comparison, revenue/fee metrics.
 
 ---
-- [Wren x402 Doctor](https://wren-x402-doctor.wrenonbase.workers.dev/check?payTo=0xb8003C6190AA56EA25309B36107FA41bB9518A5F) — Free `POST /lint` checks an x402 v2 402 against the spec and CDP Bazaar listing rules; `GET /check?payTo=0x…` reports a seller's live Bazaar listings, 30-day calls, payers and estimated delisting dates for 0.10 USDC on Base.
 
 ## Testing & Development
 

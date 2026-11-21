@@ -52,6 +52,7 @@ Dates for every entry (first failed knock, last answer, returns) are in [24klabs
 - [Tollex](https://api.tollex.org/tools/chain_get_block) — Robinhood Chain mainnet data for agents (blocks, transactions, logs, balances, USDG and stock tokens; 34 capabilities) paid per call over x402 v2 in USDC on Base or USDG on Robinhood Chain, each response with a signed execution receipt. Call with `POST`.
 - [DevX Multichain Balances](https://wallet-balances.nextill-pos.workers.dev/v1/balances) — Native and major-token balances (USDC, USDT, DAI, EURC, WETH, WBTC/cbBTC) for an EVM, Solana and/or Tron address across Base, Ethereum, Arbitrum, Optimism, Polygon, Avalanche, BNB Chain, Solana and Tron in one call, with block numbers and a stablecoin total, for $0.002 USDC on Base via x402. Example: `GET /v1/balances?address=0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045&chains=base,ethereum`. ([OpenAPI](https://wallet-balances.nextill-pos.workers.dev/openapi.json))
 - [DevX Token Snapshot](https://token-snapshot.nextill-pos.workers.dev/v1/snapshot) — ERC-20 USD price, FDV, total DEX liquidity, top pools and contract risk flags (proxy, owner, mint, blacklist, fees) on 7 EVM chains from live on-chain reads, for $0.003 USDC on Base via x402. Example: `GET /v1/snapshot?token=0x4ed4E862860beD51a9570b96d89aF5E1B0Efefed&chain=base`. ([OpenAPI](https://token-snapshot.nextill-pos.workers.dev/openapi.json))
+- [Node Scorecard API](https://nodescorecard.xyz/scorecard/nodes) — Scored directory of Sentinel dVPN network nodes: composite score per node, sorted best-first, active nodes by default with an optional full snapshot. $0.005 USDC per call on Base, Solana, Polygon, Arbitrum, and Avalanche.
 
 ### Data & Research
 
@@ -105,6 +106,7 @@ Dates for every entry (first failed knock, last answer, returns) are in [24klabs
 - [DevX 7702 Sweeper Check](https://sweeper-check.nextill-pos.workers.dev/v1/check) — Reports EIP-7702 delegations for 1-20 EVM addresses on 8 chains with delegate bytecode analysis for sweeper and hard-coded forwarder patterns, for $0.01 USDC on Base via x402. Example: `GET /v1/check?address=0x...`. ([OpenAPI](https://sweeper-check.nextill-pos.workers.dev/openapi.json))
 - [DevX Crypto Link Check](https://crypto-link-check.nextill-pos.workers.dev/v1/check) — Checks 1-10 URLs for wallet, exchange and dapp lookalikes, punycode, RDAP domain age, DNS, redirects and page code asking for seed phrases or drainer approvals before a wallet connects, for $0.005 USDC on Base via x402. Example: `GET /v1/check?url=https://example.com`. ([OpenAPI](https://crypto-link-check.nextill-pos.workers.dev/openapi.json))
 - [DevX Repo Run Check](https://repo-run-check.nextill-pos.workers.dev/v1/check) — Scans 1-3 GitHub repos' README, install scripts, package.json, VS Code tasks and Makefile for download-and-execute one-liners, obfuscated payloads, typosquatted dependencies and agent-targeted prompt injection before an AI coding agent runs them, for $0.005 USDC on Base via x402. Example: `GET /v1/check?repo=github.com/owner/repo`. ([OpenAPI](https://repo-run-check.nextill-pos.workers.dev/openapi.json))
+- [Wren Pre-sign Check](https://wren-presign-check.wrenonbase.workers.dev/check) — Returns block, review or allow for a transaction or EIP-712 message before an agent signs, flagging unlimited approvals, permits, EIP-7702 delegations and injected instructions; 0.01 USDC on Base per call. `POST /check {"tx":{"to":"0x…","data":"0x…"}}`; free examples at `/demo/<name>`.
 
 ### Web & Geospatial
 
@@ -196,6 +198,10 @@ Dates for every entry (first failed knock, last answer, returns) are in [24klabs
 
 ### Trust & Reputation
 
+### Spending Controls
+
+- [wren-guard Pro](https://wren-guard-pro.wrenonbase.workers.dev/sample) — TypeScript/viem guard for agent wallets (capped, simulated sends; approval, permit and EIP-7702 decoding; injection screen) with an 89-scenario drain corpus and a GitHub Action. `GET /sample` returns 5 scenarios for 0.01 USDC on Base; `GET /buy/19` (or 49, 99) returns a 7-day download link to the kit. MIT core: [wren-guard](https://github.com/claudeisgod/wren-guard).
+
 
 ## tools
 
@@ -215,3 +221,4 @@ Dates for every entry (first failed knock, last answer, returns) are in [24klabs
 
 - [Valoria](https://x402.valoria.net/.well-known/x402) — x402 market intelligence with revenue rankings, service analysis, pricing data across 90K+ indexed services and $148M+ in tracked on-chain volume.
 - [x402station](https://x402station.com) — Real-time monitoring and discovery platform for 20,000+ x402 endpoints. Probes every 10 minutes, tracks health scores, uptime, and latency. MCP server for agent access included.
+- [Wren x402 Doctor](https://wren-x402-doctor.wrenonbase.workers.dev/check?payTo=0xb8003C6190AA56EA25309B36107FA41bB9518A5F) — Free `POST /lint` checks an x402 v2 402 against the spec and CDP Bazaar listing rules; `GET /check?payTo=0x…` reports a seller's live Bazaar listings, 30-day calls, payers and estimated delisting dates for 0.10 USDC on Base.
